@@ -14,10 +14,7 @@ const Layout = () => {
           <Sidebar />
         </aside>
       </div>
-      
-
-      
-      <div className="main-content right-dashboard">
+      <div className="main-content right-dashboard px-3">
      
         <header className="header">
           <Header />
