@@ -3,7 +3,7 @@ import DashboardStatsGrid from '../components/dashboard/DashboardStatsGrid'
 
 const Dashboard = () => {
   return (
-    <div>
+    <div className='content-mid'>
       <DashboardStatsGrid />
     </div>
   )

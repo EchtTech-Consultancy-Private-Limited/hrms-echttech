@@ -1,0 +1,7 @@
+@media (max-width: 768px) {
+    .left-sidebar {
+        width: 0%; 
+        height: auto; 
+        position: relative; 
+    }
+}

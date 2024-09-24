@@ -2,7 +2,7 @@ import React from 'react'
 
 const DashboardStatsGrid = () => {
   return (
-    <div>
+    <div className='dashboard-stats-grid'>
       DashboardStatsGrid
     </div>
   )

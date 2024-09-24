@@ -1,20 +1,40 @@
-import React from 'react'
-import Sidebar from './Sidebar'
-import Header from './Header'
-import { Outlet } from 'react-router-dom'
+import React from 'react';
+import Sidebar from './Sidebar';
+import Header from './Header';
+import Footer from './Footer';
+import { Outlet } from 'react-router-dom';
+
 
 const Layout = () => {
   return (
-    <div>
-        <Sidebar />
-        <div>
-            <Header />
-            <div>
-                <Outlet />
-                </div>
-            </div>
-        </div>
-  )
+    <div className="layout main-container flex">
+
+      <div className="left-sidebar">
+        <aside className="sidebar">
+          <Sidebar />
+        </aside>
+      </div>
+      
+
+      
+      <div className="main-content right-dashboard">
+     
+        <header className="header">
+          <Header />
+        </header>
+
+       
+        <main className="content">
+          <Outlet />
+        </main>
+
+        
+        <footer className="footer">
+          <Footer />
+        </footer>
+      </div>
+    </div>
+  );
 }
 
-export default Layout
+export default Layout;

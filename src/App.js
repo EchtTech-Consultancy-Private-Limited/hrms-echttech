@@ -9,7 +9,7 @@ function App() {
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Dashboard />} />
                 </Route>
-                {/* <Route path="/register" element={<Register />} /> */}
+               
             </Routes>
         </Router>
     )

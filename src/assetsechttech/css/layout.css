@@ -1,0 +1,9 @@
+.content-mid
+{
+    height: calc(100vh - 110px);
+}
+
+.main-container
+{
+    background: #e5e7eb;
+}

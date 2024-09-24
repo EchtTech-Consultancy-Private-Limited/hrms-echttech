@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('../src/assetsechttech/css/globalecht.css');
+@import url('../src//assetsechttech//css//sidebarecht.css');
+@import url('../src//assetsechttech//css/rightdashboard.css');
+@import url('../src//assetsechttech//css/topheader.css');
+@import url('../src//assetsechttech//css/footer.css');
+@import url('../src//assetsechttech//css/responsiveecht.css');
+@import url('../src//assetsechttech//css/layout.css');
+@import url('../src//assetsechttech//css/main-container.css');
 
 @tailwind base;
 @tailwind components;
