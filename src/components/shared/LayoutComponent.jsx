@@ -1,11 +1,11 @@
 import React from 'react';
-import Sidebar from './Sidebar';
-import Header from './Header';
-import Footer from './Footer';
+import Sidebar from './SidebarComponent';
+import Header from './HeaderComponent';
+import Footer from './FooterComponent';
 import { Outlet } from 'react-router-dom';
 
 
-const Layout = () => {
+const LayoutComponent = () => {
   return (
     <div className="layout main-container flex">
 
@@ -34,4 +34,4 @@ const Layout = () => {
   );
 }
 
-export default Layout;
+export default LayoutComponent;

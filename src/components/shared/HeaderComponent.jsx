@@ -10,7 +10,7 @@ import { Dialog } from '@headlessui/react';
 
 
 
-const Header = () => {
+const HeaderComponent = () => {
   
   const [isOpen, setIsOpen] = useState(false);
 
@@ -296,4 +296,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default HeaderComponent

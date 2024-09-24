@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from "../../assetsechttech/logo/logo.png"
 
-const Sidebar = () => {
+const SidebarComponent = () => {
   return (
     <div className='left-sidebar-inner p-4'>
        <div className="sidebar-top-logo-con w-full rounded-lg logo-custom-border p-2">
@@ -14,4 +14,4 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar
+export default SidebarComponent
