@@ -1,5 +1,8 @@
     /* Sidebar CSS */
-
+.dashboard-text{
+    display: flex;
+    align-items: center;
+}
     .left-sidebar
     {
         width: 20%;
@@ -8,3 +11,23 @@
         border-radius: 0px 25px 0px 0px;
       
     }
+    .ul-list{
+      background-color: unset !important;
+      color: #fff !important;
+    }
+    .list {
+        margin: 15px 0;
+      }
+    
+    .listing li a {
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    .listing li a:hover {
+        text-decoration: none;
+      }
+      .list ul {
+        display: none;
+      }
