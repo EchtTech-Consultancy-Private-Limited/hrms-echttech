@@ -5,29 +5,22 @@
 }
     .left-sidebar
     {
-        width: 20%;
-        background-color: #1E293B;
+        width: 18%;
+        background-color: #174E94;
         height: 100vh;
-        border-radius: 0px 25px 0px 0px;
+        transition: width 0.3s;
+        
       
     }
-    .ul-list{
-      background-color: unset !important;
-      color: #fff !important;
+    .layout.hide .left-sidebar{
+      width: 5%;
     }
-    .list {
-        margin: 15px 0;
-      }
-    
-    .listing li a {
-        color: #fff;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-    .listing li a:hover {
-        text-decoration: none;
-      }
-      .list ul {
-        display: none;
-      }
+    .sidebar-top-logo-con {
+      background-color: #fff;
+      width: 85% !important;
+      margin: 25px auto;
+    }
+    .layout.hide .sidebar-top-logo-con {
+      padding: 15px 2px;
+    }
+ 

@@ -4,3 +4,27 @@
     border-bottom: 1px solid rgba(182, 181, 181, 0.904);
     padding: 16px 2px;
 }
+.header {
+    position: relative;
+  }
+  .top-header::before {
+    content: "";
+    height: 50px;
+    width: 25px;
+    background-color: #174e94;
+    position: absolute;
+    left: 0;
+    border-radius: 0px 15px 15px 0px;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .top-header:before:hover{
+    box-shadow: 1px 3px 2px gray !important;
+  }
+  .collapse-btn{
+    z-index: 9;
+    position: absolute;
+    top: 20px;
+    padding: 10px 2px;
+    left: 0;
+  }
