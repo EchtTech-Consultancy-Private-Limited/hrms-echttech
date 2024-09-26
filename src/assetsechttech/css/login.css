@@ -1,0 +1,42 @@
+.mlc-right
+{
+
+    background: #174e94;
+}
+.mlc-left
+{
+
+    background: #f8f6f0 !important;
+}
+.absolute-red-dot
+{
+    position: absolute;
+    right: 45%;
+    bottom: 9%;
+}
+.drawer-btn
+{
+    position: absolute;
+    right: -12px;
+    top: 0px;
+    z-index: 12;
+    background-color: #174e94;
+    color: #fff !important;
+}
+
+
+.bg-login-img {
+  
+    background-size: cover;
+    background-position: center; 
+    background-image: url('https://cdn.dribbble.com/users/48830/screenshots/1216892/media/21e8f2d2af06c996e9bb547d78b0f3be.gif');
+
+}
+
+.absolute-eye-pwd {
+    position: absolute;
+    right: 3%;
+    color: grey;
+    bottom: 30%;
+    z-index: 99;
+}
