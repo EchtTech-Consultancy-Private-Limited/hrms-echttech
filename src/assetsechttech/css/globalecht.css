@@ -1,0 +1,9 @@
+:root {
+    --white-color: #fff;
+}
+.color-white{
+    color:#fff;
+}
+.arrow-icons{
+    font-size: 13px !important;
+}

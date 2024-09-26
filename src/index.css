@@ -7,6 +7,7 @@
 @import url('../src//assetsechttech//css/responsiveecht.css');
 @import url('../src//assetsechttech//css/layout.css');
 @import url('../src//assetsechttech//css/main-container.css');
+@import url('../src//assetsechttech//css/sidebar-content.css');
 
 @tailwind base;
 @tailwind components;

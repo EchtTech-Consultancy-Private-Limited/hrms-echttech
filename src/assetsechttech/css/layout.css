@@ -1,9 +1,24 @@
-.content-mid
-{
-    height: calc(100vh - 110px);
-}
+.layout.main-container {
+    overflow-x: hidden;
+  }
 
-.main-container
+
+.main-content.right-dashboard {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    flex-wrap: wrap;
+    overflow-y: auto;
+    height: calc(100vh - 135px);
+  }
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+/* .main-container
 {
     background: #e5e7eb;
-}
+} */
