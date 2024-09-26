@@ -17,7 +17,7 @@ const LayoutComponent = () => {
   return (
     <div className={`layout main-container flex ${isActive ? 'hide' : 'show'}`}>
 
-      <div className="left-sidebar">
+      <div className="left-sidebar main-bg-color">
         <aside className="sidebar">
           <Sidebar />
         </aside>
