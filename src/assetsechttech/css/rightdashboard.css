@@ -1,5 +1,9 @@
 .right-dashboard
 {
-    background-color: #e0e4cc;
-    width: 80%;
+    background-color: #ffffff;
+    width: 82%;
+}
+.layout.hide .right-dashboard
+{
+    width: 95%;
 }

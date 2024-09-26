@@ -1,25 +1,26 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import NotificationsActiveOutlinedIcon from '@mui/icons-material/NotificationsActiveOutlined';
 import accountimage from "../../assetsechttech/utility-images/accountimage.png"
-import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
+import { HiChevronDoubleRight,  HiChevronDoubleLeft  } from "react-icons/hi";
 
 
 
-const Header = () => {
+const HeaderComponent = ({toggleClass, isToggled}) => {
   
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
   return (
-    <div className='top-header flex justify-between items-center'>
-      <div className="top-bar-left">
-        <h3 className='text-lg font-semibold' >Section Title</h3>
+    <div className='top-header flex justify-between items-center px-3'>
+      <div className="top-bar-left flex">
+        <button className='collapse-btn' onClick={toggleClass}> {isToggled ? <HiChevronDoubleRight className='text-xl color-white'/> : <HiChevronDoubleLeft  className='text-xl color-white'/>}</button>
+        {/* <h3 className='text-lg font-semibold' >Section Title</h3> */}
       </div>
       <div className="top-bar-left flex items-center ">
 
@@ -296,4 +297,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default HeaderComponent

@@ -1,10 +1,26 @@
     /* Sidebar CSS */
-
+.dashboard-text{
+    display: flex;
+    align-items: center;
+}
     .left-sidebar
     {
-        width: 20%;
-        background-color: #1E293B;
+        width: 18%;
+        background-color: #174E94;
         height: 100vh;
-        border-radius: 0px 25px 0px 0px;
+        transition: width 0.3s;
+        
       
     }
+    .layout.hide .left-sidebar{
+      width: 5%;
+    }
+    .sidebar-top-logo-con {
+      background-color: #fff;
+      width: 85% !important;
+      margin: 25px auto;
+    }
+    .layout.hide .sidebar-top-logo-con {
+      padding: 15px 2px;
+    }
+ 
