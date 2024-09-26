@@ -9,6 +9,8 @@
 @import url('../src//assetsechttech//css/main-container.css');
 @import url('../src//assetsechttech//css/sidebar-content.css');
 @import url('../src//assetsechttech//css/login.css');
+@import url('../src//assetsechttech//css/dashboardSG-S-Admin.css');
+@import url('../src//assetsechttech//css/dashboardSG-Employee.css');
 
 @tailwind base;
 @tailwind components;

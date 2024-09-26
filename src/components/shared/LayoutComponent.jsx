@@ -29,7 +29,7 @@ const LayoutComponent = () => {
         </header>
 
        
-        <main className="content px-3">
+        <main className="content">
           <Outlet />
         </main>
 

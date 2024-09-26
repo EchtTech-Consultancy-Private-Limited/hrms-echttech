@@ -11,5 +11,9 @@
     background-color: #174E94;
 }
 .base-bg-color{
-    background-color: #f4f7fd;
+    background-color: #174e9412;
 }
+.headings {
+    font-size: 22px;
+    font-weight: 500;
+  }
