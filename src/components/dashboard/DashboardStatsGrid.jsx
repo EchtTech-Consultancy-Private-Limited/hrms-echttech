@@ -5,6 +5,9 @@ import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import { PiUsersThree, PiUserCheck } from "react-icons/pi";
 import { CiCalendar } from "react-icons/ci";
 import { FiUmbrella } from "react-icons/fi";
+import employee_img from "../../assetsechttech/utility-images/employee_img.png"
+import { Card, Typography } from "@material-tailwind/react";
+
 
 const days = [
 
@@ -27,12 +30,44 @@ const days = [
    
 ]
 
+const TABLE_HEAD = ["Name", "Job", "Employed", ""];
+ 
+const TABLE_ROWS = [
+  {
+    name: "John Michael",
+    job: "Manager",
+    date: "23/04/18",
+  },
+  {
+    name: "Alexa Liras",
+    job: "Developer",
+    date: "23/04/18",
+  },
+  {
+    name: "Laurent Perrier",
+    job: "Executive",
+    date: "19/09/17",
+  },
+  {
+    name: "Michael Levi",
+    job: "Developer",
+    date: "24/12/08",
+  },
+  {
+    name: "Richard Gran",
+    job: "Manager",
+    date: "04/10/21",
+  },
+];
+
 const DashboardStatsGrid = () => {
 
   const [selected, setSelected] = useState(days[1])
 
   return (
-    // ==============Dashboard Start ==========================================================================================================================
+
+// ============== Super Admin Dashboard Start ==========================================================================================================================
+
     <div id='dashboard' className='px-10 py-12'>
   
       <div className='dashboard-stats-grid  super-admin'>
@@ -83,7 +118,7 @@ const DashboardStatsGrid = () => {
         <div className="mid-content">
           <div className="info-cards-section mt-10 flex flex-wrap">
            
-            <div className="card relative">
+            <div className="card relative shadow">
               <div className="top-part relative">
                 <div className="card-icons one"><PiUsersThree className='text-2xl'/></div>
               </div>
@@ -94,7 +129,7 @@ const DashboardStatsGrid = () => {
                 <p className='text-base'>Total No of Users</p>
               </div>
             </div>
-            <div className="card relative">
+            <div className="card relative shadow">
               <div className="top-part relative">
                 <div className="card-icons two"><CiCalendar className='text-2xl'/></div>
               </div>
@@ -105,7 +140,7 @@ const DashboardStatsGrid = () => {
                 <p className='text-base'>Total No of Leave</p>
               </div>
             </div>
-            <div className="card relative">
+            <div className="card relative shadow">
               <div className="top-part relative">
                 <div className="card-icons three"><FiUmbrella className='text-2xl'/></div>
               </div>
@@ -116,7 +151,7 @@ const DashboardStatsGrid = () => {
                 <p className='text-base'>Total No of Holiday</p>
               </div>
             </div>
-            <div className="card relative">
+            <div className="card relative shadow">
               <div className="top-part relative">
                 <div className="card-icons four"><PiUserCheck  className='text-2xl'/></div>
               </div>
@@ -127,7 +162,7 @@ const DashboardStatsGrid = () => {
                 <p className='text-base'>Total No of Attendance</p>
               </div>
             </div>
-            <div className="card relative">
+            <div className="card relative shadow">
               <div className="top-part relative">
                 <div className="card-icons five"><PiUsersThree className='text-2xl'/></div>
               </div>
@@ -142,7 +177,11 @@ const DashboardStatsGrid = () => {
         </div>
       </div>
 
+{/* =========================== Super Admin Dashboard End =================================================================================================== */}
+
       <br /><br /><br />
+
+{/* =========================== Employee Dashboard Start =================================================================================================== */}
 
       <div className='dashboard-stats-grid employee-das'>
           <div className="top-head flex justify-between items-center">
@@ -150,8 +189,9 @@ const DashboardStatsGrid = () => {
                 <h1 className='headings'>Employee Dashboard</h1>
               </div>
           </div>
-          <div className="emp-info-section flex mt-10">
-            <div className="time-card relative">
+          {/* Employee Card information Section start */}
+          <div className="emp-info-section flex mt-10 flex-wrap">
+            <div className="time-card relative shadow">
               <div className="top-head">
                 <p>Last Login:<span>26-sep-2024</span> 06:10 pm</p>
               </div>
@@ -164,8 +204,93 @@ const DashboardStatsGrid = () => {
                 <p>office shift Time: 09:00 am to 06:00 pm</p>
               </div>
             </div>
-            <div className="emp-info first"></div>
-            <div className="emp-info second"></div>
+            <div className="emp-info first relative shadow">
+              <div className="top-head">
+                    <h3>Echttech HRMS</h3>
+              </div>
+              <div className="mid-part my-5 flex items-center flex-col">
+                    <div className="emp-img my-5"><img src={employee_img} alt="" /></div>
+                    <div className="full-name flex items-center flex-col">
+                      <h2>Rohit Sharma</h2>
+                      <h4>UI Developer</h4>
+                    </div>
+              </div>
+              <div className="bottom-part">
+                      <div className="bottom-info"><h6>Emp ID</h6><span>:</span><p>123456</p></div>
+                      <div className="bottom-info"><h6>User Name</h6><span>:</span><p>rohit_sharma123</p></div>
+                      <div className="bottom-info"><h6>Email</h6><span>:</span><p>rohit.sharma458@echttech.com</p></div>
+                      <div className="bottom-info"><h6>Contact</h6><span>:</span><p>9999999999</p></div>
+              </div>
+            </div>
+            <div className="emp-info second relative shadow">
+            <div className="top-head">
+                    <h4>Terms & Conditions</h4>
+                    <ul>
+                      <li><p>Praesentium, atque inventore quam id eius sit odio mollitia</p></li>
+                      <li><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p></li>
+                    </ul>
+              </div>
+              <div className="mid-part my-10">
+                    <div className="bottom-info"><h6>Joining Date</h6><span>:</span><p>20-oct-2024</p></div>
+                    <div className="bottom-info"><h6>Expire Date</h6><span>:</span><p>.........</p></div>
+              </div>
+              {/* <div className="bottom-part">
+                      
+              </div> */}
+            </div>
+          </div>
+          {/* Employee Card information Section End */}
+          <div className="emp-table-section">
+            <div className="head my-10">
+              <h2 className='headings'>My Project</h2>
+            </div>
+            <div className="emp-table">
+                {/* <Card className="h-full w-full overflow-scroll">
+                  <table className="w-full min-w-max table-auto text-left">
+                    <thead>
+                      <tr>
+                        {TABLE_HEAD.map((head) => (
+                          <th key={head} className="border-b border-blue-gray-100 bg-blue-gray-50 p-4">
+                            <Typography
+                              variant="small"
+                              color="blue-gray"
+                              className="font-normal leading-none opacity-70"
+                            >
+                              {head}
+                            </Typography>
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {TABLE_ROWS.map(({ name, job, date }, index) => (
+                        <tr key={name} className="even:bg-blue-gray-50/50">
+                          <td className="p-4">
+                            <Typography variant="small" color="blue-gray" className="font-normal">
+                              {name}
+                            </Typography>
+                          </td>
+                          <td className="p-4">
+                            <Typography variant="small" color="blue-gray" className="font-normal">
+                              {job}
+                            </Typography>
+                          </td>
+                          <td className="p-4">
+                            <Typography variant="small" color="blue-gray" className="font-normal">
+                              {date}
+                            </Typography>
+                          </td>
+                          <td className="p-4">
+                            <Typography as="a" href="#" variant="small" color="blue-gray" className="font-medium">
+                              Edit
+                            </Typography>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+              </Card> */}
+            </div>
           </div>
       </div>
     </div>
