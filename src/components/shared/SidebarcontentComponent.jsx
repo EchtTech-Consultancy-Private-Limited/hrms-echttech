@@ -62,7 +62,9 @@ export default function SidebarcontentComponent() {
       <Accordion onChange={handleChange('panel1')} className='ul-list'>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header" className='color-white ul-parent'>
             <FiUserCheck className='mr-3 text-xl'/>
-          <Typography>Attendence</Typography>
+            <Link className='no-underline hover:no-underline' to = '/Attendance' >
+            <Typography className='text-white' >Attendence</Typography>
+            </Link>
         </AccordionSummary>
         <AccordionDetails className='parent-all-ul'>
           <ul className='all-ul'>

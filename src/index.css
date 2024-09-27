@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400&display=swap');
+
 @import url('../src/assetsechttech/css/globalecht.css');
 @import url('../src//assetsechttech//css//sidebarecht.css');
 @import url('../src//assetsechttech//css/rightdashboard.css');
@@ -36,4 +38,14 @@
 	a {
 		@apply text-sky-500 hover:underline;
 	}
+	.bg-neutral-100
+	{
+		@apply text-sky-500 hover:underline;
+
+	}
+	
 }
+
+body {
+	font-family: 'Assistant', sans-serif;
+  }
