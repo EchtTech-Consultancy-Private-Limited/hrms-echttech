@@ -5,7 +5,7 @@ import { FaPlus } from "react-icons/fa6";
 
 
 
-const AttendanceComponent = () => {
+const AttendanceListComponent = () => {
 
     const attendanceData = Array.from({ length: 100 }, (_, i) => ({
         status: i % 2 === 0 ? "Present" : "Absent",
@@ -165,4 +165,4 @@ const AttendanceComponent = () => {
   );
 }
 
-export default AttendanceComponent;
+export default AttendanceListComponent;

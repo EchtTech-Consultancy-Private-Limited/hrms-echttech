@@ -58,3 +58,10 @@
       position: absolute;
       right: 0;
     }
+
+    .ul-parent a{
+      color: #fff;
+    }
+    .ul-parent a:hover{
+      text-decoration: none !important;
+    }

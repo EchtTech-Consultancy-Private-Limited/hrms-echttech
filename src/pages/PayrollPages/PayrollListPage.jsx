@@ -1,9 +1,9 @@
 import React from 'react'
-import PayrollListComponent from '../../components/payrollmanagement/PayrollListComponent'
+import PayrollListComponent from '../../components/Payrollmanagement/PayrollListComponent'
 
 const PayrollListPage = () => {
   return (
-    <div className='content-mid base-bg-color'>
+    <div>
         <PayrollListComponent />
     </div>
   )

@@ -31,7 +31,15 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     icon: <HiOutlineShoppingCart />,
     submenu: [
       { key: 'leave-requests', label: 'Leave Requests', path: '/leave' },
-      { key: 'leave-history', label: 'Leave History', path: '/leave/history' },
+    ]
+  },
+  {
+    key: 'payslip',
+    label: 'Pay Slip',
+    path: '/payslip',
+    icon: <HiOutlineShoppingCart />,
+    submenu: [
+      { key: 'payslip', label: 'Pay Slip List', path: '/payslip' },
     ]
   },
   {

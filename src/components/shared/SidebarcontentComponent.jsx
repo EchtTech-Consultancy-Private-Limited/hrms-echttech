@@ -65,7 +65,9 @@ export default function SidebarcontentComponent() {
       <Accordion expanded={link.submenu?.length > 0 && expanded === link.key} onChange={handleChange(link.key)} className='ul-list'>
         <AccordionSummary aria-controls={`${link.key}-content`} id={`${link.key}-header`} className='color-white ul-parent'>
           <span className="mr-3 text-xl">{link.icon}</span>
-          <Typography>{link.label}</Typography>
+          <Typography>
+            <Link to={link.path}>{link.label}</Link>
+          </Typography>
           {link.submenu?.length > 0 && (
             <span className="text-neutral-200 side-bar-content-arrow">{isSubMenuOpen ? < HiOutlineChevronRight /> : <HiOutlineChevronDown />}</span>
          )}
