@@ -47,3 +47,6 @@
         flex-direction: column;
         justify-items: center;
       }
+  .ul-parent .MuiAccordionSummary-expandIconWrapper {
+    display: none;
+    }
