@@ -10,6 +10,8 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import { FiUserCheck } from "react-icons/fi";
 import { MdOutlinePayments } from "react-icons/md";
+import { useState, SyntheticEvent } from 'react';
+import { DASHBOARD_SIDEBAR_LINKS } from '../../lib/constants'
 
 
 
@@ -50,44 +52,35 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 export default function SidebarcontentComponent() {
-  const [expanded, setExpanded] = React.useState('panel1');
-
+  const [expanded, setExpanded] = useState('panel1');
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const handleChange =
-    (panel) => (event: React.SyntheticEvent, newExpanded: boolean) => {
+    (panel) => (event: SyntheticEvent, newExpanded: Boolean) => {
       setExpanded(newExpanded ? panel : false);
     };
 
   return (
     <div>
-      <Accordion onChange={handleChange('panel1')} className='ul-list'>
-        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header" className='color-white ul-parent'>
-            <FiUserCheck className='mr-3 text-xl'/>
-          <Typography>Attendence</Typography>
+      {DASHBOARD_SIDEBAR_LINKS.map((link) => (
+      <Accordion expanded={link.submenu?.length > 0 && expanded === link.key} onChange={handleChange(link.key)} className='ul-list'>
+        <AccordionSummary aria-controls={`${link.key}-content`} id={`${link.key}-header`} className='color-white ul-parent'>
+          <span className="mr-3 text-xl">{link.icon}</span>
+          <Typography>{link.label}</Typography>
+          {link.submenu?.length > 0 && (
+            <span className="text-neutral-200">{isSubMenuOpen ? '▲' : '▼'}</span>
+         )}
         </AccordionSummary>
+        {link.submenu?.length > 0 && (
         <AccordionDetails className='parent-all-ul'>
           <ul className='all-ul'>
-            <li><Link to="">Demo 1</Link></li>
-            <li><Link to="">Demo 2</Link></li>
-            <li><Link to="">Demo 3</Link></li>
-            <li><Link to="">Demo 4</Link></li>
+            {link.submenu.map((subLink) => (
+              <li><Link to={subLink.path}>{subLink.label}</Link></li>
+            ))}
           </ul>
         </AccordionDetails>
+         )}
       </Accordion>
-      <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')} className='ul-list'>
-        <AccordionSummary aria-controls="panel2d-content" id="panel2d-header" className='color-white ul-parent'>
-            <MdOutlinePayments className='mr-3 text-xl'/>
-          <Typography>Payroll</Typography>
-        </AccordionSummary>
-        <AccordionDetails className='parent-all-ul'>
-          <ul className='all-ul'>
-            <li><Link to="">Demo 1</Link></li>
-            <li><Link to="">Demo 2</Link></li>
-            <li><Link to="">Demo 3</Link></li>
-            <li><Link to="">Demo 4</Link></li>
-          </ul>
-        </AccordionDetails>
-      </Accordion>
-      
+      ))}
     </div>
   );
 }
