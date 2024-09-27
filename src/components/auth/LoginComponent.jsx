@@ -53,7 +53,7 @@ const LoginComponent = () => {
       <div className={`relative flex max-w-4xl bg-white shadow-lg rounded-lg ${isClosed ? 'flex-row w-1/4' : 'flex-row w-full md:w-full'}`}>
         
         {/* Left Section */}
-        <div className="mlc-left p-8 bg-gray-100  ${isClosed ? width : 'w-1/2' : 'w-1'}"  >
+        <div className="mlc-left p-8 bg-gray-100  ${isClosed ? width : '50%' : '100%'}"  >
           <h2 className="text-3xl">Welcome to</h2>
           <h2 className="text-3xl mb-2 font-bold text-blue-500">EchtTech HRMS</h2>
           <p className='mb-6 text-sm text-gray-500'>Hi, login to your account</p>
@@ -179,6 +179,7 @@ const LoginComponent = () => {
           </button>
        
       </div>
+     
      
       
     </div>

@@ -47,3 +47,21 @@
         flex-direction: column;
         justify-items: center;
       }
+  .ul-parent .MuiAccordionSummary-expandIconWrapper {
+    display: none;
+    }
+
+    .ul-parent > .MuiAccordionSummary-content {
+      position: relative;
+    }
+    .ul-parent .side-bar-content-arrow {
+      position: absolute;
+      right: 0;
+    }
+
+    .ul-parent a{
+      color: #fff;
+    }
+    .ul-parent a:hover{
+      text-decoration: none !important;
+    }
