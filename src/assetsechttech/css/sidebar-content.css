@@ -50,3 +50,11 @@
   .ul-parent .MuiAccordionSummary-expandIconWrapper {
     display: none;
     }
+
+    .ul-parent > .MuiAccordionSummary-content {
+      position: relative;
+    }
+    .ul-parent .side-bar-content-arrow {
+      position: absolute;
+      right: 0;
+    }

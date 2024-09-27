@@ -6,7 +6,6 @@ import { PiUsersThree, PiUserCheck } from "react-icons/pi";
 import { CiCalendar } from "react-icons/ci";
 import { FiUmbrella } from "react-icons/fi";
 import employee_img from "../../assetsechttech/utility-images/employee_img.png"
-import { Card, Typography } from "@material-tailwind/react";
 
 
 const days = [
@@ -30,34 +29,12 @@ const days = [
    
 ]
 
-const TABLE_HEAD = ["Name", "Job", "Employed", ""];
- 
-const TABLE_ROWS = [
-  {
-    name: "John Michael",
-    job: "Manager",
-    date: "23/04/18",
-  },
-  {
-    name: "Alexa Liras",
-    job: "Developer",
-    date: "23/04/18",
-  },
-  {
-    name: "Laurent Perrier",
-    job: "Executive",
-    date: "19/09/17",
-  },
-  {
-    name: "Michael Levi",
-    job: "Developer",
-    date: "24/12/08",
-  },
-  {
-    name: "Richard Gran",
-    job: "Manager",
-    date: "04/10/21",
-  },
+const data = [
+  ['Title', 'Project Date', 'Status', 'Progress'],
+  ['A', '22-Aug-2024', 'Complete', 'Active'],
+  ['B', '22-spt-2024', 'Complete', 'Active'],
+  ['C', '22-Aug-2024', 'Complete', 'Active'],
+  ['D', '22-Aug-2024', 'Complete', 'Active'],
 ];
 
 const DashboardStatsGrid = () => {
@@ -240,56 +217,60 @@ const DashboardStatsGrid = () => {
             </div>
           </div>
           {/* Employee Card information Section End */}
+
+
+          {/* Employee Table Section Start */}
           <div className="emp-table-section">
             <div className="head my-10">
               <h2 className='headings'>My Project</h2>
             </div>
             <div className="emp-table">
-                {/* <Card className="h-full w-full overflow-scroll">
-                  <table className="w-full min-w-max table-auto text-left">
+              <div className="table-container shadow">
+                  <table>
                     <thead>
                       <tr>
-                        {TABLE_HEAD.map((head) => (
-                          <th key={head} className="border-b border-blue-gray-100 bg-blue-gray-50 p-4">
-                            <Typography
-                              variant="small"
-                              color="blue-gray"
-                              className="font-normal leading-none opacity-70"
-                            >
-                              {head}
-                            </Typography>
-                          </th>
+                        {data[0].map((header, index) => (
+                          <th key={index}>{header}</th>
                         ))}
                       </tr>
                     </thead>
                     <tbody>
-                      {TABLE_ROWS.map(({ name, job, date }, index) => (
-                        <tr key={name} className="even:bg-blue-gray-50/50">
-                          <td className="p-4">
-                            <Typography variant="small" color="blue-gray" className="font-normal">
-                              {name}
-                            </Typography>
-                          </td>
-                          <td className="p-4">
-                            <Typography variant="small" color="blue-gray" className="font-normal">
-                              {job}
-                            </Typography>
-                          </td>
-                          <td className="p-4">
-                            <Typography variant="small" color="blue-gray" className="font-normal">
-                              {date}
-                            </Typography>
-                          </td>
-                          <td className="p-4">
-                            <Typography as="a" href="#" variant="small" color="blue-gray" className="font-medium">
-                              Edit
-                            </Typography>
-                          </td>
+                      {data.slice(1).map((row, rowIndex) => (
+                        <tr key={rowIndex}>
+                          {row.map((cell, cellIndex) => (
+                            <td key={cellIndex}>{cell}</td>
+                          ))}
                         </tr>
                       ))}
                     </tbody>
                   </table>
-              </Card> */}
+              </div>
+            </div>
+
+            <div className="head my-10">
+              <h2 className='headings'>My Tasks</h2>
+            </div>
+            <div className="emp-table">
+              <div className="table-container shadow">
+                  <table>
+                    <thead>
+                      <tr>
+                        {data[0].map((header, index) => (
+                          <th key={index}>{header}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {data.slice(1).map((row, rowIndex) => (
+                        <tr key={rowIndex}>
+                          {row.map((cell, cellIndex) => (
+                            <td key={cellIndex}>{cell}</td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+              </div>
             </div>
           </div>
       </div>

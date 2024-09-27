@@ -8,8 +8,7 @@ import MuiAccordionSummary, {
 } from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
-import { FiUserCheck } from "react-icons/fi";
-import { MdOutlinePayments } from "react-icons/md";
+import { HiOutlineChevronRight, HiOutlineChevronDown } from "react-icons/hi";
 import { useState, SyntheticEvent } from 'react';
 import { DASHBOARD_SIDEBAR_LINKS } from '../../lib/constants'
 
@@ -59,6 +58,7 @@ export default function SidebarcontentComponent() {
       setExpanded(newExpanded ? panel : false);
     };
 
+    
   return (
     <div>
       {DASHBOARD_SIDEBAR_LINKS.map((link) => (
@@ -67,7 +67,7 @@ export default function SidebarcontentComponent() {
           <span className="mr-3 text-xl">{link.icon}</span>
           <Typography>{link.label}</Typography>
           {link.submenu?.length > 0 && (
-            <span className="text-neutral-200">{isSubMenuOpen ? '▲' : '▼'}</span>
+            <span className="text-neutral-200 side-bar-content-arrow">{isSubMenuOpen ? < HiOutlineChevronRight /> : <HiOutlineChevronDown />}</span>
          )}
         </AccordionSummary>
         {link.submenu?.length > 0 && (
