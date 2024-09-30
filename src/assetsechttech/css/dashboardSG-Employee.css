@@ -160,6 +160,11 @@
 .high-charts-section .charts > div{
   border-radius: 10px;
 }
+/* Styling for message cards */
+.message-section .message-card{
+  width: 32%;
+}
+
 
   /* Start Styling for employee table */
 

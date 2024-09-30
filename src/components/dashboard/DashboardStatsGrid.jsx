@@ -42,31 +42,31 @@ const customers = [
   {
       name: "Tania Andrew",
       email: "tania@gmail.com",
-      price: 400,
+      time: "05:35 pm",
       image: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-1.jpg",
   },
   {
       name: "John Micheal",
       email: "john@gmail.com",
-      price: 420,
+      time: "05:35 pm",
       image: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-6.jpg",
   },
   {
       name: "Alexa Liras",
       email: "alexa@gmail.com",
-      price: 340,
+      time: "05:35 pm",
       image: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-2.jpg",
   },
   {
       name: "Richard Gran",
       email: "richard@gmail.com",
-      price: 520,
+      time: "05:35 pm",
       image: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-3.jpg",
   },
   {
       name: "Micheal Levi",
       email: "levi@gmail.com",
-      price: 780,
+      time: "05:35 pm",
       image: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-4.jpg",
   },
 ];
@@ -455,18 +455,18 @@ const DashboardStatsGrid = () => {
           {/* Message Section Start */}
 
           <div className="message-section my-10 flex justify-between">
-            <Card className="w-96 bg-white">
+            <Card className="w-96 bg-white message-card">
               <CardBody>
                   <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <Typography className="font-bold" style={{ color: '#4A5568', fontSize: '1.25rem' }}>
-                          Latest Customers
+                          Messages
                       </Typography>
                       <Typography as="a" href="#" className="text-blue-500 font-bold" style={{ fontSize: '0.875rem' }}>
                           View all
                       </Typography>
                   </div>
                   <div style={{ borderTop: '1px solid #E5E7EB' }}>
-                      {customers.map(({ name, email, price, image }, index) => (
+                      {customers.map(({ name, email, time, image }, index) => (
                           <div
                               key={index}
                               style={{ display: 'flex', justifyContent: 'space-between', padding: '0.75rem 0' }}
@@ -482,26 +482,26 @@ const DashboardStatsGrid = () => {
                                       </Typography>
                                   </div>
                               </div>
-                              <Typography className="font-semibold" style={{ color: '#4A5568', fontSize: '1rem' }}>
-                                  ${price}
+                              <Typography className="font-semibold" style={{ color: '#838589', fontSize: '0.875rem' }}>
+                                  {time}
                               </Typography>
                           </div>
                       ))}
                   </div>
               </CardBody>
             </Card>
-            <Card className="w-96 bg-white">
+            <Card className="w-96 bg-white message-card">
               <CardBody>
                   <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <Typography className="font-bold" style={{ color: '#4A5568', fontSize: '1.25rem' }}>
-                          Latest Customers
+                          Messages
                       </Typography>
                       <Typography as="a" href="#" className="text-blue-500 font-bold" style={{ fontSize: '0.875rem' }}>
                           View all
                       </Typography>
                   </div>
                   <div style={{ borderTop: '1px solid #E5E7EB' }}>
-                      {customers.map(({ name, email, price, image }, index) => (
+                      {customers.map(({ name, email, time, image }, index) => (
                           <div
                               key={index}
                               style={{ display: 'flex', justifyContent: 'space-between', padding: '0.75rem 0' }}
@@ -517,26 +517,26 @@ const DashboardStatsGrid = () => {
                                       </Typography>
                                   </div>
                               </div>
-                              <Typography className="font-semibold" style={{ color: '#4A5568', fontSize: '1rem' }}>
-                                  ${price}
+                              <Typography className="font-semibold" style={{ color: '#838589', fontSize: '0.875rem' }}>
+                                  {time}
                               </Typography>
                           </div>
                       ))}
                   </div>
               </CardBody>
             </Card>
-            <Card className="w-96 bg-white">
+            <Card className="w-96 bg-white message-card">
               <CardBody>
                   <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <Typography className="font-bold" style={{ color: '#4A5568', fontSize: '1.25rem' }}>
-                          Latest Customers
+                          Messages
                       </Typography>
                       <Typography as="a" href="#" className="text-blue-500 font-bold" style={{ fontSize: '0.875rem' }}>
                           View all
                       </Typography>
                   </div>
                   <div style={{ borderTop: '1px solid #E5E7EB' }}>
-                      {customers.map(({ name, email, price, image }, index) => (
+                      {customers.map(({ name, email, time, image }, index) => (
                           <div
                               key={index}
                               style={{ display: 'flex', justifyContent: 'space-between', padding: '0.75rem 0' }}
@@ -552,8 +552,8 @@ const DashboardStatsGrid = () => {
                                       </Typography>
                                   </div>
                               </div>
-                              <Typography className="font-semibold" style={{ color: '#4A5568', fontSize: '1rem' }}>
-                                  ${price}
+                              <Typography className="font-semibold" style={{ color: '#838589', fontSize: '0.875rem' }}>
+                                  {time}
                               </Typography>
                           </div>
                       ))}
