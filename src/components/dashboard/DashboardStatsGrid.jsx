@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Label, Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import { PiUsersThree, PiUserCheck } from "react-icons/pi";
+import { MdOutlineTimer } from "react-icons/md";
 import { CiCalendar } from "react-icons/ci";
 import { FiUmbrella } from "react-icons/fi";
 import employee_img from "../../assetsechttech/utility-images/employee_img.png"
@@ -168,13 +169,14 @@ const DashboardStatsGrid = () => {
           </div>
           {/* Employee Card information Section start */}
           <div className="emp-info-section flex mt-10 flex-wrap">
-            <div className="time-card relative shadow">
-              <div className="top-head">
+            <div className="time-card relative shadow flex justify-center">
+              <div className="top-head flex flex-col items-center">
+                <div className="timer-icon"><MdOutlineTimer className='text-3xl mb-5'/></div>
                 <p>Last Login:<span>26-sep-2024</span> 06:10 pm</p>
               </div>
               <div className="mid-part my-10">
-                <div id='time-in' className="timer  my-5 flex items-center"><p>Login Time:</p><p className='text-3xl px-5'>09:10 <span className='text-xs'>am</span></p></div>
-                <div id='time-out' className="timeer my-5 flex items-center"><p>Logout Time:</p><p className='text-3xl px-5'>09:10 <span className='text-xs'>pm</span></p></div>
+                <div id='time-in' className="timer  my-5 flex items-center justify-center"><p>Login Time:</p><p className='text-3xl px-5'>09:10 <span className='text-xs'>am</span></p></div>
+                <div id='time-out' className="timeer my-5 flex items-center justify-center"><p>Logout Time:</p><p className='text-3xl px-5'>09:10 <span className='text-xs'>pm</span></p></div>
                 <div className="time-btn mt-10"><h3>Start</h3></div>
               </div>
               <div className="bottom-part">
@@ -222,10 +224,15 @@ const DashboardStatsGrid = () => {
           {/* Employee Table Section Start */}
           <div className="emp-table-section">
             <div className="head my-10">
-              <h2 className='headings'>My Project</h2>
+              
             </div>
             <div className="emp-table">
+              
               <div className="table-container shadow">
+              <div className="head mb-4">
+                <h2 className='headings text-lg font-bold'>My Project</h2>
+              </div>
+             
                   <table>
                     <thead>
                       <tr>
@@ -248,10 +255,13 @@ const DashboardStatsGrid = () => {
             </div>
 
             <div className="head my-10">
-              <h2 className='headings'>My Tasks</h2>
+              
             </div>
             <div className="emp-table">
               <div className="table-container shadow">
+              <div className="head mb-4">
+                <h2 className='headings text-lg font-bold'>My Tasks</h2>
+              </div>
                   <table>
                     <thead>
                       <tr>
