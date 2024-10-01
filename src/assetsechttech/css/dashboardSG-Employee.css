@@ -3,6 +3,14 @@
   width: 90%;
   text-align: center;
 }
+.timer-icon {
+  background-color: #1cab47;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: -22px;
+}
 .time-card{
     position: relative;
     padding: 15px;
@@ -140,6 +148,23 @@
   .emp-info-section .time-card, .emp-info-section .emp-info {
     height: 499px;
   }
+
+/* Styling for High-charts */
+
+.high-charts-section .first-chart{
+  width: 58%;
+}
+.high-charts-section .second-chart{
+  width: 40%;
+}
+.high-charts-section .charts > div{
+  border-radius: 10px;
+}
+/* Styling for message cards */
+.message-section .message-card{
+  width: 32%;
+}
+
 
   /* Start Styling for employee table */
 
