@@ -4,19 +4,27 @@ import { TbEditCircle } from "react-icons/tb";
 import LeaveApplyPage from "../../pages/LeavePages/LeaveApplyPage";
 
 const LeaveComponentList = () => {
-  // const leaveData = Array.from({ length: 100 }, (_, i) => ({
-  //   leaveType: i % 3 === 0 ? "CL" : i % 3 === 1 ? "PL" : "EL",
-  //   fromDate: `2024-09-${(i % 30) + 1}`,
-  //   toDate: `2024-09-${(i % 30) + 3}`,
-  //   status: i % 2 === 0 ? "Approved" : "Pending",
-  // }));
-  const leaveData = Array.from({ length: 100 }, (_, i) => ({
-    leaveType: i % 3 === 0 ? "CL" : i % 3 === 1 ? "PL" : "EL",
-    fromDate: `2024-09-${(i % 30) + 1}`,
-    toDate: `2024-09-${(i % 30) + 3}`,
-    status: i % 2 === 0 ? "Approved" : "Pending",
-    reason: i % 2 === 0 ? "Personal Work" : "Medical Appointment", // Adding reason
-  }));
+
+  const leaveData = Array.from({ length: 100 }, (_, i) => {
+    const fromDate = new Date(`2024-09-${(i % 30) + 1}`);
+    const toDate = new Date(`2024-09-${(i % 30) + 3}`);
+  
+    const formatDate = (date) => {
+      const day = String(date.getDate()).padStart(2, '0'); // Format day as 2 digits
+      const month = String(date.getMonth() + 1).padStart(2, '0'); // Format month as 2 digits
+      const year = String(date.getFullYear()).slice(-2); // Get last two digits of year
+      return `${day}/${month}/${year}`;
+    };
+  
+    return {
+      leaveType: i % 3 === 0 ? "CL" : i % 3 === 1 ? "PL" : "EL",
+      fromDate: formatDate(fromDate), // Format date to dd/mm/yy
+      toDate: formatDate(toDate),     // Format date to dd/mm/yy
+      status: i % 2 === 0 ? "Approved" : "Pending",
+      reason: i % 2 === 0 ? "Personal Work" : "Medical Appointment", // Adding reason
+    };
+  });
+  
 
   const [currentPage, setCurrentPage] = useState(1);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -130,7 +138,7 @@ const LeaveComponentList = () => {
               <th className="border border-gray-300 px-4 py-2">From Date</th>
               <th className="border border-gray-300 px-4 py-2">To Date</th>
               <th className="border border-gray-300 px-4 py-2">Status</th>
-              <th className="border border-gray-300 px-4 py-2">Reason</th> {/* New Reason Column */}
+              <th className="border border-gray-300 px-4 py-2">Reason</th> 
               <th className="border border-gray-300 px-4 py-2">Actions</th>
             </tr>
           </thead>
@@ -141,8 +149,8 @@ const LeaveComponentList = () => {
                 <td className="border border-gray-300 px-4 py-2">{leave.fromDate}</td>
                 <td className="border border-gray-300 px-4 py-2">{leave.toDate}</td>
                 <td className="border border-gray-300 px-4 py-2">{leave.status}</td>
-                <td className="border border-gray-300 px-4 py-2">{leave.reason}</td> {/* Display Reason */}
-                <td className="border border-gray-300 px-4 py-2 flex justify-start">
+                <td className="border border-gray-300 px-4 py-2">{leave.reason}</td>
+                <td className="px-4 py-3 flex justify-start">
                   <FaEye className="text-blue-500 cursor-pointer mr-2" />
                   <FaPlus className="text-blue-500 cursor-pointer mr-2" />
                   <TbEditCircle className="text-green-500 cursor-pointer mr-2" />
@@ -164,14 +172,14 @@ const LeaveComponentList = () => {
          <div className="" >
          <button
           onClick={handlePrevPage}
-          className="bg-gray-300 text-gray-700 px-4 mx-1 py-2 rounded"
+          className="bg-blue-500 text-white px-2 mx-1 py-1 text-xs rounded"
           disabled={currentPage === 1}
         >
           Previous
         </button>
         <button
           onClick={handleNextPage}
-          className="bg-gray-300 text-gray-700 px-4 py-2 rounded"
+          className="bg-blue-500 text-white px-2 mx-1 py-1 text-xs rounded"
           disabled={end >= totalEntries}
         >
           Next

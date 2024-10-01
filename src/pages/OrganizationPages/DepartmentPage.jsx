@@ -3,9 +3,12 @@ import DepartmentComponent from '../../components/Organization/DepartmentCompone
 
 const DepartmentPage = () => {
   return (
-    <div>
+    <div className='content-mid base-bg-color'>
+     <div id='dashboard' class="px-10 py-12" >
       <DepartmentComponent />
     </div>
+    </div>
+   
   )
 }
 

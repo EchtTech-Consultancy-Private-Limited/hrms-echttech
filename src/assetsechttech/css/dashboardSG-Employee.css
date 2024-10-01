@@ -165,7 +165,71 @@
   width: 32%;
 }
 
+/* Styling for to-do and weather card section */
 
+.weather-card
+{
+  background-image: url(../utility-images/weather-img2.jpg);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: cover;
+  position: relative;
+}
+.weather-card::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+  background-color: #000;
+  height: 100%;
+  opacity: 0.5;
+  right: 0;
+  border-radius: 10px;
+
+}
+.weather-card .top-part-w, .weather-card .mid-part-w, .weather-card .bottom-part-w {
+  z-index: 5;
+}
+.to-do-weather-section .to-do-card-container {
+  width: 32%;
+}
+.weather-card .mid-part-w {
+  margin-bottom: 100px;
+}
+.to-do-weather-section .to-do-card, .to-do-weather-section .weather-card-container .weather-card{
+  width: 100%;
+}
+.to-do-weather-section .weather-card-container{
+  width: 66%;
+}
+.weather-card{
+  height: 100%;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+}
+.mid-part-w h1 {
+  font-size: 90px;
+  margin-right: 20px;
+}
+.weather-card .top-part-w h3 {
+  font-size: 26px;
+}
+.mid-part-w h3{
+  font-size: 40px;
+}
+.mid-weather-icon {
+  margin-right: 20px;
+}
+.mid-part-w h1 svg {
+  margin-top: 30px;
+}
+.mid-part-w h3 svg{
+  margin-top: 10px;
+}
+.mid-weather-icon {
+  font-size: 40px;
+}
   /* Start Styling for employee table */
 
   .table-container table th, .table-container table tbody tr td {
