@@ -7,6 +7,10 @@ import { MdOutlineTimer } from "react-icons/md";
 import { FiUmbrella } from "react-icons/fi";
 import { MdOutlineEditCalendar } from "react-icons/md";
 import { LuUserCheck2 } from "react-icons/lu";
+import { IoIosClose } from "react-icons/io";
+import { TiWeatherPartlySunny, TiWeatherDownpour } from "react-icons/ti";
+import { TbTemperatureCelsius } from "react-icons/tb";
+import { TbTemperatureFahrenheit } from "react-icons/tb";
 import employee_img from "../../assetsechttech/utility-images/employee_img.png"
 import Highcharts from 'highcharts'
 import exporting  from 'highcharts/modules/exporting'
@@ -41,31 +45,31 @@ const Avatar = ({ size, src, alt }) => (
 const customers = [
   {
       name: "Tania Andrew",
-      email: "tania@gmail.com",
+      message: "Hi How are you",
       time: "05:35 pm",
       image: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-1.jpg",
   },
   {
       name: "John Micheal",
-      email: "john@gmail.com",
+      message: "Hello dear",
       time: "05:35 pm",
       image: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-6.jpg",
   },
   {
       name: "Alexa Liras",
-      email: "alexa@gmail.com",
+      message: "Today I'm not there",
       time: "05:35 pm",
       image: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-2.jpg",
   },
   {
       name: "Richard Gran",
-      email: "richard@gmail.com",
+      message: "Hi Dear all How are you",
       time: "05:35 pm",
       image: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-3.jpg",
   },
   {
       name: "Micheal Levi",
-      email: "levi@gmail.com",
+      message: "Today I am not available",
       time: "05:35 pm",
       image: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-4.jpg",
   },
@@ -389,11 +393,11 @@ const DashboardStatsGrid = () => {
                         align: 'left'
                     },
                     tooltip: {
-                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        pointFormat: '{series.name}: <b>{point.percentage:.1f}</b>'
                     },
                     accessibility: {
                         point: {
-                            valueSuffix: '%'
+                            valueSuffix: ''
                         }
                     },
                     credits: {
@@ -406,7 +410,7 @@ const DashboardStatsGrid = () => {
                             cursor: 'pointer',
                             dataLabels: {
                                 enabled: true,
-                                format: '<b>{point.name}</b><br>{point.percentage}%',
+                                format: '<b>{point.name}</b><br>{point.percentage}',
                                 distance: 20
                             }
                         }
@@ -420,27 +424,27 @@ const DashboardStatsGrid = () => {
                         colorByPoint: true,
                         data: [{
                             name: 'Customer Support',
-                            y: 21.3
+                            y: 21
                         }, 
                         {
                             name: 'Development',
-                            y: 18.7
+                            y: 18
                         }, 
                         {
                             name: 'Sales',
-                            y: 20.2
+                            y: 20
                         }, 
                         {
                             name: 'Marketing',
-                            y: 14.2
+                            y: 14
                         }, 
                         {
                           name: 'Designing',
-                          y: 14.2
+                          y: 14
                       },
                         {
                             name: 'Other',
-                            y: 25.6
+                            y: 25
                         }]
                     }]
                 }}
@@ -458,7 +462,7 @@ const DashboardStatsGrid = () => {
             <Card className="w-96 bg-white message-card">
               <CardBody>
                   <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <Typography className="font-bold" style={{ color: '#4A5568', fontSize: '1.25rem' }}>
+                      <Typography className="font-bold" style={{ color: '#000', fontSize: '1.25rem' }}>
                           Messages
                       </Typography>
                       <Typography as="a" href="#" className="text-blue-500 font-bold" style={{ fontSize: '0.875rem' }}>
@@ -466,7 +470,7 @@ const DashboardStatsGrid = () => {
                       </Typography>
                   </div>
                   <div style={{ borderTop: '1px solid #E5E7EB' }}>
-                      {customers.map(({ name, email, time, image }, index) => (
+                      {customers.map(({ name, message, time, image }, index) => (
                           <div
                               key={index}
                               style={{ display: 'flex', justifyContent: 'space-between', padding: '0.75rem 0' }}
@@ -478,7 +482,7 @@ const DashboardStatsGrid = () => {
                                           {name}
                                       </Typography>
                                       <Typography className="text-gray-500" style={{ fontSize: '0.875rem' }}>
-                                          {email}
+                                          {message}
                                       </Typography>
                                   </div>
                               </div>
@@ -493,15 +497,15 @@ const DashboardStatsGrid = () => {
             <Card className="w-96 bg-white message-card">
               <CardBody>
                   <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <Typography className="font-bold" style={{ color: '#4A5568', fontSize: '1.25rem' }}>
-                          Messages
+                      <Typography className="font-bold" style={{ color: '#000', fontSize: '1.25rem' }}>
+                          Events
                       </Typography>
                       <Typography as="a" href="#" className="text-blue-500 font-bold" style={{ fontSize: '0.875rem' }}>
                           View all
                       </Typography>
                   </div>
                   <div style={{ borderTop: '1px solid #E5E7EB' }}>
-                      {customers.map(({ name, email, time, image }, index) => (
+                      {customers.map(({ name, message, time, image }, index) => (
                           <div
                               key={index}
                               style={{ display: 'flex', justifyContent: 'space-between', padding: '0.75rem 0' }}
@@ -513,7 +517,7 @@ const DashboardStatsGrid = () => {
                                           {name}
                                       </Typography>
                                       <Typography className="text-gray-500" style={{ fontSize: '0.875rem' }}>
-                                          {email}
+                                          {message}
                                       </Typography>
                                   </div>
                               </div>
@@ -528,15 +532,15 @@ const DashboardStatsGrid = () => {
             <Card className="w-96 bg-white message-card">
               <CardBody>
                   <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <Typography className="font-bold" style={{ color: '#4A5568', fontSize: '1.25rem' }}>
-                          Messages
+                      <Typography className="font-bold" style={{ color: '#000', fontSize: '1.25rem' }}>
+                          Notification
                       </Typography>
                       <Typography as="a" href="#" className="text-blue-500 font-bold" style={{ fontSize: '0.875rem' }}>
                           View all
                       </Typography>
                   </div>
                   <div style={{ borderTop: '1px solid #E5E7EB' }}>
-                      {customers.map(({ name, email, time, image }, index) => (
+                      {customers.map(({ name, message, time, image }, index) => (
                           <div
                               key={index}
                               style={{ display: 'flex', justifyContent: 'space-between', padding: '0.75rem 0' }}
@@ -548,7 +552,7 @@ const DashboardStatsGrid = () => {
                                           {name}
                                       </Typography>
                                       <Typography className="text-gray-500" style={{ fontSize: '0.875rem' }}>
-                                          {email}
+                                          {message}
                                       </Typography>
                                   </div>
                               </div>
@@ -563,6 +567,121 @@ const DashboardStatsGrid = () => {
           </div>
 
           {/* Message Section End */}
+
+          {/* TO-DO tasks and weather section start */}
+
+          <div className="to-do-weather-section my-10 flex justify-between">
+            <div className="to-do-card-container">
+            <Card className="w-96 bg-white to-do-card">
+              <CardBody>
+                  <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <Typography className="font-bold" style={{ color: '#000', fontSize: '1.25rem' }}>
+                          TO DO List
+                      </Typography>
+                      <Typography as="a" href="#" className="text-blue-500 font-bold" style={{ fontSize: '0.875rem' }}>
+                          View all
+                      </Typography>
+                  </div>
+                  <div style={{ borderTop: '1px solid #E5E7EB' }}>
+                      {customers.map(({ name, message, time, image }, index) => (
+                          <div
+                              key={index}
+                              style={{ display: 'flex', justifyContent: 'space-between', padding: '0.75rem 0', alignItems: 'center' }}
+                          >
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                                  <input type="checkbox" />
+                                  <div>
+                                      <Typography className="font-semibold" style={{ color: '#4A5568', fontSize: '1rem' }}>
+                                          {name}
+                                      </Typography>
+                                      <Typography className="text-gray-500" style={{ fontSize: '0.875rem' }}>
+                                          26-09-2024 to 26-10-2024
+                                      </Typography>
+                                      
+                                  </div>
+                              </div>
+                              <Typography className="font-semibold" style={{ color: '#838589', cursor: 'pointer' }}>
+                                  <IoIosClose className='text-xl' />
+                              </Typography>
+                          </div>
+                      ))}
+                  </div>
+              </CardBody>
+            </Card>
+            </div>
+            <div className="weather-card-container shadow bg-white radius">
+              <div className="weather-card p-4 radius">
+                  <div className="top-part-w flex justify-between px-8 color-white">
+                    <div className="left"><h3>Delhi</h3><h5>Delhi-west</h5></div>
+                    <div className="right"><p>Saturday,<span className='ml-3'>06:21 PM</span></p></div>
+                  </div>
+                  <div className="mid-part-w flex items-center px-8 color-white">
+                      <div className="mid-weather-icon">< TiWeatherPartlySunny /></div>
+                      <h1 className='flex'>24 <TbTemperatureCelsius className='text-2xl'/></h1><h3 className='flex'>75 <TbTemperatureFahrenheit className='text-2xl'/></h3>
+                  </div>
+                  <div className="bottom-part-w flex justify-between px-8 color-white">
+                    <div className="week-weather-icons flex flex-col">
+                      <h5>Sat</h5>
+                      <div className="weather-icon">< TiWeatherDownpour /></div>
+                      <div className="temp flex">
+                        <p className='flex'>26 <TbTemperatureCelsius /></p><p className='flex'>78 <TbTemperatureFahrenheit /></p>
+                      </div>
+                    </div>
+
+                    <div className="week-weather-icons flex flex-col">
+                      <h5>Sun</h5>
+                      <div className="weather-icon">< TiWeatherDownpour /></div>
+                      <div className="temp flex">
+                        <p className='flex'>26 <TbTemperatureCelsius /></p><p className='flex'>78 <TbTemperatureFahrenheit /></p>
+                      </div>
+                    </div>
+
+                    <div className="week-weather-icons flex flex-col">
+                      <h5>Mon</h5>
+                      <div className="weather-icon">< TiWeatherDownpour /></div>
+                      <div className="temp flex">
+                        <p className='flex'>26 <TbTemperatureCelsius /></p><p className='flex'>78 <TbTemperatureFahrenheit /></p>
+                      </div>
+                    </div>
+
+                    <div className="week-weather-icons flex flex-col">
+                      <h5>Tue</h5>
+                      <div className="weather-icon">< TiWeatherDownpour /></div>
+                      <div className="temp flex">
+                        <p className='flex'>26 <TbTemperatureCelsius /></p><p className='flex'>78 <TbTemperatureFahrenheit /></p>
+                      </div>
+                    </div>
+
+                    <div className="week-weather-icons flex flex-col">
+                      <h5>Wed</h5>
+                      <div className="weather-icon">< TiWeatherDownpour /></div>
+                      <div className="temp flex">
+                        <p className='flex'>26 <TbTemperatureCelsius /></p><p className='flex'>78 <TbTemperatureFahrenheit /></p>
+                      </div>
+                    </div>
+
+                    <div className="week-weather-icons flex flex-col">
+                      <h5>Thu</h5>
+                      <div className="weather-icon">< TiWeatherDownpour /></div>
+                      <div className="temp flex">
+                        <p className='flex'>26 <TbTemperatureCelsius /></p><p className='flex'>78 <TbTemperatureFahrenheit /></p>
+                      </div>
+                    </div>
+
+                    <div className="week-weather-icons flex flex-col">
+                      <h5>Fri</h5>
+                      <div className="weather-icon">< TiWeatherDownpour /></div>
+                      <div className="temp flex">
+                        <p className='flex'>26 <TbTemperatureCelsius /></p><p className='flex'>78 <TbTemperatureFahrenheit /></p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          {/* TO-DO tasks and weather section End */}
+
       </div>
 
 {/* =========================== Super Admin Dashboard End =================================================================================================== */}
