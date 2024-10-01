@@ -7,6 +7,13 @@ import LeaveListPage from './pages/LeavePages/LeaveListPage'
 import HolidayListPage from './pages/HolidayPages/HolidayListPage'
 import AccountSettingPage from './pages/AccountSettingPage'
 import PayslipListPage from './pages/PaySlipPages/PayslipListPage'
+import CompanyCreatePage from './pages/OrganizationPages/CompanyCreatePage'
+import LocationCompanyBranchPage from './pages/OrganizationPages/LocationCompanyBranchPage'
+import DepartmentPage from './pages/OrganizationPages/DepartmentPage'
+import DesignationPage from './pages/OrganizationPages/DesignationPage'
+import AnnouncementPage from './pages/OrganizationPages/AnnouncementPage'
+import PoliciesPage from './pages/OrganizationPages/PoliciesPage'
+import ExpensePage from './pages/OrganizationPages/ExpensePage'
 
 function App() {
     return (
@@ -17,6 +24,13 @@ function App() {
                     <Route index element={<Dashboard />} />
                     <Route path='dashboard' element={<Dashboard />} />
                     <Route path='account-setting' element={<AccountSettingPage />} />
+                    <Route path='company' element={<CompanyCreatePage />} />
+                    <Route path='location' element={<LocationCompanyBranchPage />} />
+                    <Route path='department' element={<DepartmentPage />} />
+                    <Route path='designation' element={<DesignationPage />} />
+                    <Route path='announcement' element={<AnnouncementPage />} />
+                    <Route path='policies' element={<PoliciesPage />} />
+                    <Route path='expense' element={<ExpensePage />} />
                     <Route path='attendance' element={<AttendanceListPage />} />
                     <Route path='leave' element={<LeaveListPage />} />
                     <Route path='payslip' element={<PayslipListPage />} />
