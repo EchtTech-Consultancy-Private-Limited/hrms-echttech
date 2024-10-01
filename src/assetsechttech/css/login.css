@@ -40,3 +40,37 @@
     bottom: 30%;
     z-index: 99;
 }
+
+
+.mc {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  .mc-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+
+  .cstm-btn-pos
+  {
+    margin-right: -10px;
+    position: absolute;
+  }
+  .login-btn
+  {
+    text-align: center;
+    padding: 10px 25px;
+    background-color: #174e94;
+    color: #fff;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .login-btn:hover
+  {
+    background-color: #2562b0; 
+  }
+  

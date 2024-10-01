@@ -76,6 +76,7 @@ export default function SidebarcontentComponent() {
         <AccordionDetails className='parent-all-ul'>
           <ul className='all-ul'>
             {link.submenu.map((subLink) => (
+              
               <li><Link to={subLink.path}>{subLink.label}</Link></li>
             ))}
           </ul>
