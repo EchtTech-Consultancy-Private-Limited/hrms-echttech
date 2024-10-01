@@ -1,17 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
+import { MdOutlineCloudUpload } from "react-icons/md";
 import ReactQuill from "react-quill"; // Importing the ReactQuill component
 import "react-quill/dist/quill.snow.css"; // Import Quill styles
 
-const LeaveApplyPage = ({setIsModalOpen}) => {
-    // Modal state
-  
-
+const LeaveApplyPage = ({ setIsModalOpen }) => {
+  // Modal state
   const closeModal = () => {
-     setIsModalOpen(false);
-   
+    setIsModalOpen(false);
   };
 
-  const [editorContent, setEditorContent] = useState('');
+  const [editorContent, setEditorContent] = useState("");
 
   const handleChange = (content) => {
     setEditorContent(content);
@@ -19,14 +17,14 @@ const LeaveApplyPage = ({setIsModalOpen}) => {
 
   // Dropdown state
   const [isOpen, setIsOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
   // Dropdown items
   const items = [
-    'Privileged Leave',
-    'Vacation Leave',
-    'Earned Leave',
-    'Casual Leave',
+    "Privileged Leave",
+    "Vacation Leave",
+    "Earned Leave",
+    "Casual Leave",
   ];
 
   // Toggle dropdown visibility
@@ -39,22 +37,24 @@ const LeaveApplyPage = ({setIsModalOpen}) => {
     item.toLowerCase().includes(searchTerm.toLowerCase())
   );
   return (
-        <div
-          className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center z-50"
-          onClick={closeModal} // Close modal on background click
-        >
-          <div
-            className="bg-white p-6 rounded-lg shadow-lg w-1/2"
-            onClick={(e) => e.stopPropagation()} // Prevent modal close on content click
-          >
-            {/* 1. Heading */}
-            <h2 className="text-xl font-semibold mb-4">Apply Leave</h2>
-           
-            <div className="flex gap-x-4" >
-              <div className='sectors w-3/4' >
-              <div className="">
-              <label className="block text-gray-700 font-medium mb-2">
+    <div
+      className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center z-50"
+      onClick={closeModal} // Close modal on background click
+    >
+      <div
+        className="bg-white  p-6 rounded-lg shadow-lg w-1/2"
+        onClick={(e) => e.stopPropagation()} // Prevent modal close on content click
+      >
+        {/* 1. Heading */}
+        <h2 className="text-xl font-semibold mb-4">Apply Leave</h2>
+        <hr className="mb-4" />
+
+        <div className="flex gap-x-4">
+          <div className="sectors w-3/4">
+            <div className="">
+              <label className="block text-gray-700 font-bold mb-2">
                 Leave Type
+                <span className="text-red-500 text-sm ml-1">*</span>
               </label>
             </div>
             <div className="relative z-10 group mb-4">
@@ -103,62 +103,89 @@ const LeaveApplyPage = ({setIsModalOpen}) => {
                 </div>
               )}
             </div>
-              </div>
-            <div className="sectors w-3/4 ">
-              <label className="block text-gray-700 font-medium mb-2">
-                From Date
-              </label>
-              <input
-                type="date"
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-              />
-            </div>
-            <div className="sectors w-3/4  ">
-              <label className="block text-gray-700 font-medium mb-2">
-                To Date
-              </label>
-              <input
-                type="date"
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-              />
-            </div>
-            </div>
-            <div className="mb-4">
-              <label className="block text-gray-700 font-medium mb-2">
-                Reason
-              </label>
-              <ReactQuill
-                value={editorContent}
-                onChange={handleChange}
-                placeholder="Write your reason here..."
-                theme="snow"
-                className="border border-gray-300 rounded-md"
-              />
-            </div>
-            <div className="mb-4">
-              <label className="block text-gray-700 font-medium mb-2">
-                Upload Document
-              </label>
-              <input
-                type="file"
-                className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
-                id="file_upload"
-                />
-                <span className='text-sm text-gray-700' >Upload : Marriage Card, Medical Appointment, etc. </span>
-            </div>
-            <div className="flex  justify-end gap-x-2">
-              <button
-                onClick={closeModal}
-                className="bg-amber-300 text-gray-700 px-4 py-2 rounded"
-                >
-                Cancel
-              </button>
-              <button className="bg-blue-500 text-white px-4 py-2 rounded">
-                Submit
-              </button>
-            </div>
+          </div>
+          <div className="sectors w-3/4 ">
+            <label className="block text-gray-700 font-bold mb-2">
+              From Date
+              <span className="text-red-500 text-sm ml-1">*</span>
+            </label>
+            <input
+              type="date"
+              className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
+            />
+          </div>
+          <div className="sectors w-3/4  ">
+            <label className="block text-gray-700 font-bold mb-2">
+              To Date
+              <span className="text-red-500 text-sm ml-1">*</span>
+            </label>
+            <input
+              type="date"
+              className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
+            />
           </div>
         </div>
-      )}
- 
-export default LeaveApplyPage
+        <div className="mb-10">
+          <label className="block text-gray-700 font-bold mb-2">
+            Reason
+            <span className="text-red-500 text-sm ml-1">*</span>
+          </label>
+          <ReactQuill
+            value={editorContent}
+            onChange={handleChange}
+            placeholder="Write your reason here..."
+            theme="snow"
+            className=" rounded-lg"
+            style={{ height: '100px' }}
+          />
+        </div>
+        <div className="mb-4 w-1/2 pt-2">
+          <label className="block text-gray-700 font-bold mb-2 ">
+            Upload Document
+            <span className="text-red-500 text-sm ml-1">*</span>
+          </label>
+
+          <div
+            className="border-2 border-dashed border-gray-300 rounded-lg bg-gray-50 flex flex-col items-center justify-center p-2 cursor-pointer hover:bg-gray-100 transition-colors"
+            onClick={() => document.getElementById("file_upload").click()}
+            onDragOver={(e) => e.preventDefault()}
+            onDrop={(e) => {
+              e.preventDefault();
+              // Handle file drop logic here
+              const files = e.dataTransfer.files;
+              console.log(files);
+            }}
+          >
+            <MdOutlineCloudUpload className="text-gray-500" />
+
+            <span className="text-xs text-center text-red-700 mt-1">
+              "Drag and drop your file like : Marriage Card,
+              Medical Appointment, etc."
+            </span>
+          </div>
+
+          <input
+            type="file"
+            className="hidden"
+            id="file_upload"
+            onChange={(e) => console.log(e.target.files)}
+          />
+        </div>
+
+        <div className="flex  justify-end gap-x-2">
+          <button
+            onClick={closeModal}
+            className="bg-gray-400 text-white px-4 py-2 rounded"
+          >
+            Cancel
+          </button>
+          <button className="bg-blue-500 text-white px-4 py-2 rounded">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default LeaveApplyPage;
