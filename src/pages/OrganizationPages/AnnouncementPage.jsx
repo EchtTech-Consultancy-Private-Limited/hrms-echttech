@@ -3,9 +3,14 @@ import AnnouncementComponent from '../../components/Organization/AnnouncementCom
 
 const AnnouncementPage = () => {
   return (
-    <div>
-      <AnnouncementComponent />
+    <>
+      <div className='content-mid base-bg-color' >
+          <div className='px-10 py-12' id='dashboard' >
+              <AnnouncementComponent />
+          </div>
     </div>
+    </>
+    
   )
 }
 

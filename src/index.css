@@ -13,6 +13,7 @@
 @import url('../src//assetsechttech//css/login.css');
 @import url('../src//assetsechttech//css/dashboardSG-S-Admin.css');
 @import url('../src//assetsechttech//css/dashboardSG-Employee.css');
+@import url('../src//assetsechttech//css/companycreatemultistepform.css');
 
 @tailwind base;
 @tailwind components;

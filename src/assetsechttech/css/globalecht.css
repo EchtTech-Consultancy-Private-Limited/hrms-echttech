@@ -8,8 +8,11 @@
     font-size: 13px !important;
 }
 .main-bg-color{
-    background-color:#113689;
+    background-color:#113689 !important;
     /* background-color: #174E94; */
+}
+.delete{
+    background-color: rgb(219, 19, 19);
 }
 .base-bg-color{
     background-color: #174e9412;
