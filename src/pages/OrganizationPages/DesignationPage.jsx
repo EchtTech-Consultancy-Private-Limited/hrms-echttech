@@ -3,8 +3,12 @@ import DesignationComponent from '../../components/Organization/DesignationCompo
 
 const DesignationPage = () => {
   return (
-    <div>
+
+
+    <div className='content-mid base-bg-color'>
+      <div id='dashboard' class="px-10 py-12" >
         <DesignationComponent />
+      </div>
     </div>
   )
 }
