@@ -2,11 +2,74 @@ import React from 'react'
 import { useState } from 'react'
 import { Label, Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
-import { PiUsersThree, PiUserCheck } from "react-icons/pi";
-import { CiCalendar } from "react-icons/ci";
+import { PiUserCheck, PiUsersBold } from "react-icons/pi";
+import { MdOutlineTimer } from "react-icons/md";
 import { FiUmbrella } from "react-icons/fi";
+import { MdOutlineEditCalendar } from "react-icons/md";
+import { LuUserCheck2 } from "react-icons/lu";
 import employee_img from "../../assetsechttech/utility-images/employee_img.png"
+import Highcharts from 'highcharts'
+import exporting  from 'highcharts/modules/exporting'
+import HighchartsReact from 'highcharts-react-official'
+exporting(Highcharts)
 
+const Card = ({ children, className }) => (
+  <div className={`border rounded-lg shadow-md ${className}`}>
+      {children}
+  </div>
+);
+
+const CardBody = ({ children }) => (
+  <div className="p-4">{children}</div>
+);
+
+const Typography = ({ as: Component = 'div', children, className, style }) => (
+  <Component className={className} style={style}>
+      {children}
+  </Component>
+);
+
+const Avatar = ({ size, src, alt }) => (
+  <img
+      className={`rounded-full ${size === 'sm' ? 'w-8 h-8' : 'w-12 h-12'}`}
+      src={src}
+      alt={alt}
+  />
+);
+
+// Sample customer data
+const customers = [
+  {
+      name: "Tania Andrew",
+      email: "tania@gmail.com",
+      time: "05:35 pm",
+      image: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-1.jpg",
+  },
+  {
+      name: "John Micheal",
+      email: "john@gmail.com",
+      time: "05:35 pm",
+      image: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-6.jpg",
+  },
+  {
+      name: "Alexa Liras",
+      email: "alexa@gmail.com",
+      time: "05:35 pm",
+      image: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-2.jpg",
+  },
+  {
+      name: "Richard Gran",
+      email: "richard@gmail.com",
+      time: "05:35 pm",
+      image: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-3.jpg",
+  },
+  {
+      name: "Micheal Levi",
+      email: "levi@gmail.com",
+      time: "05:35 pm",
+      image: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-4.jpg",
+  },
+];
 
 const days = [
 
@@ -38,6 +101,82 @@ const data = [
 ];
 
 const DashboardStatsGrid = () => {
+
+  (function (H) {
+    H.seriesTypes.pie.prototype.animate = function (init) {
+        const series = this,
+            chart = series.chart,
+            points = series.points,
+            {
+                animation
+            } = series.options,
+            {
+                startAngleRad
+            } = series;
+
+        function fanAnimate(point, startAngleRad) {
+            const graphic = point.graphic,
+                args = point.shapeArgs;
+
+            if (graphic && args) {
+
+                graphic
+                    // Set inital animation values
+                    .attr({
+                        start: startAngleRad,
+                        end: startAngleRad,
+                        opacity: 1
+                    })
+                    // Animate to the final position
+                    .animate({
+                        start: args.start,
+                        end: args.end
+                    }, {
+                        duration: animation.duration / points.length
+                    }, function () {
+                        // On complete, start animating the next point
+                        if (points[point.index + 1]) {
+                            fanAnimate(points[point.index + 1], args.end);
+                        }
+                        // On the last point, fade in the data labels, then
+                        // apply the inner size
+                        if (point.index === series.points.length - 1) {
+                            series.dataLabelsGroup.animate({
+                                opacity: 1
+                            },
+                            void 0,
+                            function () {
+                                points.forEach(point => {
+                                    point.opacity = 1;
+                                });
+                                series.update({
+                                    enableMouseTracking: true
+                                }, false);
+                                chart.update({
+                                    plotOptions: {
+                                        pie: {
+                                            innerSize: '40%',
+                                            borderRadius: 8
+                                        }
+                                    }
+                                });
+                            });
+                        }
+                    });
+            }
+        }
+
+        if (init) {
+            // Hide points on init
+            points.forEach(point => {
+                point.opacity = 0;
+            });
+        } else {
+            fanAnimate(points[0], startAngleRad);
+        }
+    };
+}(Highcharts));
+
 
   const [selected, setSelected] = useState(days[1])
 
@@ -92,14 +231,14 @@ const DashboardStatsGrid = () => {
                 </Listbox>
           </div>
         </div>
-        <div className="mid-content">
+        <div className="employee-info-card-first-section mid-content">
           <div className="info-cards-section mt-10 flex flex-wrap">
            
             <div className="card relative shadow">
               <div className="top-part relative">
-                <div className="card-icons one"><PiUsersThree className='text-2xl'/></div>
+                <div className="card-icons one"><PiUsersBold className='text-2xl'/></div>
               </div>
-              <div className="mid-part my-10">
+              <div className="mid-part my-5">
                 <p className='text-3xl font-semibold'>1000+</p>
               </div>
               <div className="bottom-part">
@@ -108,9 +247,9 @@ const DashboardStatsGrid = () => {
             </div>
             <div className="card relative shadow">
               <div className="top-part relative">
-                <div className="card-icons two"><CiCalendar className='text-2xl'/></div>
+                <div className="card-icons two"><MdOutlineEditCalendar className='text-2xl'/></div>
               </div>
-              <div className="mid-part my-10">
+              <div className="mid-part my-5">
                 <p className='text-3xl font-semibold'>7</p>
               </div>
               <div className="bottom-part">
@@ -121,7 +260,7 @@ const DashboardStatsGrid = () => {
               <div className="top-part relative">
                 <div className="card-icons three"><FiUmbrella className='text-2xl'/></div>
               </div>
-              <div className="mid-part my-10">
+              <div className="mid-part my-5">
                 <p className='text-3xl font-semibold'>5</p>
               </div>
               <div className="bottom-part">
@@ -130,9 +269,9 @@ const DashboardStatsGrid = () => {
             </div>
             <div className="card relative shadow">
               <div className="top-part relative">
-                <div className="card-icons four"><PiUserCheck  className='text-2xl'/></div>
+                <div className="card-icons four"><LuUserCheck2  className='text-2xl'/></div>
               </div>
-              <div className="mid-part my-10">
+              <div className="mid-part my-5">
                 <p className='text-3xl font-semibold'>23</p>
               </div>
               <div className="bottom-part">
@@ -141,9 +280,9 @@ const DashboardStatsGrid = () => {
             </div>
             <div className="card relative shadow">
               <div className="top-part relative">
-                <div className="card-icons five"><PiUsersThree className='text-2xl'/></div>
+                <div className="card-icons five"><PiUsersBold className='text-2xl'/></div>
               </div>
-              <div className="mid-part my-10">
+              <div className="mid-part my-5">
                 <p className='text-3xl font-semibold'>1000+</p>
               </div>
               <div className="bottom-part">
@@ -152,29 +291,303 @@ const DashboardStatsGrid = () => {
             </div>
           </div>
         </div>
+
+         {/* High-charts section start */}
+         <div className="high-charts-section flex justify-between mt-10">
+            <div className="first-chart shadow charts radius">
+            < HighchartsReact 
+                  highcharts={Highcharts}
+                  options={{
+                    chart: {
+                      type: 'column'
+                  },
+                  title: {
+                      text: 'World\'s largest cities per 2021'
+                  },
+                  subtitle: {
+                      text: 'Source: <a href="https://worldpopulationreview.com/world-cities" target="_blank">World Population Review</a>'
+                  },
+                  xAxis: {
+                      type: 'category',
+                      labels: {
+                          autoRotation: [-45, -90],
+                          style: {
+                              fontSize: '13px',
+                              fontFamily: 'Verdana, sans-serif'
+                          }
+                      }
+                  },
+                  yAxis: {
+                      min: 0,
+                      title: {
+                          text: 'Population (millions)'
+                      }
+                  },
+                  legend: {
+                      enabled: false
+                  },
+                  tooltip: {
+                      pointFormat: 'Population in 2021: <b>{point.y:.1f} millions</b>'
+                  },
+                  credits: {
+                    enabled: false // Hides the credits
+                  },
+                  series: [{
+                      name: 'Population',
+                      colors: [
+                          '#9b20d9', '#9215ac', '#861ec9', '#7a17e6', '#7010f9', '#691af3',
+                          '#6225ed', '#5b30e7', '#533be1', '#4c46db', '#4551d5', '#3e5ccf',
+                          '#3667c9', '#2f72c3', '#277dbd', '#1f88b7', '#1693b1', '#0a9eaa',
+                          '#03c69b',  '#00f194'
+                      ],
+                      colorByPoint: true,
+                      groupPadding: 0,
+                      data: [
+                          ['Tokyo', 37.33],
+                          ['Delhi', 31.18],
+                          ['Shanghai', 27.79],
+                          ['Sao Paulo', 22.23],
+                          ['Mexico City', 21.91],
+                          ['Dhaka', 21.74],
+                          ['Cairo', 21.32],
+                          ['Beijing', 20.89],
+                          ['Mumbai', 20.67],
+                       
+                      ],
+                      dataLabels: {
+                          enabled: true,
+                          rotation: -90,
+                          color: '#FFFFFF',
+                          inside: true,
+                          verticalAlign: 'top',
+                          format: '{point.y:.1f}', // one decimal
+                          y: 10, // 10 pixels down from the top
+                          style: {
+                              fontSize: '13px',
+                              fontFamily: 'Verdana, sans-serif'
+                          }
+                      }
+                  }],
+                  }}
+                  immutable={true}
+                />
+            </div>
+            <div className="second-chart shadow charts radius">
+            < HighchartsReact 
+                  highcharts={Highcharts}
+                  options={{
+                    chart: {
+                        type: 'pie'
+                    },
+                   
+                    title: {
+                        text: 'Departamental Strength of the Company',
+                        align: 'left'
+                    },
+                    subtitle: {
+                        text: 'Custom animation of pie series',
+                        align: 'left'
+                    },
+                    tooltip: {
+                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                    },
+                    accessibility: {
+                        point: {
+                            valueSuffix: '%'
+                        }
+                    },
+                    credits: {
+                      enabled: false // Hides the credits
+                  },
+                    plotOptions: {
+                        pie: {
+                            allowPointSelect: true,
+                            borderWidth: 2,
+                            cursor: 'pointer',
+                            dataLabels: {
+                                enabled: true,
+                                format: '<b>{point.name}</b><br>{point.percentage}%',
+                                distance: 20
+                            }
+                        }
+                    },
+                    series: [{
+                        // Disable mouse tracking on load, enable after custom animation
+                        enableMouseTracking: false,
+                        animation: {
+                            duration: 2000
+                        },
+                        colorByPoint: true,
+                        data: [{
+                            name: 'Customer Support',
+                            y: 21.3
+                        }, 
+                        {
+                            name: 'Development',
+                            y: 18.7
+                        }, 
+                        {
+                            name: 'Sales',
+                            y: 20.2
+                        }, 
+                        {
+                            name: 'Marketing',
+                            y: 14.2
+                        }, 
+                        {
+                          name: 'Designing',
+                          y: 14.2
+                      },
+                        {
+                            name: 'Other',
+                            y: 25.6
+                        }]
+                    }]
+                }}
+                            
+                  immutable={true}
+                />
+            </div>
+               
+          </div>
+          {/* End High-chart Section */}
+
+          {/* Message Section Start */}
+
+          <div className="message-section my-10 flex justify-between">
+            <Card className="w-96 bg-white message-card">
+              <CardBody>
+                  <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <Typography className="font-bold" style={{ color: '#4A5568', fontSize: '1.25rem' }}>
+                          Messages
+                      </Typography>
+                      <Typography as="a" href="#" className="text-blue-500 font-bold" style={{ fontSize: '0.875rem' }}>
+                          View all
+                      </Typography>
+                  </div>
+                  <div style={{ borderTop: '1px solid #E5E7EB' }}>
+                      {customers.map(({ name, email, time, image }, index) => (
+                          <div
+                              key={index}
+                              style={{ display: 'flex', justifyContent: 'space-between', padding: '0.75rem 0' }}
+                          >
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                                  <Avatar size="sm" src={image} alt={name} />
+                                  <div>
+                                      <Typography className="font-semibold" style={{ color: '#4A5568', fontSize: '1rem' }}>
+                                          {name}
+                                      </Typography>
+                                      <Typography className="text-gray-500" style={{ fontSize: '0.875rem' }}>
+                                          {email}
+                                      </Typography>
+                                  </div>
+                              </div>
+                              <Typography className="font-semibold" style={{ color: '#838589', fontSize: '0.875rem' }}>
+                                  {time}
+                              </Typography>
+                          </div>
+                      ))}
+                  </div>
+              </CardBody>
+            </Card>
+            <Card className="w-96 bg-white message-card">
+              <CardBody>
+                  <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <Typography className="font-bold" style={{ color: '#4A5568', fontSize: '1.25rem' }}>
+                          Messages
+                      </Typography>
+                      <Typography as="a" href="#" className="text-blue-500 font-bold" style={{ fontSize: '0.875rem' }}>
+                          View all
+                      </Typography>
+                  </div>
+                  <div style={{ borderTop: '1px solid #E5E7EB' }}>
+                      {customers.map(({ name, email, time, image }, index) => (
+                          <div
+                              key={index}
+                              style={{ display: 'flex', justifyContent: 'space-between', padding: '0.75rem 0' }}
+                          >
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                                  <Avatar size="sm" src={image} alt={name} />
+                                  <div>
+                                      <Typography className="font-semibold" style={{ color: '#4A5568', fontSize: '1rem' }}>
+                                          {name}
+                                      </Typography>
+                                      <Typography className="text-gray-500" style={{ fontSize: '0.875rem' }}>
+                                          {email}
+                                      </Typography>
+                                  </div>
+                              </div>
+                              <Typography className="font-semibold" style={{ color: '#838589', fontSize: '0.875rem' }}>
+                                  {time}
+                              </Typography>
+                          </div>
+                      ))}
+                  </div>
+              </CardBody>
+            </Card>
+            <Card className="w-96 bg-white message-card">
+              <CardBody>
+                  <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <Typography className="font-bold" style={{ color: '#4A5568', fontSize: '1.25rem' }}>
+                          Messages
+                      </Typography>
+                      <Typography as="a" href="#" className="text-blue-500 font-bold" style={{ fontSize: '0.875rem' }}>
+                          View all
+                      </Typography>
+                  </div>
+                  <div style={{ borderTop: '1px solid #E5E7EB' }}>
+                      {customers.map(({ name, email, time, image }, index) => (
+                          <div
+                              key={index}
+                              style={{ display: 'flex', justifyContent: 'space-between', padding: '0.75rem 0' }}
+                          >
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                                  <Avatar size="sm" src={image} alt={name} />
+                                  <div>
+                                      <Typography className="font-semibold" style={{ color: '#4A5568', fontSize: '1rem' }}>
+                                          {name}
+                                      </Typography>
+                                      <Typography className="text-gray-500" style={{ fontSize: '0.875rem' }}>
+                                          {email}
+                                      </Typography>
+                                  </div>
+                              </div>
+                              <Typography className="font-semibold" style={{ color: '#838589', fontSize: '0.875rem' }}>
+                                  {time}
+                              </Typography>
+                          </div>
+                      ))}
+                  </div>
+              </CardBody>
+            </Card>
+          </div>
+
+          {/* Message Section End */}
       </div>
 
 {/* =========================== Super Admin Dashboard End =================================================================================================== */}
 
-      <br /><br /><br />
+      <br /><br />
 
 {/* =========================== Employee Dashboard Start =================================================================================================== */}
 
       <div className='dashboard-stats-grid employee-das'>
           <div className="top-head flex justify-between items-center">
               <div className="left-part">
-                <h1 className='headings'>Employee Dashboard</h1>
+                {/* <h1 className='headings'>Employee Dashboard</h1> */}
               </div>
           </div>
-          {/* Employee Card information Section start */}
-          <div className="emp-info-section flex mt-10 flex-wrap">
-            <div className="time-card relative shadow">
-              <div className="top-head">
+
+           {/* Employee Card information Section start */}
+           <div className="emp-info-section flex mt-10 flex-wrap">
+            <div className="time-card relative shadow flex justify-center">
+              <div className="top-head flex flex-col items-center">
+                <div className="timer-icon"><MdOutlineTimer className='text-3xl'/></div>
                 <p>Last Login:<span>26-sep-2024</span> 06:10 pm</p>
               </div>
               <div className="mid-part my-10">
-                <div id='time-in' className="timer  my-5 flex items-center"><p>Login Time:</p><p className='text-3xl px-5'>09:10 <span className='text-xs'>am</span></p></div>
-                <div id='time-out' className="timeer my-5 flex items-center"><p>Logout Time:</p><p className='text-3xl px-5'>09:10 <span className='text-xs'>pm</span></p></div>
+                <div id='time-in' className="timer  my-5 flex items-center justify-center"><p>Login Time:</p><p className='text-3xl px-5'>09:10 <span className='text-xs'>am</span></p></div>
+                <div id='time-out' className="timeer my-5 flex items-center justify-center"><p>Logout Time:</p><p className='text-3xl px-5'>09:10 <span className='text-xs'>pm</span></p></div>
                 <div className="time-btn mt-10"><h3>Start</h3></div>
               </div>
               <div className="bottom-part">
@@ -222,10 +635,15 @@ const DashboardStatsGrid = () => {
           {/* Employee Table Section Start */}
           <div className="emp-table-section">
             <div className="head my-10">
-              <h2 className='headings'>My Project</h2>
+              
             </div>
             <div className="emp-table">
+              
               <div className="table-container shadow">
+              <div className="head mb-4">
+                <h2 className='headings text-lg font-bold'>My Project</h2>
+              </div>
+             
                   <table>
                     <thead>
                       <tr>
@@ -248,10 +666,13 @@ const DashboardStatsGrid = () => {
             </div>
 
             <div className="head my-10">
-              <h2 className='headings'>My Tasks</h2>
+              
             </div>
             <div className="emp-table">
               <div className="table-container shadow">
+              <div className="head mb-4">
+                <h2 className='headings text-lg font-bold'>My Tasks</h2>
+              </div>
                   <table>
                     <thead>
                       <tr>

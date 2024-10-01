@@ -1,3 +1,16 @@
+/* Styling for Time card */
+.time-card .top-head, .time-card .mid-part, .time-card .bottom-part {
+  width: 90%;
+  text-align: center;
+}
+.timer-icon {
+  background-color: #1cab47;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: -22px;
+}
 .time-card{
     position: relative;
     padding: 15px;
@@ -14,11 +27,11 @@
     font-size: 14px;
 }
 #time-in {
-    background-color: #0080000d;
+    background-color: #0080003b;
     padding: 10px 20px;
   }
   #time-out {
-    background-color: #8000000d;
+    background-color: #80000042;
     padding: 10px 20px;
   }
 .time-btn h3 {
@@ -136,7 +149,29 @@
     height: 499px;
   }
 
+/* Styling for High-charts */
+
+.high-charts-section .first-chart{
+  width: 58%;
+}
+.high-charts-section .second-chart{
+  width: 40%;
+}
+.high-charts-section .charts > div{
+  border-radius: 10px;
+}
+/* Styling for message cards */
+.message-section .message-card{
+  width: 32%;
+}
+
+
   /* Start Styling for employee table */
+
+  .table-container table th, .table-container table tbody tr td {
+    border: 1px solid #c7c7c7;
+    text-align: center;
+  }
 
   .table-container {
     margin: 20px;
