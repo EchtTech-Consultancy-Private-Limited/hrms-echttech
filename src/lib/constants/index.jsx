@@ -7,7 +7,7 @@ import {
 	HiOutlineCog,
   HiUserGroup
 } from 'react-icons/hi';
-import { SiAwsorganizations,SiPayhip } from "react-icons/si";
+import { SiAwsorganizations } from "react-icons/si";
 import { FaAmazonPay } from "react-icons/fa6";
 import { IoMdArrowDropright } from "react-icons/io";
 
