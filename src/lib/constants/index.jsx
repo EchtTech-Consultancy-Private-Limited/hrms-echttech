@@ -10,6 +10,7 @@ import {
 import { SiAwsorganizations } from "react-icons/si";
 import { FaAmazonPay } from "react-icons/fa6";
 import { IoMdArrowDropright } from "react-icons/io";
+import { GiPayMoney } from "react-icons/gi";
 
 export const DASHBOARD_SIDEBAR_LINKS = [
 	{
@@ -22,7 +23,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
   {
     key: 'organization',
     label: 'Organization',
-    path: '/company',
+    path: '#',
     icon: <SiAwsorganizations />,
     submenu: [
       { key: 'company', label: 'Company', path: '/company',icon:<IoMdArrowDropright  /> },
@@ -37,12 +38,25 @@ export const DASHBOARD_SIDEBAR_LINKS = [
   {
     key: 'employees',
     label: 'Employees',
-    path: '/company',
+    path: '#',
     icon: <HiUserGroup />,
     submenu: [
       { key: 'employees', label: 'Employees', path: '/employees' },
       { key: 'awards', label: 'Awards', path: '/awards' },
       { key: 'transfers', label: 'Transfers', path: '/transfers' },
+    ]
+  },
+  {
+    key: 'payroll',
+    label: 'Pay Roll',
+    path: '#',
+    icon: <GiPayMoney />,
+    submenu: [
+      { key: 'payrolltemplate', label: 'Payroll Templates', path: '/payrolltemplate' },
+      { key: 'hourly-wages', label: 'Hourly Wages', path: '/hourly-wages' },
+      { key: 'manage-salary', label: 'Manage Salary', path: '/manage-salary' },
+      { key: 'generate-payslip', label: 'Generate Payslip', path: '/generate-payslip' },
+      { key: 'payment-history', label: 'Payment History', path: '/payment-history' },
     ]
   },
   {
@@ -57,7 +71,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
   {
     key: 'leave',
     label: 'Leave',
-    path: '/leave',
+    path: '#',
     icon: <HiOutlineShoppingCart />,
     submenu: [
       { key: 'leave-requests', label: 'Leave Requests', path: '/leave' },
@@ -66,7 +80,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
   {
     key: 'payslip',
     label: 'Pay Slip',
-    path: '/payslip',
+    path: '#',
     icon: <FaAmazonPay />,
     submenu: [
       { key: 'payslip', label: 'Pay Slip List', path: '/payslip' },

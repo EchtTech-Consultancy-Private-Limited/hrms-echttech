@@ -14,6 +14,14 @@ import DesignationPage from './pages/OrganizationPages/DesignationPage'
 import AnnouncementPage from './pages/OrganizationPages/AnnouncementPage'
 import PoliciesPage from './pages/OrganizationPages/PoliciesPage'
 import ExpensePage from './pages/OrganizationPages/ExpensePage'
+import EmployeeCreatePage from './pages/EmployeesPages/EmployeeCreatePage'
+import AwardsPage from './pages/EmployeesPages/AwardsPage'
+import TransfersPage from './pages/EmployeesPages/TransfersPage'
+import GeneratePayslipPage from './pages/PayRollPages/GeneratePayslipPage'
+import HourlyWagesPage from './pages/PayRollPages/HourlyWagesPage'
+import ManageSalaryPage from './pages/PayRollPages/ManageSalaryPage'
+import PaymentHistoryPage from './pages/PayRollPages/PaymentHistoryPage'
+import PayrollTemplatesPage from './pages/PayRollPages/PayrollTemplatesPage'
 
 function App() {
     return (
@@ -31,10 +39,18 @@ function App() {
                     <Route path='announcement' element={<AnnouncementPage />} />
                     <Route path='policies' element={<PoliciesPage />} />
                     <Route path='expense' element={<ExpensePage />} />
+                    <Route path='employees' element={<EmployeeCreatePage />} />
+                    <Route path='awards' element={<AwardsPage />} />
+                    <Route path='transfers' element={<TransfersPage />} />
                     <Route path='attendance' element={<AttendanceListPage />} />
                     <Route path='leave' element={<LeaveListPage />} />
                     <Route path='payslip' element={<PayslipListPage />} />
                     <Route path='holidays' element={<HolidayListPage />} />
+                    <Route path='payrolltemplate' element={<PayrollTemplatesPage />} />
+                    <Route path='hourly-wages' element={<HourlyWagesPage />} />
+                    <Route path='manage-salary' element={<ManageSalaryPage />} />
+                    <Route path='generate-payslip' element={<GeneratePayslipPage />} />
+                    <Route path='payment-history' element={<PaymentHistoryPage />} />
                 </Route>
                
             </Routes>

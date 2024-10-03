@@ -1,5 +1,5 @@
 import React from 'react'
-import PayrollListComponent from '../../components/Payrollmanagement/PayrollListComponent'
+import PayrollListComponent from '../../components/Payrollmanagement/PayRollListComponent'
 
 const PayrollListPage = () => {
   return (
