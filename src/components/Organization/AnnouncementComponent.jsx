@@ -7,7 +7,8 @@ import 'react-quill/dist/quill.snow.css'; // Import Quill styles
 const AnnouncementComponent = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const [entriesPerPage] = useState(10);
+  // const [entriesPerPage] = useState(10);
+  const [entriesPerPage, setEntriesPerPage] = useState(10); // Updated to be dynamic
 
   // Updated data structure to include all necessary fields
   const data = Array.from({ length: 100 }, (_, index) => ({
@@ -41,7 +42,7 @@ const AnnouncementComponent = () => {
       setCurrentPage(currentPage - 1);
     }
   };
-  
+
   const [editorContent, setEditorContent] = useState('');
 
   const handleChange = (content) => {
@@ -62,8 +63,8 @@ const AnnouncementComponent = () => {
               <div className="flex flex-wrap">
                 <div className="w-full md:w-1/2">
                   <div className="flex-1 bg-white rounded-lg mb-4">
-                    <label className="block text-black font-bold m-2">Announcement Title
-                    <span className="text-red-500 text-sm ml-1">*</span>
+                    <label className="block text-black font-bold">Announcement Title
+                      <span className="text-red-500 text-sm ml-1">*</span>
 
                     </label>
                     <input
@@ -73,27 +74,27 @@ const AnnouncementComponent = () => {
                     />
                   </div>
                   <div className="flex flex-wrap">
-                    <div className="w-1/2 ">
-                      <label htmlFor="start-date" className="block text-black font-bold  m-2">Start Date
-                      <span className="text-red-500 text-sm ml-1">*</span>
-
-                      </label>
-                      <input type="date" id="start-date" name="start-date" className="mt-1 mr-1 block w-60 p-2 border border-gray-300 rounded-md"/>
-                    </div>
-                    <div className="w-1/2">
-                      <label htmlFor="end-date" className="block text-black font-bold  m-2">End Date
-                      <span className="text-red-500 text-sm ml-1">*</span>
-
-                      </label>
-                      <input type="date" id="end-date" name="end-date" className="mt-1 block w-60 p-2 border border-gray-300 rounded-md"/>
-                    </div>
-                    <div className="w-1/2">
-                      <div className="flex-1 bg-white mb-4 rounded-lg">
-                        <label className="block text-black font-bold  m-2">Company
+                    <div className="w-full md:w-1/2 mb-2 ">
+                      <label htmlFor="start-date" className="block text-black font-bold">Start Date
                         <span className="text-red-500 text-sm ml-1">*</span>
 
+                      </label>
+                      <input type="date" id="start-date" name="start-date" className="custom-width-ann-sd block p-2 border border-gray-300 rounded-md" />
+                    </div>
+                    <div className="w-full md:w-1/2">
+                      <label htmlFor="end-date" className="block text-black font-bold">End Date
+                        <span className="text-red-500 text-sm ml-1">*</span>
+
+                      </label>
+                      <input type="date" id="end-date" name="end-date" className=" block custom-width-ann-end p-2 border border-gray-300 rounded-md" />
+                    </div>
+                    <div className="w-full md:w-1/2">
+                      <div className="flex-1 bg-white mb-4 rounded-lg">
+                        <label className="block text-black font-bold">Company
+                          <span className="text-red-500 text-sm ml-1">*</span>
+
                         </label>
-                        <select className="block w-60 p-2 border border-gray-300 rounded-md">
+                        <select className="block block custom-width-ann-sd p-2 border border-gray-300 rounded-md">
                           <option>Select Company Type</option>
                           <option>Government</option>
                           <option>Private</option>
@@ -101,12 +102,12 @@ const AnnouncementComponent = () => {
                         </select>
                       </div>
                     </div>
-                    <div className="w-1/2">
+                    <div className="w-full md:w-1/2">
                       <div className="flex-1 bg-white mb-4 rounded-lg">
-                        <label className="block text-black font-bold  m-2">Location
-                        <span className="text-red-500 text-sm ml-1">*</span>
+                        <label className="block text-black font-bold">Location
+                          <span className="text-red-500 text-sm ml-1">*</span>
                         </label>
-                        <select className="block w-60 p-2 border border-gray-300 rounded-md">
+                        <select className="block block custom-width-ann-end p-2 border border-gray-300 rounded-md">
                           <option>Select Location</option>
                           <option>North</option>
                           <option>East</option>
@@ -116,7 +117,7 @@ const AnnouncementComponent = () => {
                     </div>
                   </div>
                 </div>
-                <div className="w-full md:w-1/2 p-2">
+                <div className="w-full md:w-1/2 p-0 md:p-2">
                   <label className="block text-gray-700 font-bold mb-2">
                     Remark
                     <span className="text-red-500 text-sm ml-1">*</span>
@@ -131,21 +132,18 @@ const AnnouncementComponent = () => {
                   />
                 </div>
               </div>
-              <div className='add-reset-btns flex justify-end'>
-              
-                <div>
-                <button
-                  className="apply-leave-btn mx-1 bg-blue-500 text-white px-4 py-2 rounded w-full md:w-auto text-sm"
+              <div className='add-reset-btns flex items-center justify-end pt-4'>
+              <button
+                  className="apply-leave-btn mx-1 bg-blue-500 text-white px-2 py-2 rounded w-full md:w-auto "
                 >
                   Save
                 </button>
                 <button
-                  className="apply-leave-btn bg-gray-400 text-white px-4 py-2 rounded w-full md:w-auto text-sm"
+                  className="apply-leave-btn bg-gray-400 text-white px-2 py-2 rounded w-full md:w-auto"
                 >
                   Reset
                 </button>
-                </div>
-                
+
               </div>
             </div>
           </div>
@@ -154,17 +152,40 @@ const AnnouncementComponent = () => {
 
       <div className='announcement-list' >
         <div className="container mx-auto p-6 border rounded-lg bg-white my-10">
-          <div className="flex justify-between items-center mb-4">
-            <h1 className="text-lg font-bold">Announcement List</h1>
-            <div className="flex items-center space-x-4">
-              <input
-                type="text"
-                placeholder="Search..."
-                className="border border-gray-300 text-gray-600 rounded px-2 py-1 text-sm"
-                onChange={e => setSearchTerm(e.target.value)}
-              />
+        <h1 className="text-lg font-bold mb-2">Announcement List</h1>
+
+        <div className='flex justify-between  items-center mb-4' >
+            <div className='mob-entries flex items-center'>
+               <label className='mb-0 text-sm text-gray-600' htmlFor="#">Show</label>
+              <select
+                className="border esel-entry border-gray-300 text-gray-600 rounded px-1 py-1 text-sm"
+                value={entriesPerPage}
+                onChange={e => {
+                  setEntriesPerPage(Number(e.target.value));
+                  setCurrentPage(1); // Reset to first page when changing entries per page
+                }}
+              >
+                <option value={10}>10</option>
+                <option value={20}>20</option>
+                <option value={50}>50</option>
+              </select>
+              <span className='mb-0 mob-none-entries text-sm text-gray-600' >entries</span>
             </div>
+           
+           
+            <div className='flex justify-end items-center' >
+            <label className=' mb-0 text-sm text-gray-600' htmlFor="#">Search : </label>
+             <input
+            type="text"
+            placeholder="Search..."
+            className="border mob-search-dc border-gray-300 text-gray-600 rounded px-2 py-1 text-sm"
+            onChange={e => setSearchTerm(e.target.value)}
+          />
+
+              </div>  
+          
           </div>
+          <div className= "overflow-auto" >
           <table className="min-w-full bg-white border border-gray-300 rounded-t-lg">
             <thead>
               <tr className="main-bg-color text-white">
@@ -207,32 +228,33 @@ const AnnouncementComponent = () => {
               ))}
             </tbody>
           </table>
-
-          {/* Pagination */}
-          <div className="flex justify-between mt-4">
-          <div className="text-gray-600 mt-2">
-              Showing {indexOfFirstEntry + 1} to {Math.min(indexOfLastEntry, filteredData.length)} of {filteredData.length} entries
-            </div>
-
-            <div>
-  <button
-    onClick={prevPage}
-    disabled={currentPage === 1}
-    className="bg-blue-500 text-white px-2 py-1 mx-1 rounded text-sm"
-  >
-    Previous
-  </button>
-  <button
-    onClick={nextPage}
-    disabled={currentPage === Math.ceil(filteredData.length / entriesPerPage)}
-    className="bg-blue-500 text-white px-2 py-1 rounded text-sm"
-  >
-    Next
-  </button>
-</div>
-
-           
           </div>
+          
+
+            {/* Pagination */}
+       <div className="flex flex-col md:flex-row justify-between items-center mt-4">
+       <div className="text-gray-600 mt-2">
+        Showing {indexOfFirstEntry + 1} to {Math.min(indexOfLastEntry, filteredData.length)} of {filteredData.length} entries
+      </div>
+      <div>
+      <button
+        onClick={prevPage}
+        disabled={currentPage === 1}
+        className={`px-2 py-1 mx-1 border rounded text-sm ${currentPage === 1 ? 'bg-gray-300 text-gray-600 cursor-not-allowed' : 'bg-blue-500 text-white'}`}
+      >
+        Previous
+      </button>
+      <button
+        onClick={nextPage}
+        disabled={currentPage === Math.ceil(filteredData.length / entriesPerPage)}
+        className={`px-2 py-1 border rounded text-sm ${currentPage === Math.ceil(filteredData.length / entriesPerPage) ? 'bg-gray-300 text-gray-600 cursor-not-allowed' : 'bg-blue-500 text-white'}`}
+      >
+        Next
+      </button>
+
+      </div>
+        
+      </div>
         </div>
       </div>
     </div>

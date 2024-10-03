@@ -1,7 +1,97 @@
-@media (max-width: 768px) {
-    .left-sidebar {
-        width: 0%; 
-        height: auto; 
-        position: relative; 
+/* Mobile Phones */
+@media (max-width: 480px) {
+    /* Styles for mobile devices */
+    
+   
+    .right-dashboard {
+        background-color: #ffffff;
+        width: 100%;
     }
-}
+     .mobile-view-notif
+    {
+       right: -140% !important;
+       
+    }
+    .mobile-view-inf
+    {
+        right: -150% !important;
+
+    }
+     .add-reset-btns
+    {
+        padding-top: 0rem !important;
+    }
+    /* .dep-list-con
+    {
+        overflow-x: scroll;
+    } */
+
+  .mob-entries    
+  {
+    width: 52px;
+    padding: 4px;
+    }
+    .mob-search-dc
+    {
+        width: 75px;
+    }
+    .mob-none-entries
+    {
+        display: none;
+    }
+    .esel-entry
+    {
+        padding: 3px 27px 3px 4px;
+    }
+    .ql-container
+    {
+        height: 54% !important;
+    }
+    .custom-width-ann-sd
+ {
+    width: 100%;
+ }
+ .apply-leave-btn
+ {
+    width: 30% !important;
+    padding: 3px !important;
+    font-size: 11px !important;
+ }
+ .top-section:last-of-type {
+    margin-top: 12px;
+  }
+  .sectors-parent 
+  {
+    flex-direction: column;
+  }
+  .sectors-parent .sectors input
+  {
+    width: 100% !important;
+  }
+  }
+  
+  /* Tablets */
+  @media (min-width: 481px) and (max-width: 768px) {
+    /* Styles for tablets */
+  }
+  
+  /* Small Desktops */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    /* Styles for small desktops */
+  }
+  
+  /* Laptops */
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    /* Styles for laptops */
+  }
+  
+  /* Big Desktops */
+  @media (min-width: 1441px) and (max-width: 1920px) {
+    /* Styles for big desktops */
+  }
+  
+  /* Large Screens */
+  @media (min-width: 1921px) {
+    /* Styles for large screens */
+  }
+  

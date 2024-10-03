@@ -55,7 +55,7 @@ const LeaveComponentList = () => {
     <>
       {/* Top Section for filtering and leave balance */}
       <div className="flex md:flex-row flex-col justify-between items-center gap-x-4">
-        <div className="w-1/2 top-section py-6 px-4 border rounded-lg bg-white">
+        <div className="w-full md:w-1/2 top-section py-6 px-4 border rounded-lg bg-white">
           <div className="top-head flex justify-between items-center">
             <div className="left-part flex justify-between pb-3 w-full">
               <h1 className="headings">Leaves Information</h1>
@@ -63,16 +63,16 @@ const LeaveComponentList = () => {
           </div>
           <h2 className="text-lg pt-6 border-t font-semibold mb-2">Select Date</h2>
           <div className="flex pt-2 flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-            <label>From: </label>
+            <label className="text-gray-600 mb-0" >From: </label>
             <input
               type="date"
-              className="border border-gray-300 text-gray-500 p-1 h-9 rounded w-full md:w-auto"
+              className="border border-gray-300 text-gray-500 p-1 rounded w-full md:w-auto"
               placeholder="Start Date"
             />
-            <label>To: </label>
+            <label className="text-gray-600 mb-0" >To: </label>
             <input
               type="date"
-              className="border border-gray-300 text-gray-500 p-1 h-9 rounded w-full md:w-auto"
+              className="border border-gray-300 text-gray-500 p-1 rounded w-full md:w-auto"
               placeholder="End Date"
             />
             <button className="bg-blue-500 text-white px-4 py-2 rounded w-full md:w-auto text-sm">
@@ -81,7 +81,7 @@ const LeaveComponentList = () => {
           </div>
         </div>
 
-        <div className="w-1/2 top-section p-4 border rounded-lg bg-blue-500">
+        <div className="w-full md:w-1/2 top-section p-4 border rounded-lg bg-blue-500">
           <div className="top-head flex justify-between items-center">
             <div className="left-part flex justify-between pb-3 w-full text-white">
               <h1 className="headings">Leaves Balance</h1>
@@ -94,7 +94,7 @@ const LeaveComponentList = () => {
             </div>
           </div>
           <div className="flex pt-1 flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-            <div className="w-1/2 p-1 border rounded-lg bg-white">
+            <div className="w-full md:w-1/2 p-1 border rounded-lg bg-white">
               <h2 className="font-semibold text-sm pb-1">Total Leave</h2>
               <div className="py-2 border-t">
                 <p className="text-sm">
@@ -108,7 +108,7 @@ const LeaveComponentList = () => {
                 </p>
               </div>
             </div>
-            <div className="w-1/2 p-1 border rounded-lg bg-blue-500 text-white">
+            <div className="w-full md:w-1/2 p-1 border rounded-lg bg-blue-500 text-white">
               <h2 className="font-semibold text-sm pb-1">Rest Leave</h2>
               <div className="py-2 border-t">
                 <p className="text-sm">
@@ -130,7 +130,7 @@ const LeaveComponentList = () => {
       )}
   
       {/* Leave Table */}
-      <div className="leave-table mt-10">
+      <div className="leave-table overflow-auto mt-10">
         <table className="min-w-full bg-white border-collapse border border-gray-300">
           <thead>
             <tr className="bg-gray-100">

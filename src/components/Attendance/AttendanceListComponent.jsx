@@ -6,6 +6,10 @@ import { TbEditCircle } from "react-icons/tb";
 
 
 const AttendanceListComponent = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+ 
+  // const [entriesPerPage] = useState(10);
+  const [entriesPerPage, setEntriesPerPage] = useState(10); // Updated to be dynamic
 
     const attendanceData = Array.from({ length: 100 }, (_, i) => ({
         status: i % 2 === 0 ? "Present" : "Absent",
@@ -15,7 +19,7 @@ const AttendanceListComponent = () => {
       }));
     
       const [currentPage, setCurrentPage] = useState(1);
-      const entriesPerPage = 10;
+      
     
       const totalEntries = attendanceData.length;
       const start = (currentPage - 1) * entriesPerPage;
@@ -67,26 +71,44 @@ const AttendanceListComponent = () => {
 
     <div className="below-section data-table-attendance mt-10" >
     <div className="container mx-auto p-6 border rounded-lg bg-white">
-      <div className="flex justify-between items-center mb-4">
-        <h1 className="text-lg font-bold">Attendance</h1>
-        <div className="flex items-center space-x-4">
-            <select id="entries" className="w-full border border-gray-300 text-gray-600 rounded px-5 py-1 text-sm">
-                <option value="25">Show 25</option>
-                <option value="50">Show 50</option>
-                <option value="100">Show 100</option>
-            </select>
-            <input
-                type="text"
-                id="search"
-                placeholder="Search..."
-                className="border border-gray-300 text-gray-600 rounded px-2 py-1 text-sm"
-            />
+    <h1 className="text-lg font-bold mb-2">Attendance List</h1>
+
+      
+        <div className='flex justify-between  items-center mb-4' >
+            <div className='mob-entries flex items-center'>
+               <label className='mb-0 text-sm text-gray-600' htmlFor="#">Show</label>
+              <select
+                className="border esel-entry border-gray-300 text-gray-600 rounded px-1 py-1 text-sm"
+                value={entriesPerPage}
+                onChange={e => {
+                  setEntriesPerPage(Number(e.target.value));
+                  setCurrentPage(1); // Reset to first page when changing entries per page
+                }}
+              >
+                <option value={10}>10</option>
+                <option value={20}>20</option>
+                <option value={50}>50</option>
+              </select>
+              <span className='mb-0 mob-none-entries text-sm text-gray-600' >entries</span>
             </div>
-      </div>
+           
+           
+            <div className='flex justify-end items-center' >
+            <label className=' mb-0 text-sm text-gray-600' htmlFor="#">Search : </label>
+             <input
+            type="text"
+            placeholder="Search..."
+            className="border mob-search-dc border-gray-300 text-gray-600 rounded px-2 py-1 text-sm"
+            onChange={e => setSearchTerm(e.target.value)}
+          />
 
-     
+              </div>  
+          
+          </div>
+      
 
-<table className="min-w-full bg-white border border-gray-300 rounded-t-lg">
+     <div className="overflow-auto" >
+     <table className="min-w-full bg-white border border-gray-300 rounded-t-lg">
             <thead>
               <tr className="bg-blue-500 text-white">
                 <th className="px-4 border-gray-300 border-l text-center py-3">S. No</th>
@@ -133,6 +155,9 @@ const AttendanceListComponent = () => {
               ))}
             </tbody>
           </table>
+     </div>
+
+
 
 
       <div className="flex justify-between items-center mt-4">
