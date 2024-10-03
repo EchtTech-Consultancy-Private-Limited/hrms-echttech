@@ -236,7 +236,7 @@ const DashboardStatsGrid = () => {
           </div>
         </div>
         <div className="employee-info-card-first-section mid-content">
-          <div className="info-cards-section mt-10 flex flex-wrap">
+          <div className="info-cards-section mt-10 flex flex-wrap justify-between">
            
             <div className="card relative shadow">
               <div className="top-part relative">
@@ -280,17 +280,6 @@ const DashboardStatsGrid = () => {
               </div>
               <div className="bottom-part">
                 <p className='text-base'>Total No of Attendance</p>
-              </div>
-            </div>
-            <div className="card relative shadow">
-              <div className="top-part relative">
-                <div className="card-icons five"><PiUsersBold className='text-2xl'/></div>
-              </div>
-              <div className="mid-part my-5">
-                <p className='text-3xl font-semibold'>1000+</p>
-              </div>
-              <div className="bottom-part">
-                <p className='text-base'>Total No of Users</p>
               </div>
             </div>
           </div>
@@ -698,7 +687,7 @@ const DashboardStatsGrid = () => {
           </div>
 
            {/* Employee Card information Section start */}
-           <div className="emp-info-section flex mt-10 flex-wrap">
+           <div className="emp-info-section flex mt-10 flex-wrap justify-between">
             <div className="time-card relative shadow flex justify-center">
               <div className="top-head flex flex-col items-center">
                 <div className="timer-icon"><MdOutlineTimer className='text-3xl'/></div>

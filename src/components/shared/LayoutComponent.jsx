@@ -15,29 +15,31 @@ const LayoutComponent = () => {
 
 
   return (
-    <div className={`layout main-container flex ${isActive ? 'hide' : 'show'}`}>
+    <div className="complete-layout">
+        <div className="header-container">
+              <header className="header">
+                <Header />
+              </header>
+        </div>
+        <div className={`layout main-container flex ${isActive ? 'hide' : 'show'}`}>
 
-      <div className="left-sidebar main-bg-color">
-        <aside className="sidebar">
-          <Sidebar />
-        </aside>
-      </div>
-      <div className="main-content right-dashboard">
-     
-        <header className="header">
-          <Header toggleClass={handleClick} isToggled={isActive} />
-        </header>
-
-       
-        <main className="content">
-          <Outlet />
-        </main>
-
+          <div className="left-sidebar main-bg-color relative">
+            <aside className="sidebar">
+              <Sidebar toggleClass={handleClick} isToggled={isActive} />
+            </aside>
+          </div>
+          <div className="main-content right-dashboard">
         
-        <footer className="footer">
-          <Footer />
-        </footer>
-      </div>
+            <main className="content">
+              <Outlet />
+            </main>
+
+            
+            <footer className="footer">
+              <Footer />
+            </footer>
+          </div>
+        </div>
     </div>
   );
 }

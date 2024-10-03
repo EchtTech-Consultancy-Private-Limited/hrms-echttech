@@ -51,8 +51,8 @@
     transition: all .5s ease;
   } 
   .card.relative {
-    margin: 15px;
-    width: 274px;
+    /* margin: 15px; */
+    width: 23%;
   }
   .card.relative:first-child {
     margin-left: 0px;
