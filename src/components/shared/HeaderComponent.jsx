@@ -6,11 +6,11 @@ import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import NotificationsActiveOutlinedIcon from '@mui/icons-material/NotificationsActiveOutlined';
 import accountimage from "../../assetsechttech/utility-images/accountimage.png"
 import { Dialog } from '@headlessui/react';
-import { HiChevronDoubleRight,  HiChevronDoubleLeft  } from "react-icons/hi";
+import logo from "../../assetsechttech/logo/logo.png"
 
 
 
-const HeaderComponent = ({toggleClass, isToggled}) => {
+const HeaderComponent = () => {
   
   const [isOpen, setIsOpen] = useState(false);
 
@@ -19,7 +19,9 @@ const HeaderComponent = ({toggleClass, isToggled}) => {
   return (
     <div className='top-header flex justify-between items-center px-3'>
       <div className="top-bar-left flex">
-        <button className='collapse-btn' onClick={toggleClass}> {isToggled ? <HiChevronDoubleRight className='text-xl color-white'/> : <HiChevronDoubleLeft  className='text-xl color-white'/>}</button>
+          <div className="sidebar-top-logo-con w-full rounded-lg logo-custom-border p-4">
+            <img src={logo} alt="" />
+          </div>
         {/* <h3 className='text-lg font-semibold' >Section Title</h3> */}
       </div>
       <div className="top-bar-left flex items-center ">
