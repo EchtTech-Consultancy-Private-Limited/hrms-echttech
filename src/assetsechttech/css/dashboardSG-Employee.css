@@ -1,4 +1,8 @@
 /* Styling for Time card */
+
+.emp-info-section .time-card{
+  margin-left: 0;
+}
 .time-card .top-head, .time-card .mid-part, .time-card .bottom-part {
   width: 90%;
   text-align: center;
@@ -238,7 +242,7 @@
   }
 
   .table-container {
-    margin: 20px;
+    /* margin: 20px; */
     padding: 20px;
     border-radius: 8px;
     background-color: #fff;

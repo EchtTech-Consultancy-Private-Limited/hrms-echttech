@@ -6,7 +6,7 @@ const DesignationPage = () => {
 
 
     <div className='content-mid base-bg-color'>
-      <div id='dashboard' class="px-10 py-12" >
+      <div id='dashboard' class="px-5 py-12" >
         <DesignationComponent />
       </div>
     </div>

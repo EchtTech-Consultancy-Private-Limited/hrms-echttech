@@ -51,7 +51,7 @@ const AnnouncementComponent = () => {
   return (
     <div>
       <div className="flex md:flex-row flex-col justify-between items-center gap-x-4">
-        <div className="w-full top-section mt-10 p-4 border rounded-lg bg-white">
+        <div className="w-full top-section p-4 border rounded-lg bg-white">
           <div className="top-head ">
             <div className="flex justify-between pb-3 w-full text-black">
               <h1 className="text-lg font-bold">Add New Announcement</h1>
