@@ -4,7 +4,7 @@ import LeaveComponentList from '../../components/leaves/LeaveComponentList'
 const LeaveListPage = () => {
   return (
     <div className='content-mid base-bg-color' >
-          <div className='px-10 py-12' id='dashboard' >
+          <div className='px-5 py-12' id='dashboard' >
         <LeaveComponentList />
     </div>
       

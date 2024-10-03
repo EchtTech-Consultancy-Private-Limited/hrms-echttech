@@ -55,7 +55,7 @@ const LeaveComponentList = () => {
     <>
       {/* Top Section for filtering and leave balance */}
       <div className="flex md:flex-row flex-col justify-between items-center gap-x-4">
-        <div className="w-1/2 top-section mt-10 py-6 px-4 border rounded-lg bg-white">
+        <div className="w-1/2 top-section py-6 px-4 border rounded-lg bg-white">
           <div className="top-head flex justify-between items-center">
             <div className="left-part flex justify-between pb-3 w-full">
               <h1 className="headings">Leaves Information</h1>
@@ -81,7 +81,7 @@ const LeaveComponentList = () => {
           </div>
         </div>
 
-        <div className="w-1/2 top-section mt-10 p-4 border rounded-lg bg-blue-500">
+        <div className="w-1/2 top-section p-4 border rounded-lg bg-blue-500">
           <div className="top-head flex justify-between items-center">
             <div className="left-part flex justify-between pb-3 w-full text-white">
               <h1 className="headings">Leaves Balance</h1>

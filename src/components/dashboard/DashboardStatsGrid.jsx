@@ -188,7 +188,7 @@ const DashboardStatsGrid = () => {
 
 // ============== Super Admin Dashboard Start ==========================================================================================================================
 
-    <div id='dashboard' className='px-10 py-12'>
+    <div id='dashboard' className='px-5 py-12'>
   
       <div className='dashboard-stats-grid  super-admin'>
         <div className="top-head flex justify-between items-center">
@@ -198,7 +198,7 @@ const DashboardStatsGrid = () => {
           <div className="right-part">
                     <Listbox value={selected} onChange={setSelected}>
                     {/* <Label className="block text-sm font-medium leading-6 text-gray-900">Assigned to</Label> */}
-                  <div className="relative mt-2">
+                  <div className="relative">
                   <ListboxButton className="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6">
                     <span className="flex items-center">
                       {/* <img alt="" src={selected.avatar} className="h-5 w-5 flex-shrink-0 rounded-full" /> */}
