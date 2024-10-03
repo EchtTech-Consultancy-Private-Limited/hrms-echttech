@@ -3,9 +3,11 @@ import PoliciesComponent from '../../components/Organization/PoliciesComponent'
 
 const PoliciesPage = () => {
   return (
-    <div>
-        <PoliciesComponent />
-    </div>
+    <div className='content-mid base-bg-color'>
+    <div id='dashboard' class="px-10 py-12" >
+    <PoliciesComponent />
+   </div>
+   </div>
   )
 }
 
