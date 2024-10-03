@@ -14,6 +14,9 @@
 @import url('../src//assetsechttech//css/dashboardSG-S-Admin.css');
 @import url('../src//assetsechttech//css/dashboardSG-Employee.css');
 @import url('../src//assetsechttech//css/companycreatemultistepform.css');
+@import url('../src//assetsechttech//css/announcementComp.css');
+@import url('../src//assetsechttech//css/responsiveecht.css');
+@import url('../src//assetsechttech//css/departmentComp.css');
 
 @tailwind base;
 @tailwind components;

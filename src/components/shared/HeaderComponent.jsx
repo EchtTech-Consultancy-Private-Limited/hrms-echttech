@@ -6,11 +6,11 @@ import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import NotificationsActiveOutlinedIcon from '@mui/icons-material/NotificationsActiveOutlined';
 import accountimage from "../../assetsechttech/utility-images/accountimage.png"
 import { Dialog } from '@headlessui/react';
-import { HiChevronDoubleRight,  HiChevronDoubleLeft  } from "react-icons/hi";
+import logo from "../../assetsechttech/logo/logo.png"
 
 
 
-const HeaderComponent = ({toggleClass, isToggled}) => {
+const HeaderComponent = () => {
   
   const [isOpen, setIsOpen] = useState(false);
 
@@ -19,7 +19,9 @@ const HeaderComponent = ({toggleClass, isToggled}) => {
   return (
     <div className='top-header flex justify-between items-center px-3'>
       <div className="top-bar-left flex">
-        <button className='collapse-btn' onClick={toggleClass}> {isToggled ? <HiChevronDoubleRight className='text-xl color-white'/> : <HiChevronDoubleLeft  className='text-xl color-white'/>}</button>
+          <div className="sidebar-top-logo-con w-full rounded-lg logo-custom-border p-4">
+            <img src={logo} alt="" />
+          </div>
         {/* <h3 className='text-lg font-semibold' >Section Title</h3> */}
       </div>
       <div className="top-bar-left flex items-center ">
@@ -76,7 +78,7 @@ const HeaderComponent = ({toggleClass, isToggled}) => {
                   </div>
 
                   <MenuItems
-                    className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                    className="absolute right-0 mobile-view-inf z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                   >
                     <div className="py-1">
                       <MenuItem>
@@ -148,7 +150,7 @@ const HeaderComponent = ({toggleClass, isToggled}) => {
 
                 <MenuItems
                   transition
-                  className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+                  className="absolute right-0 mobile-view-notif z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
                 >
                   <div className="py-1">
                     <MenuItem>
@@ -156,7 +158,7 @@ const HeaderComponent = ({toggleClass, isToggled}) => {
                         href="#"
                         className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
                       >
-                        Edit
+                        Edits
                       </a>
                     </MenuItem>
                     <MenuItem>

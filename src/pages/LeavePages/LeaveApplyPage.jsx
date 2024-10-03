@@ -42,15 +42,15 @@ const LeaveApplyPage = ({ setIsModalOpen }) => {
       onClick={closeModal} // Close modal on background click
     >
       <div
-        className="bg-white  p-6 rounded-lg shadow-lg w-1/2"
+        className="bg-white  p-6 rounded-lg shadow-lg  w-3/4 md:w-1/2"
         onClick={(e) => e.stopPropagation()} // Prevent modal close on content click
       >
         {/* 1. Heading */}
         <h2 className="text-xl font-semibold mb-4">Apply Leave</h2>
         <hr className="mb-4" />
 
-        <div className="flex gap-x-4">
-          <div className="sectors w-3/4">
+        <div className="flex sectors-parent gap-x-4">
+          <div className="sectors   md:w-1/2">
             <div className="">
               <label className="block text-gray-700 font-bold mb-2">
                 Leave Type
@@ -104,7 +104,7 @@ const LeaveApplyPage = ({ setIsModalOpen }) => {
               )}
             </div>
           </div>
-          <div className="sectors w-3/4 ">
+          <div className="sectors   md:w-1/2">
             <label className="block text-gray-700 font-bold mb-2">
               From Date
               <span className="text-red-500 text-sm ml-1">*</span>
@@ -114,7 +114,7 @@ const LeaveApplyPage = ({ setIsModalOpen }) => {
               className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
             />
           </div>
-          <div className="sectors w-3/4  ">
+          <div className="sectors   md:w-1/2">
             <label className="block text-gray-700 font-bold mb-2">
               To Date
               <span className="text-red-500 text-sm ml-1">*</span>

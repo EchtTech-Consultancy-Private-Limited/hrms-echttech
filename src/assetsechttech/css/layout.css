@@ -15,12 +15,19 @@
   .content {
     flex-wrap: wrap;
     overflow-y: auto;
-    height: calc(100vh - 135px);
+    height: calc(100vh - 53px);
   }
   .footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 9999;
+    background-color: #fff;
+  }
+  .layout.main-container {
+    overflow: hidden;
+    position: relative;
+    padding-top: 65px;
   }
 /* .main-container
 {

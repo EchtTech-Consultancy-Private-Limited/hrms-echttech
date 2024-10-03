@@ -70,12 +70,14 @@
   background-image: url(../utility-images/emp-card-img.jpg);
   background-repeat: no-repeat;
   background-position: 0% 0%;
+  background-size: contain;
 }
 .emp-info.emp-info.second
 {
   background-image: url(../utility-images/emp-card-2-img.jpg);
   background-repeat: no-repeat;
   background-position: 0% 100%;
+  background-size: contain;
 }
 
   .emp-info{
@@ -109,8 +111,8 @@
     font-weight: 500;
   }
   .time-card, .emp-info {
-    width: 466px;
-    margin: 15px;
+    width: 32%;
+    /* margin: 15px; */
   }
   .emp-info strong{
     width: 50%;
