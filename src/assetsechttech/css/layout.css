@@ -15,7 +15,7 @@
   .content {
     flex-wrap: wrap;
     overflow-y: auto;
-    height: calc(100vh - 53px);
+    height: calc(100vh - 118px);
   }
   .footer {
     position: fixed;

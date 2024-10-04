@@ -286,7 +286,7 @@ const DashboardStatsGrid = () => {
         </div>
 
          {/* High-charts section start */}
-         <div className="high-charts-section flex justify-between mt-10">
+         <div className="high-charts-section flex justify-between mt-10 flex-wrap">
             <div className="first-chart shadow charts radius">
             < HighchartsReact 
                   highcharts={Highcharts}
@@ -441,14 +441,13 @@ const DashboardStatsGrid = () => {
                   immutable={true}
                 />
             </div>
-               
-          </div>
+         </div>
           {/* End High-chart Section */}
 
           {/* Message Section Start */}
 
-          <div className="message-section my-10 flex justify-between">
-            <Card className="w-96 bg-white message-card">
+          <div className="message-section my-10 flex justify-between flex-wrap">
+            <Card className="w-96 bg-white message-card first-msg-card">
               <CardBody>
                   <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <Typography className="font-bold" style={{ color: '#000', fontSize: '1.25rem' }}>
@@ -483,7 +482,7 @@ const DashboardStatsGrid = () => {
                   </div>
               </CardBody>
             </Card>
-            <Card className="w-96 bg-white message-card">
+            <Card className="w-96 bg-white message-card second-events-card">
               <CardBody>
                   <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <Typography className="font-bold" style={{ color: '#000', fontSize: '1.25rem' }}>
@@ -518,7 +517,7 @@ const DashboardStatsGrid = () => {
                   </div>
               </CardBody>
             </Card>
-            <Card className="w-96 bg-white message-card">
+            <Card className="w-96 bg-white message-card third-notification-card">
               <CardBody>
                   <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <Typography className="font-bold" style={{ color: '#000', fontSize: '1.25rem' }}>
@@ -559,7 +558,7 @@ const DashboardStatsGrid = () => {
 
           {/* TO-DO tasks and weather section start */}
 
-          <div className="to-do-weather-section my-10 flex justify-between">
+          <div className="to-do-weather-section my-10 flex justify-between flex-wrap">
             <div className="to-do-card-container">
             <Card className="w-96 bg-white to-do-card">
               <CardBody>
