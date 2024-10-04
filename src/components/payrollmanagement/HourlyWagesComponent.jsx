@@ -78,7 +78,7 @@ const HourlyWagesComponent = () => {
 
               <div className='add-reset-btns flex items-center justify-end pt-4'>
                 <button
-                  className="apply-leave-btn mx-1 bg-blue-500 text-white px-2 py-2 rounded w-full md:w-auto "
+                  className="apply-leave-btn mx-1 text-white px-2 py-2 rounded w-full md:w-auto main-bg-color"
                 >
                   Save
                 </button>
@@ -104,7 +104,7 @@ const HourlyWagesComponent = () => {
 
 
       <div className='w-full department-list mt-10' >
-        <div className='container dep-list-con mx-auto p-6 border rounded-lg bg-white' >
+        <div className=' dep-list-con mx-auto p-6 border rounded-lg bg-white' >
           <h1 className="text-lg font-bold mb-2">Hourly List</h1>
 
           <div className='flex justify-between  items-center mb-4' >
@@ -142,26 +142,25 @@ const HourlyWagesComponent = () => {
           {/* Table */}
           <table className="table-auto w-full bg-white">
             <thead>
-              <tr className="bg-gray-200 text-left">
-                <th className="px-4 py-2">S.no</th>
-                <th className="px-4 py-2">Hourly Wage Title</th>
-                <th className="px-4 py-2">Hourly Rate</th>
-                <th className="px-4 py-2">Created By</th>
-                <th className="px-4 py-2">Created Date</th>
-                <th className="px-4 py-2">Actions</th>
+              <tr className="main-bg-color text-center">
+                <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Hourly Wage Title</th>
+                <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Hourly Rate</th>
+                <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Created By</th>
+                <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Created Date</th>
+                <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Actions</th>
               </tr>
             </thead>
             <tbody>
               {currentEntries.length > 0 ? (
                 currentEntries.map((item, index) => (
                   <tr key={item.id}>
-                    <td className="border px-4 py-2">{index + 1}</td>
-                    <td className="border px-4 py-2">{item.payrollTemplate}</td>
-                    <td className="border px-4 py-2">{item.hourlyRate}</td>
-                    <td className="border px-4 py-2">{item.createdBy}</td>
-                    <td className="border px-4 py-2">{item.createdDate}</td>
-                    <td className="border px-4 py-2">
-                      <div className="flex space-x-2">
+                    {/* <td className="border px-4 py-2">{index + 1}</td> */}
+                    <td className="border px-4 py-2 text-center">{item.payrollTemplate}</td>
+                    <td className="border px-4 py-2 text-center">{item.hourlyRate}</td>
+                    <td className="border px-4 py-2 text-center">{item.createdBy}</td>
+                    <td className="border px-4 py-2 text-center">{item.createdDate}</td>
+                    <td className="border px-4 py-2 text-center">
+                      <div className="flex space-x-2 justify-center">
                         <button className="text-blue-500">
                           <FaEye />
                         </button>
@@ -205,7 +204,7 @@ const HourlyWagesComponent = () => {
                 disabled={currentPage === Math.ceil(filteredData.length / entriesPerPage)}
                 className={`px-2 py-1 border rounded text-sm ${currentPage === Math.ceil(filteredData.length / entriesPerPage)
                     ? 'bg-gray-300 text-gray-600 cursor-not-allowed'
-                    : 'bg-blue-500 text-white'
+                    : 'main-bg-color text-white'
                   }`}
               >
                 Next

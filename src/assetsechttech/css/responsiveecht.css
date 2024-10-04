@@ -71,27 +71,93 @@
   }
   
   /* Tablets */
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1024px) {
     /* Styles for tablets */
-  }
-  
-  /* Small Desktops */
-  @media (min-width: 769px) and (max-width: 1024px) {
-    /* Styles for small desktops */
+    .left-sidebar {
+      width: 25%;
+    }
+    .right-dashboard {
+      background-color: #ffffff;
+      width: 75%;
+    }
+    .layout.hide .left-sidebar {
+      width: 7%;
+    }
+    .layout.hide .right-dashboard {
+      width: 93%;
+    }
+    .ul-list .ul-parent a {
+      font-size: 14px !important;
+    }
+    .below-content.p-4 {
+      padding: 10px;
+    }
+    .layout.hide .ul-parent svg {
+      font-size: 22px;
+    }
+    .card.relative {
+      margin-bottom: 45px;
+      width: 48%;
+    }
+    .layout.hide .card.relative {
+      margin: 0;
+      width: 23.5%;
+    }
+    .layout.show .high-charts-section {
+      margin-top: 0px;
+    }
+    .layout.hide .high-charts-section {
+      margin-top: 30px;
+    }
+    .high-charts-section .first-chart {
+      width: 100%;
+    }
+    .high-charts-section .second-chart {
+      width: 100%;
+      margin-top: 20px;
+    }
+    
+    .message-section .message-card {
+      width: 48%;
+      margin-bottom: 30px;
+    }
+    .message-section .message-card {
+      width: 100%;
+    }
+    .layout.hide .message-section .message-card.first-msg-card, .layout.hide .message-section .message-card.second-events-card {
+      width: 49%;
+    }
+    .to-do-weather-section .to-do-card-container {
+      width: 100%;
+    }
+    .to-do-weather-section .weather-card-container {
+      width: 100%;
+      margin-top: 30px;
+    }
+    .emp-info-section .time-card, .emp-info-section .emp-info.first {
+      width: 49%;
+    }
+    .emp-info.emp-info.second{
+      background-position: 0% 160%;
+      width: 100%;
+      margin-top: 25px;
+    }
+
   }
   
   /* Laptops */
-  @media (min-width: 1025px) and (max-width: 1440px) {
+  @media (min-width: 1025px) and (max-width: 1399px) {
+    /* Styles for small desktops */
+  }
+  
+  /* Desktops */
+  @media (min-width: 1400px) and (max-width: 1599px) {
     /* Styles for laptops */
   }
   
   /* Big Desktops */
-  @media (min-width: 1441px) and (max-width: 1920px) {
+  @media (min-width: 1600px) {
     /* Styles for big desktops */
   }
   
-  /* Large Screens */
-  @media (min-width: 1921px) {
-    /* Styles for large screens */
-  }
   
