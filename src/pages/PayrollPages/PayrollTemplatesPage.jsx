@@ -3,9 +3,12 @@ import PayrollTemplatesComponent from '../../components/Payrollmanagement/Payrol
 
 const PayrollTemplatesPage = () => {
   return (
-    <div>
-        <PayrollTemplatesComponent />
-    </div>
+   
+      <div className='content-mid base-bg-color' >
+      <div id='dashboard' className='px-5 py-12'  >
+         <PayrollTemplatesComponent />
+      </div>
+      </div>
   )
 }
 

@@ -23,6 +23,7 @@ import ManageSalaryPage from './pages/PayRollPages/ManageSalaryPage'
 import PaymentHistoryPage from './pages/PayRollPages/PaymentHistoryPage'
 import PayrollTemplatesPage from './pages/PayRollPages/PayrollTemplatesPage'
 
+
 function App() {
     return (
         <Router>

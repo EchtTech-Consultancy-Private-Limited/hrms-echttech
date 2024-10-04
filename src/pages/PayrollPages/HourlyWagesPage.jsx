@@ -3,8 +3,10 @@ import HourlyWagesComponent from '../../components/Payrollmanagement/HourlyWages
 
 const HourlyWagesPage = () => {
   return (
-    <div>
-      <HourlyWagesComponent />
+    <div className='content-mid base-bg-color' >
+      <div id='dashboard' className='px-5 py-12'  >
+        <HourlyWagesComponent />
+      </div>
     </div>
   )
 }
