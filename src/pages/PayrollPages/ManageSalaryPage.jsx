@@ -3,9 +3,11 @@ import ManageSalaryComponent from '../../components/Payrollmanagement/ManageSala
 
 const ManageSalaryPage = () => {
   return (
-    <div>
-        <ManageSalaryComponent />
+    <div className='content-mid base-bg-color' >
+    <div id='dashboard' className='px-5 py-12'  >
+    <ManageSalaryComponent />
     </div>
+  </div>
   )
 }
 

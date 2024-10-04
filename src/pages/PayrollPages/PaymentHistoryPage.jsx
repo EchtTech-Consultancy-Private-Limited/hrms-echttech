@@ -3,8 +3,12 @@ import PaymentHistoryComponent from '../../components/Payrollmanagement/PaymentH
 
 const PaymentHistoryPage = () => {
   return (
-    <div>
+
+
+    <div className='content-mid base-bg-color' >
+      <div id='dashboard' className='px-5 py-12'  >
         <PaymentHistoryComponent />
+      </div>
     </div>
   )
 }
