@@ -753,7 +753,7 @@ const DashboardStatsGrid = () => {
              
                   <table>
                     <thead>
-                      <tr>
+                      <tr className='main-bg-color'>
                         {data[0].map((header, index) => (
                           <th key={index}>{header}</th>
                         ))}
@@ -782,7 +782,7 @@ const DashboardStatsGrid = () => {
               </div>
                   <table>
                     <thead>
-                      <tr>
+                      <tr className='main-bg-color'>
                         {data[0].map((header, index) => (
                           <th key={index}>{header}</th>
                         ))}

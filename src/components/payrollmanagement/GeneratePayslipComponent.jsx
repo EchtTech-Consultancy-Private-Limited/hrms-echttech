@@ -224,7 +224,7 @@ const GeneratePayslipComponent = () => {
                 disabled={currentPage === Math.ceil(filteredData.length / entriesPerPage)}
                 className={`px-2 py-1 border rounded text-sm ${currentPage === Math.ceil(filteredData.length / entriesPerPage)
                   ? 'bg-gray-300 text-gray-600 cursor-not-allowed'
-                  : 'bg-blue-500 text-white'
+                  : 'main-bg-color text-white'
                   }`}
               >
                 Next

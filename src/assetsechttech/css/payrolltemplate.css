@@ -1,4 +1,18 @@
+.md\:w-1\/4 {
+    width: 20% !important;
+  }
+
 .template-sec input
 {
- width: 98%;
+ width: 96%;
 }
+.template-sec label {
+    color: #333;
+    font-weight: normal;
+  }
+  .add-btn{
+    padding: 8px 10px;
+  }
+  .add-btn svg{
+    margin-right: 5px;
+  }
