@@ -3,8 +3,13 @@ import LocationCompanyBranchComponent from '../../components/Organization/Locati
 
 const LocationCompanyBranchPage = () => {
   return (
-    <div>
-      <LocationCompanyBranchComponent />
+
+
+    <div className='content-mid base-bg-color'>
+      <div id='dashboard' class="px-5 py-12" >
+        <LocationCompanyBranchComponent />
+
+      </div>
     </div>
   )
 }

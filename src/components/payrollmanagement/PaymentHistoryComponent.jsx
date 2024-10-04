@@ -9,23 +9,23 @@ const PaymentHistoryComponent = () => {
 
   // Sample data to populate the table
   const data = [
-    { id: 1, payrollTemplate: 'Wage 1', hourlyRate: 15, createdBy: 'John', createdDate: '2023-10-01' },
-    { id: 2, payrollTemplate: 'Wage 2', hourlyRate: 20, createdBy: 'Doe', createdDate: '2023-10-02' },
-    { id: 3, payrollTemplate: 'Wage 3', hourlyRate: 18, createdBy: 'Alice', createdDate: '2023-10-03' },
-    { id: 4, payrollTemplate: 'Wage 1', hourlyRate: 15, createdBy: 'John', createdDate: '2023-10-01' },
-    { id: 5, payrollTemplate: 'Wage 2', hourlyRate: 20, createdBy: 'Doe', createdDate: '2023-10-02' },
-    { id: 6, payrollTemplate: 'Wage 3', hourlyRate: 18, createdBy: 'Alice', createdDate: '2023-10-03' },
-    { id: 7, payrollTemplate: 'Wage9', hourlyRate: 15, createdBy: 'John', createdDate: '2023-10-01' },
-    { id: 8, payrollTemplate: 'Wage 2', hourlyRate: 20, createdBy: 'Doe', createdDate: '2023-10-02' },
-    { id: 9, payrollTemplate: 'Wage 3', hourlyRate: 18, createdBy: 'Alice', createdDate: '2023-10-03' },
-    { id: 10, payrollTemplate: 'Wage 1', hourlyRate: 15, createdBy: 'John', createdDate: '2023-10-01' },
-    { id: 11, payrollTemplate: 'Wage 2', hourlyRate: 20, createdBy: 'Doe', createdDate: '2023-10-02' },
-    { id: 12, payrollTemplate: 'Wage 3', hourlyRate: 18, createdBy: 'Alice', createdDate: '2023-10-03' },
+    { id: 1, empId: 'ET112', name: 'Akash', sal: '10,000', createdDate: '2023-10-01' , slip: 'Generated', type: 'NEFT' },
+    { id: 2, empId: 'ET113', name: 'Sachin', sal: '12,000', createdDate: '2023-10-02' , slip: 'Generated' , type: 'CASH' },
+    { id: 3, empId: 'ET114', name: 'Rohit', sal: '10,000', createdDate: '2023-10-03' , slip: 'Generated' , type: 'NEFT'},
+    { id: 4, empId: 'ET115', name: 'Girish', sal: '9,000', createdDate: '2023-10-01' , slip: 'Generated' , type: 'CASH'},
+    { id: 5, empId: 'ET116', name: 'Anubha', sal: '11,000', createdDate: '2023-10-02' , slip: 'Generated' , type: 'NEFT'},
+    { id: 6, empId: 'ET117', name: 'Sarita', sal: '13,000', createdDate: '2023-10-03' , slip: 'Generated' , type: 'CASH'},
+    { id: 7, empId: 'ET118', name: 'Praveen', sal: '14,500', createdDate: '2023-10-01' , slip: 'Generated' , type: 'NEFT'},
+    { id: 8, empId: 'ET119', name: 'Rahul', sal: '16,000', createdDate: '2023-10-02' , slip: 'Generated' , type: 'CASH'},
+    { id: 9, empId: 'ET120', name: 'Suraj', sal: '17,799', createdDate: '2023-10-03' , slip: 'Generated' , type: 'NEFT'},
+    { id: 10, empId: 'ET121', name: 'Aman', sal: '2000', createdDate: '2023-10-01' , slip: 'Generated' , type: 'CASH'},
+    { id: 11, empId: 'ET122', name: 'Dheeraj', sal: '1000', createdDate: '2023-10-02' , slip: 'Generated' , type: 'NEFT'},
+    { id: 12, empId: 'ET123', name: 'Ram', sal: '6000', createdDate: '2023-10-03' , slip: 'Generated' , type: 'CASH'},
   ];
 
   // Filter data based on the search term
   const filteredData = data.filter(item =>
-    item.payrollTemplate.toLowerCase().includes(searchTerm.toLowerCase())
+    item.empId.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   // Calculate pagination
@@ -87,12 +87,15 @@ const PaymentHistoryComponent = () => {
           <table className="table-auto w-full bg-white">
             <thead>
               <tr className="bg-gray-200 text-left">
-                <th className="px-4 py-2">S.no</th>
-                <th className="px-4 py-2">Hourly Wage Title</th>
-                <th className="px-4 py-2">Hourly Rate</th>
-                <th className="px-4 py-2">Created By</th>
-                <th className="px-4 py-2">Created Date</th>
-                <th className="px-4 py-2">Actions</th>
+                <th className="px-4 main-bg-color py-2">S.no</th>
+                <th className="px-4 main-bg-color py-2">Emp ID</th>
+                <th className="px-4 main-bg-color py-2">Emp Name</th>
+                <th className="px-4 main-bg-color py-2">Paid Amount</th>
+                <th className="px-4 main-bg-color py-2">Payment Month</th>
+                <th className="px-4 main-bg-color py-2">Payment Date</th>
+                <th className="px-4 main-bg-color py-2">Payment Type</th>
+                <th className="px-4 main-bg-color py-2">Pay Slip</th>
+                <th className="px-4 main-bg-color py-2">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -100,10 +103,13 @@ const PaymentHistoryComponent = () => {
                 currentEntries.map((item, index) => (
                   <tr key={item.id}>
                     <td className="border px-4 py-2">{index + 1}</td>
-                    <td className="border px-4 py-2">{item.payrollTemplate}</td>
-                    <td className="border px-4 py-2">{item.hourlyRate}</td>
-                    <td className="border px-4 py-2">{item.createdBy}</td>
+                    <td className="border px-4 py-2">{item.empId}</td>
+                    <td className="border px-4 py-2">{item.name}</td>
+                    <td className="border px-4 py-2">{item.sal}</td>
                     <td className="border px-4 py-2">{item.createdDate}</td>
+                    <td className="border px-4 py-2">{item.createdDate}</td>
+                    <td className="border px-4 py-2">{item.type}</td>
+                    <td className="border px-4 py-2">{item.slip}</td>
                     <td className="border px-4 py-2">
                       <div className="flex space-x-2">
                         <button className="text-blue-500">
