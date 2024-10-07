@@ -118,8 +118,8 @@ const DepartmentComponent = () => {
       </div>
 
 
-      <div className='department-list mt-10'>
-      <div className="container dep-list-con mx-auto p-6 border rounded-lg bg-white">
+      <div className='department-list mt-5'>
+      <div className=" dep-list-con mx-auto p-6 border rounded-lg bg-white">
       <h1 className="text-lg font-bold mb-2">Department List</h1>
       
        
@@ -144,7 +144,7 @@ const DepartmentComponent = () => {
            
            
             <div className='flex justify-end items-center' >
-            <label className=' mb-0 text-sm text-gray-600' htmlFor="#">Search : </label>
+            <label className=' mb-0 text-sm text-gray-600 search-label' htmlFor="#">Search : </label>
              <input
             type="text"
             placeholder="Search..."
@@ -156,7 +156,7 @@ const DepartmentComponent = () => {
           
           </div>
       
-      <div className='overflow-auto' >
+      <div className='bottom-section template-list overflow-auto' >
       <table className="min-w-full bg-white border border-gray-300 rounded-t-lg">
         <thead>
           <tr className="main-bg-color text-white">

@@ -95,6 +95,7 @@
     color: #5e5e5e;
     margin: 4px 0;
     letter-spacing: 0.8px;
+    overflow-wrap: anywhere;
   }
   .emp-info .mid-part .emp-img {
     border: 4px solid #174e94;

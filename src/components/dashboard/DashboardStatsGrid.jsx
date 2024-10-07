@@ -674,8 +674,7 @@ const DashboardStatsGrid = () => {
 
 {/* =========================== Super Admin Dashboard End =================================================================================================== */}
 
-      <br /><br />
-
+      
 {/* =========================== Employee Dashboard Start =================================================================================================== */}
 
       <div className='dashboard-stats-grid employee-das'>
@@ -686,7 +685,7 @@ const DashboardStatsGrid = () => {
           </div>
 
            {/* Employee Card information Section start */}
-           <div className="emp-info-section flex mt-10 flex-wrap justify-between">
+           <div className="emp-info-section flex mt-0 flex-wrap justify-between">
             <div className="time-card relative shadow flex justify-center">
               <div className="top-head flex flex-col items-center">
                 <div className="timer-icon"><MdOutlineTimer className='text-3xl'/></div>

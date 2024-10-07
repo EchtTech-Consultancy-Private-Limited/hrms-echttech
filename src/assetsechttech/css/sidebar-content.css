@@ -91,23 +91,28 @@
     .below-content
     {
       overflow: auto; 
-      transition: scrollbar-color 0.3s ease, scrollbar-width 0.3s ease; /* For Firefox */
+      transition: scrollbar-color 0.3s ease-in-out, scrollbar-width 0.3s ease-in-out; /* For Firefox */
+      transition: opacity 0.5s ease-in-out;
 
      
     }
     .below-content::-webkit-scrollbar {
       width: 4px; 
-      transition: width 0.3s ease;
+      transition: width 0.3s ease-in-out;
+      opacity: 0; 
+      transition: opacity 0.5s ease-in-out;
     }
     
     .below-content::-webkit-scrollbar-track {
       background: #113689; 
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease-in-out;
+      transition: opacity 0.5s ease-in-out;
     }
     
     .below-content::-webkit-scrollbar-thumb {
       background-color: #c0c0c0; 
       border-radius: 10px; 
+<<<<<<< HEAD
       transition: background-color 0.3s ease; 
     }
 
@@ -132,3 +137,7 @@
 .layout.hide .constant-sidebar li svg{
   display: none;
 }
+=======
+      transition: background-color 0.3s ease-in-out; 
+    }
+>>>>>>> a4c973887f57a7e81c89f7b137873a305d88fd46

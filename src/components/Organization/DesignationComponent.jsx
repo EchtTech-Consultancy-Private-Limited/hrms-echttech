@@ -89,8 +89,8 @@ const DesignationComponent = () => {
         </div>
       </div>
 
-      <div className="department-list mt-10">
-        <div className="container mx-auto p-6 border rounded-lg bg-white">
+      <div className="department-list mt-5">
+        <div className=" mx-auto p-6 border rounded-lg bg-white">
         <h1 className="text-lg font-bold mb-2">Designation List</h1>
 
         <div className='flex justify-between  items-center mb-4' >
