@@ -98,7 +98,7 @@ const DepartmentComponent = () => {
 
               <div className='add-reset-btns flex items-center justify-end pt-4'>
               <button
-                  className="apply-leave-btn mx-1 bg-blue-500 text-white px-2 py-2 rounded w-full md:w-auto "
+                  className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto "
                 >
                   Save
                 </button>
@@ -144,7 +144,7 @@ const DepartmentComponent = () => {
            
            
             <div className='flex justify-end items-center' >
-            <label className=' mb-0 text-sm text-gray-600' htmlFor="#">Search : </label>
+            <label className=' mb-0 text-sm text-gray-600 search-label' htmlFor="#">Search : </label>
              <input
             type="text"
             placeholder="Search..."
@@ -156,7 +156,7 @@ const DepartmentComponent = () => {
           
           </div>
       
-      <div className='overflow-auto' >
+      <div className='bottom-section template-list overflow-auto' >
       <table className="min-w-full bg-white border border-gray-300 rounded-t-lg">
         <thead>
           <tr className="main-bg-color text-white">

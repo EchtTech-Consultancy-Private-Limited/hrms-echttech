@@ -92,12 +92,15 @@
     {
       overflow: auto; 
       transition: scrollbar-color 0.3s ease, scrollbar-width 0.3s ease; /* For Firefox */
+      transition: opacity 0.5s ease-in-out;
 
      
     }
     .below-content::-webkit-scrollbar {
       width: 4px; 
       transition: width 0.3s ease;
+      opacity: 0; 
+      transition: opacity 0.5s ease-in-out;
     }
     
     .below-content::-webkit-scrollbar-track {

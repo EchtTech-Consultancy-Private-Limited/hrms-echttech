@@ -119,7 +119,10 @@
     
     .message-section .message-card {
       width: 48%;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
+    }
+    .message-section .message-card:last-child{
+      margin-bottom: 0;
     }
     .message-section .message-card {
       width: 100%;
@@ -138,9 +141,24 @@
       width: 49%;
     }
     .emp-info.emp-info.second{
-      background-position: 0% 160%;
+      background-position: 0px 280px;
       width: 100%;
       margin-top: 25px;
+    }
+    .mid-part #time-in p, .mid-part #time-out p {
+      font-size: 14px;
+    }
+    .md\:w-1\/4 {
+      width: 33% !important;
+    }
+    .bottom-section.template-list {
+      padding-bottom: 20px;
+    }
+    .department-below-sect label {
+      font-size: 14px;
+    }
+    select {
+      text-overflow: ellipsis;
     }
 
   }
@@ -148,6 +166,13 @@
   /* Laptops */
   @media (min-width: 1025px) and (max-width: 1399px) {
     /* Styles for small desktops */
+
+    .high-charts-section .first-chart {
+      width: 49%;
+    }
+    .high-charts-section .second-chart {
+      width: 49%;
+    }
   }
   
   /* Desktops */

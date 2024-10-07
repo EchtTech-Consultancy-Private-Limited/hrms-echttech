@@ -23,7 +23,5 @@
     height: auto;
   }
   .header-container {
-    position: fixed;
-    top: 0;
     width: 100%;
   }

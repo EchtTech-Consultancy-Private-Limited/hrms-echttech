@@ -197,69 +197,77 @@ const ManageSalaryComponent = () => {
           </div>
 
           {/* Table */}
-          <table className="table-auto w-full bg-white">
-            <thead>
-              <tr className="main-bg-color text-center">
-                <th className="px-4 py-2 text-center">Employee Name</th>
-                <th className="px-4 py-2 text-center">User Name</th>
-                <th className="px-4 py-2 text-center">Designation</th>
-                <th className="px-4 py-2 text-center">Hourly</th>
-                <th className="px-4 py-2 text-center">Monthaly</th>
-                <th className="px-4 py-2 text-center">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {currentEntries.length > 0 ? (
-                currentEntries.map((item, index) => (
-                  <tr key={item.id}>
-                    <td className="border px-4 py-2 text-center">{index + 1}</td>
-                    <td className="border px-4 py-2 text-center">{item.payrollTemplate}</td>
-                    <td className="border px-4 py-2 text-center">{item.hourlyRate}</td>
-                    <td className="px-4 py-2 text-center td-select flex justify-evenly items-center">
-                      <input type="checkbox" />
-                      <select name="cars" id="cars">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="opel">Opel</option>
-                        <option value="audi">Audi</option>
-                      </select>
-                    </td>
-                    <td className="border px-4 py-2 td-select2">
-                      <input type="checkbox" />
-                      <select name="cars" id="cars">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="opel">Opel</option>
-                        <option value="audi">Audi</option>
-                      </select>
-                    </td>
-                    <td className="border px-4 py-2">
-                      <div className="flex space-x-2">
-                        <button className="text-blue-500">
-                          <FaEye />
-                        </button>
-                        <button className="text-blue-500">
-                          <FaPlus />
-                        </button>
-                        <button className="text-yellow-500">
-                          <TbEditCircle />
-                        </button>
-                        <button className="text-red-500">
-                          <FaTrashAlt />
-                        </button>
-                      </div>
+          <div className="bottom-section template-list overflow-auto">
+            <table className="table-auto w-full bg-white">
+              <thead>
+                <tr className="main-bg-color text-center">
+                  <th className="px-4 py-2 text-center">Employee Name</th>
+                  <th className="px-4 py-2 text-center">User Name</th>
+                  <th className="px-4 py-2 text-center">Designation</th>
+                  <th className="px-4 py-2 text-center">Hourly</th>
+                  <th className="px-4 py-2 text-center">Monthaly</th>
+                  <th className="px-4 py-2 text-center">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {currentEntries.length > 0 ? (
+                  currentEntries.map((item, index) => (
+                    <tr key={item.id}>
+                      <td className="border px-4 py-2 text-center">
+                        {index + 1}
+                      </td>
+                      <td className="border px-4 py-2 text-center">
+                        {item.payrollTemplate}
+                      </td>
+                      <td className="border px-4 py-2 text-center">
+                        {item.hourlyRate}
+                      </td>
+                      <td className="px-4 py-2 text-center td-select flex justify-evenly items-center">
+                        <input type="checkbox" />
+                        <select name="cars" id="cars">
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="opel">Opel</option>
+                          <option value="audi">Audi</option>
+                        </select>
+                      </td>
+                      <td className="border px-4 py-2 td-select2">
+                        <input type="checkbox" />
+                        <select name="cars" id="cars">
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="opel">Opel</option>
+                          <option value="audi">Audi</option>
+                        </select>
+                      </td>
+                      <td className="border px-4 py-2">
+                        <div className="flex space-x-2">
+                          <button className="text-blue-500">
+                            <FaEye />
+                          </button>
+                          <button className="text-blue-500">
+                            <FaPlus />
+                          </button>
+                          <button className="text-yellow-500">
+                            <TbEditCircle />
+                          </button>
+                          <button className="text-red-500">
+                            <FaTrashAlt />
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td className="border px-4 py-2 text-center" colSpan={6}>
+                      No data available
                     </td>
                   </tr>
-                ))
-              ) : (
-                <tr>
-                  <td className="border px-4 py-2 text-center" colSpan={6}>
-                    No data available
-                  </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
+                )}
+              </tbody>
+            </table>
+          </div>
 
           {/* Pagination */}
           <div className="flex flex-col md:flex-row justify-between items-center mt-4">

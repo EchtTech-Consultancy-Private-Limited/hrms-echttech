@@ -140,50 +140,53 @@ const HourlyWagesComponent = () => {
           </div>
 
           {/* Table */}
-          <table className="table-auto w-full bg-white">
-            <thead>
-              <tr className="main-bg-color text-center">
-                <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Hourly Wage Title</th>
-                <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Hourly Rate</th>
-                <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Created By</th>
-                <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Created Date</th>
-                <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {currentEntries.length > 0 ? (
-                currentEntries.map((item, index) => (
-                  <tr key={item.id}>
-                    {/* <td className="border px-4 py-2">{index + 1}</td> */}
-                    <td className="border px-4 py-2 text-center">{item.payrollTemplate}</td>
-                    <td className="border px-4 py-2 text-center">{item.hourlyRate}</td>
-                    <td className="border px-4 py-2 text-center">{item.createdBy}</td>
-                    <td className="border px-4 py-2 text-center">{item.createdDate}</td>
-                    <td className="border px-4 py-2 text-center">
-                      <div className="flex space-x-2 justify-center">
-                        <button className="text-blue-500">
-                          <FaEye />
-                        </button>
-                        <button className="text-blue-500">
-                          <FaPlus />
-                        </button>
-                        <button className="text-yellow-500">
-                          <TbEditCircle />
-                        </button>
-                        <button className="text-red-500">
-                          <FaTrashAlt />
-                        </button>
-                      </div>
-                    </td>
+          <div className='bottom-section template-list overflow-auto'>
+              <table className="table-auto w-full bg-white">
+                <thead>
+                  <tr className="main-bg-color text-center">
+                    <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Hourly Wage Title</th>
+                    <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Hourly Rate</th>
+                    <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Created By</th>
+                    <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Created Date</th>
+                    <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Actions</th>
                   </tr>
-                ))
-              ) : (
-                <tr>
-                  <td className="border px-4 py-2 text-center" colSpan={6}>No data available</td>
-                </tr>
-              )}
-            </tbody>
-          </table>
+                </thead>
+                <tbody>
+                  {currentEntries.length > 0 ? (
+                    currentEntries.map((item, index) => (
+                      <tr key={item.id}>
+                        {/* <td className="border px-4 py-2">{index + 1}</td> */}
+                        <td className="border px-4 py-2 text-center">{item.payrollTemplate}</td>
+                        <td className="border px-4 py-2 text-center">{item.hourlyRate}</td>
+                        <td className="border px-4 py-2 text-center">{item.createdBy}</td>
+                        <td className="border px-4 py-2 text-center">{item.createdDate}</td>
+                        <td className="border px-4 py-2 text-center">
+                          <div className="flex space-x-2 justify-center">
+                            <button className="text-blue-500">
+                              <FaEye />
+                            </button>
+                            <button className="text-blue-500">
+                              <FaPlus />
+                            </button>
+                            <button className="text-yellow-500">
+                              <TbEditCircle />
+                            </button>
+                            <button className="text-red-500">
+                              <FaTrashAlt />
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr>
+                      <td className="border px-4 py-2 text-center" colSpan={6}>No data available</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+          </div>
+         
 
           {/* Pagination */}
           <div className="flex flex-col md:flex-row justify-between items-center mt-4">

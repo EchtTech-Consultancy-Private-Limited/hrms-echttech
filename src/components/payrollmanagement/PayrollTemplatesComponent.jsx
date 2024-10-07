@@ -55,7 +55,7 @@ const PayrollTemplatesComponent = () => {
             <hr className="mb-6" />
             {/* Department Form Section */}
             <div className="department-below-sect w-full">
-              <div className="flex flex-col md:flex-row md:space-x-1 justify-between">
+              <div className="flex flex-col md:flex-row md:space-x-3 justify-between">
                 <div className="flex-1 bg-white rounded-lg mb-4">
                   <label className="block text-black  font-bold">
                     Name of Template
@@ -96,7 +96,7 @@ const PayrollTemplatesComponent = () => {
             <hr className="mb-6" />
             {/* Department Form Section */}
             <div className="department-below-sect w-full">
-              <div className="flex flex-wrap template-sec">
+              <div className="flex flex-wrap template-sec items-end">
                 <div className="w-full md:w-1/4 bg-white rounded-lg mb-4">
                   <label className="block text-black font-bold">
                     Basic Salary
@@ -217,7 +217,7 @@ const PayrollTemplatesComponent = () => {
             <hr className="mb-6" />
             {/* Department Form Section */}
             <div className="department-below-sect w-full">
-              <div className="flex flex-wrap template-sec">
+              <div className="flex flex-wrap template-sec items-end">
                 <div className="w-full md:w-1/4 bg-white rounded-lg mb-4">
                   <label className="block text-black font-bold">
                     EPF Employee Contribution
@@ -283,7 +283,7 @@ const PayrollTemplatesComponent = () => {
             <hr className="mb-6" />
             {/* Department Form Section */}
             <div className="department-below-sect w-full">
-              <div className="flex flex-wrap template-sec">
+              <div className="flex flex-wrap template-sec items-end">
                 <div className="w-full md:w-1/4 bg-white rounded-lg mb-4">
                   <label className="block text-black font-bold">
                     EPF Employee Contribution
@@ -336,7 +336,7 @@ const PayrollTemplatesComponent = () => {
             <hr className="mb-6" />
             {/* Department Form Section */}
             <div className="department-below-sect w-full">
-              <div className="flex flex-wrap template-sec">
+              <div className="flex flex-wrap template-sec items-end">
                 <div className="w-full md:w-1/4 bg-white rounded-lg mb-4">
                   <label className="block text-black font-bold">
                     Gross Salary
@@ -401,7 +401,10 @@ const PayrollTemplatesComponent = () => {
           <div className=" dep-list-con mx-auto p-6 border rounded-lg bg-white">
             <div className="flex justify-between pb-3 w-full text-black items-center">
               <h1 className="text-lg font-bold mb-2">Template List</h1>
-              <button className=" add-btn main-bg-color rounded color-white flex items-center justify-between"><AiOutlinePlus className="color-white"/>Add New</button>
+              <button className=" add-btn main-bg-color rounded color-white flex items-center justify-between">
+                <AiOutlinePlus className="color-white" />
+                Add New
+              </button>
             </div>
             <hr className="mb-6" />
             <div className="flex justify-between  items-center mb-4">
@@ -517,42 +520,41 @@ const PayrollTemplatesComponent = () => {
                   ))}
                 </tbody>
               </table>
-
-              {/* Pagination */}
-              <div className="flex flex-col md:flex-row justify-between items-center mt-4">
-                <div className="text-gray-600 mt-2">
-                  Showing {indexOfFirstEntry + 1} to{" "}
-                  {Math.min(indexOfLastEntry, filteredData.length)} of{" "}
-                  {filteredData.length} entries
-                </div>
-                <div>
-                  <button
-                    onClick={prevPage}
-                    disabled={currentPage === 1}
-                    className={`px-2 py-1 mx-1 border rounded text-sm ${
-                      currentPage === 1
-                        ? "bg-gray-300 text-gray-600 cursor-not-allowed"
-                        : "bg-blue-500 text-white"
-                    }`}
-                  >
-                    Previous
-                  </button>
-                  <button
-                    onClick={nextPage}
-                    disabled={
-                      currentPage ===
-                      Math.ceil(filteredData.length / entriesPerPage)
-                    }
-                    className={`px-2 py-1 border rounded text-sm ${
-                      currentPage ===
-                      Math.ceil(filteredData.length / entriesPerPage)
-                        ? "bg-gray-300 text-gray-600 cursor-not-allowed"
-                        : "main-bg-color text-white"
-                    }`}
-                  >
-                    Next
-                  </button>
-                </div>
+            </div>
+            {/* Pagination */}
+            <div className="flex flex-col md:flex-row justify-between items-center mt-4">
+              <div className="text-gray-600 mt-2">
+                Showing {indexOfFirstEntry + 1} to{" "}
+                {Math.min(indexOfLastEntry, filteredData.length)} of{" "}
+                {filteredData.length} entries
+              </div>
+              <div>
+                <button
+                  onClick={prevPage}
+                  disabled={currentPage === 1}
+                  className={`px-2 py-1 mx-1 border rounded text-sm ${
+                    currentPage === 1
+                      ? "bg-gray-300 text-gray-600 cursor-not-allowed"
+                      : "bg-blue-500 text-white"
+                  }`}
+                >
+                  Previous
+                </button>
+                <button
+                  onClick={nextPage}
+                  disabled={
+                    currentPage ===
+                    Math.ceil(filteredData.length / entriesPerPage)
+                  }
+                  className={`px-2 py-1 border rounded text-sm ${
+                    currentPage ===
+                    Math.ceil(filteredData.length / entriesPerPage)
+                      ? "bg-gray-300 text-gray-600 cursor-not-allowed"
+                      : "main-bg-color text-white"
+                  }`}
+                >
+                  Next
+                </button>
               </div>
             </div>
           </div>
