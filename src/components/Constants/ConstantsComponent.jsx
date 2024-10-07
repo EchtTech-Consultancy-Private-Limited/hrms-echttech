@@ -44,7 +44,8 @@ const ConstantsComponent = () => {
             className={`${activeTab === tab.id ? 'block' : 'hidden'}`}
           >
             <p className="text-gray-700">{tab.content}</p>
-            <LeaveTypePage />
+            {tab.id === 1 && activeTab === 1 && <LeaveTypePage />}
+
           </div>
         ))}
       </div>
