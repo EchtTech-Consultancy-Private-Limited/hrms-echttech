@@ -1,8 +1,11 @@
 import React from 'react'
+import LeaveTypeComponent from '../../components/Constants/LeaveTypeComponent'
 
 const LeaveTypePage = () => {
   return (
-    <div>LeaveTypePage</div>
+    <div>
+      <LeaveTypeComponent />
+    </div>
   )
 }
 
