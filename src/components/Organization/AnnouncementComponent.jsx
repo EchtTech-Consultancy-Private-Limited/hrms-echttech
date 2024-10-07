@@ -151,7 +151,7 @@ const AnnouncementComponent = () => {
       </div>
 
       <div className='announcement-list' >
-        <div className="container mx-auto p-6 border rounded-lg bg-white my-10">
+        <div className=" mx-auto p-6 border rounded-lg bg-white my-5">
         <h1 className="text-lg font-bold mb-2">Announcement List</h1>
 
         <div className='flex justify-between  items-center mb-4' >

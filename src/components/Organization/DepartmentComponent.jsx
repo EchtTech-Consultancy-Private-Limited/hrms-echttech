@@ -118,8 +118,8 @@ const DepartmentComponent = () => {
       </div>
 
 
-      <div className='department-list mt-10'>
-      <div className="container dep-list-con mx-auto p-6 border rounded-lg bg-white">
+      <div className='department-list mt-5'>
+      <div className=" dep-list-con mx-auto p-6 border rounded-lg bg-white">
       <h1 className="text-lg font-bold mb-2">Department List</h1>
       
        

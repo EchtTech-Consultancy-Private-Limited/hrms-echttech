@@ -16,7 +16,7 @@ const CompanyCreateComponent = () => {
         
           <div className="form-step">
             <div className="form-labels">
-                <div className="row first-row flex items-center">
+                <div className="row first-row flex items-center flex-wrap justify-start md:space-x-3">
                   <div className="first">
                     <label htmlFor="" className='block text-gray-700 font-bold mb-2'>Company Name</label>
                     <input className='border border-gray-300 text-gray-500 p-2 h-9 rounded w-full' type="text" placeholder='Company Name' />
@@ -44,10 +44,7 @@ const CompanyCreateComponent = () => {
                     <label htmlFor="" className='block text-gray-700 font-bold mb-2'>Contact Number</label>
                     <input className='border border-gray-300 text-gray-500 p-2 h-9 rounded w-full' type="text" placeholder='Contact Number' />
                   </div>
-                 
-                </div>
 
-                <div className="row flex second-row items-center mt-5">
                   <div className="first">
                     <label htmlFor="" className='block text-gray-700 font-bold mb-2'>Email</label>
                     <input className='border border-gray-300 text-gray-500 p-2 h-9 rounded w-full' type="text" placeholder='Email' />
@@ -69,10 +66,10 @@ const CompanyCreateComponent = () => {
                         <input className='border border-gray-300 text-gray-500 p-2 h-9 rounded w-full' type="text" placeholder='Address Line 1' />
                     </div>
                   </div>
-                  <div className="first"><input className='border border-gray-300 text-gray-500 p-2 h-9 rounded w-full' type="text" placeholder='Address Line 2' /></div>
-                </div>
+                  <div className="first">
+                    <input className='border border-gray-300 text-gray-500 p-2 h-9 rounded w-full' type="text" placeholder='Address Line 2' />
+                  </div>
 
-                <div className="row flex third-row items-center mt-10">
                   <div className="first">
                     <input className='border border-gray-300 text-gray-500 p-2 h-9 rounded w-full' type="text" placeholder='City' />
                   </div>
@@ -90,7 +87,16 @@ const CompanyCreateComponent = () => {
                         <option value="opel">Pakistan</option>
                       </select>
                   </div>
+                 
                 </div>
+
+                {/* <div className="row flex second-row items-center mt-5">
+                  
+                </div>
+
+                <div className="row flex third-row items-center mt-10">
+                  
+                </div> */}
 
             </div>
             <div className="button button-bottom mt-10 flex justify-between">

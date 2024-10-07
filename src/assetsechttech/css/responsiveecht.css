@@ -157,8 +157,19 @@
     .department-below-sect label {
       font-size: 14px;
     }
-    select {
+    select, input {
       text-overflow: ellipsis;
+      font-size: 14px !important;
+    }
+    .form-labels .first {
+      width: 30%;
+      align-self: end;
+      margin-bottom: 20px;
+      /* margin-right: 10px; */
+    }
+    select {
+      height: unset !important;
+      padding: 2px 2px 8px 10px !important;
     }
 
   }

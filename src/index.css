@@ -63,3 +63,10 @@ body {
   .search-label {
 	margin-right: 10px;
   }
+  select {
+	height: unset !important;
+	padding: 4px 2px 6px 10px !important;
+  }
+  input {
+	height: 36px;
+  }

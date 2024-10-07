@@ -80,8 +80,12 @@
   } */
   .form-labels .first {
     width: 19%;
-    margin-right: 15px;
     align-self: end;
+    margin-bottom: 20px;
+    /* margin-right: 10px; */
+  }
+  .form-labels .first:first-child {
+    margin-left: 10px;
   }
   .progress-bar .steps {
     position: absolute;
