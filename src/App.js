@@ -22,6 +22,7 @@ import HourlyWagesPage from './pages/PayRollPages/HourlyWagesPage'
 import ManageSalaryPage from './pages/PayRollPages/ManageSalaryPage'
 import PaymentHistoryPage from './pages/PayRollPages/PaymentHistoryPage'
 import PayrollTemplatesPage from './pages/PayRollPages/PayrollTemplatesPage'
+import ConstantsPage from './pages/ConstantsPages/ConstantsPage'
 
 
 function App() {
@@ -52,7 +53,7 @@ function App() {
                     <Route path='manage-salary' element={<ManageSalaryPage />} />
                     <Route path='generate-payslip' element={<GeneratePayslipPage />} />
                     <Route path='payment-history' element={<PaymentHistoryPage />} />
-                    <Route path='constants' element={<PaymentHistoryPage />} />
+                    <Route path='constants' element={<ConstantsPage />} />
                 </Route>
                
             </Routes>
