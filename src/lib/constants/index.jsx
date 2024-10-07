@@ -19,6 +19,8 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     label: 'Dashboard',
     path: '/',
     icon: <HiOutlineViewGrid />,
+    secondsidebar: 0,
+
     submenu: [] // No submenu for dashboard
   },
   {
@@ -26,6 +28,8 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     label: 'Organization',
     path: '#',
     icon: <SiAwsorganizations />,
+    secondsidebar: 0,
+
     submenu: [
       { key: 'company', label: 'Company', path: '/company',icon:<IoMdArrowDropright  /> },
       { key: 'location', label: 'Location', path: '/location' },
@@ -41,6 +45,8 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     label: 'Employees',
     path: '#',
     icon: <HiUserGroup />,
+    secondsidebar: 0,
+
     submenu: [
       { key: 'employees', label: 'Employees', path: '/employees' },
       { key: 'awards', label: 'Awards', path: '/awards' },
@@ -52,6 +58,8 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     label: 'Pay Roll',
     path: '#',
     icon: <GiPayMoney />,
+    secondsidebar: 0,
+
     submenu: [
       { key: 'payrolltemplate', label: 'Payroll Templates', path: '/payrolltemplate' },
       { key: 'hourly-wages', label: 'Hourly Wages', path: '/hourly-wages' },
@@ -65,6 +73,8 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     label: 'Attendance',
     path: '/attendance',
     icon: <HiOutlineCube />,
+    secondsidebar: 0,
+
     submenu: [
       { key: 'daily', label: 'Daily Attendance', path: '/attendance' },
     ]
@@ -74,6 +84,8 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     label: 'Leave',
     path: '#',
     icon: <HiOutlineShoppingCart />,
+    secondsidebar: 0,
+
     submenu: [
       { key: 'leave-requests', label: 'Leave Requests', path: '/leave' },
     ]
@@ -83,6 +95,8 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     label: 'Pay Slip',
     path: '#',
     icon: <FaAmazonPay />,
+    secondsidebar: 0,
+
     submenu: [
       { key: 'payslip', label: 'Pay Slip List', path: '/payslip' },
     ]
@@ -92,6 +106,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     label: 'Holidays',
     path: '/holidays',
     icon: <HiOutlineUsers />,
+    secondsidebar: 0,
     submenu: [] // No submenu for holidays
   },
   {
@@ -99,9 +114,11 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     label: 'Constants',
     path: '/constants',
     icon: <VscSymbolConstant />,
-    submenu: [] // No submenu for holidays
+    secondsidebar: 1,
+    submenu: [], // No submenu for holidays
   },
 ]
+
 
 export const DASHBOARD_SIDEBAR_BOTTOM_LINKS = [
 	{

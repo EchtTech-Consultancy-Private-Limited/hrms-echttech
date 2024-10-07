@@ -2,6 +2,8 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import { Link } from 'react-router-dom'
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
+
+
 import MuiAccordion, { AccordionProps } from '@mui/material/Accordion';
 import MuiAccordionSummary, {
   AccordionSummaryProps,
@@ -50,10 +52,10 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
-export default function SidebarcontentComponent() {
+export default function SidebarcontentComponent({toggleClass}) {
   const [expanded, setExpanded] = useState('panel1');
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
-  const handleChange =
+  const handleChange = 
     (panel) => (event: SyntheticEvent, newExpanded: Boolean) => {
       setExpanded(newExpanded ? panel : false);
     };
@@ -64,9 +66,12 @@ export default function SidebarcontentComponent() {
       {DASHBOARD_SIDEBAR_LINKS.map((link) => (
       <Accordion expanded={link.submenu?.length > 0 && expanded === link.key} onChange={handleChange(link.key)} className='ul-list'>
         <AccordionSummary aria-controls={`${link.key}-content`} id={`${link.key}-header`} className='color-white ul-parent'>
-          <span className="mr-3 text-xl">{link.icon}</span>
+          <span className="mr-3 text-xl" onClick={toggleClass}>{link.icon}</span>
           <Typography>
-            <Link to={link.path}>{link.label}</Link>
+            {
+            link.secondsidebar=== 1 ?<Link to={link.path} onClick={toggleClass}>{link.label}</Link>:<Link to={link.path}>{link.label}</Link>
+            }
+            
           </Typography>
           {link.submenu?.length > 0 && (
             <span className="text-neutral-200 side-bar-content-arrow">{isSubMenuOpen ? < HiOutlineChevronRight /> : <HiOutlineChevronDown />}</span>
@@ -84,6 +89,43 @@ export default function SidebarcontentComponent() {
          )}
       </Accordion>
       ))}
+      
+      {/* <div className='absolute constant-sidebar ' >
+          <ul>
+            <li className='py-2 px-1 flex justify-between' > 
+              <Link className='text-white'  >Contract Type</Link> <PiCaretDoubleRightBold className='text-sm text-white' />
+              </li>
+              <li className='py-2 px-1 flex justify-between'> 
+              <Link className='text-white'>Qualification</Link> <PiCaretDoubleRightBold className='text-sm text-white' /></li>
+              <li className='py-2 px-1 flex justify-between'> 
+              <Link className='text-white'>Document Type </Link> <PiCaretDoubleRightBold className='text-sm text-white' /></li>
+              <li className='py-2 px-1 flex justify-between'> 
+              <Link className='text-white'>Award Type</Link> <PiCaretDoubleRightBold className='text-sm text-white' /></li>
+              <li className='py-2 px-1 flex justify-between'> 
+              <Link className='text-white'>Leave Type</Link> <PiCaretDoubleRightBold className='text-sm text-white' /></li>
+              <li className='py-2 px-1 flex justify-between'> 
+              <Link className='text-white'>Warning Type</Link> <PiCaretDoubleRightBold className='text-sm text-white' /></li>
+              <li className='py-2 px-1 flex justify-between'> 
+              <Link className='text-white'>Termination Type</Link> <PiCaretDoubleRightBold className='text-sm text-white' /></li>
+              <li className='py-2 px-1 flex justify-between'> 
+              <Link className='text-white'>Expense Type</Link> <PiCaretDoubleRightBold className='text-sm text-white' /></li>
+              <li className='py-2 px-1 flex justify-between'> 
+              <Link className='text-white'>Job Type</Link> <PiCaretDoubleRightBold className='text-sm text-white' /></li>
+              <li className='py-2 px-1 flex justify-between'> 
+              <Link className='text-white'>Employee Exit Type</Link> <PiCaretDoubleRightBold className='text-sm text-white' /></li>
+              <li className='py-2 px-1 flex justify-between'> 
+              <Link className='text-white'>Travel Arrangement Type</Link> <PiCaretDoubleRightBold className='text-sm text-white' /></li>
+              <li className='py-2 px-1 flex justify-between'> 
+              <Link>Payment Methods</Link> <PiCaretDoubleRightBold className='text-sm text-white' /></li>
+              <li className='py-2 px-1 flex justify-between'> 
+              <Link className='text-white'>Currency Type</Link> <PiCaretDoubleRightBold className='text-sm text-white' /></li>
+            
+          </ul>
+      </div> */}
+
+
     </div>
+
+    
   );
 }

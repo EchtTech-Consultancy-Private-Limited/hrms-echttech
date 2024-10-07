@@ -110,3 +110,25 @@
       border-radius: 10px; 
       transition: background-color 0.3s ease; 
     }
+
+
+    /* styling for second-sidebar */
+
+    .layout.show .constant-sidebar {
+      display: none;
+  }
+  .layout.hide .constant-sidebar {
+    display: block;
+    height: 478px;
+    overflow-x: hidden;
+    position: absolute;
+    left: 4.1%;
+    padding: 10px 0 10px 20px;
+}
+.layout.hide .constant-sidebar li{
+  border: none;
+  margin: 0;
+}
+.layout.hide .constant-sidebar li svg{
+  display: none;
+}
