@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaEye, FaTrashAlt, FaPlus } from 'react-icons/fa'; // Import icons
+import { FaEye, FaTrashAlt } from 'react-icons/fa'; // Import icons
 import { TbEditCircle } from 'react-icons/tb'; // Import icons
 import ReactQuill from 'react-quill'; // Importing the ReactQuill component
 import 'react-quill/dist/quill.snow.css'; // Import Quill styles
@@ -127,19 +127,19 @@ const AnnouncementComponent = () => {
                     onChange={handleChange}
                     placeholder="Write your reason here..."
                     theme="snow"
-                    className=" rounded-lg"
-                    style={{ height: '170px' }}
+                    className=" rounded-lg announcement-quill"
+                    style={{ height: '200px' }}
                   />
                 </div>
               </div>
               <div className='add-reset-btns flex items-center justify-end pt-4'>
               <button
-                  className="apply-leave-btn mx-1 bg-blue-500 text-white px-2 py-2 rounded w-full md:w-auto "
+                  className="mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto "
                 >
                   Save
                 </button>
                 <button
-                  className="apply-leave-btn bg-gray-400 text-white px-2 py-2 rounded w-full md:w-auto"
+                  className="bg-gray-400 text-white px-2 py-2 rounded w-full md:w-auto"
                 >
                   Reset
                 </button>
@@ -178,7 +178,7 @@ const AnnouncementComponent = () => {
              <input
             type="text"
             placeholder="Search..."
-            className="border mob-search-dc border-gray-300 text-gray-600 rounded px-2 py-1 text-sm"
+            className="border mob-search-dc ml-1 border-gray-300 text-gray-600 rounded px-2 py-1 text-sm"
             onChange={e => setSearchTerm(e.target.value)}
           />
 
@@ -213,9 +213,7 @@ const AnnouncementComponent = () => {
                       <button className="text-blue-500">
                         <FaEye />
                       </button>
-                      <button className="text-blue-500">
-                        <FaPlus />
-                      </button>
+                     
                       <button className="text-yellow-500">
                         <TbEditCircle />
                       </button>
@@ -240,14 +238,14 @@ const AnnouncementComponent = () => {
       <button
         onClick={prevPage}
         disabled={currentPage === 1}
-        className={`px-2 py-1 mx-1 border rounded text-sm ${currentPage === 1 ? 'bg-gray-300 text-gray-600 cursor-not-allowed' : 'bg-blue-500 text-white'}`}
+        className={`px-2 py-1 mx-1 border rounded text-sm ${currentPage === 1 ? 'bg-gray-300 text-gray-600 cursor-not-allowed' : 'main-bg-color text-white'}`}
       >
         Previous
       </button>
       <button
         onClick={nextPage}
         disabled={currentPage === Math.ceil(filteredData.length / entriesPerPage)}
-        className={`px-2 py-1 border rounded text-sm ${currentPage === Math.ceil(filteredData.length / entriesPerPage) ? 'bg-gray-300 text-gray-600 cursor-not-allowed' : 'bg-blue-500 text-white'}`}
+        className={`px-2 py-1 border rounded text-sm ${currentPage === Math.ceil(filteredData.length / entriesPerPage) ? 'bg-gray-300 text-gray-600 cursor-not-allowed' : 'main-bg-color text-white'}`}
       >
         Next
       </button>
