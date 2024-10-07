@@ -112,7 +112,6 @@
     .below-content::-webkit-scrollbar-thumb {
       background-color: #c0c0c0; 
       border-radius: 10px; 
-<<<<<<< HEAD
       transition: background-color 0.3s ease; 
     }
 
@@ -137,7 +136,3 @@
 .layout.hide .constant-sidebar li svg{
   display: none;
 }
-=======
-      transition: background-color 0.3s ease-in-out; 
-    }
->>>>>>> a4c973887f57a7e81c89f7b137873a305d88fd46
