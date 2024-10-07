@@ -52,6 +52,7 @@ function App() {
                     <Route path='manage-salary' element={<ManageSalaryPage />} />
                     <Route path='generate-payslip' element={<GeneratePayslipPage />} />
                     <Route path='payment-history' element={<PaymentHistoryPage />} />
+                    <Route path='constants' element={<PaymentHistoryPage />} />
                 </Route>
                
             </Routes>

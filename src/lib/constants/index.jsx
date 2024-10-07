@@ -11,6 +11,7 @@ import { SiAwsorganizations } from "react-icons/si";
 import { FaAmazonPay } from "react-icons/fa6";
 import { IoMdArrowDropright } from "react-icons/io";
 import { GiPayMoney } from "react-icons/gi";
+import { VscSymbolConstant } from "react-icons/vsc";
 
 export const DASHBOARD_SIDEBAR_LINKS = [
 	{
@@ -91,6 +92,13 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     label: 'Holidays',
     path: '/holidays',
     icon: <HiOutlineUsers />,
+    submenu: [] // No submenu for holidays
+  },
+  {
+    key: 'constants',
+    label: 'Constants',
+    path: '/constants',
+    icon: <VscSymbolConstant />,
     submenu: [] // No submenu for holidays
   },
 ]
