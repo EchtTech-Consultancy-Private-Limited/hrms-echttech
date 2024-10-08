@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaEye, FaTrashAlt, FaPlus } from "react-icons/fa";
+import { FaEye, FaTrashAlt } from "react-icons/fa";
 import { TbEditCircle } from "react-icons/tb";
 import LeaveApplyPage from "../../pages/LeavePages/LeaveApplyPage";
 
@@ -152,7 +152,6 @@ const LeaveComponentList = () => {
                 <td className="border border-gray-300 px-4 py-2">{leave.reason}</td>
                 <td className="px-4 py-3 flex justify-start">
                   <FaEye className="text-blue-500 cursor-pointer mr-2" />
-                  <FaPlus className="text-blue-500 cursor-pointer mr-2" />
                   <TbEditCircle className="text-green-500 cursor-pointer mr-2" />
                   <FaTrashAlt className="text-red-500 cursor-pointer" />
                 </td>

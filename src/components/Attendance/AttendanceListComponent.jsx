@@ -71,7 +71,7 @@ const AttendanceListComponent = () => {
 
     <div className="below-section data-table-attendance mt-10" >
     <div className="container mx-auto p-6 border rounded-lg bg-white">
-    <h1 className="text-lg font-bold mb-2">Attendance List</h1>
+    <h1 className="text-lg  font-bold mb-2">Attendance List</h1>
 
       
         <div className='flex justify-between  items-center mb-4' >
@@ -98,7 +98,7 @@ const AttendanceListComponent = () => {
              <input
             type="text"
             placeholder="Search..."
-            className="border mob-search-dc border-gray-300 text-gray-600 rounded px-2 py-1 text-sm"
+            className="border ml-1 mob-search-dc border-gray-300 text-gray-600 rounded px-2 py-1 text-sm"
             onChange={e => setSearchTerm(e.target.value)}
           />
 

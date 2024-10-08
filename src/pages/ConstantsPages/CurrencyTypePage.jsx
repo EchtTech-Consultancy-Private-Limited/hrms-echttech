@@ -3,8 +3,12 @@ import CurrencyTypeComponent from '../../components/Constants/CurrencyTypeCompon
 
 const CurrencyTypePage = () => {
   return (
-    <div>
-      <CurrencyTypeComponent />
+
+
+    <div className='content-mid base-bg-color' >
+      <div className='px-5 py-12' id='dashboard' >
+        <CurrencyTypeComponent />
+      </div>
     </div>
   )
 }

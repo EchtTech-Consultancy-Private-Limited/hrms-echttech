@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { loadCaptchaEnginge, LoadCanvasTemplateNoReload, LoadCanvasTemplate, validateCaptcha,} from 'react-simple-captcha';
 import { useNavigate, Link } from 'react-router-dom';
 import { RiRefreshLine } from "react-icons/ri";
 import { FaCaretLeft } from 'react-icons/fa';
@@ -6,6 +7,7 @@ import captcha from '../../assetsechttech/utility-images/captcha.PNG';
 import { HiChevronDoubleRight, HiChevronDoubleLeft } from "react-icons/hi";
 import { GoEyeClosed } from "react-icons/go";
 import { IoEyeOutline } from "react-icons/io5";
+import { useForm } from 'react-hook-form';
 
 const LoginComponent = () => {
   const [email, setEmail] = useState('');
@@ -17,22 +19,31 @@ const LoginComponent = () => {
   const [isClosed, setIsClosed] = useState(false);
   const [showOtpInput, setShowOtpInput] = useState(false);
   const navigate = useNavigate();
+  const [captchaCode, setCaptchaCode] = useState('');
+  const [generatedCaptcha, setGeneratedCaptcha] = useState('');
+  const { register, handleSubmit, formState: { errors } } = useForm();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setError('');
 
-    // Replace with your login logic
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      navigate('/dashboard');
-    } catch (error) {
-      setError('Login failed. Please check your credentials.');
-    } finally {
-      setLoading(false);
-    }
+  const onSubmit = (data) => {
+    // Handle form submission
+    
+    console.log('Form Data:', data);
   };
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setLoading(true);
+  //   setError('');
+
+  //   // Replace with your login logic
+  //   try {
+  //     await new Promise((resolve) => setTimeout(resolve, 2000));
+  //     navigate('/dashboard');
+  //   } catch (error) {
+  //     setError('Login failed. Please check your credentials.');
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -54,7 +65,10 @@ const LoginComponent = () => {
   const toggleView = () => {
     setIsClosed(!isClosed);
   };
-
+  React.useEffect(() => {
+    loadCaptchaEnginge(6); // Generate a 6-character CAPTCHA
+  }, []);
+  
   return (
     <div className="mc">
       <div className="min-h-screen relative bg-gray-300 border flex items-center bg-login-img">
@@ -77,7 +91,7 @@ const LoginComponent = () => {
                 </>
               )}
 
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit(onSubmit)}>
                 {!showEmailInput && !showOtpInput ? (  // Hide login form if OTP input is shown
                   <>
                    <h2 className="text-2xl font-bold mb-2">Login</h2>
@@ -88,12 +102,17 @@ const LoginComponent = () => {
                       <input
                         type="email"
                         id="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
                         className="w-full px-3 py-2 border-slate-200 text-gray-700 focus:border-blue-500"
                         placeholder="Email"
-                        required
+                        {...register('email', {
+                          required: 'Please input your email!',
+                          pattern: {
+                            value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+                            message: 'The input is not a valid E-mail!'
+                          }
+                        })}
                       />
+                      {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
                     </div>
 
                     <div className="mb-6 relative">
@@ -101,12 +120,23 @@ const LoginComponent = () => {
                       <input
                         type={showPassword ? 'text' : 'password'}
                         id="password"
-                        value={password}
+                        name="password"
                         onChange={(e) => setPassword(e.target.value)}
                         className="w-full px-3 py-2 border-slate-200 text-gray-700 focus:border-blue-500"
                         placeholder="Password"
-                        required
+                        {...register('password', {
+                          required: 'Please input your password!',
+                          minLength: {
+                            value: 8,
+                            message: 'Password must be at least 8 characters long.'
+                          },
+                          // pattern: {
+                          //   value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+                          //   message: 'The input is not a valid E-mail!'
+                          // }
+                        })}
                       />
+                      {errors.password && <p className="text-red-500 text-sm">{errors.password.message}</p>}
                       <Link>
                         <p className='text-sm text-black-500 font-bold underline mt-2' onClick={signinOtp}>Signin with O.T.P</p>
                       </Link>
@@ -118,21 +148,29 @@ const LoginComponent = () => {
                         {showPassword ?  <IoEyeOutline /> : <GoEyeClosed />}
                       </button>
                     </div>
-
                     <div className="mb-2">
                       <div className='flex items-center h-[42px] mb-3'>
-                        <img className='w-auto h-[40px]' src={captcha} alt="" />
-                        <button className="flex items-center mx-3 px-2 py-3 text-sm font-medium text-blue-700 bg-white border border-black-700 rounded-lg hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                      <LoadCanvasTemplate />
+
+                        {/* <button className="flex items-center mx-3 px-2 py-3 text-sm font-medium text-blue-700 bg-white border border-black-700 rounded-lg hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                           <RiRefreshLine />
-                        </button>
+                        </button> */}
                         <input
                           type="text"
                           id="captcha"
+                          name="captcha"
                           className="w-full border px-3 py-2 border-slate-200 text-gray-700 focus:border-blue-500"
                           placeholder="Captcha"
-                          required
+                          {...register('captcha', {
+                            required: 'Please input your captcha!',
+                            // pattern: {
+                            //   value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+                            //   message: 'The input is not a valid E-mail!'
+                            // }
+                          })}
                         />
                       </div>
+                      {errors.captcha && <p className="text-red-500 text-sm">{errors.captcha.message}</p>}
                     </div>
 
                     <button
@@ -142,37 +180,9 @@ const LoginComponent = () => {
                     >
                       {loading ? 'Logging in...' : 'Login'}
                     </button>
-
-
-
-
-
-
-                    {/* <h2 className="text-2xl font-bold mb-2">Company Logo</h2>
-                   <p className='mb-2 text-sm text-gray-500 underline'>Learn More About Us</p>
-                    <div className="mb-4">
-                      <label className="text-black font-bold">New Password</label>
-                      <input type="password" className='w-full px-3 py-2 border-slate-200 text-gray-700 focus:border-blue-500' />
-                      
-                    </div>
-
-                    <div className="mb-6 relative">
-                      <label className='text-black font-bold' >Confirm Password</label>
-                      <input type="password" className='w-full px-3 py-2 border-slate-200 text-gray-700 focus:border-blue-500' />
-                    </div>
-
-                    
-
-                    <button
-                      type="submit"
-                      disabled={loading}
-                      className="w-full login-btn mt-2 mb-12 bg-gradient-to-r text-white font-bold py-3 px-4 from-blue-300 via-blue-500 to-blue-900 transition duration-300"
-                    >
-                      {loading ? 'Logging in...' : 'Login'}
-                    </button> */}
                   </>
-                ) : null} {/* Only show login form if OTP input is NOT shown */}
-
+                ) : null} 
+                {/* Only show login form if OTP input is NOT shown */}
                 {showEmailInput ? (
                   <div className="mb-4">
                     <label htmlFor="forgetEmail" className="sr-only">Reset Password Email</label>
@@ -181,7 +191,7 @@ const LoginComponent = () => {
                       type="email"
                       id="forgetEmail"
                       value={email}
-                      onChange={(e) => setEmail(e.target.value)}
+                     // onChange={(e) => setEmail(e.target.value)}
                       className="w-full mb-2 px-3 py-2 border-slate-200 text-gray-700 focus:border-blue-500"
                       placeholder="Enter your email to reset password"
                       required
