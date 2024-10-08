@@ -22,7 +22,19 @@ import HourlyWagesPage from './pages/PayRollPages/HourlyWagesPage'
 import ManageSalaryPage from './pages/PayRollPages/ManageSalaryPage'
 import PaymentHistoryPage from './pages/PayRollPages/PaymentHistoryPage'
 import PayrollTemplatesPage from './pages/PayRollPages/PayrollTemplatesPage'
-import ConstantsPage from './pages/ConstantsPages/ConstantsPage'
+import ContractTypePage from './pages/ConstantsPages/ContractTypePage'
+import QualificationPage from './pages/ConstantsPages/QualificationPage'
+import DocumentTypePage from './pages/ConstantsPages/DocumentTypePage'
+import AwardTypePage from './pages/ConstantsPages/AwardTypePage'
+import LeaveTypePage from './pages/ConstantsPages/LeaveTypePage'
+import WarningTypePage from './pages/ConstantsPages/WarningTypePage'
+import TerminationTypePage from './pages/ConstantsPages/TerminationTypePage'
+import ExpenseTypePage from './pages/ConstantsPages/ExpenseTypePage'
+import JobTypePage from './pages/ConstantsPages/JobTypePage'
+import EmployeeExitTypePage from './pages/ConstantsPages/EmployeeExitTypePage'
+import TravelArrangementTypePage from './pages/ConstantsPages/TravelArrangementTypePage'
+import PaymentMethodPage from './pages/ConstantsPages/PaymentMethodPage'
+import CurrencyTypePage from './pages/ConstantsPages/CurrencyTypePage'
 
 
 function App() {
@@ -53,7 +65,19 @@ function App() {
                     <Route path='manage-salary' element={<ManageSalaryPage />} />
                     <Route path='generate-payslip' element={<GeneratePayslipPage />} />
                     <Route path='payment-history' element={<PaymentHistoryPage />} />
-                    <Route path='constants' element={<ConstantsPage />} />
+                    <Route path='contract-type' element={<ContractTypePage />} />
+                    <Route path='qualification' element={<QualificationPage />} />
+                    <Route path='document-type' element={<DocumentTypePage />} />
+                    <Route path='award-type' element={<AwardTypePage />} />
+                    <Route path='leave-type' element={<LeaveTypePage />} />
+                    <Route path='warning-type' element={<WarningTypePage />} />
+                    <Route path='termination-type' element={<TerminationTypePage />} />
+                    <Route path='expense-type' element={<ExpenseTypePage />} />
+                    <Route path='job-type' element={<JobTypePage />} />
+                    <Route path='employee-exit-type' element={<EmployeeExitTypePage />} />
+                    <Route path='travel-arrangement-type' element={<TravelArrangementTypePage />} />
+                    <Route path='payment-methods' element={<PaymentMethodPage />} />
+                    <Route path='currency-type' element={<CurrencyTypePage />} />
                 </Route>
                
             </Routes>
