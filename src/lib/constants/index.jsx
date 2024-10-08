@@ -112,7 +112,6 @@ export const DASHBOARD_SIDEBAR_LINKS = [
   {
     key: 'constants',
     label: 'Constants',
-    path: '/constants',
     icon: <VscSymbolConstant />,
     secondsidebar: 1,
     submenu: [], // No submenu for holidays
@@ -133,4 +132,84 @@ export const DASHBOARD_SIDEBAR_BOTTOM_LINKS = [
 		path: '/#',
 		icon: <HiOutlineQuestionMarkCircle />
 	}
+]
+export const CONSTANTS_SIDEBAR_LINKS = [
+	{
+		key: '1',
+		label: 'Contract Type',
+		path: '/contract-type',
+		icon: <HiOutlineCog />
+	},
+	{
+		key: '2',
+		label: 'Qualification',
+		path: '/qualification',
+		icon: <HiOutlineQuestionMarkCircle />
+	},
+  {
+		key: '3',
+		label: 'Document Type',
+		path: '/document-type',
+		icon: <HiOutlineQuestionMarkCircle />
+	},
+  {
+		key: '4',
+		label: 'Award Type',
+		path: '/award-type',
+		icon: <HiOutlineQuestionMarkCircle />
+	},
+  {
+		key: '5',
+		label: 'Leave Type',
+		path: '/leave-type',
+		icon: <HiOutlineQuestionMarkCircle />
+	},
+  {
+		key: '6',
+		label: 'Warning Type',
+		path: '/warning-type',
+		icon: <HiOutlineQuestionMarkCircle />
+	},
+  {
+		key: '7',
+		label: 'Termination Type',
+		path: '/termination-type',
+		icon: <HiOutlineQuestionMarkCircle />
+	},
+  {
+		key: '8',
+		label: 'Expense Type',
+		path: '/expense-type',
+		icon: <HiOutlineQuestionMarkCircle />
+	},
+  {
+		key: '9',
+		label: 'Job Type',
+		path: '/job-type',
+		icon: <HiOutlineQuestionMarkCircle />
+	},
+  {
+		key: '10',
+		label: 'Employee Exit Type',
+		path: '/employee-exit-type',
+		icon: <HiOutlineQuestionMarkCircle />
+	},
+  {
+		key: '11',
+		label: 'Travel Arrangement Type',
+		path: '/travel-arrangement-type',
+		icon: <HiOutlineQuestionMarkCircle />
+	},
+  {
+		key: '12',
+		label: 'Payment Methods',
+		path: '/payment-methods',
+		icon: <HiOutlineQuestionMarkCircle />
+	},
+  {
+		key: '13',
+		label: 'Currency Type',
+		path: '/currency-type',
+		icon: <HiOutlineQuestionMarkCircle />
+	},
 ]
