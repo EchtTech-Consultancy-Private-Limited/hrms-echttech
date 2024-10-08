@@ -32,3 +32,29 @@
 {
     background: #e5e7eb;
 } */
+
+
+
+
+/* Second Sidebar Customized scrollbar */
+/* .constant-sidebar ul::-webkit-scrollbar {
+  width: 3px; 
+}
+
+.constant-sidebar ul::-webkit-scrollbar-track {
+  background: #113689; 
+  margin-right: 10px;
+}
+.constant-sidebar ul::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0; 
+  border-radius: 6px; 
+}
+
+.constant-sidebar ul::-webkit-scrollbar-thumb:hover {
+   background: #113689; 
+} */
+
+.constant-sidebar ul li a
+{
+  font-size: 14px;
+}

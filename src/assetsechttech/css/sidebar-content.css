@@ -116,23 +116,40 @@
     }
 
 
-    /* styling for second-sidebar */
+    /* styling for second-sidebar/constant sidebar */
 
-    .layout.show .constant-sidebar {
+  .layout.constshow .constant-sidebar {
       display: none;
   }
-  .layout.hide .constant-sidebar {
+  .layout.consthide .constant-sidebar {
     display: block;
     height: 478px;
     overflow-x: hidden;
     position: absolute;
     left: 4.1%;
     padding: 10px 0 10px 20px;
+    top: 8%;
+    border-radius : 0px 18px 18px 0px;
 }
-.layout.hide .constant-sidebar li{
+.layout.consthide .constant-sidebar li{
   border: none;
   margin: 0;
 }
-.layout.hide .constant-sidebar li svg{
+.layout.consthide .constant-sidebar li svg{
   display: none;
+}
+
+.layout.consthide .left-sidebar{
+  width: 4%;
+  h1 , p , .side-bar-content-arrow {
+    display: none;
+  }
+}
+.layout.consthide
+{
+  background-color: #EFF3F7;
+}
+.layout.consthide .right-dashboard
+{
+ width: 82%;
 }

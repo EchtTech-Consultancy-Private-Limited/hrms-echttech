@@ -22,7 +22,6 @@ const HeaderComponent = () => {
           <div className="sidebar-top-logo-con w-full rounded-lg logo-custom-border p-4">
             <img src={logo} alt="" />
           </div>
-        {/* <h3 className='text-lg font-semibold' >Section Title</h3> */}
       </div>
       <div className="top-bar-left flex items-center ">
 
@@ -58,12 +57,6 @@ const HeaderComponent = () => {
           </Dialog.Panel>
         </div>
       </Dialog>
-
-
-
-
-
-
             </li>
           
               <li>
@@ -141,10 +134,6 @@ const HeaderComponent = () => {
                          <NotificationsActiveOutlinedIcon/>
 
                     <div class="absolute top-0 right-0 w-2.5 h-2.5 bg-red-500 border-2 border-gray-100 dark:border-gray-900 rounded-full"></div>
-
-
-
-
                   </MenuButton>
                 </div>
 

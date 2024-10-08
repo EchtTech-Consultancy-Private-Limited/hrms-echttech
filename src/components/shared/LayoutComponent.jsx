@@ -12,9 +12,17 @@ import { PiCaretDoubleRightBold } from "react-icons/pi";
 const LayoutComponent = () => {
 
   const [isActive, setIsActive] = useState(false)
+  const [isconstsidebarActive, setIsconstsidebarActive] = useState(false)
+
   
   const handleClick = () => {
     setIsActive(!isActive)
+    console.log("parent1")
+  }
+
+  const handleconstsidebarClick = () => {
+    setIsconstsidebarActive(!isconstsidebarActive)
+    console.log("parent2")
   }
 
 
@@ -25,15 +33,15 @@ const LayoutComponent = () => {
                 <Header />
               </header>
         </div>
-        <div className={`layout main-container flex ${isActive ? 'hide' : 'show'}`}>
+        <div className={`layout main-container flex ${isActive ? 'hide' : 'show'} ${isconstsidebarActive ? 'consthide' : 'constshow'}`}>
 
           <div className="left-sidebar main-bg-color relative">
             <aside className="sidebar">
-              <Sidebar toggleClass={handleClick} isToggled={isActive} />
+              <Sidebar toggleClass={handleClick} consttoggleClass={handleconstsidebarClick} isToggled={isActive} constisToggled={isconstsidebarActive} />
             </aside>
           </div>
-          <div className='absolute z-50 top-28 constant-sidebar main-bg-color overflow-scroll ' >
-        <ul  >
+          <div className='absolute z-50 constant-sidebar main-bg-color  ' >
+        <ul className='p-1 csu overflow-scroll'  >
           <li className='py-2 px-1 flex justify-between my-2 border-b border-white' > 
             <Link className='text-white'  >Contract Type</Link> <PiCaretDoubleRightBold className='text-sm text-white' />
             </li>
@@ -58,7 +66,7 @@ const LayoutComponent = () => {
             <li className='py-2 px-1 flex justify-between my-2 border-b border-white'> 
             <Link className='text-white'>Travel Arrangement Type</Link> <PiCaretDoubleRightBold className='text-sm text-white' /></li>
             <li className='py-2 px-1 flex justify-between my-2 border-b border-white'> 
-            <Link>Payment Methods</Link> <PiCaretDoubleRightBold className='text-sm text-white' /></li>
+            <Link className='text-white' >Payment Methods</Link> <PiCaretDoubleRightBold className='text-sm text-white' /></li>
             <li className='py-2 px-1 flex justify-between my-2 border-b border-white'> 
             <Link className='text-white'>Currency Type</Link> <PiCaretDoubleRightBold className='text-sm text-white' /></li>
           
