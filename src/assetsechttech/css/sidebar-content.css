@@ -127,7 +127,7 @@
     overflow-x: hidden;
     position: absolute;
     left: 4.1%;
-    padding: 10px 0 10px 20px;
+    padding: 10px 10px 10px 10px;
     top: 8%;
     border-radius : 0px 18px 18px 0px;
 }
@@ -135,9 +135,7 @@
   border: none;
   margin: 0;
 }
-.layout.consthide .constant-sidebar li svg{
-  display: none;
-}
+
 
 .layout.consthide .left-sidebar{
   width: 4%;

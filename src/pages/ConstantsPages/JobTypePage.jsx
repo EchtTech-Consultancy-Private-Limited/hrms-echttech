@@ -3,8 +3,10 @@ import JobTypeComponent from '../../components/Constants/JobTypeComponent'
 
 const JobTypePage = () => {
   return (
-    <div>
-      <JobTypeComponent />
+    <div className='content-mid base-bg-color' >
+      <div className='px-5 py-12' id='dashboard' >
+        <JobTypeComponent />
+      </div>
     </div>
   )
 }

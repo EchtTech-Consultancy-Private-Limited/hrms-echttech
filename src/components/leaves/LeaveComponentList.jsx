@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaEye, FaTrashAlt, FaPlus } from "react-icons/fa";
+import { FaEye, FaTrashAlt } from "react-icons/fa";
 import { TbEditCircle } from "react-icons/tb";
 import LeaveApplyPage from "../../pages/LeavePages/LeaveApplyPage";
 
@@ -75,7 +75,7 @@ const LeaveComponentList = () => {
               className="border border-gray-300 text-gray-500 p-1 rounded w-full md:w-auto"
               placeholder="End Date"
             />
-            <button className="bg-blue-500 text-white px-4 py-2 rounded w-full md:w-auto text-sm">
+            <button className="main-bg-color text-white px-4 py-2 rounded w-full md:w-auto text-sm">
               Filter
             </button>
           </div>
@@ -133,8 +133,8 @@ const LeaveComponentList = () => {
       <div className="leave-table overflow-auto mt-10">
         <table className="min-w-full bg-white border-collapse border border-gray-300">
           <thead>
-            <tr className="bg-gray-100">
-              <th className="border border-gray-300 px-4 py-2">Leave Type</th>
+            <tr className=" main-bg-color">
+              <th className="border  border-gray-300 px-4 py-2 " style={{textDecoration: 'none'}}  >Leave Type</th>
               <th className="border border-gray-300 px-4 py-2">From Date</th>
               <th className="border border-gray-300 px-4 py-2">To Date</th>
               <th className="border border-gray-300 px-4 py-2">Status</th>
@@ -152,7 +152,6 @@ const LeaveComponentList = () => {
                 <td className="border border-gray-300 px-4 py-2">{leave.reason}</td>
                 <td className="px-4 py-3 flex justify-start">
                   <FaEye className="text-blue-500 cursor-pointer mr-2" />
-                  <FaPlus className="text-blue-500 cursor-pointer mr-2" />
                   <TbEditCircle className="text-green-500 cursor-pointer mr-2" />
                   <FaTrashAlt className="text-red-500 cursor-pointer" />
                 </td>
@@ -172,14 +171,14 @@ const LeaveComponentList = () => {
          <div className="" >
          <button
           onClick={handlePrevPage}
-          className="bg-blue-500 text-white px-2 mx-1 py-1 text-xs rounded"
+          className="main-bg-color text-white px-2 mx-1 py-1 text-xs rounded"
           disabled={currentPage === 1}
         >
           Previous
         </button>
         <button
           onClick={handleNextPage}
-          className="bg-blue-500 text-white px-2 mx-1 py-1 text-xs rounded"
+          className="main-bg-color text-white px-2 mx-1 py-1 text-xs rounded"
           disabled={end >= totalEntries}
         >
           Next

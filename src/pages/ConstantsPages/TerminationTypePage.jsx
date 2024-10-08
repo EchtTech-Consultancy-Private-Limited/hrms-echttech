@@ -3,8 +3,10 @@ import TerminationTypeComponent from '../../components/Constants/TerminationType
 
 const TerminationTypePage = () => {
   return (
-    <div>
-      <TerminationTypeComponent />
+    <div className='content-mid base-bg-color' >
+      <div className='px-5 py-12' id='dashboard' >
+        <TerminationTypeComponent />
+      </div>
     </div>
   )
 }

@@ -3,8 +3,10 @@ import PaymentMethodComponent from '../../components/Constants/PaymentMethodComp
 
 const PaymentMethodPage = () => {
   return (
-    <div>
-      <PaymentMethodComponent />
+    <div className='content-mid base-bg-color' >
+      <div className='px-5 py-12' id='dashboard' >
+        <PaymentMethodComponent />
+      </div>
     </div>
   )
 }

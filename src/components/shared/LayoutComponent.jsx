@@ -40,12 +40,17 @@ const LayoutComponent = () => {
               <Sidebar toggleClass={handleClick} consttoggleClass={handleconstsidebarClick} isToggled={isActive} constisToggled={isconstsidebarActive} />
             </aside>
           </div>
-          <div className='absolute z-50 top-28 constant-sidebar main-bg-color overflow-scroll ' >
+          <div className='absolute z-50 top-28 constant-sidebar main-bg-color ' >
         <ul>
         {CONSTANTS_SIDEBAR_LINKS.map((tab) => (
-          <li className='py-2 px-1 flex justify-between my-2 border-b border-white' > 
-            <Link className='text-white' to={tab.path}>{tab.label}</Link> <PiCaretDoubleRightBold className='text-sm text-white' />
-          </li>
+           <li className='py-2 px-1 flex justify-between my-2 border-b border-white' key={tab.key}>
+           <Link className='text-white no-underline flex items-center' to={tab.path}>
+             {/* Display the icon before the label */}
+             <span className='mr-2'>{tab.icon}</span>
+             {tab.label}
+           </Link>
+           
+         </li>
         ))}
         </ul>
           </div>
