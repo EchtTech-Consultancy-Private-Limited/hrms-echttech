@@ -20,6 +20,8 @@
 @import url('../src//assetsechttech//css/hourlywages.css');
 @import url('../src//assetsechttech//css/manage-salary.css');
 @import url('../src//assetsechttech//css/policiescomponent.css');
+@import url('../src//assetsechttech//css/genratePaySlip.css');
+@import url('../src//assetsechttech//css/leave-information.css');
 
 @import url('../src//assetsechttech//css/responsiveecht.css');
 
@@ -39,19 +41,22 @@
 	td {
 		@apply py-3 px-2.5 text-sm text-left border-y border-gray-200;
 	}
-	thead {
+	/* thead {
 		@apply bg-neutral-100;
-	}
+	} */
 	th {
 		@apply font-semibold;
 	}
 	a {
-		@apply text-sky-500 hover:underline;
+		/* @apply text-sky-500 hover:underline; */
 	}
 	.bg-neutral-100
 	{
 		@apply text-sky-500 hover:underline;
 
+	}
+	th:hover{
+		border-bottom: none;
 	}
 	
 }
@@ -66,6 +71,7 @@ body {
   select {
 	height: unset !important;
 	padding: 4px 2px 6px 10px !important;
+	color: #7b7b7b;
   }
   input {
 	height: 36px;

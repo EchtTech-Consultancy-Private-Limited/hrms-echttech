@@ -401,10 +401,10 @@ const PayrollTemplatesComponent = () => {
           <div className=" dep-list-con mx-auto p-6 border rounded-lg bg-white">
             <div className="flex justify-between pb-3 w-full text-black items-center">
               <h1 className="text-lg font-bold mb-2">Template List</h1>
-              <button className=" add-btn main-bg-color rounded color-white flex items-center justify-between">
+              {/* <button className=" add-btn main-bg-color rounded color-white flex items-center justify-between">
                 <AiOutlinePlus className="color-white" />
                 Add New
-              </button>
+              </button> */}
             </div>
             <hr className="mb-6" />
             <div className="flex justify-between  items-center mb-4">
@@ -430,7 +430,7 @@ const PayrollTemplatesComponent = () => {
               </div>
 
               <div className="flex justify-end items-center">
-                <label className=" mb-0 text-sm text-gray-600" htmlFor="#">
+                <label className=" mb-0 text-sm text-gray-600 search-label" htmlFor="#">
                   Search :{" "}
                 </label>
                 <input

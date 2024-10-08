@@ -4,7 +4,7 @@ const LocationCompanyBranchComponent = () => {
   return (
     <>
       <div className="flex md:flex-row flex-col justify-between items-center gap-x-4">
-        <div className="w-full top-section p-4 border rounded-lg bg-white">
+        <div className="w-full top-section p-6 border rounded-lg bg-white">
           <div className="top-head ">
             <div className=" flex justify-between pb-3 w-full text-black">
               <h1 className="text-lg font-bold">Add New Location</h1>
@@ -12,7 +12,7 @@ const LocationCompanyBranchComponent = () => {
             <hr className="mb-6" />
             {/* Department Form Section */}
             <div className="department-below-sect w-full form-labels">
-              <div className="row first-row flex items-center flex-wrap justify-start md:space-x-3">
+              <div className="row first-row flex items-center flex-wrap justify-start md:space-x-3 justify-between">
                 <div className="first bg-white rounded-lg mb-4 ">
                   <div>
                     <label className="block text-black font-bold ">

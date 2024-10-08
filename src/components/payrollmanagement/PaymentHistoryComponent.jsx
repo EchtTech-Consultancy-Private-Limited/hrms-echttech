@@ -146,8 +146,8 @@ const PaymentHistoryComponent = () => {
   };
   return (
     <div>
-      <div className="w-full department-list mt-10">
-        <div className="container dep-list-con mx-auto p-6 border rounded-lg bg-white">
+      <div className="w-full department-list mt-0">
+        <div className=" dep-list-con mx-auto p-6 border rounded-lg bg-white">
           <h1 className="text-lg font-bold mb-2">List All Payment History</h1>
 
           <div className="flex justify-between  items-center mb-4">
@@ -173,7 +173,7 @@ const PaymentHistoryComponent = () => {
             </div>
 
             <div className="flex justify-end items-center">
-              <label className=" mb-0 text-sm text-gray-600" htmlFor="#">
+              <label className=" mb-0 text-sm text-gray-600 search-label" htmlFor="#">
                 Search :{" "}
               </label>
               <input
@@ -256,7 +256,7 @@ const PaymentHistoryComponent = () => {
                 className={`px-2 py-1 mx-1 border rounded text-sm ${
                   currentPage === 1
                     ? "bg-gray-300 text-gray-600 cursor-not-allowed"
-                    : "bg-blue-500 text-white"
+                    : "main-bg-color text-white"
                 }`}
               >
                 Previous
@@ -271,7 +271,7 @@ const PaymentHistoryComponent = () => {
                   currentPage ===
                   Math.ceil(filteredData.length / entriesPerPage)
                     ? "bg-gray-300 text-gray-600 cursor-not-allowed"
-                    : "bg-blue-500 text-white"
+                    : "main-bg-color text-white"
                 }`}
               >
                 Next

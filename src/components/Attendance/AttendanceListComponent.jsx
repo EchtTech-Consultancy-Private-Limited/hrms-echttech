@@ -43,7 +43,7 @@ const AttendanceListComponent = () => {
        <div className="w-full top-section  p-4 border rounded-lg bg-white">
        <div class="top-head flex justify-between items-center">
           <div class="left-part flex justify-between pb-3 w-full"><h1 class="headings">Attendance Information</h1>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded w-full md:w-auto text-sm">
+          <button className="main-bg-color text-white px-4 py-2 rounded w-full md:w-auto text-sm">
           Add Attendance
         </button>
           </div>
@@ -62,7 +62,7 @@ const AttendanceListComponent = () => {
           className="border border-gray-300 text-gray-500 p-1 h-9 rounded w-full md:w-auto"
           placeholder="End Date"
         />
-        <button className="bg-blue-500 text-white px-4 py-2 rounded w-full md:w-auto text-sm">
+        <button className="main-bg-color text-white px-4 py-2 rounded w-full md:w-auto text-sm">
           Filter
         </button>
       </div>
@@ -94,7 +94,7 @@ const AttendanceListComponent = () => {
            
            
             <div className='flex justify-end items-center' >
-            <label className=' mb-0 text-sm text-gray-600' htmlFor="#">Search : </label>
+            <label className=' mb-0 text-sm text-gray-600 search-label' htmlFor="#">Search : </label>
              <input
             type="text"
             placeholder="Search..."
@@ -110,7 +110,7 @@ const AttendanceListComponent = () => {
      <div className="overflow-auto" >
      <table className="min-w-full bg-white border border-gray-300 rounded-t-lg">
             <thead>
-              <tr className="bg-blue-500 text-white">
+              <tr className="main-bg-color text-white">
                 <th className="px-4 border-gray-300 border-l text-center py-3">S. No</th>
                 <th className="px-4 border-l border-gray-300 text-center py-3">Check-in</th>
                 <th className="px-4 border-l border-gray-300 text-center py-3">Check-out</th>
@@ -168,14 +168,14 @@ const AttendanceListComponent = () => {
           <div>
           <button
           onClick={handlePrevPage}
-          className="bg-blue-500 text-white text-sm rounded mx-1 px-2 py-1"
+          className="main-bg-color text-white text-sm rounded mx-1 px-2 py-1 cursor-pointer"
           disabled={currentPage === 1}
         >
           Prev
         </button>
         <button
           onClick={handleNextPage}
-          className="bg-blue-500 text-sm text-white rounded px-2 py-1"
+          className="main-bg-color text-sm text-white rounded px-2 py-1"
           disabled={end >= totalEntries}
         >
           Next

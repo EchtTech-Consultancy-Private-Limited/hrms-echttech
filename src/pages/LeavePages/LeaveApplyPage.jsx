@@ -42,7 +42,7 @@ const LeaveApplyPage = ({ setIsModalOpen }) => {
       onClick={closeModal} // Close modal on background click
     >
       <div
-        className="bg-white  p-6 rounded-lg shadow-lg  w-3/4 md:w-1/2"
+        className="bg-white  p-6 rounded-lg shadow-lg  w-3/4"
         onClick={(e) => e.stopPropagation()} // Prevent modal close on content click
       >
         {/* 1. Heading */}
@@ -179,7 +179,7 @@ const LeaveApplyPage = ({ setIsModalOpen }) => {
           >
             Cancel
           </button>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded">
+          <button className="main-bg-color text-white px-4 py-2 rounded">
             Submit
           </button>
         </div>

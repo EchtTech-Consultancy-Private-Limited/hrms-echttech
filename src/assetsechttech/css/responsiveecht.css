@@ -154,7 +154,7 @@
     .bottom-section.template-list {
       padding-bottom: 20px;
     }
-    .department-below-sect label {
+     label {
       font-size: 14px;
     }
     select, input {
@@ -170,6 +170,36 @@
     select {
       height: unset !important;
       padding: 2px 2px 8px 10px !important;
+    }
+    .field-btn-parent {
+      display: flex;
+      flex-direction: column;
+    }
+    .left-fields {
+      width: 100%;
+    }
+    .department-prnt .first-child .first {
+      width: 49%;
+      margin: 10px 0 !important;
+    }
+    .policy-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .policy-left-fields, .policy-right-fields {
+      width: 100%;
+    }
+    .manage-salary-btn {
+      width: 70%;
+      justify-content: flex-start;
+    }
+    .leave-info-container {
+      display: flex;
+      flex-direction: column !important;
+    }
+    .leave-info-container .top-section {
+      width: 100% !important;
+      margin-top: 10px;
     }
 
   }

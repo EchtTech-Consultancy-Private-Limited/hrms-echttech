@@ -3,3 +3,13 @@
     width: 55px;
     margin: 0px 4px;
 }
+.field-btn-parent {
+    display: flex;
+    align-items: end;
+  }
+.field-btn-parent .left-fields {
+    display: flex;
+  }
+  .left-fields {
+    width: 90%;
+  }

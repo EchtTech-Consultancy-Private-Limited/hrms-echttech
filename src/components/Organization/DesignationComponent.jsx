@@ -41,7 +41,7 @@ const DesignationComponent = () => {
   return (
     <>
       <div className="flex md:flex-row flex-col justify-between items-center gap-x-4">
-        <div className="w-full top-section p-4 border rounded-lg bg-white">
+        <div className="w-full top-section p-6 border rounded-lg bg-white">
           <div className="top-head ">
             <div className="flex justify-between pb-3 w-full text-black">
               <h1 className="text-lg font-bold">Add New Designation</h1>
@@ -113,7 +113,7 @@ const DesignationComponent = () => {
            
            
             <div className='flex justify-end items-center' >
-            <label className=' mb-0 text-sm text-gray-600' htmlFor="#">Search : </label>
+            <label className=' mb-0 text-sm text-gray-600 search-label' htmlFor="#">Search : </label>
              <input
             type="text"
             placeholder="Search..."

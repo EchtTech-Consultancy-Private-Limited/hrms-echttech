@@ -267,9 +267,9 @@ const GeneratePayslipComponent = () => {
         </div>
       </div>
 
-      <div className="w-full department-list mt-10">
-        <div className="container dep-list-con mx-auto p-6 border rounded-lg bg-white">
-          <div className="flex justify-between items-center mb-2">
+      <div className="w-full department-list mt-5">
+        <div className=" dep-list-con mx-auto p-6 border rounded-lg bg-white">
+          <div className="flex justify-between items-center mb-2 pay-slip-table">
             <h1 className="text-lg font-bold mb-2">Payment Information</h1>
             <div className="flex space-x-2">
               {/* Generate Salary Button */}
@@ -312,7 +312,7 @@ const GeneratePayslipComponent = () => {
             </div>
 
             <div className="flex justify-end items-center">
-              <label className=" mb-0 text-sm text-gray-600" htmlFor="#">
+              <label className=" mb-0 text-sm text-gray-600 search-label" htmlFor="#">
                 Search :{" "}
               </label>
               <input

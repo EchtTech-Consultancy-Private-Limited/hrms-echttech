@@ -2,3 +2,12 @@
 {
     height: 87px;
 }
+.policy-left-fields {
+    width: 49%;
+  }
+  .policy-container .policy-left-fields .first, .policy-container .policy-left-fields .second {
+    width: 49%;
+  }
+  .policy-right-fields {
+    width: 50%;
+  }
