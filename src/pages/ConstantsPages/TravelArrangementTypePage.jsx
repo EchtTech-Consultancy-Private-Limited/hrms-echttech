@@ -3,9 +3,12 @@ import TravelArrangementTypeComponent from '../../components/Constants/TravelArr
 
 const TravelArrangementTypePage = () => {
   return (
-    <div>
-      <TravelArrangementTypeComponent />
-    </div>
+         <div className='content-mid base-bg-color' >
+         <div className='px-5 py-12' id='dashboard' >
+           <TravelArrangementTypeComponent />
+         </div>
+       </div>
+
   )
 }
 

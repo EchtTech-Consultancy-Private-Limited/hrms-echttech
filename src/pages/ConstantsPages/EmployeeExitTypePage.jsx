@@ -3,9 +3,14 @@ import EmployeeExitTypeComponent from '../../components/Constants/EmployeeExitTy
 
 const EmployeeExitTypePage = () => {
   return (
-    <div>
-      <EmployeeExitTypeComponent />
+
+    <div className='content-mid base-bg-color' >
+      <div className='px-5 py-12' id='dashboard' >
+        <EmployeeExitTypeComponent />
+
+      </div>
     </div>
+
   )
 }
 

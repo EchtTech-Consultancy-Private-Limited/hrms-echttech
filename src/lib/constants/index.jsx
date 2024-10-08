@@ -12,6 +12,30 @@ import { FaAmazonPay } from "react-icons/fa6";
 import { IoMdArrowDropright } from "react-icons/io";
 import { GiPayMoney } from "react-icons/gi";
 import { VscSymbolConstant } from "react-icons/vsc";
+import { IoMdContract } from "react-icons/io";
+import { MdCastForEducation } from "react-icons/md";
+import { IoDocumentAttachOutline } from "react-icons/io5";
+import { FiAward } from "react-icons/fi";
+import { CiCalendar } from "react-icons/ci";
+import { CiWarning } from "react-icons/ci";
+import { RiIndeterminateCircleLine } from "react-icons/ri";
+import { CiDollar } from "react-icons/ci";
+import { MdPayment } from "react-icons/md";
+import { MdCardTravel } from "react-icons/md";
+import { BiExit } from "react-icons/bi";
+import { MdWorkOutline } from "react-icons/md";
+
+
+
+
+
+
+
+
+
+
+
+
 
 export const DASHBOARD_SIDEBAR_LINKS = [
 	{
@@ -20,7 +44,6 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     path: '/',
     icon: <HiOutlineViewGrid />,
     secondsidebar: 0,
-
     submenu: [] // No submenu for dashboard
   },
   {
@@ -138,78 +161,83 @@ export const CONSTANTS_SIDEBAR_LINKS = [
 		key: '1',
 		label: 'Contract Type',
 		path: '/contract-type',
-		icon: <HiOutlineCog />
+		icon: <IoMdContract />
+
 	},
 	{
 		key: '2',
 		label: 'Qualification',
 		path: '/qualification',
-		icon: <HiOutlineQuestionMarkCircle />
+		icon: <MdCastForEducation />
+
 	},
   {
 		key: '3',
 		label: 'Document Type',
 		path: '/document-type',
-		icon: <HiOutlineQuestionMarkCircle />
+		icon: <IoDocumentAttachOutline />
+
 	},
   {
 		key: '4',
 		label: 'Award Type',
 		path: '/award-type',
-		icon: <HiOutlineQuestionMarkCircle />
+		icon: <FiAward/>
 	},
   {
 		key: '5',
 		label: 'Leave Type',
 		path: '/leave-type',
-		icon: <HiOutlineQuestionMarkCircle />
+		icon: <CiCalendar />
 	},
   {
 		key: '6',
 		label: 'Warning Type',
 		path: '/warning-type',
-		icon: <HiOutlineQuestionMarkCircle />
+		icon: <CiWarning />
 	},
   {
 		key: '7',
 		label: 'Termination Type',
 		path: '/termination-type',
-		icon: <HiOutlineQuestionMarkCircle />
+		icon: <CiDollar  /> 
 	},
   {
 		key: '8',
 		label: 'Expense Type',
 		path: '/expense-type',
-		icon: <HiOutlineQuestionMarkCircle />
+		icon: <CiDollar  /> 
 	},
   {
 		key: '9',
 		label: 'Job Type',
 		path: '/job-type',
-		icon: <HiOutlineQuestionMarkCircle />
+		icon: <MdWorkOutline />
+
 	},
   {
 		key: '10',
 		label: 'Employee Exit Type',
 		path: '/employee-exit-type',
-		icon: <HiOutlineQuestionMarkCircle />
+		icon:  <BiExit />
+
 	},
   {
 		key: '11',
 		label: 'Travel Arrangement Type',
 		path: '/travel-arrangement-type',
-		icon: <HiOutlineQuestionMarkCircle />
+		icon: <MdCardTravel />
 	},
   {
 		key: '12',
 		label: 'Payment Methods',
 		path: '/payment-methods',
-		icon: <HiOutlineQuestionMarkCircle />
+		icon: <MdPayment />
 	},
   {
 		key: '13',
 		label: 'Currency Type',
 		path: '/currency-type',
-		icon: <HiOutlineQuestionMarkCircle />
+		icon: <CiDollar  /> 
 	},
 ]

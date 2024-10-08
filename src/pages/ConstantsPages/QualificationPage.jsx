@@ -3,9 +3,13 @@ import QualificationComponent from '../../components/Constants/QualificationComp
 
 const QualificationPage = () => {
   return (
-    <div>
-      <QualificationComponent />
+    
+    <div className='content-mid base-bg-color' >
+    <div className='px-5 py-12' id='dashboard' >
+    <QualificationComponent />
+
     </div>
+  </div>
   )
 }
 
