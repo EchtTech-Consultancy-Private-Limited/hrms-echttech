@@ -24,17 +24,7 @@ import { MdPayment } from "react-icons/md";
 import { MdCardTravel } from "react-icons/md";
 import { BiExit } from "react-icons/bi";
 import { MdWorkOutline } from "react-icons/md";
-
-
-
-
-
-
-
-
-
-
-
+import { FaCriticalRole } from "react-icons/fa";
 
 
 export const DASHBOARD_SIDEBAR_LINKS = [
@@ -119,7 +109,6 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     path: '#',
     icon: <FaAmazonPay />,
     secondsidebar: 0,
-
     submenu: [
       { key: 'payslip', label: 'Pay Slip List', path: '/payslip' },
     ]
@@ -138,6 +127,16 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     icon: <VscSymbolConstant />,
     secondsidebar: 1,
     submenu: [], // No submenu for holidays
+  },
+  {
+    key: 'roles-permission',
+    label: 'Roles & Permissions',
+    icon: <FaCriticalRole />,
+    secondsidebar: 0,
+    submenu: [
+      { key: 'roles', label: 'Roles', path: '/roles' },
+      { key: 'permissions', label: 'Permissions', path: '/permissions' },
+    ]
   },
 ]
 
