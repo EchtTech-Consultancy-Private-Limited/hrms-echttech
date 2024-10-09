@@ -64,9 +64,9 @@ const AnnouncementComponent = () => {
             {/* Announcement Form Section */}
             <div className="department-below-sect w-full ">
               <div className="flex flex-wrap department-prnt">
-                <div className="w-full first-child p-2">
-                  <div className="flex flex-wrap md:space-x-3 justify-between">
-                    <div className=" first bg-white rounded-lg mb-4">
+                <div className="form-labels w-full">
+                  <div className="row first-row flex items-center flex-wrap justify-start justify-between flex-gap">
+                    <div className="first mb-4">
                       <label className="block text-black font-bold">
                         Announcement Title
                         <span className="text-red-500 text-sm ml-1">*</span>
@@ -77,7 +77,7 @@ const AnnouncementComponent = () => {
                         placeholder="Enter Announcement name"
                       />
                     </div>
-                    <div className="first mb-2 ">
+                    <div className="first mb-4">
                       <label
                         htmlFor="start-date"
                         className="block text-black font-bold"
@@ -92,7 +92,7 @@ const AnnouncementComponent = () => {
                         className="custom-width-ann-sd block p-2 border border-gray-300 rounded-md"
                       />
                     </div>
-                    <div className="first">
+                    <div className="first mb-4">
                       <label
                         htmlFor="end-date"
                         className="block text-black font-bold"
@@ -107,8 +107,8 @@ const AnnouncementComponent = () => {
                         className=" block custom-width-ann-end p-2 border border-gray-300 rounded-md"
                       />
                     </div>
-                    <div className="first">
-                      <div className="flex-1 bg-white mb-4 rounded-lg">
+                    <div className="first mb-4">
+                      <div className="">
                         <label className="block text-black font-bold">
                           Company
                           <span className="text-red-500 text-sm ml-1">*</span>
@@ -121,8 +121,8 @@ const AnnouncementComponent = () => {
                         </select>
                       </div>
                     </div>
-                    <div className="first">
-                      <div className="flex-1 bg-white mb-4 rounded-lg">
+                    <div className="first mb-4">
+                      <div className="">
                         <label className="block text-black font-bold">
                           Location
                           <span className="text-red-500 text-sm ml-1">*</span>
@@ -137,7 +137,7 @@ const AnnouncementComponent = () => {
                     </div>
                   </div>
                 </div>
-                <div className="w-full p-2 second-child">
+                <div className="w-full second-child">
                   <label className="block text-gray-700 font-bold mb-2">
                     Remark
                     <span className="text-red-500 text-sm ml-1">*</span>

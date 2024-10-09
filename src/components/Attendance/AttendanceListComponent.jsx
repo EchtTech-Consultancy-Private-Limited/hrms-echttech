@@ -48,22 +48,34 @@ const AttendanceListComponent = () => {
         <h2 className="text-lg pt-2 border-t font-semibold mb-2">
           Select Date
         </h2>
-        <div className="flex  pt-1 flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-          <label>From : </label>
-          <input
-            type="date"
-            className="border border-gray-300 text-gray-500 p-1 h-9 rounded w-full md:w-auto"
-            placeholder="Start Date"
-          />
-          <label>To : </label>
-          <input
-            type="date"
-            className="border border-gray-300 text-gray-500 p-1 h-9 rounded w-full md:w-auto"
-            placeholder="End Date"
-          />
-          <button className="main-bg-color text-white px-4 py-2 rounded w-full md:w-auto text-sm">
-            Filter
-          </button>
+        <div className="form-labels">
+          <div className="flex-gap items-center">
+            <div className="first mb-4 ">
+              <div>
+                <label className="block text-black  font-bold">From :</label>
+                <input
+                  type="date"
+                  className="block w-full p-2 border border-gray-300 rounded-md"
+                />
+              </div>
+            </div>
+            <div className="first mb-4 ">
+              <div>
+                <label className="block text-black  font-bold">To :</label>
+                <input
+                  type="date"
+                  className="block w-full p-2 border border-gray-300 rounded-md"
+                />
+              </div>
+            </div>
+            <div className="first mb-4">
+              <div>
+                <button className="main-bg-color text-white px-4 py-2 rounded w-full md:w-auto text-sm">
+                  Filter
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

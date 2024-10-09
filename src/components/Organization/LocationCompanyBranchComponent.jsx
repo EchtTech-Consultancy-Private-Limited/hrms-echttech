@@ -12,7 +12,7 @@ const LocationCompanyBranchComponent = () => {
             <hr className="mb-6" />
             {/* Department Form Section */}
             <div className="department-below-sect w-full form-labels">
-              <div className="row first-row flex items-center flex-wrap justify-start md:space-x-3 justify-between">
+              <div className="row first-row flex items-center flex-wrap justify-start md:space-x-3 justify-between flex-gap">
                 <div className="first bg-white rounded-lg mb-4 ">
                   <div>
                     <label className="block text-black font-bold ">

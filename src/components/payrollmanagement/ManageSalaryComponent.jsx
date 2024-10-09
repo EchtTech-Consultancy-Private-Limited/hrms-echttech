@@ -129,9 +129,9 @@ const ManageSalaryComponent = () => {
           </div>
           <hr className="mb-6" />
           {/* Department Form Section */}
-          <div className="department-below-sect w-full">
-            <div className="flex flex-col md:flex-row md:space-x-1 justify-between">
-              <div className="flex-1 bg-white rounded-lg mb-4">
+          <div className="department-below-sect form-labels">
+            <div className="flex-gap justify-between items-center">
+              <div className="flex-1 bg-white rounded-lg mb-4 firstt">
                 <label className="block text-black  font-bold">Employee</label>
                 <select className="block w-full p-2 border border-gray-300 rounded-md">
                   <option value="" disabled selected>
@@ -144,7 +144,7 @@ const ManageSalaryComponent = () => {
                 </select>
               </div>
 
-              <div className="add-reset-btns flex items-center pt-4 manage-salary-btn">
+              <div className="mb-4 add-reset-btns flex items-center manage-salary-btn first">
                 <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
                   Search
                 </button>

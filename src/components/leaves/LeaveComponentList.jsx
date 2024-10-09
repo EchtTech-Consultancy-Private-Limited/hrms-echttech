@@ -61,24 +61,36 @@ const LeaveComponentList = () => {
               <h1 className="headings">Leaves Information</h1>
             </div>
           </div>
-          <h2 className="text-lg pt-6 border-t font-semibold mb-2">Select Date</h2>
-          <div className="flex pt-2 flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0 flex-wrap">
-            <label className="text-gray-600 mb-0" >From: </label>
-            <input
-              type="date"
-              className="border border-gray-300 text-gray-500 p-1 rounded w-full md:w-auto"
-              placeholder="Start Date"
-            />
-            <label className="text-gray-600 mb-0" >To: </label>
-            <input
-              type="date"
-              className="border border-gray-300 text-gray-500 p-1 rounded w-full md:w-auto"
-              placeholder="End Date"
-            />
-            <button className="main-bg-color text-white px-4 py-2 rounded w-full md:w-auto text-sm">
-              Filter
-            </button>
+          <h2 className="text-lg pt-2 border-t font-semibold mb-2">Select Date</h2>
+          <div className="form-labels">
+          <div className="flex-gap items-end">
+            <div className="first ">
+              <div>
+                <label className="block text-black  font-bold">From :</label>
+                <input
+                  type="date"
+                  className="block w-full p-2 border border-gray-300 rounded-md"
+                />
+              </div>
+            </div>
+            <div className="first ">
+              <div>
+                <label className="block text-black  font-bold">To :</label>
+                <input
+                  type="date"
+                  className="block w-full p-2 border border-gray-300 rounded-md"
+                />
+              </div>
+            </div>
+            <div className=" flex justify-end">
+              <div>
+                <button className="main-bg-color text-white px-4 py-2 rounded w-full md:w-auto text-sm">
+                  Filter
+                </button>
+              </div>
+            </div>
           </div>
+        </div>
         </div>
 
         <div className="w-full md:w-1/2 top-section p-4 border rounded-lg main-bg-color">
@@ -171,14 +183,14 @@ const LeaveComponentList = () => {
          <div className="" >
          <button
           onClick={handlePrevPage}
-          className="main-bg-color text-white px-2 mx-1 py-1 text-xs rounded"
+          className="main-bg-color text-white px-4 py-2 rounded w-full md:w-auto text-sm mr-4 cursor-pointer"
           disabled={currentPage === 1}
         >
           Previous
         </button>
         <button
           onClick={handleNextPage}
-          className="main-bg-color text-white px-2 mx-1 py-1 text-xs rounded"
+          className="main-bg-color text-white px-4 py-2 rounded w-full md:w-auto text-sm cursor-pointer"
           disabled={end >= totalEntries}
         >
           Next
