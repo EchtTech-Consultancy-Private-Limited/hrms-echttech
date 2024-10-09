@@ -54,7 +54,7 @@ const ExpenseComponent = () => {
   };
 
   return (
-    <div>
+    <div id="dashboard" className="px-5 py-12">
       <div className="w-full top-section p-4 border rounded-lg bg-white">
         <div className="top-head">
           <div className="flex justify-between pb-3 w-full text-black">
