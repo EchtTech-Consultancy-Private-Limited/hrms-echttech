@@ -201,12 +201,12 @@ const ManageSalaryComponent = () => {
             <table className="table-auto w-full bg-white">
               <thead>
                 <tr className="main-bg-color text-center">
-                  <th className="px-4 py-2 text-center">Employee Name</th>
-                  <th className="px-4 py-2 text-center">User Name</th>
-                  <th className="px-4 py-2 text-center">Designation</th>
-                  <th className="px-4 py-2 text-center">Hourly</th>
-                  <th className="px-4 py-2 text-center">Monthaly</th>
-                  <th className="px-4 py-2 text-center">Actions</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Employee Name</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">User Name</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Designation</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Hourly</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Monthaly</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -241,7 +241,7 @@ const ManageSalaryComponent = () => {
                         </select>
                       </td>
                       <td className="border px-4 py-2">
-                        <div className="flex space-x-2">
+                        <div className="flex space-x-2 justify-center">
                           <button className="text-blue-500">
                             <FaEye />
                           </button>

@@ -125,7 +125,7 @@ const DesignationComponent = () => {
           
           </div>
           <div className='overflow-auto' >
-          <table className="min-w-full bg-white border border-gray-300 rounded-t-lg">
+          <table className="min-w-full bg-white border border-gray-300 rounded-t-lg organization-table">
             <thead>
               <tr className="main-bg-color text-white">
                 <th className="px-4 border-gray-300 main-bg-color border-l text-center py-3">S. No</th>

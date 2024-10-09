@@ -190,31 +190,31 @@ const PaymentHistoryComponent = () => {
             <table className="table-auto w-full bg-white">
               <thead>
                 <tr className="bg-gray-200 text-left">
-                  <th className="px-4 main-bg-color py-2">S.no</th>
-                  <th className="px-4 main-bg-color py-2">Emp ID</th>
-                  <th className="px-4 main-bg-color py-2">Emp Name</th>
-                  <th className="px-4 main-bg-color py-2">Paid Amount</th>
-                  <th className="px-4 main-bg-color py-2">Payment Month</th>
-                  <th className="px-4 main-bg-color py-2">Payment Date</th>
-                  <th className="px-4 main-bg-color py-2">Payment Type</th>
-                  <th className="px-4 main-bg-color py-2">Pay Slip</th>
-                  <th className="px-4 main-bg-color py-2">Actions</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">S.no</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Emp ID</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Emp Name</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Paid Amount</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Payment Month</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Payment Date</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Payment Type</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Pay Slip</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Actions</th>
                 </tr>
               </thead>
               <tbody>
                 {currentEntries.length > 0 ? (
                   currentEntries.map((item, index) => (
                     <tr key={item.id}>
-                      <td className="border px-4 py-2">{index + 1}</td>
-                      <td className="border px-4 py-2">{item.empId}</td>
-                      <td className="border px-4 py-2">{item.name}</td>
-                      <td className="border px-4 py-2">{item.sal}</td>
-                      <td className="border px-4 py-2">{item.createdDate}</td>
-                      <td className="border px-4 py-2">{item.createdDate}</td>
-                      <td className="border px-4 py-2">{item.type}</td>
-                      <td className="border px-4 py-2">{item.slip}</td>
-                      <td className="border px-4 py-2">
-                        <div className="flex space-x-2">
+                      <td className="border px-4 py-2 text-center">{index + 1}</td>
+                      <td className="border px-4 py-2 text-center">{item.empId}</td>
+                      <td className="border px-4 py-2 text-center">{item.name}</td>
+                      <td className="border px-4 py-2 text-center">{item.sal}</td>
+                      <td className="border px-4 py-2 text-center">{item.createdDate}</td>
+                      <td className="border px-4 py-2 text-center">{item.createdDate}</td>
+                      <td className="border px-4 py-2 text-center">{item.type}</td>
+                      <td className="border px-4 py-2 text-center">{item.slip}</td>
+                      <td className="border px-4 py-2 text-center">
+                        <div className="flex space-x-2 justify-center">
                           <button className="text-blue-500">
                             <FaEye />
                           </button>

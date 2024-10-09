@@ -384,35 +384,35 @@ const GeneratePayslipComponent = () => {
             <table className="table-auto w-full bg-white">
               <thead>
                 <tr className="bg-gray-200 text-left">
-                  <th className="px-4 main-bg-color py-2">S.no</th>
-                  <th className="px-4 main-bg-color py-2">Emp Id</th>
-                  <th className="px-4 main-bg-color py-2">Emp Name</th>
-                  <th className="px-4 main-bg-color py-2">Location</th>
-                  <th className="px-4 main-bg-color py-2">Salary Type</th>
-                  <th className="px-4 main-bg-color py-2">Basic Salary</th>
-                  <th className="px-4 main-bg-color py-2">Net Salary</th>
-                  <th className="px-4 main-bg-color py-2">Details</th>
-                  <th className="px-4 main-bg-color py-2">Status</th>
-                  <th className="px-4 main-bg-color py-2">Actions</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">S.no</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Emp Id</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Emp Name</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Location</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Salary Type</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Basic Salary</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Net Salary</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Details</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Status</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Actions</th>
                 </tr>
               </thead>
               <tbody>
                 {currentEntries.length > 0 ? (
                   currentEntries.map((item, index) => (
                     <tr key={item.id}>
-                      <td className="border px-4 py-2">{index + 1}</td>
-                      <td className="border px-4 py-2">{item.empId}</td>
-                      <td className="border px-4 py-2">{item.empName}</td>
-                      <td className="border px-4 py-2">{item.location}</td>
-                      <td className="border px-4 py-2">{item.type}</td>
-                      <td className="border px-4 py-2">{item.basicsal}</td>
-                      <td className="border px-4 py-2">{item.salary}</td>
-                      <td className="border px-4 py-2">{item.details}</td>
-                      <td className="border px-4 py-2 text-red-500">
+                      <td className="border px-4 py-2 text-center">{index + 1}</td>
+                      <td className="border px-4 py-2 text-center">{item.empId}</td>
+                      <td className="border px-4 py-2 text-center">{item.empName}</td>
+                      <td className="border px-4 py-2 text-center">{item.location}</td>
+                      <td className="border px-4 py-2 text-center">{item.type}</td>
+                      <td className="border px-4 py-2 text-center">{item.basicsal}</td>
+                      <td className="border px-4 py-2 text-center">{item.salary}</td>
+                      <td className="border px-4 py-2 text-center">{item.details}</td>
+                      <td className="border px-4 py-2 text-center text-red-500">
                         {item.status}
                       </td>
-                      <td className="border px-4 py-2">
-                        <div className="flex space-x-2">
+                      <td className="border px-4 py-2 text-center">
+                        <div className="flex space-x-2 justify-center">
                           <button className="text-blue-500">
                             <FaEye />
                           </button>
