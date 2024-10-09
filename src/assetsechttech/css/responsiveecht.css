@@ -230,15 +230,15 @@
     select, input {
       font-size: 15px !important;
     }
-    .left-sidebar {
+    /* .left-sidebar {
       width: 20%;
-    }
+    } */
     .form-labels .first {
       width: 24%;
     }
-    .right-dashboard {
+    /* .right-dashboard {
       width: 80%;
-    }
+    } */
 
     .high-charts-section .first-chart {
       width: 49%;
