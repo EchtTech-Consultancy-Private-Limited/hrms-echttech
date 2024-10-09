@@ -38,7 +38,6 @@ import CurrencyTypePage from './pages/ConstantsPages/CurrencyTypePage'
 import RolesPage from './pages/RolesPermissionsPages/RolesPage'
 import PermissionPage from './pages/RolesPermissionsPages/PermissionPage'
 
-
 function App() {
     return (
         <Router>

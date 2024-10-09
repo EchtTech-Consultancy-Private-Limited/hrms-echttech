@@ -72,30 +72,31 @@ const LeaveTypeComponent = () => {
       <div className="w-full top-section p-4 border rounded-lg bg-white">
         <div className="top-head">
           <div className="flex justify-between pb-3 w-full text-black">
-            <h1 className="text-lg font-bold">Add New Designation</h1>
+            <h1 className="text-lg font-bold">Add New Leave Type</h1>
           </div>
           <hr className="mb-6" />
           {/* Department Form Section */}
           <div className="department-below-sect w-full">
             <div className="flex flex-col md:flex-row md:space-x-4 justify-between">
               <div className="flex-1 bg-white rounded-lg mb-4">
-                <label className="block text-black font-bold">Name</label>
-                <input
-                  type="text"
-                  className="block w-full p-2 border border-gray-300 rounded-md"
-                  placeholder="Enter designation name"
-                />
-              </div>
-  
-              <div className="flex-1 bg-white mb-4 rounded-lg">
-                <label className="block text-black font-bold">Designation</label>
+                <label className="block text-black font-bold">Select Employee</label>
                 <select className="block w-full p-2 border border-gray-300 rounded-md">
-                  <option>Select Designation</option>
+                  <option>Select Employee</option>
                   <option>Accountant</option>
                   <option>Technical Support</option>
                   <option>Tester</option>
                   <option>Developer</option>
                 </select>
+              </div>
+  
+              <div className="flex-1 bg-white mb-4 rounded-lg">
+                <label className="block text-black font-bold">Enter Leave Type</label>
+                <input className='block w-full p-2 border border-gray-300 rounded-md' type="text" placeholder='leave type' />
+
+              </div>
+              <div className="flex-1 bg-white mb-4 rounded-lg">
+                <label className="block text-black font-bold">Days Per Year</label>
+                <input className='block w-full p-2 border border-gray-300 rounded-md' type="text" placeholder='days per year' />
               </div>
               <div className="add-reset-btns flex items-center pt-4 justify-end">
                 <button className="main-bg-color mx-1 bg-blue-500 text-white px-4 py-2 rounded w-full md:w-auto">
@@ -111,7 +112,7 @@ const LeaveTypeComponent = () => {
       </div>
   
       <div className="contract-type-list overflow-auto mx-auto p-6 border rounded-lg bg-white mt-5">
-        <h1 className="text-lg font-bold mb-2">Contract Type List</h1>
+        <h1 className="text-lg font-bold mb-2">List All Leave Type</h1>
         {/* Entries selector and search bar */}
         <div className="flex justify-between mb-4">
           <div className="flex items-center">
@@ -144,9 +145,9 @@ const LeaveTypeComponent = () => {
           <thead>
             <tr className="main-bg-color">
               <th className="border border-gray-300 px-4 py-2">S.No</th>
-              <th className="border border-gray-300 px-4 py-2">Name</th>
-              <th className="border border-gray-300 px-4 py-2">Position</th>
-              <th className="border border-gray-300 px-4 py-2">Office</th>
+              <th className="border border-gray-300 px-4 py-2">Select Employee</th>
+              <th className="border border-gray-300 px-4 py-2">Enter Leave Type</th>
+              <th className="border border-gray-300 px-4 py-2">Days per Year</th>
               <th className="border border-gray-300 px-4 py-2">Age</th>
               <th className="border border-gray-300 px-4 py-2">Start Date</th>
               <th className="border border-gray-300 px-4 py-2">Actions</th>

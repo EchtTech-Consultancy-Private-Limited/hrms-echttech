@@ -49,7 +49,7 @@ const RolesComponent = () => {
   return (
     <div>
       <div className="flex md:flex-row flex-col justify-between items-center gap-x-4 leave-info-container">
-        <div className="w-full md:w-1/2 top-section p-4 border rounded-lg main-bg-color">
+        {/* <div className="w-full md:w-1/2 top-section p-4 border rounded-lg main-bg-color">
           <div className="top-head flex justify-between items-center">
             <div className="left-part flex justify-between pb-3 w-full text-white">
               <h1 className="headings">Leaves Balance</h1>
@@ -59,6 +59,53 @@ const RolesComponent = () => {
               >
                 Add Roles
               </button>
+            </div>
+          </div>
+        </div> */}
+
+<div className="w-full top-section p-6 border rounded-lg bg-white">
+          <div className="top-head ">
+            <div className="flex justify-between pb-3 w-full text-black">
+              <h1 className="text-lg font-bold">Add New Roles</h1>
+              
+            </div>
+            <hr className="mb-6" />
+            {/* Department Form Section */}
+            <div className="department-below-sect w-full">
+              <div className="flex flex-col md:flex-row md:space-x-4 justify-between">
+                <div className="flex-1 bg-white rounded-lg mb-4">
+                  <label className="block text-black font-bold">Type Of Role</label>
+                  <input
+                    type="text"
+                    className="block w-full p-2 border border-gray-300 rounded-md"
+                    placeholder="Enter designation name"
+                  />
+                </div>
+
+                <div className="flex-1 bg-white mb-4 rounded-lg">
+                  <label className="block text-black font-bold">Designation</label>
+                  <select className="block w-full p-2 border border-gray-300 rounded-md">
+                    <option>Select Designation</option>
+                    <option>Accountant</option>
+                    <option>Technical Support</option>
+                    <option>Tester</option>
+                    <option>Developer</option>
+                  </select>
+                </div>
+                <div className="add-reset-btns flex items-center pt-4 justify-end">
+                <button
+                  className=" main-bg-color mx-1 bg-blue-500 text-white px-4 py-2 rounded w-full md:w-auto "
+                >
+                  Save
+                </button>
+                <button
+                  className=" bg-gray-400 text-white px-4 py-2 rounded w-full md:w-auto"
+                >
+                  Reset
+                </button>
+              </div>
+              </div>
+              
             </div>
           </div>
         </div>
