@@ -55,9 +55,9 @@ const HourlyWagesComponent = () => {
           </div>
           <hr className="mb-6" />
           {/* Department Form Section */}
-          <div className="department-below-sect w-full">
-            <div className="flex flex-col md:flex-row md:space-x-1 justify-between">
-              <div className="flex-1 bg-white rounded-lg mb-4">
+          <div className="department-below-sect form-labels">
+            <div className="flex-gap justify-between">
+              <div className="first mb-4">
                 <label className="block text-black  font-bold">Title</label>
                 <input
                   type="text"
@@ -66,7 +66,7 @@ const HourlyWagesComponent = () => {
                 />
               </div>
 
-              <div className="flex-1 bg-white rounded-lg mb-4">
+              <div className="first mb-4">
                 <label className="block text-black  font-bold">Hourly Rate</label>
                 <input
                   type="text"
@@ -76,7 +76,7 @@ const HourlyWagesComponent = () => {
               </div>
 
 
-              <div className='add-reset-btns flex items-center justify-end pt-4'>
+              <div className='add-reset-btns flex items-center first mb-4'>
                 <button
                   className="apply-leave-btn mx-1 text-white px-2 py-2 rounded w-full md:w-auto main-bg-color"
                 >

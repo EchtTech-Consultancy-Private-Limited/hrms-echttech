@@ -1,5 +1,5 @@
 .below-content {
-    height: 73vh;
+    height: 90vh;
     overflow: auto;
   }
   .ul-list .ul-parent {
@@ -24,9 +24,20 @@
   }
   .all-ul{
     margin-left: 20px;
+    border-left: 3px solid #3959a3;
+    padding-left: 13px;
+    list-style-type: disc;
+     
   }
   .all-ul li {
       margin: 15px 0;
+      transition: 0.3s;
+    }
+    .all-ul li:hover
+    {
+      background: rgb(37, 37, 37);
+    padding: 6px 0px 10px 9px;
+    border-radius: 3px;
     }
     .all-ul li:first-child{
         margin-top: 0;
@@ -38,6 +49,7 @@
   .all-ul li a {
       color: #fff !important;
       display: flex;
+      font-size: 14px;
     }
   .all-ul li a:hover {
       text-decoration: none;
@@ -113,6 +125,11 @@
       background-color: #c0c0c0; 
       border-radius: 10px; 
       transition: background-color 0.3s ease; 
+    }
+
+    .css-uvvswg-MuiButtonBase-root-MuiAccordionSummary-root 
+    {
+      background-color: #113689 !important;
     }
 
 

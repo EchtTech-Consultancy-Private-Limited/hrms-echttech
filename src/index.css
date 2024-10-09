@@ -1,6 +1,5 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400&display=swap');
-
 @import url('../src/assetsechttech/css/globalecht.css');
 @import url('../src//assetsechttech//css//sidebarecht.css');
 @import url('../src//assetsechttech//css/rightdashboard.css');
@@ -58,6 +57,9 @@
 	th:hover{
 		border-bottom: none;
 	}
+	table.organization-table thead tr th:first-child, table.attendance-table thead tr th:first-child{
+		width: 100px;
+	  }
 	
 }
 

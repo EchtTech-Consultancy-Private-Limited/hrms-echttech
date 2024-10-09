@@ -1,12 +1,12 @@
 /* Mobile Phones */
-@media (max-width: 480px) {
+@media (max-width: 767px) {
     /* Styles for mobile devices */
     
    
-    .right-dashboard {
+    /* .right-dashboard {
         background-color: #ffffff;
         width: 100%;
-    }
+    } */
      .mobile-view-notif
     {
        right: -140% !important;
@@ -67,6 +67,22 @@
   .sectors-parent .sectors input
   {
     width: 100% !important;
+  }
+  .form-labels .first {
+    width: 100%;
+  }
+  .left-fields {
+    width: 100%;
+  }
+  .add-reset-btns button.main-bg-color {
+    margin-bottom: 10px;
+  }
+  .policy-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .policy-left-fields, .policy-right-fields {
+    width: 100%;
   }
   }
   
@@ -164,8 +180,7 @@
     .form-labels .first {
       width: 30%;
       align-self: end;
-      margin-bottom: 20px;
-      /* margin-right: 10px; */
+      flex: 1 0 auto;
     }
     select {
       height: unset !important;
@@ -201,12 +216,29 @@
       width: 100% !important;
       margin-top: 10px;
     }
+    .pay-slip-table {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start !important;
+    }
 
   }
   
   /* Laptops */
   @media (min-width: 1025px) and (max-width: 1399px) {
     /* Styles for small desktops */
+    select, input {
+      font-size: 15px !important;
+    }
+    /* .left-sidebar {
+      width: 20%;
+    } */
+    .form-labels .first {
+      width: 24%;
+    }
+    /* .right-dashboard {
+      width: 80%;
+    } */
 
     .high-charts-section .first-chart {
       width: 49%;
@@ -214,6 +246,9 @@
     .high-charts-section .second-chart {
       width: 49%;
     }
+    /* .form-labels .first {
+      width: 25%;
+    } */
   }
   
   /* Desktops */

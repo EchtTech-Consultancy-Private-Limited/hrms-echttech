@@ -79,15 +79,12 @@
     background: #0056b3;
   } */
   .form-labels .first {
-    width: 19.3%;
-    align-self: end;
-    margin-bottom: 20px;
-    /* margin-right: 10px; */
+    width: 18%;
     margin-left: 0 !important;
+    align-self: end;
+    flex: 1 0 auto;
   }
-  .form-labels .first:first-child {
-    margin-left: 10px;
-  }
+ 
   .last-fields {
     width: 100%;
     display: flex;

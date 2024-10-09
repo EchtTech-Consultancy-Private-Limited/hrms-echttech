@@ -216,9 +216,9 @@ const GeneratePayslipComponent = () => {
           </div>
           <hr className="mb-6" />
           {/* Department Form Section */}
-          <div className="department-below-sect w-full">
-            <div className="flex flex-col md:flex-row md:space-x-1 justify-between">
-              <div className="flex-1 bg-white rounded-lg mb-4">
+          <div className="department-below-sect form-labels">
+            {/* <div className="flex-gap justify-between">
+              <div className="first mb-4">
                 <label className="block text-black  font-bold">Employee</label>
                 <select className="block w-full p-2 border border-gray-300 rounded-md">
                   <option value="" disabled selected>
@@ -231,7 +231,7 @@ const GeneratePayslipComponent = () => {
                 </select>
               </div>
 
-              <div className="flex-1 bg-white rounded-lg mb-4">
+              <div className="first mb-4">
                 <label className="block text-black  font-bold">Location</label>
                 <select className="block w-full p-2 border border-gray-300 rounded-md">
                   <option value="" disabled selected>
@@ -244,7 +244,7 @@ const GeneratePayslipComponent = () => {
                 </select>
               </div>
 
-              <div className="flex-1 bg-white rounded-lg mb-4">
+              <div className="first mb-4">
                 <label className="block text-black  font-bold">
                   Select Date Range
                 </label>
@@ -254,13 +254,65 @@ const GeneratePayslipComponent = () => {
                 />
               </div>
 
-              <div className="add-reset-btns flex items-center justify-end pt-4">
-                <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
-                  Search
-                </button>
-                <button className="apply-leave-btn bg-gray-400 text-white px-2 py-2 rounded w-full md:w-auto">
-                  Reset
-                </button>
+            
+            </div> */}
+            <div className="form-labels field-btn-parent flex-gap">
+              <div className="left-fields row first-row flex items-center flex-wrap justify-start  justify-between flex-gap">
+                <div className="first mb-4  ">
+                  <div>
+                    <label className="block text-black  font-bold">
+                      Employee
+                    </label>
+                    <select className="block w-full p-2 border border-gray-300 rounded-md">
+                      <option value="" disabled selected>
+                        Select Title
+                      </option>
+                      <option value="Mr">Engineer</option>
+                      <option value="Ms">Developer</option>
+                      <option value="Mrs">Accountant</option>
+                      <option value="Dr">Administrator</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="first mb-4 ">
+                  <div>
+                    <label className="block text-black  font-bold">
+                      Location
+                    </label>
+                    <select className="block w-full p-2 border border-gray-300 rounded-md">
+                      <option value="" disabled selected>
+                        Select Title
+                      </option>
+                      <option value="delhi">Delhi</option>
+                      <option value="mumbai">Mumbai</option>
+                      <option value="chennai">Chennai</option>
+                      <option value="gurgaon">Gurgaon</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="first mb-4 ">
+                  <div>
+                    <label className="block text-black  font-bold">
+                      Select Date Range
+                    </label>
+                    <input
+                      type="date"
+                      className="block w-full p-2 border border-gray-300 rounded-md"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="right-btn">
+                <div className="add-reset-btns flex items-center justify-end mb-4">
+                  <button className=" mx-1 main-bg-color bg-blue-500 text-white px-2 py-2 rounded w-full md:w-auto ">
+                    Search
+                  </button>
+                  <button className=" bg-gray-400 text-white px-2 py-2 rounded w-full md:w-auto">
+                    Reset
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -312,7 +364,10 @@ const GeneratePayslipComponent = () => {
             </div>
 
             <div className="flex justify-end items-center">
-              <label className=" mb-0 text-sm text-gray-600 search-label" htmlFor="#">
+              <label
+                className=" mb-0 text-sm text-gray-600 search-label"
+                htmlFor="#"
+              >
                 Search :{" "}
               </label>
               <input
@@ -329,35 +384,35 @@ const GeneratePayslipComponent = () => {
             <table className="table-auto w-full bg-white">
               <thead>
                 <tr className="bg-gray-200 text-left">
-                  <th className="px-4 main-bg-color py-2">S.no</th>
-                  <th className="px-4 main-bg-color py-2">Emp Id</th>
-                  <th className="px-4 main-bg-color py-2">Emp Name</th>
-                  <th className="px-4 main-bg-color py-2">Location</th>
-                  <th className="px-4 main-bg-color py-2">Salary Type</th>
-                  <th className="px-4 main-bg-color py-2">Basic Salary</th>
-                  <th className="px-4 main-bg-color py-2">Net Salary</th>
-                  <th className="px-4 main-bg-color py-2">Details</th>
-                  <th className="px-4 main-bg-color py-2">Status</th>
-                  <th className="px-4 main-bg-color py-2">Actions</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">S.no</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Emp Id</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Emp Name</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Location</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Salary Type</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Basic Salary</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Net Salary</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Details</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Status</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Actions</th>
                 </tr>
               </thead>
               <tbody>
                 {currentEntries.length > 0 ? (
                   currentEntries.map((item, index) => (
                     <tr key={item.id}>
-                      <td className="border px-4 py-2">{index + 1}</td>
-                      <td className="border px-4 py-2">{item.empId}</td>
-                      <td className="border px-4 py-2">{item.empName}</td>
-                      <td className="border px-4 py-2">{item.location}</td>
-                      <td className="border px-4 py-2">{item.type}</td>
-                      <td className="border px-4 py-2">{item.basicsal}</td>
-                      <td className="border px-4 py-2">{item.salary}</td>
-                      <td className="border px-4 py-2">{item.details}</td>
-                      <td className="border px-4 py-2 text-red-500">
+                      <td className="border px-4 py-2 text-center">{index + 1}</td>
+                      <td className="border px-4 py-2 text-center">{item.empId}</td>
+                      <td className="border px-4 py-2 text-center">{item.empName}</td>
+                      <td className="border px-4 py-2 text-center">{item.location}</td>
+                      <td className="border px-4 py-2 text-center">{item.type}</td>
+                      <td className="border px-4 py-2 text-center">{item.basicsal}</td>
+                      <td className="border px-4 py-2 text-center">{item.salary}</td>
+                      <td className="border px-4 py-2 text-center">{item.details}</td>
+                      <td className="border px-4 py-2 text-center text-red-500">
                         {item.status}
                       </td>
-                      <td className="border px-4 py-2">
-                        <div className="flex space-x-2">
+                      <td className="border px-4 py-2 text-center">
+                        <div className="flex space-x-2 justify-center">
                           <button className="text-blue-500">
                             <FaEye />
                           </button>

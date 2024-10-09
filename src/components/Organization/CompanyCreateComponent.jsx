@@ -11,8 +11,8 @@ const CompanyCreateComponent = () => {
       <form className="mt-10">
         <div className="form-step">
           <div className="form-labels">
-            <div className="row first-row flex items-center flex-wrap justify-start md:space-x-3 justify-between">
-              <div className="first">
+            <div className="row first-row flex items-center flex-wrap justify-start md:space-x-3 justify-between flex-gap">
+              <div className="first mb-4">
                 <label
                   htmlFor=""
                   className="block text-gray-700 font-bold mb-2"
@@ -26,7 +26,7 @@ const CompanyCreateComponent = () => {
                 />
               </div>
 
-              <div className="first">
+              <div className="first mb-4">
                 <label
                   for="type"
                   className="block text-gray-700 font-bold mb-2"
@@ -44,7 +44,7 @@ const CompanyCreateComponent = () => {
                 </select>
               </div>
 
-              <div className="first">
+              <div className="first mb-4">
                 <label
                   htmlFor=""
                   className="block text-gray-700 font-bold mb-2"
@@ -58,7 +58,7 @@ const CompanyCreateComponent = () => {
                 />
               </div>
 
-              <div className="first">
+              <div className="first mb-4">
                 <label
                   htmlFor=""
                   className="block text-gray-700 font-bold mb-2"
@@ -71,7 +71,7 @@ const CompanyCreateComponent = () => {
                   placeholder="Registration Number"
                 />
               </div>
-              <div className="first">
+              <div className="first mb-4">
                 <label
                   htmlFor=""
                   className="block text-gray-700 font-bold mb-2"
@@ -85,7 +85,7 @@ const CompanyCreateComponent = () => {
                 />
               </div>
 
-              <div className="first">
+              <div className="first mb-4">
                 <label
                   htmlFor=""
                   className="block text-gray-700 font-bold mb-2"
@@ -99,7 +99,7 @@ const CompanyCreateComponent = () => {
                 />
               </div>
 
-              <div className="first">
+              <div className="first mb-4">
                 <label
                   htmlFor=""
                   className="block text-gray-700 font-bold mb-2"
@@ -113,7 +113,7 @@ const CompanyCreateComponent = () => {
                 />
               </div>
 
-              <div className="first">
+              <div className="first mb-4">
                 <label
                   htmlFor=""
                   className="block text-gray-700 font-bold mb-2"
@@ -127,7 +127,7 @@ const CompanyCreateComponent = () => {
                 />
               </div>
 
-              <div className="first flex items-end">
+              <div className="first mb-4">
                 <div className="address-with-label">
                   <label
                     htmlFor=""
@@ -142,7 +142,7 @@ const CompanyCreateComponent = () => {
                   />
                 </div>
               </div>
-              <div className="first">
+              <div className="first mb-4">
               <label
                     htmlFor=""
                     className="block text-gray-700 font-bold mb-2"
@@ -155,8 +155,8 @@ const CompanyCreateComponent = () => {
                   placeholder="Address Line 2"
                 />
               </div>
-              <div className="last-fields">
-                <div className="first">
+              
+                <div className="first mb-4">
                 <label
                     htmlFor=""
                     className="block text-gray-700 font-bold mb-2"
@@ -169,7 +169,7 @@ const CompanyCreateComponent = () => {
                     placeholder="City"
                   />
                 </div>
-                <div className="first">
+                <div className="first mb-4">
                 <label
                     htmlFor=""
                     className="block text-gray-700 font-bold mb-2"
@@ -182,7 +182,7 @@ const CompanyCreateComponent = () => {
                     placeholder="State/Province"
                   />
                 </div>
-                <div className="first">
+                <div className="first mb-4">
                 <label
                     htmlFor=""
                     className="block text-gray-700 font-bold mb-2"
@@ -195,7 +195,7 @@ const CompanyCreateComponent = () => {
                     placeholder="Zip Code/Postal Code"
                   />
                 </div>
-                <div className="first">
+                <div className="first mb-4">
                 <label
                     htmlFor=""
                     className="block text-gray-700 font-bold mb-2"
@@ -212,7 +212,7 @@ const CompanyCreateComponent = () => {
                     <option value="opel">Pakistan</option>
                   </select>
                 </div>
-              </div>
+              
             </div>
 
             {/* <div className="row flex second-row items-center mt-5">

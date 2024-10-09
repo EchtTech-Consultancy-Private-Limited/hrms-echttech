@@ -61,24 +61,36 @@ const LeaveComponentList = () => {
               <h1 className="headings">Leaves Information</h1>
             </div>
           </div>
-          <h2 className="text-lg pt-6 border-t font-semibold mb-2">Select Date</h2>
-          <div className="flex pt-2 flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0 flex-wrap">
-            <label className="text-gray-600 mb-0" >From: </label>
-            <input
-              type="date"
-              className="border border-gray-300 text-gray-500 p-1 rounded w-full md:w-auto"
-              placeholder="Start Date"
-            />
-            <label className="text-gray-600 mb-0" >To: </label>
-            <input
-              type="date"
-              className="border border-gray-300 text-gray-500 p-1 rounded w-full md:w-auto"
-              placeholder="End Date"
-            />
-            <button className="main-bg-color text-white px-4 py-2 rounded w-full md:w-auto text-sm">
-              Filter
-            </button>
+          <h2 className="text-lg pt-2 border-t font-semibold mb-2">Select Date</h2>
+          <div className="form-labels">
+          <div className="flex-gap items-end">
+            <div className="first ">
+              <div>
+                <label className="block text-black  font-bold">From :</label>
+                <input
+                  type="date"
+                  className="block w-full p-2 border border-gray-300 rounded-md"
+                />
+              </div>
+            </div>
+            <div className="first ">
+              <div>
+                <label className="block text-black  font-bold">To :</label>
+                <input
+                  type="date"
+                  className="block w-full p-2 border border-gray-300 rounded-md"
+                />
+              </div>
+            </div>
+            <div className=" flex justify-end">
+              <div>
+                <button className="main-bg-color text-white px-4 py-2 rounded w-full md:w-auto text-sm">
+                  Filter
+                </button>
+              </div>
+            </div>
           </div>
+        </div>
         </div>
 
         <div className="w-full md:w-1/2 top-section p-4 border rounded-lg main-bg-color">
@@ -134,27 +146,36 @@ const LeaveComponentList = () => {
         <table className="min-w-full bg-white border-collapse border border-gray-300">
           <thead>
             <tr className="main-bg-color">
-              <th className="border border-gray-300 px-4 py-2">Leave Type</th>
-              <th className="border border-gray-300 px-4 py-2">From Date</th>
-              <th className="border border-gray-300 px-4 py-2">To Date</th>
-              <th className="border border-gray-300 px-4 py-2">Status</th>
-              <th className="border border-gray-300 px-4 py-2">Reason</th> 
-              <th className="border border-gray-300 px-4 py-2">Actions</th>
+              <th className="px-4 border-l border-gray-300 text-center py-3">Leave Type</th>
+              <th className="px-4 border-l border-gray-300 text-center py-3">From Date</th>
+              <th className="px-4 border-l border-gray-300 text-center py-3">To Date</th>
+              <th className="px-4 border-l border-gray-300 text-center py-3">Status</th>
+              <th className="px-4 border-l border-gray-300 text-center py-3">Reason</th> 
+              <th className="px-4 border-l border-gray-300 text-center py-3">Actions</th>
             </tr>
           </thead>
           <tbody>
             {pageData.map((leave, index) => (
               <tr key={index} className="hover:bg-gray-50">
-                <td className="border border-gray-300 px-4 py-2">{leave.leaveType}</td>
-                <td className="border border-gray-300 px-4 py-2">{leave.fromDate}</td>
-                <td className="border border-gray-300 px-4 py-2">{leave.toDate}</td>
-                <td className="border border-gray-300 px-4 py-2">{leave.status}</td>
-                <td className="border border-gray-300 px-4 py-2">{leave.reason}</td>
-                <td className="px-4 py-3 flex justify-start">
-                  <FaEye className="text-blue-500 cursor-pointer mr-2" />
-                  <TbEditCircle className="text-green-500 cursor-pointer mr-2" />
-                  <FaTrashAlt className="text-red-500 cursor-pointer" />
-                </td>
+                <td className="py-2 px-4 border-l border-gray-300 text-center">{leave.leaveType}</td>
+                <td className="py-2 px-4 border-l border-gray-300 text-center">{leave.fromDate}</td>
+                <td className="py-2 px-4 border-l border-gray-300 text-center">{leave.toDate}</td>
+                <td className="py-2 px-4 border-l border-gray-300 text-center">{leave.status}</td>
+                <td className="py-2 px-4 border-l border-gray-300 text-center">{leave.reason}</td>
+                <td className="py-2 px-4 border-l border-gray-300 text-center">
+                      <div className="flex justify-center space-x-2">
+                        <button className="text-blue-500">
+                          <FaEye />
+                        </button>
+
+                        <button className="text-yellow-500">
+                          <TbEditCircle />
+                        </button>
+                        <button className="text-red-500">
+                          <FaTrashAlt />
+                        </button>
+                      </div>
+                    </td>
               </tr>
             ))}
           </tbody>
@@ -171,14 +192,14 @@ const LeaveComponentList = () => {
          <div className="" >
          <button
           onClick={handlePrevPage}
-          className="main-bg-color text-white px-2 mx-1 py-1 text-xs rounded"
+          className="main-bg-color text-white px-4 py-2 rounded w-full md:w-auto text-sm mr-4 cursor-pointer"
           disabled={currentPage === 1}
         >
           Previous
         </button>
         <button
           onClick={handleNextPage}
-          className="main-bg-color text-white px-2 mx-1 py-1 text-xs rounded"
+          className="main-bg-color text-white px-4 py-2 rounded w-full md:w-auto text-sm cursor-pointer"
           disabled={end >= totalEntries}
         >
           Next

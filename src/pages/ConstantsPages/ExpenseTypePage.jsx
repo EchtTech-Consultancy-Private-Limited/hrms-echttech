@@ -1,11 +1,11 @@
 import React from 'react'
-import ExpenseComponent from '../../components/Organization/ExpenseComponent'
+import ExpenseTypeComponent from '../../components/Constants/ExpenseTypeComponent'
 
 const ExpenseTypePage = () => {
   return (
     <div className='content-mid base-bg-color' >
       <div className='px-5 py-12' id='dashboard' >
-        <ExpenseComponent />
+         <ExpenseTypeComponent/>
       </div>
     </div>
   )

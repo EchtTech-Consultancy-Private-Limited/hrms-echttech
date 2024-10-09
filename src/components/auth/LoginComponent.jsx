@@ -72,7 +72,7 @@ const LoginComponent = () => {
   return (
     <div className="mc">
       <div className="min-h-screen relative bg-gray-300 border flex items-center bg-login-img">
-        <div className={`absolute mc-child bg-blue-500 transition-all duration-500 flex ${isClosed ? 'w-[325px]' : 'w-[650px]'}`}>
+        <div className={`parnt-login-h-438 absolute mc-child bg-blue-500 transition-all duration-500 flex ${isClosed ? 'w-[325px]' : 'w-[650px]'}`}>
           {/* The Toggle Button */}
           <button
             className="absolute -top-2 -right-2 -mr-4 mt-2 bg-blue-500 text-white font-bold py-2 px-4 rounded-full focus:outline-none"
@@ -82,7 +82,7 @@ const LoginComponent = () => {
           </button>
 
           {/* Left Box (blue section) */}
-          <div className={`bg-white shadow-lg max-w-sm transition-all duration-500 ${isClosed ? 'max-w-full' : 'max-w-[50%]'} overflow-hidden`}>
+          <div className={`child-login-h-438 bg-white shadow-lg max-w-sm transition-all duration-500 ${isClosed ? 'max-w-full' : 'max-w-[50%]'} overflow-hidden`}>
             <div className='p-8'>
               {/* Only show Login heading and welcome message when not on OTP page */}
               {!showOtpInput && (
@@ -227,8 +227,8 @@ const LoginComponent = () => {
                 <p className='font-bold mb-2' >Verification Code (Sent to registered Email & Mobile)</p>
                 <input type="text" className="border border-gray-300 rounded px-3 py-2 w-full" placeholder="Enter OTP" />
                 <div className='flex items-center'>
-                <button className="login-btn mt-4 bg-gradient-to-r text-white font-bold py-3 px-2 from-blue-300 via-blue-500 to-blue-900 transition duration-300">Resend Code</button>
-                <button className="mt-4 bg-gray-500 border border-gray-500 text-white font-bold py-3 mx-1 px-4 rounded">Verify</button>
+                <button className="login-btn mt-4 bg-gradient-to-r text-white font-bold py-3 px-2 from-blue-300 via-blue-500 to-blue-900 transition duration-300 w-1/2">Resend Code</button>
+                <button className="mt-4 bg-gray-500 border border-gray-500 text-white font-bold py-3 mx-1 px-4 rounded w-1/2">Verify</button>
                 </div>
               </div>
             )}
@@ -236,19 +236,19 @@ const LoginComponent = () => {
 
           {/* Right Box (red section) */}
           
-          <div className={`bg-blue-500 flex items-center justify-between overflow-hidden rounded-lg shadow-lg transition-all duration-500 ${isClosed ? 'max-w-0 overflow-hidden' : 'max-w-[50%]'}`}>
+          <div className={`bg-blue-500 flex justify-between overflow-hidden rounded-lg shadow-lg transition-all duration-500 ${isClosed ? 'max-w-0 overflow-hidden' : 'max-w-[50%]'}`}>
              
             <div className='p-8'>
-              <div>
+              <div className='login-style' >
                 <div className='flex items-center' >
-                   <HiChevronDoubleRight className='text-white'/>
+                   <HiChevronDoubleRight className='text-white mt-1'/>
 
-                   <p className='text-white underline font-bold' >Learn more about us</p>
+                   <h2 className='text-white underline font-bold' >Learn more about us</h2>
 
                 </div>
-                <h2 className="text-3xl text-white font-bold">
-                  Efficiently Organize and <span className='font-bold'>Handle Tasks</span>
-                </h2>
+                <h4 className=" text-white font-bold">
+                  Efficiently Organize and <span className='font-bold'>Handle Tasks .</span>
+                </h4>
                 <p className='text-white'>
                   Manage your HR tasks efficiently. See how our innovative solutions can help you save time and focus on what matters most.
                 </p>

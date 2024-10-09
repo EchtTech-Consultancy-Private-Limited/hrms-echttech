@@ -57,9 +57,9 @@ const DepartmentComponent = () => {
             <hr className="mb-6" />
             {/* Department Form Section */}
             <div className="department-below-sect w-full ">
-              <div className="flex md:space-x-4 justify-between field-btn-parent">
-                <div className="left-fields md:space-x-4">
-                  <div className="flex-1 bg-white rounded-lg mb-4 ">
+              <div className="form-labels field-btn-parent flex-gap">
+                <div className="left-fields row first-row flex items-center flex-wrap justify-start  justify-between flex-gap">
+                  <div className="first mb-4  ">
                     <div>
                       <label className="block text-black font-bold ">
                         Name
@@ -72,7 +72,7 @@ const DepartmentComponent = () => {
                     </div>
                   </div>
 
-                  <div className="flex-1 bg-white mb-4 rounded-lg">
+                  <div className="first mb-4 ">
                     <div>
                       <label className="block text-black font-bold ">
                         Location
@@ -87,7 +87,7 @@ const DepartmentComponent = () => {
                     </div>
                   </div>
 
-                  <div className="flex-1 bg-white mb-4 rounded-lg">
+                  <div className="first mb-4 ">
                     <div>
                       <label className="block text-black font-bold ">
                         Department Head
@@ -160,7 +160,7 @@ const DepartmentComponent = () => {
           </div>
 
           <div className="bottom-section template-list overflow-auto">
-            <table className="min-w-full bg-white border border-gray-300 rounded-t-lg">
+            <table className="min-w-full bg-white border border-gray-300 rounded-t-lg organization-table">
               <thead>
                 <tr className="main-bg-color text-white">
                   <th className="px-4 border-gray-300 main-bg-color border-l text-center py-3">

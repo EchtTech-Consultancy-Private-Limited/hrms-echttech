@@ -72,32 +72,23 @@ const AwardTypeComponent = () => {
       <div className="w-full top-section p-4 border rounded-lg bg-white">
         <div className="top-head">
           <div className="flex justify-between pb-3 w-full text-black">
-            <h1 className="text-lg font-bold">Add New Designation</h1>
+            <h1 className="text-lg font-bold">Add New Award Type</h1>
           </div>
           <hr className="mb-6" />
           {/* Department Form Section */}
           <div className="department-below-sect w-full">
-            <div className="flex flex-col md:flex-row md:space-x-4 justify-between">
+            <div className="flex flex-col md:flex-row md:space-x-4 justify-between items-end">
               <div className="flex-1 bg-white rounded-lg mb-4">
-                <label className="block text-black font-bold">Name</label>
+                <label className="block text-black font-bold">List All Award Type</label>
                 <input
                   type="text"
                   className="block w-full p-2 border border-gray-300 rounded-md"
-                  placeholder="Enter designation name"
+                  placeholder="Enter Award Type"
                 />
               </div>
   
               <div className="flex-1 bg-white mb-4 rounded-lg">
-                <label className="block text-black font-bold">Designation</label>
-                <select className="block w-full p-2 border border-gray-300 rounded-md">
-                  <option>Select Designation</option>
-                  <option>Accountant</option>
-                  <option>Technical Support</option>
-                  <option>Tester</option>
-                  <option>Developer</option>
-                </select>
-              </div>
-              <div className="add-reset-btns flex items-center pt-4 justify-end">
+              <div className="add-reset-btns flex items-center pt-4">
                 <button className="main-bg-color mx-1 bg-blue-500 text-white px-4 py-2 rounded w-full md:w-auto">
                   Save
                 </button>
@@ -105,13 +96,15 @@ const AwardTypeComponent = () => {
                   Reset
                 </button>
               </div>
+              </div>
+              
             </div>
           </div>
         </div>
       </div>
   
       <div className="contract-type-list overflow-auto mx-auto p-6 border rounded-lg bg-white mt-5">
-        <h1 className="text-lg font-bold mb-2">Contract Type List</h1>
+        <h1 className="text-lg font-bold mb-2">Award Type List</h1>
         {/* Entries selector and search bar */}
         <div className="flex justify-between mb-4">
           <div className="flex items-center">
@@ -144,11 +137,11 @@ const AwardTypeComponent = () => {
           <thead>
             <tr className="main-bg-color">
               <th className="border border-gray-300 px-4 py-2">S.No</th>
-              <th className="border border-gray-300 px-4 py-2">Name</th>
-              <th className="border border-gray-300 px-4 py-2">Position</th>
-              <th className="border border-gray-300 px-4 py-2">Office</th>
-              <th className="border border-gray-300 px-4 py-2">Age</th>
-              <th className="border border-gray-300 px-4 py-2">Start Date</th>
+              <th className="border border-gray-300 px-4 py-2">Award Type</th>
+              <th className="border border-gray-300 px-4 py-2">Employee Name</th>
+              <th className="border border-gray-300 px-4 py-2">Department</th>
+              {/* <th className="border border-gray-300 px-4 py-2">Age</th> */}
+              <th className="border border-gray-300 px-4 py-2">Date</th>
               <th className="border border-gray-300 px-4 py-2">Actions</th>
             </tr>
           </thead>
@@ -159,7 +152,7 @@ const AwardTypeComponent = () => {
                 <td className="border border-gray-300 px-4 py-2">{entry.name}</td>
                 <td className="border border-gray-300 px-4 py-2">{entry.position}</td>
                 <td className="border border-gray-300 px-4 py-2">{entry.office}</td>
-                <td className="border border-gray-300 px-4 py-2">{entry.age}</td>
+                {/* <td className="border border-gray-300 px-4 py-2">{entry.age}</td> */}
                 <td className="border border-gray-300 px-4 py-2">{entry.startDate}</td>
                 <td className="border border-gray-300 px-4 py-2">{entry.actions}</td>
               </tr>

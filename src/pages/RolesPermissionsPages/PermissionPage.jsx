@@ -3,9 +3,11 @@ import PermissionComponent from '../../components/Rolespermissions/PermissionCom
 
 const PermissionPage = () => {
   return (
-    <div>
-      <PermissionComponent />
-    </div>
+    <div className='content-mid base-bg-color' >
+    <div className='px-5 py-12' id='dashboard' >
+    <PermissionComponent />
+      </div>
+  </div>
   )
 }
 
