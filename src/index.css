@@ -57,6 +57,9 @@
 	th:hover{
 		border-bottom: none;
 	}
+	table.organization-table thead tr th:first-child, table.attendance-table thead tr th:first-child{
+		width: 100px;
+	  }
 	
 }
 

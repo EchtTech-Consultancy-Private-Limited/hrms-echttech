@@ -146,27 +146,36 @@ const LeaveComponentList = () => {
         <table className="min-w-full bg-white border-collapse border border-gray-300">
           <thead>
             <tr className="main-bg-color">
-              <th className="border border-gray-300 px-4 py-2">Leave Type</th>
-              <th className="border border-gray-300 px-4 py-2">From Date</th>
-              <th className="border border-gray-300 px-4 py-2">To Date</th>
-              <th className="border border-gray-300 px-4 py-2">Status</th>
-              <th className="border border-gray-300 px-4 py-2">Reason</th> 
-              <th className="border border-gray-300 px-4 py-2">Actions</th>
+              <th className="px-4 border-l border-gray-300 text-center py-3">Leave Type</th>
+              <th className="px-4 border-l border-gray-300 text-center py-3">From Date</th>
+              <th className="px-4 border-l border-gray-300 text-center py-3">To Date</th>
+              <th className="px-4 border-l border-gray-300 text-center py-3">Status</th>
+              <th className="px-4 border-l border-gray-300 text-center py-3">Reason</th> 
+              <th className="px-4 border-l border-gray-300 text-center py-3">Actions</th>
             </tr>
           </thead>
           <tbody>
             {pageData.map((leave, index) => (
               <tr key={index} className="hover:bg-gray-50">
-                <td className="border border-gray-300 px-4 py-2">{leave.leaveType}</td>
-                <td className="border border-gray-300 px-4 py-2">{leave.fromDate}</td>
-                <td className="border border-gray-300 px-4 py-2">{leave.toDate}</td>
-                <td className="border border-gray-300 px-4 py-2">{leave.status}</td>
-                <td className="border border-gray-300 px-4 py-2">{leave.reason}</td>
-                <td className="px-4 py-3 flex justify-start">
-                  <FaEye className="text-blue-500 cursor-pointer mr-2" />
-                  <TbEditCircle className="text-green-500 cursor-pointer mr-2" />
-                  <FaTrashAlt className="text-red-500 cursor-pointer" />
-                </td>
+                <td className="py-2 px-4 border-l border-gray-300 text-center">{leave.leaveType}</td>
+                <td className="py-2 px-4 border-l border-gray-300 text-center">{leave.fromDate}</td>
+                <td className="py-2 px-4 border-l border-gray-300 text-center">{leave.toDate}</td>
+                <td className="py-2 px-4 border-l border-gray-300 text-center">{leave.status}</td>
+                <td className="py-2 px-4 border-l border-gray-300 text-center">{leave.reason}</td>
+                <td className="py-2 px-4 border-l border-gray-300 text-center">
+                      <div className="flex justify-center space-x-2">
+                        <button className="text-blue-500">
+                          <FaEye />
+                        </button>
+
+                        <button className="text-yellow-500">
+                          <TbEditCircle />
+                        </button>
+                        <button className="text-red-500">
+                          <FaTrashAlt />
+                        </button>
+                      </div>
+                    </td>
               </tr>
             ))}
           </tbody>

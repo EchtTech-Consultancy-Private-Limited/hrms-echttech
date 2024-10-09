@@ -122,7 +122,7 @@ const AttendanceListComponent = () => {
           </div>
 
           <div className="overflow-auto">
-            <table className="min-w-full bg-white border border-gray-300 rounded-t-lg">
+            <table className="min-w-full bg-white border border-gray-300 rounded-t-lg attendance-table">
               <thead>
                 <tr className="main-bg-color text-white">
                   <th className="px-4 border-gray-300 border-l text-center py-3">
