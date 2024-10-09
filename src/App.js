@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import MissingPage from './components/Error/404';
 import Dashboard from './pages/Dashboard'
 import LayoutComponent from './components/shared/LayoutComponent'
 import LoginPage from './pages/LoginPage'
@@ -83,6 +84,7 @@ function App() {
                     <Route path='roles' element={<RolesPage />} />
                     <Route path='permissions' element={<PermissionPage />} />
                 </Route>
+                <Route component={MissingPage} />
             </Routes>
         </Router>
     )
