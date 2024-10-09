@@ -54,9 +54,9 @@ const PayrollTemplatesComponent = () => {
             </div>
             <hr className="mb-6" />
             {/* Department Form Section */}
-            <div className="department-below-sect w-full">
-              <div className="flex flex-col md:flex-row md:space-x-3 justify-between">
-                <div className="flex-1 bg-white rounded-lg mb-4">
+            <div className="department-below-sect form-labels">
+              <div className=" flex-gap justify-between">
+                <div className="first mb-4">
                   <label className="block text-black  font-bold">
                     Name of Template
                   </label>
@@ -67,7 +67,7 @@ const PayrollTemplatesComponent = () => {
                   />
                 </div>
 
-                <div className="flex-1 bg-white mb-4 rounded-lg">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">Select</label>
                   <select className="block w-full p-2 border border-gray-300 rounded-md">
                     <option>Select Month</option>
@@ -77,7 +77,7 @@ const PayrollTemplatesComponent = () => {
                     <option>April</option>
                   </select>
                 </div>
-                <div className="flex-1 bg-white rounded-lg mb-4">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">Monthly</label>
                   <input
                     type="text"
@@ -95,9 +95,9 @@ const PayrollTemplatesComponent = () => {
             </div>
             <hr className="mb-6" />
             {/* Department Form Section */}
-            <div className="department-below-sect w-full">
-              <div className="flex flex-wrap template-sec items-end">
-                <div className="w-full md:w-1/4 bg-white rounded-lg mb-4">
+            <div className="department-below-sect form-labels">
+              <div className="justifu-between flex-gap template-sec">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">
                     Basic Salary
                   </label>
@@ -108,7 +108,7 @@ const PayrollTemplatesComponent = () => {
                   />
                 </div>
 
-                <div className="w-full md:w-1/4  bg-white rounded-lg mb-4">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">
                     Dearness Allowance
                   </label>
@@ -119,7 +119,7 @@ const PayrollTemplatesComponent = () => {
                   />
                 </div>
 
-                <div className="w-full md:w-1/4  bg-white rounded-lg mb-4">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">
                     Overtime(Per hour)
                   </label>
@@ -130,7 +130,7 @@ const PayrollTemplatesComponent = () => {
                   />
                 </div>
 
-                <div className="w-full md:w-1/4  bg-white rounded-lg mb-4">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">
                     House Rent Allowance
                   </label>
@@ -141,7 +141,7 @@ const PayrollTemplatesComponent = () => {
                   />
                 </div>
 
-                <div className="w-full md:w-1/4  bg-white rounded-lg mb-4">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">
                     Medical Allowance
                   </label>
@@ -152,7 +152,7 @@ const PayrollTemplatesComponent = () => {
                   />
                 </div>
 
-                <div className="w-full md:w-1/4  bg-white rounded-lg mb-4">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">
                     Leave Travel Assistance
                   </label>
@@ -163,7 +163,7 @@ const PayrollTemplatesComponent = () => {
                   />
                 </div>
 
-                <div className="w-full md:w-1/4  bg-white rounded-lg mb-4">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">
                     Conveyance Allowance
                   </label>
@@ -174,7 +174,7 @@ const PayrollTemplatesComponent = () => {
                   />
                 </div>
 
-                <div className="w-full md:w-1/4  bg-white rounded-lg mb-4">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">
                     Special Allowance
                   </label>
@@ -185,7 +185,7 @@ const PayrollTemplatesComponent = () => {
                   />
                 </div>
 
-                <div className="w-full md:w-1/4  bg-white rounded-lg mb-4">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">
                     Statuary Bonus
                   </label>
@@ -196,7 +196,7 @@ const PayrollTemplatesComponent = () => {
                   />
                 </div>
 
-                <div className="w-full md:w-1/4  bg-white rounded-lg mb-4">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">
                     Education Allowance
                   </label>
@@ -216,9 +216,9 @@ const PayrollTemplatesComponent = () => {
             </div>
             <hr className="mb-6" />
             {/* Department Form Section */}
-            <div className="department-below-sect w-full">
-              <div className="flex flex-wrap template-sec items-end">
-                <div className="w-full md:w-1/4 bg-white rounded-lg mb-4">
+            <div className="department-below-sect form-labels">
+              <div className="flex-gap template-sec justify-between">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">
                     EPF Employee Contribution
                   </label>
@@ -229,7 +229,7 @@ const PayrollTemplatesComponent = () => {
                   />
                 </div>
 
-                <div className="w-full md:w-1/4  bg-white rounded-lg mb-4">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">
                     ESIC Employee
                   </label>
@@ -240,7 +240,7 @@ const PayrollTemplatesComponent = () => {
                   />
                 </div>
 
-                <div className="w-full md:w-1/4  bg-white rounded-lg mb-4">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">
                     Tax Deduction
                   </label>
@@ -251,7 +251,7 @@ const PayrollTemplatesComponent = () => {
                   />
                 </div>
 
-                <div className="w-full md:w-1/4  bg-white rounded-lg mb-4">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">
                     Security Deposit
                   </label>
@@ -262,7 +262,7 @@ const PayrollTemplatesComponent = () => {
                   />
                 </div>
 
-                <div className="w-full md:w-1/4  bg-white rounded-lg mb-4">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">
                     Medical Insurance
                   </label>
@@ -282,9 +282,9 @@ const PayrollTemplatesComponent = () => {
             </div>
             <hr className="mb-6" />
             {/* Department Form Section */}
-            <div className="department-below-sect w-full">
-              <div className="flex flex-wrap template-sec items-end">
-                <div className="w-full md:w-1/4 bg-white rounded-lg mb-4">
+            <div className="department-below-sect form-labels">
+              <div className="flex-gaptemplate-sec flex-gap">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">
                     EPF Employee Contribution
                   </label>
@@ -295,7 +295,7 @@ const PayrollTemplatesComponent = () => {
                   />
                 </div>
 
-                <div className="w-full md:w-1/4  bg-white rounded-lg mb-4">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">
                     ESIC Employee
                   </label>
@@ -306,7 +306,7 @@ const PayrollTemplatesComponent = () => {
                   />
                 </div>
 
-                <div className="w-full md:w-1/4  bg-white rounded-lg mb-4">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">Gratuity</label>
                   <input
                     type="text"
@@ -315,7 +315,7 @@ const PayrollTemplatesComponent = () => {
                   />
                 </div>
 
-                <div className="w-full md:w-1/4  bg-white rounded-lg mb-4">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">
                     Medical Insurance
                   </label>
@@ -335,9 +335,9 @@ const PayrollTemplatesComponent = () => {
             </div>
             <hr className="mb-6" />
             {/* Department Form Section */}
-            <div className="department-below-sect w-full">
-              <div className="flex flex-wrap template-sec items-end">
-                <div className="w-full md:w-1/4 bg-white rounded-lg mb-4">
+            <div className="department-below-sect form-labels">
+              <div className="flex-gap template-sec">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">
                     Gross Salary
                   </label>
@@ -349,7 +349,7 @@ const PayrollTemplatesComponent = () => {
                   />
                 </div>
 
-                <div className="w-full md:w-1/4  bg-white rounded-lg mb-4">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">
                     Totak Allowance + Benefits
                   </label>
@@ -361,7 +361,7 @@ const PayrollTemplatesComponent = () => {
                   />
                 </div>
 
-                <div className="w-full md:w-1/4  bg-white rounded-lg mb-4">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">
                     Total Deduction
                   </label>
@@ -373,7 +373,7 @@ const PayrollTemplatesComponent = () => {
                   />
                 </div>
 
-                <div className="w-full md:w-1/4  bg-white rounded-lg mb-4">
+                <div className="first mb-4">
                   <label className="block text-black font-bold">
                     Net Salary
                   </label>
