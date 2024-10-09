@@ -73,4 +73,30 @@
   {
     background-color: #2562b0; 
   }
+
+  .login-style h2 , .login-style svg
+  {
+    font-size: 25px;
+    margin-bottom: 7%;
+  }
+  .login-style h4
+  {
+    font-size: 18px;
+
+  }
+  .login-style p
+  {
+    margin-top: 5%;
+  }
+  #captcha
+  {
+    margin-bottom: 14px;
+  }
+  .parnt-login-h-438 , .child-login-h-438 
+  {
+    height: 438px;
+  }
+
+ 
+
   

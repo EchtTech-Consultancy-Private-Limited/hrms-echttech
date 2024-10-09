@@ -24,13 +24,20 @@
   }
   .all-ul{
     margin-left: 20px;
-    border-left: 1px solid #a7a7a7;
-    padding-left: 14px;
+    border-left: 3px solid #3959a3;
+    padding-left: 13px;
     list-style-type: disc;
-
+     
   }
   .all-ul li {
       margin: 15px 0;
+      transition: 0.3s;
+    }
+    .all-ul li:hover
+    {
+      background: rgb(37, 37, 37);
+    padding: 6px 0px 10px 9px;
+    border-radius: 3px;
     }
     .all-ul li:first-child{
         margin-top: 0;
