@@ -35,6 +35,8 @@ import EmployeeExitTypePage from './pages/ConstantsPages/EmployeeExitTypePage'
 import TravelArrangementTypePage from './pages/ConstantsPages/TravelArrangementTypePage'
 import PaymentMethodPage from './pages/ConstantsPages/PaymentMethodPage'
 import CurrencyTypePage from './pages/ConstantsPages/CurrencyTypePage'
+import RolesPage from './pages/RolesPermissionsPages/RolesPage'
+import PermissionPage from './pages/RolesPermissionsPages/PermissionPage'
 
 
 function App() {
@@ -78,8 +80,9 @@ function App() {
                     <Route path='travel-arrangement-type' element={<TravelArrangementTypePage />} />
                     <Route path='payment-methods' element={<PaymentMethodPage />} />
                     <Route path='currency-type' element={<CurrencyTypePage />} />
+                    <Route path='roles' element={<RolesPage />} />
+                    <Route path='permissions' element={<PermissionPage />} />
                 </Route>
-               
             </Routes>
         </Router>
     )

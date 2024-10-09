@@ -6,10 +6,10 @@ import LeaveApplyPage from "../../pages/LeavePages/LeaveApplyPage";
 const LeaveComponentList = () => {
 
   const leaveData = Array.from({ length: 100 }, (_, i) => {
-    const fromDate = new Date(`2024-09-${(i % 30) + 1}`);
-    const toDate = new Date(`2024-09-${(i % 30) + 3}`);
+  const fromDate = new Date(`2024-09-${(i % 30) + 1}`);
+  const toDate = new Date(`2024-09-${(i % 30) + 3}`);
   
-    const formatDate = (date) => {
+  const formatDate = (date) => {
       const day = String(date.getDate()).padStart(2, '0'); // Format day as 2 digits
       const month = String(date.getMonth() + 1).padStart(2, '0'); // Format month as 2 digits
       const year = String(date.getFullYear()).slice(-2); // Get last two digits of year
