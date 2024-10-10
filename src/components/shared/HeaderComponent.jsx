@@ -7,15 +7,29 @@ import NotificationsActiveOutlinedIcon from '@mui/icons-material/NotificationsAc
 import accountimage from "../../assetsechttech/utility-images/accountimage.png"
 import { Dialog } from '@headlessui/react';
 import logo from "../../assetsechttech/logo/logo.png"
+import { useNavigate } from "react-router-dom";
+import { useAlert } from 'react-alert'
+import { logout } from '../../reduxapis/actions/loginAction'
+import { useDispatch } from 'react-redux';
 
 
 
 const HeaderComponent = () => {
   
+  const alert = useAlert();
+  const dispatch = useDispatch();
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
+  const logoutHandler = () => {
+      dispatch(logout());
+      alert.success('Logged out successfully.')
+      localStorage.removeItem("token");
+      window.location.href ='/login';
+  }
+
   return (
     <div className='top-header flex justify-between items-center px-3'>
       <div className="top-bar-left flex">
@@ -267,6 +281,7 @@ const HeaderComponent = () => {
                             type="submit"
                             className={`block w-full px-4 py-2 text-left text-sm ${active ? 'bg-gray-100 text-gray-900' : 'text-gray-700'
                               }`}
+                              onClick={logoutHandler}
                           >
                             Sign out
                           </button>

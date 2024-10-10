@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import MissingPage from './components/Error/404';
+import Loader from "./components/shared/Loader";
+import { useSelector } from "react-redux";
 import Dashboard from './pages/Dashboard'
 import LayoutComponent from './components/shared/LayoutComponent'
 import LoginPage from './pages/LoginPage'
@@ -40,7 +42,10 @@ import RolesPage from './pages/RolesPermissionsPages/RolesPage'
 import PermissionPage from './pages/RolesPermissionsPages/PermissionPage'
 
 function App() {
+    const { loading } = useSelector((state) => state.alerts);
     return (
+        <div>
+        {loading && <Loader />}
         <Router>
             <Routes>
                 <Route path='login' element={<LoginPage />} />
@@ -86,6 +91,7 @@ function App() {
                 <Route component={MissingPage} />
             </Routes>
         </Router>
+        </div>
     )
 }
 

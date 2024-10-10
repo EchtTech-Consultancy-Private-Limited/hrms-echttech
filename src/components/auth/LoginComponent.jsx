@@ -1,49 +1,51 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { loadCaptchaEnginge, LoadCanvasTemplateNoReload, LoadCanvasTemplate, validateCaptcha,} from 'react-simple-captcha';
 import { useNavigate, Link } from 'react-router-dom';
 import { RiRefreshLine } from "react-icons/ri";
 import { FaCaretLeft } from 'react-icons/fa';
 import captcha from '../../assetsechttech/utility-images/captcha.PNG';
+import { HideLoading, ShowLoading } from "../../reduxapis/slice/alertsSlice";
 import { HiChevronDoubleRight, HiChevronDoubleLeft } from "react-icons/hi";
+import { useAlert } from 'react-alert'
 import { GoEyeClosed } from "react-icons/go";
 import { IoEyeOutline } from "react-icons/io5";
 import { useForm } from 'react-hook-form';
+import { useDispatch, useSelector } from 'react-redux'
+import { login, clearErrors } from '../../reduxapis/actions/loginAction';
+
 
 const LoginComponent = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
-  const [showEmailInput, setShowEmailInput] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
-  const [isClosed, setIsClosed] = useState(false);
-  const [showOtpInput, setShowOtpInput] = useState(false);
-  const navigate = useNavigate();
-  const [captchaCode, setCaptchaCode] = useState('');
-  const [generatedCaptcha, setGeneratedCaptcha] = useState('');
-  const { register, handleSubmit, formState: { errors } } = useForm();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
+    const [showEmailInput, setShowEmailInput] = useState(false);
+    const [isClosed, setIsClosed] = useState(false);
+    const [showOtpInput, setShowOtpInput] = useState(false);
+    const navigate = useNavigate();
+    const [captchaCode, setCaptchaCode] = useState('');
+    const [generatedCaptcha, setGeneratedCaptcha] = useState('');
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const alert = useAlert();
+    const dispatch = useDispatch();
 
 
+  const { isAuthenticated, error, message, loading } = useSelector(state => state.auth);
+    //const redirect = location.search ? location.search.split('=')[1] : '/'
+    useEffect(() => {
+        if (isAuthenticated) {
+            dispatch(HideLoading());
+            navigate('/dashboard');
+        }
+        if (error) {
+            alert.error(error);
+            dispatch(clearErrors());
+        }
+    }, [dispatch,  isAuthenticated, error])
   const onSubmit = (data) => {
     // Handle form submission
-    
-    console.log('Form Data:', data);
+    dispatch(ShowLoading());
+    dispatch(login(data.email, data.password))
   };
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   setLoading(true);
-  //   setError('');
-
-  //   // Replace with your login logic
-  //   try {
-  //     await new Promise((resolve) => setTimeout(resolve, 2000));
-  //     navigate('/dashboard');
-  //   } catch (error) {
-  //     setError('Login failed. Please check your credentials.');
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -127,8 +129,8 @@ const LoginComponent = () => {
                         {...register('password', {
                           required: 'Please input your password!',
                           minLength: {
-                            value: 8,
-                            message: 'Password must be at least 8 characters long.'
+                            value: 7,
+                            message: 'Password must be at least 7 characters long.'
                           },
                           // pattern: {
                           //   value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
