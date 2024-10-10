@@ -3,7 +3,7 @@ import CompanyCreateComponent from '../../components/Organization/CompanyCreateC
 
 const CompanyCreatePage = () => {
   return (
-    <div className='content-mid base-bg-color company-create' >
+    <div className='content-mid company-create' >
           <div className='px-5 py-12' id='dashboard' >
               <CompanyCreateComponent />
           </div>

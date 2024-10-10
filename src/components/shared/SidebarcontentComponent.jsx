@@ -62,7 +62,7 @@ export default function SidebarcontentComponent({consttoggleClass}) {
 
     
   return (
-    <div>
+    <div className='below-content-list'>
       {DASHBOARD_SIDEBAR_LINKS.map((link) => (
       <Accordion expanded={link.submenu?.length > 0 && expanded === link.key} onChange={handleChange(link.key)} className='ul-list'>
         <AccordionSummary aria-controls={`${link.key}-content`} id={`${link.key}-header`} className='color-white ul-parent'>

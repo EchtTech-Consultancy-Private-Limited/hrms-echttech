@@ -200,14 +200,14 @@ const AttendanceListComponent = () => {
             <div>
               <button
                 onClick={handlePrevPage}
-                className="main-bg-color text-white text-sm rounded mx-1 px-2 py-1 cursor-pointer"
+                className="px-2 py-1 border rounded text-sm main-bg-color text-white mx-1 cursor-pointer"
                 disabled={currentPage === 1}
               >
-                Prev
+                Previous
               </button>
               <button
                 onClick={handleNextPage}
-                className="main-bg-color text-sm text-white rounded px-2 py-1"
+                className="px-2 py-1 border rounded text-sm main-bg-color text-white cursor-pointer"
                 disabled={end >= totalEntries}
               >
                 Next
