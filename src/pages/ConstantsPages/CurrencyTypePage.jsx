@@ -5,8 +5,8 @@ const CurrencyTypePage = () => {
   return (
 
 
-    <div className='content-mid base-bg-color' >
-      <div className='px-5 py-12 right-const-structure' id='dashboard' >
+    <div className='content-mid' >
+      <div className='px-5 py-12' id='dashboard' >
         <CurrencyTypeComponent />
       </div>
     </div>

@@ -3,7 +3,7 @@ import GeneratePayslipComponent from '../../components/Payrollmanagement/Generat
 
 const GeneratePayslipPage = () => {
   return (
-    <div className='content-mid base-bg-color' >
+    <div className='content-mid' >
       <div id='dashboard' className='px-5 py-12'  >
         <GeneratePayslipComponent />
       </div>

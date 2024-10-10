@@ -235,8 +235,22 @@
   }
   
   /* Laptops */
+  @media (min-width: 1025px) and (max-width: 1250px){
+    .left-sidebar {
+      width: 24%;
+    }
+    .right-dashboard{
+      width: 76%;
+    }
+  }
   @media (min-width: 1025px) and (max-width: 1399px) {
     /* Styles for small desktops */
+    .layout.hide .left-sidebar {
+      width: 5%;
+    }
+    .layout.hide .right-dashboard {
+      width: 95%;
+    }
     select, input {
       font-size: 15px !important;
     }
