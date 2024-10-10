@@ -145,7 +145,7 @@
     position: absolute;
     left: 4.1%;
     padding: 10px 10px 10px 10px;
-    top: 8%;
+    top: 6%;
     border-radius : 0px 18px 18px 0px;
 }
 .layout.consthide .constant-sidebar li{
@@ -166,5 +166,5 @@
 }
 .layout.consthide .right-dashboard
 {
- width: 82%;
+ width: 96%;
 }

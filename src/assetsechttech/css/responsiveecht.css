@@ -222,6 +222,16 @@
       align-items: flex-start !important;
     }
 
+
+    /* ============== */
+
+    /* .layout.consthide .content-mid .right-const-structure {
+      position: absolute;
+      width: 75%;
+      right: 0;
+  } */
+
+
   }
   
   /* Laptops */
@@ -249,16 +259,20 @@
     /* .form-labels .first {
       width: 25%;
     } */
+   /* ========== */
+   
   }
   
   /* Desktops */
   @media (min-width: 1400px) and (max-width: 1599px) {
     /* Styles for laptops */
-  }
+    /* ========== */
+    }
   
   /* Big Desktops */
   @media (min-width: 1600px) {
     /* Styles for big desktops */
-  }
+    /* ========== */
+   }
   
   

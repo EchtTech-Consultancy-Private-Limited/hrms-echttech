@@ -66,6 +66,7 @@ const LayoutComponent = () => {
             </footer>
           </div>
         </div>
+       
     </div>
   );
 }

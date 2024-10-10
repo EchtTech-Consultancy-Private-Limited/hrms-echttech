@@ -4,7 +4,7 @@ import LeaveTypeComponent from '../../components/Constants/LeaveTypeComponent'
 const LeaveTypePage = () => {
   return (
     <div className='content-mid base-bg-color' >
-      <div className='px-5 py-12' id='dashboard' >
+      <div className='px-5 py-12 right-const-structure' id='dashboard' >
         <LeaveTypeComponent />
 
       </div>
