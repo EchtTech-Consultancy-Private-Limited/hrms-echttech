@@ -204,8 +204,8 @@ const ManageSalaryComponent = () => {
                   <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Employee Name</th>
                   <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">User Name</th>
                   <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Designation</th>
-                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Hourly</th>
-                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Monthaly</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3" style={{width: "209px", minWidth:"200px"}}>Hourly</th>
+                  <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3" style={{width: "209px", minWidth:"200px"}}>Monthaly</th>
                   <th className="px-4 border-l main-bg-color border-gray-300 text-center py-3">Actions</th>
                 </tr>
               </thead>
@@ -222,7 +222,7 @@ const ManageSalaryComponent = () => {
                       <td className="border px-4 py-2 text-center">
                         {item.hourlyRate}
                       </td>
-                      <td className="px-4 py-2 text-center td-select flex justify-evenly items-center">
+                      <td className="px-4 py-2 text-center td-select flex justify-evenly items-center" style={{height:"57px"}}>
                         <input type="checkbox" />
                         <select name="cars" id="cars">
                           <option value="volvo">Volvo</option>

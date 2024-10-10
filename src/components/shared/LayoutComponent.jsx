@@ -56,7 +56,7 @@ const LayoutComponent = () => {
           </div>
           <div className="main-content right-dashboard">
         
-            <main className="content">
+            <main className="content base-bg-color">
               <Outlet />
             </main>
 
@@ -66,6 +66,7 @@ const LayoutComponent = () => {
             </footer>
           </div>
         </div>
+       
     </div>
   );
 }

@@ -3,7 +3,7 @@ import LeaveComponentList from '../../components/leaves/LeaveComponentList'
 
 const LeaveListPage = () => {
   return (
-    <div className='content-mid base-bg-color' >
+    <div className='content-mid' >
         <div className='px-5 py-12' id='dashboard' >
            <LeaveComponentList />
         </div>

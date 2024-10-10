@@ -74,10 +74,10 @@ const LoginComponent = () => {
   return (
     <div className="mc">
       <div className="min-h-screen relative bg-gray-300 border flex items-center bg-login-img">
-        <div className={`parnt-login-h-438 absolute mc-child bg-blue-500 transition-all duration-500 flex ${isClosed ? 'w-[325px]' : 'w-[650px]'}`}>
+        <div className={`parnt-login-h-438 absolute mc-child main-bg-color transition-all duration-500 flex ${isClosed ? 'w-[325px]' : 'w-[650px]'}`}>
           {/* The Toggle Button */}
           <button
-            className="absolute -top-2 -right-2 -mr-4 mt-2 bg-blue-500 text-white font-bold py-2 px-4 rounded-full focus:outline-none"
+            className="absolute -top-2 -right-2 -mr-4 mt-2 main-bg-color text-white font-bold py-2 px-4 rounded-full focus:outline-none"
             onClick={toggleView}
           >
             {isClosed ? <HiChevronDoubleRight /> : <HiChevronDoubleLeft />}
@@ -117,7 +117,7 @@ const LoginComponent = () => {
                       {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
                     </div>
 
-                    <div className="mb-6 relative">
+                    <div className="mb-4 relative">
                       <label htmlFor="password" className="sr-only">Password</label>
                       <input
                         type={showPassword ? 'text' : 'password'}
@@ -140,7 +140,7 @@ const LoginComponent = () => {
                       />
                       {errors.password && <p className="text-red-500 text-sm">{errors.password.message}</p>}
                       <Link>
-                        <p className='text-sm text-black-500 font-bold underline mt-2' onClick={signinOtp}>Signin with O.T.P</p>
+                        <p className='text-sm signin-text font-bold mt-2' onClick={signinOtp}>Sign-in with OTP</p>
                       </Link>
                       <button
                         type="button"
@@ -178,7 +178,7 @@ const LoginComponent = () => {
                     <button
                       type="submit"
                       disabled={loading}
-                      className="w-full login-btn mt-2 mb-12 bg-gradient-to-r text-white font-bold py-3 px-4 from-blue-300 via-blue-500 to-blue-900 transition duration-300"
+                      className="w-full login-btn mt-2 mb-2 bg-gradient-to-r text-white font-bold py-3 px-4 from-blue-300 via-blue-500 to-blue-900 transition duration-300"
                     >
                       {loading ? 'Logging in...' : 'Login'}
                     </button>
@@ -215,7 +215,7 @@ const LoginComponent = () => {
                 </p>
               )}
               {!showEmailInput && !showOtpInput && ( // Show only when OTP input is not shown
-                <p className='text-end text-sm text-gray-500'>
+                <p className='text-start text-sm text-gray-500'>
                   If you forget the password? <Link to="#" onClick={handleForgetPassword}>Forget</Link>
                 </p>
               )}
@@ -230,7 +230,7 @@ const LoginComponent = () => {
                 <input type="text" className="border border-gray-300 rounded px-3 py-2 w-full" placeholder="Enter OTP" />
                 <div className='flex items-center'>
                 <button className="login-btn mt-4 bg-gradient-to-r text-white font-bold py-3 px-2 from-blue-300 via-blue-500 to-blue-900 transition duration-300 w-1/2">Resend Code</button>
-                <button className="mt-4 bg-gray-500 border border-gray-500 text-white font-bold py-3 mx-1 px-4 rounded w-1/2">Verify</button>
+                <button className="mt-4 bg-gray-500  text-white font-bold py-3 mx-1 px-4 rounded w-1/2">Verify</button>
                 </div>
               </div>
             )}
@@ -238,7 +238,7 @@ const LoginComponent = () => {
 
           {/* Right Box (red section) */}
           
-          <div className={`bg-blue-500 flex justify-between overflow-hidden rounded-lg shadow-lg transition-all duration-500 ${isClosed ? 'max-w-0 overflow-hidden' : 'max-w-[50%]'}`}>
+          <div className={`main-bg-color flex justify-between overflow-hidden rounded-lg shadow-lg transition-all duration-500 ${isClosed ? 'max-w-0 overflow-hidden' : 'max-w-[50%]'}`}>
              
             <div className='p-8'>
               <div className='login-style' >

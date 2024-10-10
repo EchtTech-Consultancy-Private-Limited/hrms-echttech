@@ -39,3 +39,49 @@
   font-size: 14px;
   text-decoration: none;
 }
+
+.consthide .content-mid .div-lr-pad-0
+{
+  padding: 10px 0px !important;
+}
+
+
+/* --------------------- */
+.layout.consthide .content
+{
+  background-color: #f3f3f3;
+}
+
+.layout.consthide .content-mid
+{
+  position: relative;
+}
+
+.layout.consthide .content-mid .right-const-structure
+{
+  position: absolute;
+  right: 0;
+  left: 195px;
+}
+
+.layout.constshow .content
+{
+  background-color: #f3f3f3;
+}
+
+.layout.constshow .content-mid
+{
+  position: relative;
+}
+
+.layout.constshow .content-mid .right-const-structure
+{
+  position: absolute;
+left: 0;
+  right: 0;
+}
+
+
+
+
+

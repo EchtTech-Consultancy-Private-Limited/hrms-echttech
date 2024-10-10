@@ -69,13 +69,12 @@ const QualificationComponent = () => {
 
   return (
     <div>
-      <div className="w-full top-section p-4 border rounded-lg bg-white">
+      {/* <div className="w-full top-section p-4 border rounded-lg bg-white">
         <div className="top-head">
           <div className="flex justify-between pb-3 w-full text-black">
             <h1 className="text-lg font-bold">Add New Education Level</h1>
           </div>
           <hr className="mb-6" />
-          {/* Department Form Section */}
           <div className="department-below-sect w-full">
             <div className="flex flex-col md:flex-row md:space-x-4 justify-between items-end">
               <div className="flex-1 bg-white rounded-lg mb-4">
@@ -101,9 +100,59 @@ const QualificationComponent = () => {
             </div>
           </div>
         </div>
+      </div> */}
+      <div className="form-container shadow radius">
+        <div className="top-hdr flex justify-between">
+          <h1 className="pb-1 font-bold text-xl">Add New Education Level</h1>
+        </div>
+        <hr />
+
+        <form className="mt-10">
+          <div className="form-step">
+            <div className="form-labels">
+              <div className="row first-row flex items-center flex-wrap justify-start md:space-x-3 justify-between flex-gap">
+                <div className="first mb-4">
+                  <label
+                    htmlFor=""
+                    className="block text-gray-700 font-bold mb-2"
+                  >
+                    Education Type
+                  </label>
+                  <input
+                    className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
+                    type="text"
+                    placeholder="Education"
+                  />
+                </div>
+                
+                <div className="button mt-2 flex justify-between first mb-4">
+
+
+                  <div className="add-reset-btns flex items-center justify-end">
+                    <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
+                      Save
+                    </button>
+                    <button className="apply-leave-btn bg-gray-400 text-white px-2 py-2 rounded w-full md:w-auto">
+                      Reset
+                    </button>
+                  </div>
+                </div>
+
+
+
+
+
+
+
+              </div>
+
+            </div>
+
+          </div>
+        </form>
       </div>
   
-      <div className="contract-type-list overflow-auto mx-auto p-6 border rounded-lg bg-white mt-5">
+      <div className="contract-type-list  mx-auto p-6 border rounded-lg bg-white mt-5">
         <h1 className="text-lg font-bold mb-2">List All Education Level</h1>
         {/* Entries selector and search bar */}
         <div className="flex justify-between mb-4">
@@ -133,6 +182,7 @@ const QualificationComponent = () => {
         </div>
   
         {/* Table */}
+        <div className='overflow-auto' >
         <table className="min-w-full border border-gray-300">
           <thead>
             <tr className="main-bg-color">
@@ -159,6 +209,8 @@ const QualificationComponent = () => {
             ))}
           </tbody>
         </table>
+        </div>
+       
   
         {/* Pagination */}
         <div className="flex justify-between items-center mt-4">

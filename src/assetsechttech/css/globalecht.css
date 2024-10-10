@@ -36,3 +36,8 @@
     flex-wrap: wrap;
     gap: 12px;
   }
+
+  table th , table td
+  {
+    text-wrap: nowrap;
+  }

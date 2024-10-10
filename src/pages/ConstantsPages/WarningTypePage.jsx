@@ -3,7 +3,7 @@ import WarningTypeComponent from '../../components/Constants/WarningTypeComponen
 
 const WarningTypePage = () => {
   return (
-    <div className='content-mid base-bg-color' >
+    <div className='content-mid' >
       <div className='px-5 py-12' id='dashboard' >
         <WarningTypeComponent />
 

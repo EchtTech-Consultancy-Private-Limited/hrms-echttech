@@ -5,7 +5,7 @@ const LocationCompanyBranchPage = () => {
   return (
 
 
-    <div className='content-mid base-bg-color company-create'>
+    <div className='content-mid company-create'>
       <div id='dashboard' class="px-5 py-12" >
         <LocationCompanyBranchComponent />
 

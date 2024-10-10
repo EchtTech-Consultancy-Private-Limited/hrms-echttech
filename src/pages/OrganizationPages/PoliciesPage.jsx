@@ -3,7 +3,7 @@ import PoliciesComponent from '../../components/Organization/PoliciesComponent'
 
 const PoliciesPage = () => {
   return (
-    <div className='content-mid base-bg-color'>
+    <div className='content-mid'>
     <div id='dashboard' class="px-5 py-12" >
     <PoliciesComponent />
    </div>
