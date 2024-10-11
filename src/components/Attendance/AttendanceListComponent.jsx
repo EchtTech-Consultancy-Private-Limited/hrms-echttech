@@ -37,9 +37,9 @@ const AttendanceListComponent = () => {
   return (
     <>
       <div className="w-full top-section  p-4 border rounded-lg bg-white">
-        <div class="top-head flex justify-between items-center">
-          <div class="left-part flex justify-between pb-3 w-full">
-            <h1 class="headings">Attendance Information</h1>
+        <div className="top-head flex justify-between items-center">
+          <div className="left-part flex justify-between pb-3 w-full">
+            <h1 className="headings">Attendance Information</h1>
             <button className="main-bg-color text-white px-4 py-2 rounded w-full md:w-auto text-sm">
               Add Attendance
             </button>

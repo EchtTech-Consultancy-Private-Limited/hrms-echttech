@@ -9,7 +9,7 @@ import {
 } from '../actionTypes/loginType'
 
 // Login
-export const login = (email, password) => async (dispatch) => {
+export const login = (email, password, loggedinType) => async (dispatch) => {
     try {
         dispatch({ type: LOGIN_REQUEST })
         const config = {
@@ -17,9 +17,9 @@ export const login = (email, password) => async (dispatch) => {
                 'Content-Type': 'application/json'
             }
         }
-        const { data } = await axios.post('/v1/admin/authenticate', { email, password }, config)
+        const { data } = await axios.post('/v1/admin/authenticate', { email, password, loggedinType }, config)
         localStorage.setItem("token",data.token);
-        localStorage.setItem("mid",data.mID);
+        localStorage.setItem("mid",data.adminID);
         dispatch({
             type: LOGIN_SUCCESS,
             payload: data

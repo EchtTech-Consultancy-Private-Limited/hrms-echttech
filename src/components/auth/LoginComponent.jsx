@@ -17,6 +17,7 @@ import { login, clearErrors } from '../../reduxapis/actions/loginAction';
 const LoginComponent = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [loggedinType, setOTP] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const [showEmailInput, setShowEmailInput] = useState(false);
     const [isClosed, setIsClosed] = useState(false);
@@ -24,29 +25,42 @@ const LoginComponent = () => {
     const navigate = useNavigate();
     const [captchaCode, setCaptchaCode] = useState('');
     const [generatedCaptcha, setGeneratedCaptcha] = useState('');
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit,handleSubmitveryfy, formState: { errors } } = useForm();
     const alert = useAlert();
     const dispatch = useDispatch();
 
 
-  const { isAuthenticated, error, message, loading } = useSelector(state => state.auth);
+  const { isAuthenticated, error, message, loading, user } = useSelector(state => state.auth);
     //const redirect = location.search ? location.search.split('=')[1] : '/'
     useEffect(() => {
         if (isAuthenticated) {
             dispatch(HideLoading());
-            navigate('/dashboard');
+            alert.success(message)
+            if(user.loggedinType ==='normal' || user.loggedinType ==='normal-verify'){
+              navigate('/dashboard');
+            }
         }
         if (error) {
-            alert.error(error);
+            // const fields = error.match(/"([^"]+)"/g).map((field) => field.replace(/"/g, ''));
+            // fields.map((field, index) => (
+              alert.error(error)
+          //  ))
             dispatch(clearErrors());
         }
     }, [dispatch,  isAuthenticated, error])
-  const onSubmit = (data) => {
-    // Handle form submission
-    dispatch(ShowLoading());
-    dispatch(login(data.email, data.password))
+  const onSubmit = (e) => {
+      dispatch(ShowLoading());
+      dispatch(login(e.email, e.password, loggedinType))
+      if(loggedinType == 'otp'){
+          setShowOtpInput(true);
+        }else{
+          setShowOtpInput(false)
+        }
   };
-
+  const onButtonClick = (btnValue) => {
+    dispatch(ShowLoading());
+    setOTP(btnValue);
+  };
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -59,11 +73,6 @@ const LoginComponent = () => {
     setShowEmailInput(false);
     setShowOtpInput(false);
   };
-
-  const signinOtp = () => {
-    setShowOtpInput(true); // Show OTP input block
-  };
-
   const toggleView = () => {
     setIsClosed(!isClosed);
   };
@@ -89,7 +98,6 @@ const LoginComponent = () => {
               {/* Only show Login heading and welcome message when not on OTP page */}
               {!showOtpInput && (
                 <>
-                 
                 </>
               )}
 
@@ -139,9 +147,10 @@ const LoginComponent = () => {
                         })}
                       />
                       {errors.password && <p className="text-red-500 text-sm">{errors.password.message}</p>}
-                      <Link>
+                      <button type="submit" className='text-sm signin-text font-bold mt-2' onClick={() => onButtonClick('otp')}>Sign-in with OTP</button>
+                      {/* <Link>
                         <p className='text-sm signin-text font-bold mt-2' onClick={signinOtp}>Sign-in with OTP</p>
-                      </Link>
+                      </Link> */}
                       <button
                         type="button"
                         onClick={togglePasswordVisibility}
@@ -165,10 +174,14 @@ const LoginComponent = () => {
                           placeholder="Captcha"
                           {...register('captcha', {
                             required: 'Please input your captcha!',
-                            // pattern: {
-                            //   value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-                            //   message: 'The input is not a valid E-mail!'
-                            // }
+                            minLength: {
+                              value: 6,
+                              message: 'captcha must be at least 6 characters long.'
+                            },
+                            pattern: {
+                              value: /^\d{6}$/,
+                              message: 'The input is not a valid captcha!'
+                            }
                           })}
                         />
                       </div>
@@ -177,6 +190,7 @@ const LoginComponent = () => {
 
                     <button
                       type="submit"
+                      onClick={() => onButtonClick('normal')}
                       disabled={loading}
                       className="w-full login-btn mt-2 mb-2 bg-gradient-to-r text-white font-bold py-3 px-4 from-blue-300 via-blue-500 to-blue-900 transition duration-300"
                     >
@@ -223,16 +237,36 @@ const LoginComponent = () => {
 
             {/* Show this div on click of signinOtp */}
             {showOtpInput && (
+              <form onSubmit={handleSubmitveryfy(onSubmit)}>
               <div className='px-8 pb-20'>
                 {/* Remove the heading and welcome message from the OTP page */}
                 {/* <h1 className='text-3xl font-bold mb-2' >Company Logo</h1> */}
                 <p className='font-bold mb-2' >Verification Code (Sent to registered Email & Mobile)</p>
-                <input type="text" className="border border-gray-300 rounded px-3 py-2 w-full" placeholder="Enter OTP" />
+                <input type="text" 
+                  id="sentotp"
+                  name="sentotp"
+                  className="border border-gray-300 rounded px-3 py-2 w-full"
+                  placeholder="Enter OTP" 
+                  {...register('sentotp', {
+                    required: 'Please input your OTP!',
+                    minLength: {
+                      value: 6,
+                      message: 'OTP must be at least 6 characters long.'
+                    },
+                    pattern: {
+                      value: /^\d{6}$/,
+                      message: 'The input is not a valid OTP!'
+                    }
+                  })}
+                 />
                 <div className='flex items-center'>
-                <button className="login-btn mt-4 bg-gradient-to-r text-white font-bold py-3 px-2 from-blue-300 via-blue-500 to-blue-900 transition duration-300 w-1/2">Resend Code</button>
-                <button className="mt-4 bg-gray-500  text-white font-bold py-3 mx-1 px-4 rounded w-1/2">Verify</button>
+                <button className="login-btn mt-4 bg-gradient-to-r text-white font-bold py-3 px-2 from-blue-300 via-blue-500 to-blue-900 transition duration-300 w-1/2"
+                  onClick={() => onButtonClick('otp')}>Resend Code</button>
+                <button className="mt-4 bg-gray-500  text-white font-bold py-3 mx-1 px-4 rounded w-1/2"
+                onClick={() => onButtonClick('normal-verify')}>Verify</button>
                 </div>
               </div>
+              </form>
             )}
           </div>
 

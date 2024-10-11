@@ -18,7 +18,6 @@ import { IoDocumentAttachOutline } from "react-icons/io5";
 import { FiAward } from "react-icons/fi";
 import { CiCalendar } from "react-icons/ci";
 import { CiWarning } from "react-icons/ci";
-import { RiIndeterminateCircleLine } from "react-icons/ri";
 import { CiDollar } from "react-icons/ci";
 import { MdPayment } from "react-icons/md";
 import { MdCardTravel } from "react-icons/md";
@@ -31,7 +30,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
 	{
     key: 'dashboard',
     label: 'Dashboard',
-    path: '/',
+    path: '/dashboard',
     icon: <HiOutlineViewGrid />,
     secondsidebar: 0,
     submenu: [] // No submenu for dashboard
