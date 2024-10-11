@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import MissingPage from './components/Error/404';
 import Loader from "./components/shared/Loader";
+import ProtectedRoute from "./components/RouteComponent/ProtectedRoute";
 import { useSelector } from "react-redux";
 import Dashboard from './pages/Dashboard'
 import LayoutComponent from './components/shared/LayoutComponent'
@@ -48,9 +49,9 @@ function App() {
         {loading && <Loader />}
         <Router>
             <Routes>
-                <Route path='login' element={<LoginPage />} />
+                <Route index path='/' element={<LoginPage />} />
                 <Route path="/" element={<LayoutComponent />}>
-                    <Route index element={<Dashboard />} />
+                    {/* <Route index element={<ProtectedRoute><Dashboard /></ProtectedRoute>} /> */}
                     <Route path='dashboard' element={<Dashboard />} />
                     <Route path='account-setting' element={<AccountSettingPage />} />
                     <Route path='company' element={<CompanyCreatePage />} />
@@ -87,6 +88,7 @@ function App() {
                     <Route path='currency-type' element={<CurrencyTypePage />} />
                     <Route path='roles' element={<RolesPage />} />
                     <Route path='permissions' element={<PermissionPage />} />
+                
                 </Route>
                 <Route component={MissingPage} />
             </Routes>

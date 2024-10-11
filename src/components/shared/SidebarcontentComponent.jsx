@@ -53,6 +53,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 export default function SidebarcontentComponent({consttoggleClass, toggleClass}) {
+export default function SidebarcontentComponent({consttoggleClass , isToggled}) {
   const [expanded, setExpanded] = useState('panel1');
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const handleChange = 
@@ -61,12 +62,19 @@ export default function SidebarcontentComponent({consttoggleClass, toggleClass})
     };
 
     console.log(toggleClass,consttoggleClass, "consttoggleClass" )
+    const initialview =()=>
+      {
+        console.log("hii")
+      }
+
+    
   return (
     <div className='below-content-list'>
       {DASHBOARD_SIDEBAR_LINKS.map((link) => (
       <Accordion expanded={link.submenu?.length > 0 && expanded === link.key} onChange={handleChange(link.key)} className='ul-list'>
         <AccordionSummary aria-controls={`${link.key}-content`} id={`${link.key}-header`} className='color-white ul-parent'>
           <span className="mr-3 text-xl" onClick={ link.secondsidebar === 1 ? ()=> {consttoggleClass(); toggleClass()} : null}>{link.icon}</span>
+          <span className="mr-3 text-xl" onClick={ link.secondsidebar === 1 ? consttoggleClass : isToggled}>{link.icon}</span>
           <Typography>
             {
             link.secondsidebar === 1 ?<Link to={link.path} onClick={() => { consttoggleClass(); toggleClass(); }}>{link.label}</Link>:<Link to={link.path}>{link.label}</Link>
