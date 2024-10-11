@@ -52,8 +52,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
-export default function SidebarcontentComponent({consttoggleClass, toggleClass}) {
-export default function SidebarcontentComponent({consttoggleClass , isToggled}) {
+export default function SidebarcontentComponent({consttoggleClass, toggleClass, isToggled}) {
   const [expanded, setExpanded] = useState('panel1');
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const handleChange = 
