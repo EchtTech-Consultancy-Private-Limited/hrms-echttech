@@ -42,7 +42,7 @@ const LeaveApplyPage = ({ setIsModalOpen }) => {
       onClick={closeModal} // Close modal on background click
     >
       <div
-        className="bg-white  p-6 rounded-lg shadow-lg  w-3/4"
+        className="bg-white  p-6 rounded-lg shadow-lg  w-3/4 apply-leave-modal"
         onClick={(e) => e.stopPropagation()} // Prevent modal close on content click
       >
         {/* 1. Heading */}
