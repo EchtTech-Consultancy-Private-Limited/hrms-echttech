@@ -73,7 +73,7 @@ export default function SidebarcontentComponent({consttoggleClass, toggleClass, 
       <Accordion expanded={link.submenu?.length > 0 && expanded === link.key} onChange={handleChange(link.key)} className='ul-list'>
         <AccordionSummary aria-controls={`${link.key}-content`} id={`${link.key}-header`} className='color-white ul-parent'>
           <span className="mr-3 text-xl" onClick={ link.secondsidebar === 1 ? ()=> {consttoggleClass(); toggleClass()} : null}>{link.icon}</span>
-          <span className="mr-3 text-xl" onClick={ link.secondsidebar === 1 ? consttoggleClass : isToggled}>{link.icon}</span>
+         
           <Typography>
             {
             link.secondsidebar === 1 ?<Link to={link.path} onClick={() => { consttoggleClass(); toggleClass(); }}>{link.label}</Link>:<Link to={link.path}>{link.label}</Link>
