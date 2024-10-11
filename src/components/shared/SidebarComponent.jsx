@@ -9,7 +9,7 @@ const SidebarComponent = ({toggleClass, isToggled, consttoggleClass}) => {
          <button className='collapse-btn' onClick={()=>{toggleClass()}}> {isToggled ? <HiChevronDoubleRight className='text-xl color-white'/> : <HiChevronDoubleLeft  className='text-xl color-white'/>}</button>
        <div className="below-content pt-4 ">
         
-         <SidebarcontentComponent consttoggleClass={consttoggleClass} />
+         <SidebarcontentComponent consttoggleClass={consttoggleClass} toggleClass={toggleClass}/>
       </div>
     </div>
   )

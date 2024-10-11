@@ -32,7 +32,7 @@
         width: 15%;
         height: 100vh;
         transition: width 0.5s;
-        
+        z-index: 99;
       
     }
     .layout.hide .left-sidebar{

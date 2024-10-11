@@ -22,7 +22,7 @@ const LayoutComponent = () => {
 
   const handleconstsidebarClick = () => {
     setIsconstsidebarActive(!isconstsidebarActive)
-    console.log("parent2")
+    
   }
 
 

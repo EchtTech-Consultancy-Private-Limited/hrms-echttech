@@ -99,6 +99,9 @@
     .layout.hide .left-sidebar {
       width: 7%;
     }
+    .layout.consthide .constant-sidebar{
+      left: 7.1%;
+    }
     .layout.hide .right-dashboard {
       width: 93%;
     }
@@ -258,6 +261,9 @@
     /* Styles for small desktops */
     .layout.hide .left-sidebar {
       width: 5%;
+    }
+    .layout.consthide .constant-sidebar{
+      left: 5.1%;
     }
     .layout.hide .right-dashboard {
       width: 95%;

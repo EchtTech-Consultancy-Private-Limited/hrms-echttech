@@ -3,8 +3,10 @@ import AccountSettingComponent from '../components/auth/AccountSettingComponent'
 
 const AccountSettingPage = () => {
   return (
-    <div>
+    <div className='content-mid' >
+      <div className='px-5 py-12' id='dashboard' >
         <AccountSettingComponent />
+      </div>
     </div>
   )
 }
