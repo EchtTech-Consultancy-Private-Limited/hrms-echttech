@@ -2,6 +2,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import MissingPage from './components/Error/404';
 import Loader from "./components/shared/Loader";
 import ProtectedRoute from "./components/RouteComponent/ProtectedRoute";
+// Translation
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+import HttpApi from "i18next-http-backend";
+
 import { useSelector } from "react-redux";
 import Dashboard from './pages/Dashboard'
 import LayoutComponent from './components/shared/LayoutComponent'
@@ -44,15 +50,32 @@ import PermissionPage from './pages/RolesPermissionsPages/PermissionPage'
 
 function App() {
     const { loading } = useSelector((state) => state.alerts);
+    i18n
+    .use(initReactI18next) // passes i18n down to react-i18next
+    .use(LanguageDetector)
+    .use(HttpApi)
+    .init({
+      supportedLngs: ["en", "hi"],
+      fallbackLng: "en",
+      detection: {
+        order: ["cookie", "localStorage", "htmlTag", "path", "subdomain"],
+        caches: ["cookie"],
+      },
+      backend: {
+        loadPath: "/assets/locales/{{lng}}/translation.json",
+      },
+      react: { useSuspense: false },
+    });
     return (
         <div>
         {loading && <Loader />}
         <Router>
             <Routes>
                 <Route index path='/' element={<LoginPage />} />
+                {/* <Route path='/login' element={<LoginPage />} /> */}
                 <Route path="/" element={<LayoutComponent />}>
                     {/* <Route index element={<ProtectedRoute><Dashboard /></ProtectedRoute>} /> */}
-                    <Route path='dashboard' element={<Dashboard />} />
+                    <Route path='dashboard' element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
                     <Route path='account-setting' element={<AccountSettingPage />} />
                     <Route path='company' element={<CompanyCreatePage />} />
                     <Route path='location' element={<LocationCompanyBranchPage />} />

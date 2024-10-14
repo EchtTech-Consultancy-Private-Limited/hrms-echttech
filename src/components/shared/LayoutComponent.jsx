@@ -5,16 +5,12 @@ import Sidebar from './SidebarComponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import { Outlet } from 'react-router-dom';
-import { PiCaretDoubleRightBold } from "react-icons/pi";
-
-
 
 const LayoutComponent = () => {
 
   const [isActive, setIsActive] = useState(false)
   const [isconstsidebarActive, setIsconstsidebarActive] = useState(false)
 
-  
   const handleClick = () => {
     setIsActive(!isActive)
     console.log("parent1")
@@ -53,18 +49,12 @@ const LayoutComponent = () => {
          </li>
         ))}
         </ul>
-
-
-
-
-        
           </div>
           <div className="main-content right-dashboard">
         
             <main className="content base-bg-color">
               <Outlet />
             </main>
-
             
             <footer className="footer">
               <Footer />

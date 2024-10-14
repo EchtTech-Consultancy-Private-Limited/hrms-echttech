@@ -1,44 +1,61 @@
-import React, { useEffect } from 'react'
-import { Outlet, useNavigate } from 'react-router-dom'
-import { jwtDecode } from "jwt-decode";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { HideLoading, ShowLoading } from "../../reduxapis/slice/alertsSlice";
+// import { SetUser } from "../redux/usersSlice";
+import DefaultLayout from "../shared/LayoutComponent";
+import { useAlert } from "react-alert";
 
-const ProtectedRoutesLayout = () => {
-    const navigate = useNavigate();
-    if(localStorage.getItem("token")===null){
-        navigate('/');
-    }else{
-        var decodedToken = jwtDecode(localStorage.getItem("token"));
-    }
-    let currentDate = new Date();
-    const validateToken = async()=> {
-        try{
-            // JWT exp is in seconds
-            if (decodedToken.exp * 1000 < currentDate.getTime()) {
-            // console.log("Token expired.");
-            const result = false;
-            } else {
-            //console.log("Valid token");   
-            const result = true;
-            }
-        }catch (error) {
-            localStorage.removeItem('token');
-            //message.error(error.message);
-        // dispatch(HideLoading())
-            navigate('/');
-            }
+
+function ProtectedRoute({ children }) {
+  const dispatch = useDispatch();
+  const alert = useAlert();
+  const { user } = useSelector((state) => state.auth);
+
+  const navigate = useNavigate();
+  const validateToken = async () => {
+    console.log(localStorage.getItem("token"))
+    try {
+      dispatch(ShowLoading());
+      const response = await axios.get(
+        "/v1/admin/3",
+        {},
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
         }
-        useEffect(() => {
-            if(localStorage.getItem('token')){
-                validateToken();
-            }else{
-                navigate('/');
-            }
-        }, []);
+      );
+      console.log(response)
+      dispatch(HideLoading());
+    //   if (response) {
+    //     console.log(response)
+    //     //dispatch(SetUser(response.data.data));
+    //   } else {
+    //     localStorage.removeItem("token");
+    //     alert.error(response.data.message);
+    //     navigate("/login");
+    //   }
+    } catch (error) {
+    //   dispatch(HideLoading());
+    //   localStorage.removeItem("token");
+
+    //   alert.error(error.message);
+    //   navigate("/login");
+    }
+  };
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      validateToken();
+    } else {
+      navigate("/login");
+    }
+  }, []);
+
   return (
-    <>
-        {/* {result && <Outlet/> } */}
-    </>
-  )
+    <div>{user == null && <DefaultLayout>{children}</DefaultLayout>}</div>
+  );
 }
 
-export default ProtectedRoutesLayout
+export default ProtectedRoute;

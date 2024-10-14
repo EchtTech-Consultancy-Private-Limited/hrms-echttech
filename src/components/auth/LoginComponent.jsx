@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { loadCaptchaEnginge, LoadCanvasTemplateNoReload, LoadCanvasTemplate, validateCaptcha,} from 'react-simple-captcha';
 import { useNavigate, Link } from 'react-router-dom';
-import { RiRefreshLine } from "react-icons/ri";
-import { FaCaretLeft } from 'react-icons/fa';
-import captcha from '../../assetsechttech/utility-images/captcha.PNG';
 import { HideLoading, ShowLoading } from "../../reduxapis/slice/alertsSlice";
 import { HiChevronDoubleRight, HiChevronDoubleLeft } from "react-icons/hi";
 import { useAlert } from 'react-alert'
 import { GoEyeClosed } from "react-icons/go";
 import { IoEyeOutline } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux'
 import { login, clearErrors } from '../../reduxapis/actions/loginAction';
+import { decode } from 'string-encode-decode';
 
 
 const LoginComponent = () => {
+    const { t } = useTranslation();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loggedinType, setOTP] = useState('');
@@ -50,7 +50,7 @@ const LoginComponent = () => {
     }, [dispatch,  isAuthenticated, error])
   const onSubmit = (e) => {
       dispatch(ShowLoading());
-      dispatch(login(e.email, e.password, loggedinType))
+      dispatch(login(e.email, btoa(e.password), loggedinType))
       if(loggedinType == 'otp'){
           setShowOtpInput(true);
         }else{
