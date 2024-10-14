@@ -37,7 +37,7 @@ const LayoutComponent = () => {
 
           <div className="left-sidebar main-bg-color relative">
             <aside className="sidebar">
-              <Sidebar toggleClass={handleClick} consttoggleClass={handleconstsidebarClick} isToggled={isActive} constisToggled={isconstsidebarActive} />
+              <Sidebar toggleClass={handleClick} consttoggleClass={handleconstsidebarClick} isToggled={isActive} constisToggled={isconstsidebarActive} isconstsidebarActive={isconstsidebarActive} />
             </aside>
           </div>
           <div className='absolute z-50 top-28 constant-sidebar main-bg-color ' >

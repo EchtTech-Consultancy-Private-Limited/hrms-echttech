@@ -4,7 +4,7 @@ import AttendanceListComponent from '../../components/Attendance/AttendanceListC
 const AttendanceListPage = () => {
   return (
     <div className='content-mid' >
-      <div id='dashboard' className='px-5 py-12'  >
+      <div id='dashboard' className='px-5 py-12 right-const-structure'  >
         <AttendanceListComponent />
       </div>
     </div>
