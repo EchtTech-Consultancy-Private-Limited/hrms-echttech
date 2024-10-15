@@ -53,7 +53,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: "1px solid rgba(0, 0, 0, .125)",
 }));
 
-export default function SidebarcontentComponent({consttoggleClass, toggleClass, isToggled, handleSettingSidebar, isconstsidebarActive, isSettingactive}) {
+export default function SidebarcontentComponent({consttoggleClass, toggleClass, isToggled, handleSettingSidebar, constisToggled, isSettingactive, setIsSettingactive}) {
   const [expanded, setExpanded] = useState('panel1');
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const handleChange =
@@ -82,12 +82,14 @@ export default function SidebarcontentComponent({consttoggleClass, toggleClass, 
               onClick={() => {
                 if (link.secondsidebar === 1){
                   if (isToggled){
-                    if(isSettingactive){
-                      handleSettingSidebar();
+                    if(!isSettingactive){
                       consttoggleClass();
+                      handleSettingSidebar();
+                     
                     }
                     else{
                       consttoggleClass();
+                     
                     }
                   }else {
                   consttoggleClass();
@@ -97,12 +99,14 @@ export default function SidebarcontentComponent({consttoggleClass, toggleClass, 
 
                 else {
                   if (isToggled) {
-                    if (isconstsidebarActive) {
+                    if (constisToggled) {
                       consttoggleClass();
                       toggleClass();
-                    } else {
+                    }
+                    else{
                       toggleClass();
                     }
+                      
                   }
                 }
                 
@@ -160,12 +164,12 @@ export default function SidebarcontentComponent({consttoggleClass, toggleClass, 
           <span className="mr-3 text-xl"  onClick={() => {
                 if (link.secondsidebar === 1){
                   if (isToggled){
-                     if(!isconstsidebarActive){
+                     if(constisToggled){
                       consttoggleClass();
                       handleSettingSidebar();
                     }
                     else{
-                      consttoggleClass();
+                      handleSettingSidebar();
                     }
                    
                   }else {
@@ -176,7 +180,7 @@ export default function SidebarcontentComponent({consttoggleClass, toggleClass, 
 
                 else {
                   if (isToggled) {
-                    if (!isSettingactive) {
+                    if (isSettingactive) {
                       handleSettingSidebar();
                       toggleClass();
                     } else {
