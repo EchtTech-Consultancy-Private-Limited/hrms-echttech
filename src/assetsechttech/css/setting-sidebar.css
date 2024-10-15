@@ -1,0 +1,16 @@
+.layout.settinghide .setting-sidebar {
+    overflow-x: hidden;
+    position: absolute;
+    left: -20%;
+}
+.layout.settingshow .setting-sidebar {
+    height: 478px;
+    overflow-x: hidden;
+    position: absolute;
+    left: 4.1%;
+    padding: 10px 10px 10px 10px;
+    top: 9%;
+    border-radius: 0px 10px 10px 0px;
+    transition: left 0.5s linear;
+    z-index: 50;
+}

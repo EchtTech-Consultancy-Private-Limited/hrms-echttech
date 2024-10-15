@@ -6,7 +6,7 @@ const LocationCompanyBranchPage = () => {
 
 
     <div className='content-mid company-create'>
-      <div id='dashboard' class="px-5 py-12" >
+      <div id='dashboard' class="px-5 py-12 right-const-structure" >
         <LocationCompanyBranchComponent />
 
       </div>

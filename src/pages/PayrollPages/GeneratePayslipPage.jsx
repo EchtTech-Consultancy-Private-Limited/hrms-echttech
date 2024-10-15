@@ -4,7 +4,7 @@ import GeneratePayslipComponent from '../../components/Payrollmanagement/Generat
 const GeneratePayslipPage = () => {
   return (
     <div className='content-mid' >
-      <div id='dashboard' className='px-5 py-12'  >
+      <div id='dashboard' className='px-5 py-12 right-const-structure'  >
         <GeneratePayslipComponent />
       </div>
     </div>

@@ -3,8 +3,10 @@ import TransfersComponent from '../../components/Employees/TransfersComponent'
 
 const TransfersPage = () => {
   return (
-    <div>
-       <TransfersComponent />
+    <div className='content-mid' >
+      <div className='px-5 py-12 right-const-structure' id='dashboard' >
+        <TransfersComponent />
+      </div>
     </div>
   )
 }
