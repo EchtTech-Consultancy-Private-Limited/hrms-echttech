@@ -299,7 +299,8 @@ const LoginComponent = () => {
         </div>
         <select
           className=" absolute top-1 right-4 w-[7%]  border-2 border-blue-500 rounded-lg"
-          value={selectedLanguage} onChange={handleLanguageChange}>
+          value={selectedLanguage} 
+          onChange={handleLanguageChange}>
           <option value="en">English</option>
           <option value="hi">Hindi</option>
         </select>
