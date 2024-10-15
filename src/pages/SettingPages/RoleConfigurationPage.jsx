@@ -3,8 +3,10 @@ import RoleConfigurationComponent from '../../components/Settings/RoleConfigurat
 
 const RoleConfigurationPage = () => {
   return (
-    <div>
-      <RoleConfigurationComponent />
+    <div className='content-mid'>
+      <div id='dashboard' class="px-5 py-12 right-const-structure" >
+        <RoleConfigurationComponent />
+      </div>
     </div>
   )
 }

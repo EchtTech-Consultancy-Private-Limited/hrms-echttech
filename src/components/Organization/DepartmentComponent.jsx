@@ -70,24 +70,6 @@ const DepartmentComponent = () => {
   const filteredItems = items.filter((item) =>
     item.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
        // Dropdown for country
        const [isOpencountry, setIsOpencountry] = useState(false);

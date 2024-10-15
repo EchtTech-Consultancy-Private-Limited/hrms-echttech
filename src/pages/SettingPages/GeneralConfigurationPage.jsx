@@ -3,8 +3,11 @@ import GeneralConfigurationComponent from '../../components/Settings/GeneralConf
 
 const GeneralConfigurationPage = () => {
   return (
-    <div>
-      <GeneralConfigurationComponent />
+
+    <div className='content-mid'>
+      <div id='dashboard' class="px-5 py-12 right-const-structure" >
+        <GeneralConfigurationComponent />
+      </div>
     </div>
   )
 }
