@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { FaCloudUploadAlt } from "react-icons/fa";
 
 const CompanyCreateComponent = () => {
-<<<<<<< HEAD
 
    // Dropdown state
    const [isOpen, setIsOpen] = useState(false);
@@ -62,7 +61,6 @@ const CompanyCreateComponent = () => {
     item.toLowerCase().includes(searchTermcountry.toLowerCase())
   );
    
-=======
   const Container = styled.div`
     display: flex;
     align-items: center;
@@ -169,7 +167,6 @@ const CompanyCreateComponent = () => {
     setImage(null);
     setPreview(null);
   };
->>>>>>> fd1ba80d3fb05d25a51a8b260c62006059994ecb
   return (
     <div className="form-container shadow radius">
       <div className="top-hdr flex justify-between">
