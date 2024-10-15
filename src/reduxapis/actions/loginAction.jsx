@@ -3,6 +3,9 @@ import {
     LOGIN_REQUEST,
     LOGIN_SUCCESS,
     LOGIN_FAIL,
+    LOAD_USER_REQUEST,
+    LOAD_USER_SUCCESS,
+    LOAD_USER_FAIL,
     LOGOUT_SUCCESS,
     LOGOUT_FAIL,
     CLEAR_ERRORS
@@ -32,7 +35,28 @@ export const login = (email, password, loggedinType) => async (dispatch) => {
         })
     }
 }
+export const getuserdetailsbyID =(id) => async(dispatch)=> {
+        try{
+            dispatch({ type: LOAD_USER_REQUEST })
+            const config = {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'authorization': `Bearer ${localStorage.getItem("token")}`
+                }
+            }
+            const { data } = await axios.post('/v1/admin/'.id, config)
+            dispatch({
+                type: LOAD_USER_SUCCESS,
+                payload: data
+            })
 
+        } catch (error) {
+            dispatch({
+                type: LOAD_USER_FAIL,
+                payload: error
+            })
+        }
+}
 
 // Logout user
 export const logout = () => async (dispatch) => {

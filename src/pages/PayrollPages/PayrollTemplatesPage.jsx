@@ -5,7 +5,7 @@ const PayrollTemplatesPage = () => {
   return (
    
       <div className='content-mid' >
-      <div id='dashboard' className='px-5 py-12'  >
+      <div id='dashboard' className='px-5 py-12 right-const-structure'  >
          <PayrollTemplatesComponent />
       </div>
       </div>

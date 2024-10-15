@@ -5,9 +5,6 @@ import Sidebar from './SidebarComponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import { Outlet } from 'react-router-dom';
-import { PiCaretDoubleRightBold } from "react-icons/pi";
-
-
 
 const LayoutComponent = () => {
 
@@ -59,6 +56,35 @@ const LayoutComponent = () => {
               </li>
             ))}
           </ul>
+          <div className="left-sidebar main-bg-color relative">
+            <aside className="sidebar">
+              <Sidebar toggleClass={handleClick} consttoggleClass={handleconstsidebarClick} isToggled={isActive} constisToggled={isconstsidebarActive} isconstsidebarActive={isconstsidebarActive} />
+            </aside>
+          </div>
+          <div className='absolute z-50 top-28 constant-sidebar main-bg-color ' >
+        <ul>
+        {CONSTANTS_SIDEBAR_LINKS.map((tab) => (
+           <li className='py-2 px-1 flex justify-between my-2 border-b border-white' key={tab.key}>
+           <Link className='text-white no-underline flex items-center' to={tab.path}>
+             {/* Display the icon before the label */}
+             <span className='mr-2'>{tab.icon}</span>
+             {tab.label}
+           </Link>
+           
+         </li>
+        ))}
+        </ul>
+          </div>
+          <div className="main-content right-dashboard">
+        
+            <main className="content base-bg-color">
+              <Outlet />
+            </main>
+            
+            <footer className="footer">
+              <Footer />
+            </footer>
+          </div>
         </div>
 
         <div className='absolute z-50 absolute left-[15%] top-24 setting-sidebar main-bg-color ' >

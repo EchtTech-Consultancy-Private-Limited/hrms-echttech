@@ -188,7 +188,7 @@ const DashboardStatsGrid = () => {
 
 // ============== Super Admin Dashboard Start ==========================================================================================================================
 
-    <div id='dashboard' className='px-5 py-12'>
+    <div id='dashboard' className='px-5 py-12 right-const-structure'>
   
       <div className='dashboard-stats-grid  super-admin'>
         <div className="top-head flex justify-between items-center">

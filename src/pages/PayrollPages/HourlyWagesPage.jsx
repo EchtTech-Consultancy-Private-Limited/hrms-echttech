@@ -4,7 +4,7 @@ import HourlyWagesComponent from '../../components/Payrollmanagement/HourlyWages
 const HourlyWagesPage = () => {
   return (
     <div className='content-mid' >
-      <div id='dashboard' className='px-5 py-12'  >
+      <div id='dashboard' className='px-5 py-12 right-const-structure'  >
         <HourlyWagesComponent />
       </div>
     </div>
