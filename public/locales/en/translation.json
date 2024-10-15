@@ -82,5 +82,7 @@
 	"grades_received": "Grades received",
 	"total_marks": "Total marks",
 	"percent": "Percent",
-	"learn_more_about_us":"Learn more about us"
+	"learn_more_about_us":"Learn more about us",
+	"email_require_message": "Please input your email!",
+	"password_require_message": "Please input your password!"
 }

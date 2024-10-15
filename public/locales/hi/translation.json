@@ -82,5 +82,7 @@
 	"grades_received": "Grades received",
 	"total_marks": "Total marks",
 	"percent": "Percent",
-	"learn_more_about_us":"हमारे बारे में अधिक जानें"
+	"learn_more_about_us":"हमारे बारे में अधिक जानें",
+	"email_require_message": "कृपया अपना ईमेल डालें!",
+	"password_require_message": "कृपया अपना पासवर्ड डालें!"
 }
