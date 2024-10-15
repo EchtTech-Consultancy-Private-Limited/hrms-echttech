@@ -25,6 +25,7 @@ const LayoutComponent = () => {
 
   const handleSettingSidebar = () => {
     setIsSettingactive(!isSettingactive)
+  
 
   }
 
@@ -40,7 +41,7 @@ const LayoutComponent = () => {
 
         <div className="left-sidebar main-bg-color relative">
           <aside className="sidebar">
-            <Sidebar toggleClass={handleClick} consttoggleClass={handleconstsidebarClick} handleSettingSidebar={handleSettingSidebar} isToggled={isActive} constisToggled={isconstsidebarActive} isSettingactive={isSettingactive} />
+            <Sidebar setIsSettingactive={setIsSettingactive} toggleClass={handleClick} consttoggleClass={handleconstsidebarClick} handleSettingSidebar={handleSettingSidebar} isToggled={isActive} constisToggled={isconstsidebarActive} isSettingactive={isSettingactive} />
           </aside>
         </div>
         <div className='absolute z-50 top-28 constant-sidebar main-bg-color ' >
