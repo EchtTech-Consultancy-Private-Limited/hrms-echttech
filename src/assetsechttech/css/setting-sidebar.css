@@ -12,4 +12,5 @@
     top: 9%;
     border-radius: 0px 10px 10px 0px;
     transition: left 0.5s linear;
+    z-index: 50;
 }

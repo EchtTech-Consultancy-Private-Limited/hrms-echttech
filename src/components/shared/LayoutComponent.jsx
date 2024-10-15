@@ -10,7 +10,7 @@ const LayoutComponent = () => {
 
   const [isActive, setIsActive] = useState(false)
   const [isconstsidebarActive, setIsconstsidebarActive] = useState(false)
-  const [isThirdactive, setIsThirdactive] = useState(false)
+  const [isSettingactive, setIsSettingactive] = useState(false)
 
 
   const handleClick = () => {
@@ -23,8 +23,8 @@ const LayoutComponent = () => {
 
   }
 
-  const handleThirdSidebar = () => {
-    setIsThirdactive(!isThirdactive)
+  const handleSettingSidebar = () => {
+    setIsSettingactive(!isSettingactive)
 
   }
 
@@ -36,11 +36,11 @@ const LayoutComponent = () => {
           <Header />
         </header>
       </div>
-      <div className={`layout main-container flex ${isActive ? 'hide' : 'show'} ${isconstsidebarActive ? 'consthide' : 'constshow'} ${isThirdactive ? 'settingshow':'settinghide'}`}>
+      <div className={`layout main-container flex ${isActive ? 'hide' : 'show'} ${isconstsidebarActive ? 'consthide' : 'constshow'} ${isSettingactive ? 'settingshow':'settinghide'}`}>
 
         <div className="left-sidebar main-bg-color relative">
           <aside className="sidebar">
-            <Sidebar toggleClass={handleClick} consttoggleClass={handleconstsidebarClick} handleThirdSidebar={handleThirdSidebar} isToggled={isActive} constisToggled={isconstsidebarActive} />
+            <Sidebar toggleClass={handleClick} consttoggleClass={handleconstsidebarClick} handleSettingSidebar={handleSettingSidebar} isToggled={isActive} constisToggled={isconstsidebarActive} isSettingactive={isSettingactive} />
           </aside>
         </div>
         <div className='absolute z-50 top-28 constant-sidebar main-bg-color ' >
@@ -56,38 +56,8 @@ const LayoutComponent = () => {
               </li>
             ))}
           </ul>
-          <div className="left-sidebar main-bg-color relative">
-            <aside className="sidebar">
-              <Sidebar toggleClass={handleClick} consttoggleClass={handleconstsidebarClick} isToggled={isActive} constisToggled={isconstsidebarActive} isconstsidebarActive={isconstsidebarActive} />
-            </aside>
-          </div>
-          <div className='absolute z-50 top-28 constant-sidebar main-bg-color ' >
-        <ul>
-        {CONSTANTS_SIDEBAR_LINKS.map((tab) => (
-           <li className='py-2 px-1 flex justify-between my-2 border-b border-white' key={tab.key}>
-           <Link className='text-white no-underline flex items-center' to={tab.path}>
-             {/* Display the icon before the label */}
-             <span className='mr-2'>{tab.icon}</span>
-             {tab.label}
-           </Link>
-           
-         </li>
-        ))}
-        </ul>
-          </div>
-          <div className="main-content right-dashboard">
-        
-            <main className="content base-bg-color">
-              <Outlet />
-            </main>
-            
-            <footer className="footer">
-              <Footer />
-            </footer>
-          </div>
-        </div>
-
-        <div className='absolute z-50 absolute left-[15%] top-24 setting-sidebar main-bg-color ' >
+         </div>
+         <div className='absolute setting-sidebar main-bg-color ' >
           <ul>
               <li class="py-2 px-1 flex justify-between my-2 border-b border-white">
                 <a class="text-white no-underline flex items-center" href="/contract-type">
@@ -210,19 +180,18 @@ const LayoutComponent = () => {
               </li>
           </ul>
         </div>
-        <div className="main-content right-dashboard">
-
-          <main className="content base-bg-color">
-            <Outlet />
-          </main>
-
-          <footer className="footer">
-            <Footer />
-          </footer>
+          <div className="main-content right-dashboard">
+        
+            <main className="content base-bg-color">
+              <Outlet />
+            </main>
+            
+            <footer className="footer">
+              <Footer />
+            </footer>
+          </div>
         </div>
       </div>
-
-    </div>
   );
 }
 
