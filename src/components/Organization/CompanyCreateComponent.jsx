@@ -172,12 +172,8 @@ const CompanyCreateComponent = () => {
       <div className="top-hdr flex justify-between">
         <h1 className="pb-3 font-bold text-lg">Add New Company</h1>
       </div>
-<<<<<<< HEAD
-      <form className="mt-10">
-=======
       <hr class="mb-6"></hr>
       <form className="mt-5">
->>>>>>> fd1ba80d3fb05d25a51a8b260c62006059994ecb
         <div className="form-step">
           <div className="form-labels">
             <div className="row first-row flex items-center flex-wrap justify-start md:space-x-3 justify-between flex-gap">
@@ -407,7 +403,6 @@ const CompanyCreateComponent = () => {
               </div>
               <div className="first mb-4">
                 <label
-<<<<<<< HEAD
                     htmlFor=""
                     className="block text-gray-700 font-bold mb-2"
                   >
@@ -463,8 +458,7 @@ const CompanyCreateComponent = () => {
               )}
                  </div>
                 </div>
-              
-=======
+                <label
                   htmlFor=""
                   className="block text-gray-700 font-bold mb-2"
                 >
@@ -480,7 +474,6 @@ const CompanyCreateComponent = () => {
                   <option value="opel">Pakistan</option>
                 </select>
               </div>
->>>>>>> fd1ba80d3fb05d25a51a8b260c62006059994ecb
             </div>
 
             {/* <div className="row flex second-row items-center mt-5">
@@ -490,7 +483,7 @@ const CompanyCreateComponent = () => {
                 <div className="row flex third-row items-center mt-10">
                   
                 </div> */}
-          </div>
+          
           <div className="button mt-10 flex justify-between">
             <div className="upload-sec">
               {/* <div className="logo-uploaded">
