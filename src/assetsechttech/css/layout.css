@@ -57,12 +57,12 @@
   position: relative;
 }
 
-.layout.hide.consthide .content-mid .right-const-structure {
+.layout.hide.consthide .content-mid .right-const-structure, .layout.hide.settingshow .content-mid .right-const-structure {
   position: absolute;
   right: 0;
   left: 218px;
 }
-.layout.show.consthide .content-mid .right-const-structure {
+.layout.show.consthide .content-mid .right-const-structure, .layout.show.settingshow .content-mid .right-const-structure {
   position: absolute;
   right: 0;
   left: 0px;
