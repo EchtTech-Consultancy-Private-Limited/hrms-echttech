@@ -3,8 +3,11 @@ import EmailNotificationsConfigurationComponent from '../../components/Settings/
 
 const EmailNotificationsConfigurationPage = () => {
   return (
-    <div>
-      <EmailNotificationsConfigurationComponent />
+
+    <div className='content-mid'>
+      <div id='dashboard' class="px-5 py-12 right-const-structure" >
+        <EmailNotificationsConfigurationComponent />
+      </div>
     </div>
   )
 }

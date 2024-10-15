@@ -3,8 +3,11 @@ import AttendanceConfigurationComponent from '../../components/Settings/Attendan
 
 const AttendanceConfigurationPage = () => {
   return (
-    <div>
+
+    <div className='content-mid'>
+      <div id='dashboard' class="px-5 py-12 right-const-structure" >
         <AttendanceConfigurationComponent />
+      </div>
     </div>
   )
 }

@@ -3,9 +3,11 @@ import NotificationPositionConfigurationComponent from '../../components/Setting
 
 const NotificationPositionConfigurationPage = () => {
   return (
-    <div>
+    <div className='content-mid'>
+    <div id='dashboard' class="px-5 py-12 right-const-structure" >
       <NotificationPositionConfigurationComponent />
     </div>
+  </div>
   )
 }
 
