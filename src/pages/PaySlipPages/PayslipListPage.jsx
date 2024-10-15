@@ -5,7 +5,7 @@ const PayslipListPage = () => {
   return (
     <div>
         <div className='content-mid' >
-          <div className='px-5 py-12' id='dashboard' >
+          <div className='px-5 py-12 right-const-structure' id='dashboard' >
               <PayslipListComponent />
           </div>
       </div>

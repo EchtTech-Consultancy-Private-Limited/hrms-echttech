@@ -156,6 +156,89 @@ export const DASHBOARD_SIDEBAR_BOTTOM_LINKS = [
 		icon: <HiOutlineQuestionMarkCircle />
 	}
 ]
+
+export const SETTING_SIDEBAR_BOTTOM_LINKS = [
+	{
+    key: 'general-configuration',
+    label: 'General',
+		path: '/general-configuration',
+    icon: <VscSymbolConstant />,
+    secondsidebar: 1,
+    submenu: [], // No submenu for holidays
+  },
+  {
+    key: 'system-logo',
+    label: 'Logos',
+		path: '/system-logo',
+    icon: <VscSymbolConstant />,
+    secondsidebar: 1,
+    submenu: [], // No submenu for holidays
+  },
+  {
+    key: 'system-configuration',
+    label: 'System',
+		path: '/system-configuration',
+    icon: <VscSymbolConstant />,
+    secondsidebar: 1,
+    submenu: [], // No submenu for holidays
+  },
+  {
+    key: 'role-configuration',
+    label: 'Role',
+		path: '/role-configuration',
+    icon: <VscSymbolConstant />,
+    secondsidebar: 1,
+    submenu: [], // No submenu for holidays
+  },
+  {
+    key: 'attendance-configuration',
+    label: 'Attendance',
+		path: '/attendance-configuration',
+    icon: <VscSymbolConstant />,
+    secondsidebar: 1,
+    submenu: [], // No submenu for holidays
+  },
+  {
+    key: 'payroll-logo-salaryslip',
+    label: 'PaySlip Logo',
+		path: '/payroll-logo-salaryslip',
+    icon: <VscSymbolConstant />,
+    secondsidebar: 1,
+    submenu: [], // No submenu for holidays
+  },
+  {
+    key: 'recruitment-configuration',
+    label: 'Recruitment',
+		path: '/recruitment-configuration',
+    icon: <VscSymbolConstant />,
+    secondsidebar: 1,
+    submenu: [], // No submenu for holidays
+  },
+  {
+    key: 'email-notifications-configuration',
+    label: 'Email Notifications',
+		path: '/email-notifications-configuration',
+    icon: <VscSymbolConstant />,
+    secondsidebar: 1,
+    submenu: [], // No submenu for holidays
+  },
+  {
+    key: 'animation-effects-configuration',
+    label: 'Animation Effects',
+		path: '/animation-effects-configuration',
+    icon: <VscSymbolConstant />,
+    secondsidebar: 1,
+    submenu: [], // No submenu for holidays
+  },
+  {
+    key: 'notification-position-configuration',
+    label: 'Notification Position',
+		path: '/notification-position-configuration',
+    icon: <VscSymbolConstant />,
+    secondsidebar: 1,
+    submenu: [], // No submenu for holidays
+  },
+]
 export const CONSTANTS_SIDEBAR_LINKS = [
 	{
 		key: '1',

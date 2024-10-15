@@ -27,7 +27,8 @@ const HeaderComponent = () => {
       dispatch(logout());
       alert.success('Logged out successfully.')
       localStorage.removeItem("token");
-      window.location.href ='/';
+      localStorage.removeItem('mid');
+      navigate('/login');
   }
 
   return (

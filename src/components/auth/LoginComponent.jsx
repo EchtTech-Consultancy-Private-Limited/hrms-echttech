@@ -105,16 +105,16 @@ const LoginComponent = () => {
               <form onSubmit={handleSubmit(onSubmit)}>
                 {!showEmailInput && !showOtpInput ? (  // Hide login form if OTP input is shown
                   <>
-                   <h2 className="text-2xl font-bold mb-2">Login</h2>
+                   <h2 className="text-2xl font-bold mb-2">{t('login_title')}</h2>
                    <p className='mb-2 text-sm text-gray-500'>Welcome, Please enter credentials</p>
                     {/* Email and Password Fields */}
-                    <div className="mb-3">
-                      <label htmlFor="email" className="sr-only">Email</label>
+                    <div className="mb-2">
+                      <label htmlFor="email" className="sr-only">{t('email')}</label>
                       <input
                         type="email"
                         id="email"
-                        className="w-full px-3 py-5 border-slate-200 text-gray-700 focus:border-blue-500"
-                        placeholder="Email"
+                        className="w-full px-3 py-2 border-slate-200 text-gray-700 focus:border-blue-500"
+                        placeholder={t('email')}
                         {...register('email', {
                           required: 'Please input your email!',
                           pattern: {
@@ -126,15 +126,15 @@ const LoginComponent = () => {
                       {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
                     </div>
 
-                    <div className="mb-6 relative">
-                      <label htmlFor="password" className="sr-only">Password</label>
+                    <div className="mb-4 relative">
+                      <label htmlFor="password" className="sr-only">{t('password')}</label>
                       <input
                         type={showPassword ? 'text' : 'password'}
                         id="password"
                         name="password"
                         onChange={(e) => setPassword(e.target.value)}
-                        className="w-full px-3 py-5 border-slate-200 text-gray-700 focus:border-blue-500"
-                        placeholder="Password"
+                        className="w-full px-3 py-2 border-slate-200 text-gray-700 focus:border-blue-500"
+                        placeholder={t('password')}
                         {...register('password', {
                           required: 'Please input your password!',
                           minLength: {
@@ -148,7 +148,7 @@ const LoginComponent = () => {
                         })}
                       />
                       {errors.password && <p className="text-red-500 text-sm">{errors.password.message}</p>}
-                      <button type="submit" className='text-sm signin-text font-bold mt-4' onClick={() => onButtonClick('otp')}>Sign-in with OTP</button>
+                      <button type="submit" className='text-sm signin-text font-bold mt-2' onClick={() => onButtonClick('otp')}>{t('Sign_in_with_OTP')}</button>
                       {/* <Link>
                         <p className='text-sm signin-text font-bold mt-2' onClick={signinOtp}>Sign-in with OTP</p>
                       </Link> */}
@@ -188,14 +188,13 @@ const LoginComponent = () => {
                       </div>
                       {errors.captcha && <p className="text-red-500 text-sm">{errors.captcha.message}</p>}
                     </div>
-
                     <button
                       type="submit"
                       onClick={() => onButtonClick('normal')}
                       disabled={loading}
                       className="w-full login-btn mt-2 mb-2 bg-gradient-to-r text-white font-bold py-3 px-4 from-blue-300 via-blue-500 to-blue-900 transition duration-300"
                     >
-                      {loading ? 'Logging in...' : 'Login'}
+                      {loading ? 'Logging in...' : t("login_title")}
                     </button>
                   </>
                 ) : null} 
@@ -231,7 +230,7 @@ const LoginComponent = () => {
               )}
               {!showEmailInput && !showOtpInput && ( // Show only when OTP input is not shown
                 <p className='text-start text-sm text-gray-500'>
-                  If you forget the password? <Link to="#" onClick={handleForgetPassword}>Forget</Link>
+                  If you forget the password? <Link to="#" onClick={handleForgetPassword}>{t('forgot_password')}</Link>
                 </p>
               )}
             </div>
