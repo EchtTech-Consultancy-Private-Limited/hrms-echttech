@@ -154,12 +154,11 @@ export default function SidebarcontentComponent({consttoggleClass, toggleClass, 
     </div>
      <div className='mt-6' >
         <hr />
-
-        {DASHBOARD_SIDEBAR_BOTTOM_LINKS.map((link) => (
+      {DASHBOARD_SIDEBAR_BOTTOM_LINKS.map((link) => (
       <Accordion expanded={link.submenu?.length > 0 && expanded === link.key} onChange={handleChange(link.key)} className='ul-list'>
         <AccordionSummary aria-controls={`${link.key}-content`} id={`${link.key}-header`} className='color-white ul-parent'>
           <span className="mr-3 text-xl"  onClick={() => {
-                if (link.settingsidebar === 1){
+                if (link.secondsidebar === 1){
                   if (isToggled){
                      if(!isconstsidebarActive){
                       consttoggleClass();
@@ -190,7 +189,7 @@ export default function SidebarcontentComponent({consttoggleClass, toggleClass, 
          
           <Typography>
             {
-            link.settingsidebar === 1 ?<Link to={link.path} onClick={() => { handleSettingSidebar(); toggleClass(); }}>{link.label}</Link>:<Link to={link.path}>{link.label}</Link>
+            link.secondsidebar === 1 ?<Link to={link.path} onClick={() => { handleSettingSidebar(); toggleClass(); }}>{link.label}</Link>:<Link to={link.path}>{link.label}</Link>
             }
             
           </Typography>

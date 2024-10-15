@@ -144,14 +144,13 @@ export const DASHBOARD_SIDEBAR_BOTTOM_LINKS = [
 	{
 		key: 'settings',
 		label: 'Settings',
-    settingsidebar:1,
-		path: '/#',
+    secondsidebar:1,
 		icon: <HiOutlineCog />
 	},
 	{
 		key: 'support',
 		label: 'Help & Support',
-    settingsidebar:0,
+    secondsidebar:0,
 		path: '/#',
 		icon: <HiOutlineQuestionMarkCircle />
 	}
