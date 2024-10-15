@@ -107,12 +107,12 @@ const LoginComponent = () => {
                    <h2 className="text-2xl font-bold mb-2">Login</h2>
                    <p className='mb-2 text-sm text-gray-500'>Welcome, Please enter credentials</p>
                     {/* Email and Password Fields */}
-                    <div className="mb-2">
+                    <div className="mb-3">
                       <label htmlFor="email" className="sr-only">Email</label>
                       <input
                         type="email"
                         id="email"
-                        className="w-full px-3 py-2 border-slate-200 text-gray-700 focus:border-blue-500"
+                        className="w-full px-3 py-5 border-slate-200 text-gray-700 focus:border-blue-500"
                         placeholder="Email"
                         {...register('email', {
                           required: 'Please input your email!',
@@ -125,14 +125,14 @@ const LoginComponent = () => {
                       {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
                     </div>
 
-                    <div className="mb-4 relative">
+                    <div className="mb-6 relative">
                       <label htmlFor="password" className="sr-only">Password</label>
                       <input
                         type={showPassword ? 'text' : 'password'}
                         id="password"
                         name="password"
                         onChange={(e) => setPassword(e.target.value)}
-                        className="w-full px-3 py-2 border-slate-200 text-gray-700 focus:border-blue-500"
+                        className="w-full px-3 py-5 border-slate-200 text-gray-700 focus:border-blue-500"
                         placeholder="Password"
                         {...register('password', {
                           required: 'Please input your password!',
@@ -147,7 +147,7 @@ const LoginComponent = () => {
                         })}
                       />
                       {errors.password && <p className="text-red-500 text-sm">{errors.password.message}</p>}
-                      <button type="submit" className='text-sm signin-text font-bold mt-2' onClick={() => onButtonClick('otp')}>Sign-in with OTP</button>
+                      <button type="submit" className='text-sm signin-text font-bold mt-4' onClick={() => onButtonClick('otp')}>Sign-in with OTP</button>
                       {/* <Link>
                         <p className='text-sm signin-text font-bold mt-2' onClick={signinOtp}>Sign-in with OTP</p>
                       </Link> */}

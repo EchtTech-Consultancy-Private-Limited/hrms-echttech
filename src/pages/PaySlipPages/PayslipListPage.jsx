@@ -4,7 +4,11 @@ import PayslipListComponent from '../../components/Payslip/PayslipListComponent'
 const PayslipListPage = () => {
   return (
     <div>
-        <PayslipListComponent />
+        <div className='content-mid' >
+          <div className='px-5 py-12' id='dashboard' >
+              <PayslipListComponent />
+          </div>
+      </div>
     </div>
   )
 }

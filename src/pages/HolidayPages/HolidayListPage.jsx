@@ -3,8 +3,10 @@ import HolidayListComponent from '../../components/Holiday/HolidayListComponent'
 
 const HolidayListPage = () => {
   return (
-    <div>
-      <HolidayListComponent />
+    <div className='content-mid' >
+      <div className='px-5 py-12' id='dashboard' >
+        <HolidayListComponent />
+      </div>
     </div>
   )
 }

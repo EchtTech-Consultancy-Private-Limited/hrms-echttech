@@ -94,7 +94,7 @@
   }
   .parnt-login-h-438 , .child-login-h-438 
   {
-    height: 438px;
+    height: 516px;
     
   }
   .parnt-login-h-438 
@@ -109,12 +109,11 @@
     margin-bottom: 5px;
 }
   #canv{
-    /* background: #cccce5 !important; */
     border-radius: 3px;
     margin: 6px 10px 0px 0px;
-    padding: 3px 0px 3px 0px;
+    padding: 8px 6px 0px 0px;
+    height: 36px !important;
     border: 1px solid #d7d7d7;
-    color: red;
   }
   .signin-text
   {

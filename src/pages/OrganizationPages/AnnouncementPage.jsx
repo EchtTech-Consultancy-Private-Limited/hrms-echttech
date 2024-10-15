@@ -8,7 +8,7 @@ const AnnouncementPage = () => {
           <div className='px-5 py-12' id='dashboard' >
               <AnnouncementComponent />
           </div>
-    </div>
+      </div>
     </>
     
   )

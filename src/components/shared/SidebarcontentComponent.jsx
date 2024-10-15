@@ -12,7 +12,7 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import { HiOutlineChevronRight, HiOutlineChevronDown } from "react-icons/hi";
 import { useState, SyntheticEvent } from 'react';
-import { DASHBOARD_SIDEBAR_LINKS } from '../../lib/constants'
+import { DASHBOARD_SIDEBAR_BOTTOM_LINKS, DASHBOARD_SIDEBAR_LINKS } from '../../lib/constants'
 
 
 
@@ -52,7 +52,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
-export default function SidebarcontentComponent({consttoggleClass, toggleClass, isToggled}) {
+export default function SidebarcontentComponent({consttoggleClass, toggleClass, isToggled, handleThirdSidebar}) {
   const [expanded, setExpanded] = useState('panel1');
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const handleChange = 
@@ -68,6 +68,7 @@ export default function SidebarcontentComponent({consttoggleClass, toggleClass, 
 
     
   return (
+    <>
     <div className='below-content-list'>
       {DASHBOARD_SIDEBAR_LINKS.map((link) => (
       <Accordion expanded={link.submenu?.length > 0 && expanded === link.key} onChange={handleChange(link.key)} className='ul-list'>
@@ -97,11 +98,40 @@ export default function SidebarcontentComponent({consttoggleClass, toggleClass, 
       </Accordion>
       ))}
       
-      
-
-
+    {/* Below Menu Content for settings & Suport section */}
     </div>
+     <div className='mt-6' >
+        <hr />
 
-    
+        {DASHBOARD_SIDEBAR_BOTTOM_LINKS.map((link) => (
+      <Accordion expanded={link.submenu?.length > 0 && expanded === link.key} onChange={handleChange(link.key)} className='ul-list'>
+        <AccordionSummary aria-controls={`${link.key}-content`} id={`${link.key}-header`} className='color-white ul-parent'>
+          <span className="mr-3 text-xl" onClick={ link.secondsidebar === 1 ? ()=> {consttoggleClass(); toggleClass(); handleThirdSidebar();} : null}>{link.icon}</span>
+         
+          <Typography>
+            {
+            link.secondsidebar === 1 ?<Link to={link.path} onClick={() => { consttoggleClass(); toggleClass(); }}>{link.label}</Link>:<Link to={link.path}>{link.label}</Link>
+            }
+            
+          </Typography>
+          {link.submenu?.length > 0 && (
+            <span className="text-neutral-200 side-bar-content-arrow">{isSubMenuOpen ? < HiOutlineChevronRight /> : <HiOutlineChevronDown />}</span>
+         )}
+        </AccordionSummary>
+        {link.submenu?.length > 0 && (
+        <AccordionDetails className='parent-all-ul'>
+          <ul className='all-ul'>
+            {link.submenu.map((subLink) => (
+              
+              <li><Link to={subLink.path}>{subLink.label}</Link></li>
+            ))}
+          </ul>
+        </AccordionDetails>
+         )}
+      </Accordion>
+      ))}
+
+     </div>
+    </>
   );
 }

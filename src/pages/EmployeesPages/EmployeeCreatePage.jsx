@@ -3,8 +3,10 @@ import EmployeeCreateComponent from '../../components/Employees/EmployeeCreateCo
 
 const EmployeeCreatePage = () => {
   return (
-    <div>
+    <div className='content-mid' >
+      <div className='px-5 py-12' id='dashboard' >
         <EmployeeCreateComponent />
+      </div>
     </div>
   )
 }

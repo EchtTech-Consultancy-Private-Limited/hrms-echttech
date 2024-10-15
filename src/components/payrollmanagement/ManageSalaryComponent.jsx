@@ -225,19 +225,19 @@ const ManageSalaryComponent = () => {
                       <td className="px-4 py-2 text-center td-select flex justify-evenly items-center" style={{height:"57px"}}>
                         <input type="checkbox" />
                         <select name="cars" id="cars">
-                          <option value="volvo">Volvo</option>
-                          <option value="saab">Saab</option>
-                          <option value="opel">Opel</option>
-                          <option value="audi">Audi</option>
+                          <option value="demo1">Demo1</option>
+                          <option value="demo2">Demo2</option>
+                          <option value="demo3">Demo3</option>
+                          <option value="demo4">Demo4</option>
                         </select>
                       </td>
                       <td className="border px-4 py-2 td-select2">
                         <input type="checkbox" />
-                        <select name="cars" id="cars">
-                          <option value="volvo">Volvo</option>
-                          <option value="saab">Saab</option>
-                          <option value="opel">Opel</option>
-                          <option value="audi">Audi</option>
+                        <select name="cars" id="cars1">
+                          <option value="demo1">Demo1</option>
+                          <option value="demo2">Demo2</option>
+                          <option value="demo3">Demo3</option>
+                          <option value="demo4">Demo4</option>
                         </select>
                       </td>
                       <td className="border px-4 py-2">
