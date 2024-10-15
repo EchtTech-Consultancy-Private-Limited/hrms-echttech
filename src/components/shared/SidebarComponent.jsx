@@ -3,14 +3,13 @@ import SidebarcontentComponent from './SidebarcontentComponent'
 import { HiChevronDoubleRight,  HiChevronDoubleLeft  } from "react-icons/hi";
 
  
-const SidebarComponent = ({toggleClass, isToggled, consttoggleClass, handleSettingSidebar, isconstsidebarActive, isSettingactive}) => {
-
+const SidebarComponent = ({toggleClass, isToggled, consttoggleClass, handleSettingSidebar}) => {
   return (
     <div className='left-sidebar-inner'>
          <button className='collapse-btn' onClick={()=>{toggleClass()}}> {isToggled ? <HiChevronDoubleRight className='text-xl color-white'/> : <HiChevronDoubleLeft  className='text-xl color-white'/>}</button>
        <div className="below-content pt-4 ">
         
-         <SidebarcontentComponent consttoggleClass={consttoggleClass} toggleClass={toggleClass}  isToggled={isToggled} isconstsidebarActive={isconstsidebarActive} handleSettingSidebar={handleSettingSidebar} isSettingactive={isSettingactive} />
+         <SidebarcontentComponent consttoggleClass={consttoggleClass} handleSettingSidebar={handleSettingSidebar} toggleClass={toggleClass}/>
       </div>
     </div>
   )
