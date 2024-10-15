@@ -1,26 +1,24 @@
 import React, { useState, } from 'react';
-import { Link} from 'react-router-dom'; // Import Link here
+import { Link, useNavigate} from 'react-router-dom'; // Import Link here
 import { CONSTANTS_SIDEBAR_LINKS } from '../../lib/constants';
 import Sidebar from './SidebarComponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import { Outlet } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-const LayoutComponent = () => {
+const LayoutComponent = ({children}) => {
 
   const [isActive, setIsActive] = useState(false)
   const [isconstsidebarActive, setIsconstsidebarActive] = useState(false)
-
   const handleClick = () => {
     setIsActive(!isActive)
-    console.log("parent1")
   }
 
   const handleconstsidebarClick = () => {
     setIsconstsidebarActive(!isconstsidebarActive)
     
   }
-
 
   return (
     <div className="complete-layout">
@@ -52,7 +50,7 @@ const LayoutComponent = () => {
           </div>
           <div className="main-content right-dashboard">
         
-            <main className="content base-bg-color">
+            <main className="content base-bg-color" children={children}>
               <Outlet />
             </main>
             

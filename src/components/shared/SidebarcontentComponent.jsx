@@ -97,9 +97,6 @@ export default function SidebarcontentComponent({consttoggleClass, toggleClass, 
       </Accordion>
       ))}
       
-      
-
-
     </div>
 
     

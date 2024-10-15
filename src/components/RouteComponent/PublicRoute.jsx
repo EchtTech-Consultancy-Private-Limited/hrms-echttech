@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 function PublicRoute({children}) {
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ function PublicRoute({children}) {
   
   return (
     <div>
-        {children}
+        <Outlet />
     </div>
   )
 }

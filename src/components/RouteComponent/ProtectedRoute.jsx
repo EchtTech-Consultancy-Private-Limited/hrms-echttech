@@ -1,61 +1,54 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { HideLoading, ShowLoading } from "../../reduxapis/slice/alertsSlice";
-// import { SetUser } from "../redux/usersSlice";
-import DefaultLayout from "../shared/LayoutComponent";
-import { useAlert } from "react-alert";
+import React, { useEffect, useState } from 'react'
+import { Outlet, useNavigate } from 'react-router-dom'
+import { jwtDecode } from 'jwt-decode'; 
+import { useSelector } from 'react-redux';
+import LayoutComponent from '../shared/LayoutComponent';
 
 
-function ProtectedRoute({ children }) {
-  const dispatch = useDispatch();
-  const alert = useAlert();
-  const { user } = useSelector((state) => state.auth);
+const ProtectedRoutesLayout = () => {
+    const [result, setResult] = useState(false); // State to track token validation result
+    const navigate = useNavigate(); // Assuming you're using react-router-dom for navigation
 
-  const navigate = useNavigate();
-  const validateToken = async () => {
-    console.log(localStorage.getItem("token"))
-    try {
-      dispatch(ShowLoading());
-      const response = await axios.get(
-        "/v1/admin/3",
-        {},
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
+    const validateToken = async () => {
+        try {
+            const token = localStorage.getItem("token");
+            
+            if (!token) {
+                throw new Error("No token found"); // If there's no token, throw an error
+            }
+
+            const decodedToken = jwtDecode(token); // Decode the token
+            const currentDate = new Date();
+
+            // Check if the token has expired (exp is in seconds, so multiply by 1000 to get milliseconds)
+            if (decodedToken.exp * 1000 < currentDate.getTime()) {
+                setResult(false); // Token expired
+                navigate('/login');
+            } else {
+                setResult(true); // Token valid
+            }
+        } catch (error) {
+            localStorage.removeItem('token');
+            localStorage.removeItem('mid');
+            setResult(false); // Handle the invalid token
+            navigate('/login');
+            console.error("Token validation error:", error.message);
         }
-      );
-      console.log(response)
-      dispatch(HideLoading());
-    //   if (response) {
-    //     console.log(response)
-    //     //dispatch(SetUser(response.data.data));
-    //   } else {
-    //     localStorage.removeItem("token");
-    //     alert.error(response.data.message);
-    //     navigate("/login");
-    //   }
-    } catch (error) {
-    //   dispatch(HideLoading());
-    //   localStorage.removeItem("token");
-
-    //   alert.error(error.message);
-    //   navigate("/login");
     }
-  };
-  useEffect(() => {
-    if (localStorage.getItem("token")) {
-      validateToken();
-    } else {
-      navigate("/login");
-    }
-  }, []);
 
-  return (
-    <div>{user == null && <DefaultLayout>{children}</DefaultLayout>}</div>
-  );
-}
+    useEffect(() => {
+        if (localStorage.getItem('token')) {
+            validateToken(); // Call the token validation function if token exists
+        } else {
+            navigate('/login'); // If no token, redirect to login
+        }
+    }, []);
 
-export default ProtectedRoute;
+    return (
+        <>
+            {result && <LayoutComponent />} {/* Render LayoutComponent only if result is true */}
+        </>
+    );
+};
+
+export default ProtectedRoutesLayout
