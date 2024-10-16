@@ -177,19 +177,6 @@ const CompanyCreateComponent = () => {
         <div className="form-step">
           <div className="form-labels">
             <div className="row first-row flex items-center flex-wrap justify-start md:space-x-3 justify-between flex-gap">
-              <div className="first mb-4">
-                <label
-                  htmlFor=""
-                  className="block text-gray-700 font-bold mb-2"
-                >
-                  Company Name
-                </label>
-                <input
-                  className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                  type="text"
-                  placeholder="Company Name"
-                />
-              </div>
 
               <div className="first mb-4">
                 <label
@@ -248,6 +235,20 @@ const CompanyCreateComponent = () => {
                 </div>
               )}
                  </div>
+              </div>
+
+              <div className="first mb-4">
+                <label
+                  htmlFor=""
+                  className="block text-gray-700 font-bold mb-2"
+                >
+                  Company Name
+                </label>
+                <input
+                  className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
+                  type="text"
+                  placeholder="Company Name"
+                />
               </div>
 
               <div className="first mb-4">
@@ -458,21 +459,6 @@ const CompanyCreateComponent = () => {
               )}
                  </div>
                 </div>
-                <label
-                  htmlFor=""
-                  className="block text-gray-700 font-bold mb-2"
-                >
-                  Countary
-                </label>
-                <select
-                  name="type"
-                  id="type"
-                  className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                >
-                  <option value="volvo">Countary</option>
-                  <option value="saab">India</option>
-                  <option value="opel">Pakistan</option>
-                </select>
               </div>
             </div>
 
