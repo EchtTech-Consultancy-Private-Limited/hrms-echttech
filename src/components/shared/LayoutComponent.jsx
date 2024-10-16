@@ -1,4 +1,4 @@
-import React, { useState, } from 'react';
+import React, { useEffect, useState, } from 'react';
 import { Link } from 'react-router-dom'; // Import Link here
 import { CONSTANTS_SIDEBAR_LINKS, SETTING_SIDEBAR_BOTTOM_LINKS } from '../../lib/constants';
 import Sidebar from './SidebarComponent';
@@ -23,11 +23,24 @@ const LayoutComponent = () => {
 
   }
 
+
   const handleSettingSidebar = () => {
     setIsSettingactive(!isSettingactive)
   
 
   }
+
+
+  useEffect(()=>{
+if(isconstsidebarActive === true){
+
+    setIsSettingactive(false)
+
+}
+  
+  },[isconstsidebarActive])
+    
+
 
 
   return (
