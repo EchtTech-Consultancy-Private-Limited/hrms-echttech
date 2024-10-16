@@ -36,6 +36,7 @@ const LoginComponent = () => {
   const { isAuthenticated, error, message, loading, user } = useSelector(state => state.auth);
     //const redirect = location.search ? location.search.split('=')[1] : '/'
     useEffect(() => {
+      console.log('Brijesh',isAuthenticated)
         if (isAuthenticated) {
             dispatch(HideLoading());
             alert.success(message)
@@ -84,7 +85,7 @@ const LoginComponent = () => {
   const toggleView = () => {
     setIsClosed(!isClosed);
   };
-  React.useEffect(() => {
+  useEffect(() => {
     loadCaptchaEnginge(6); // Generate a 6-character CAPTCHA
   }, []);
   

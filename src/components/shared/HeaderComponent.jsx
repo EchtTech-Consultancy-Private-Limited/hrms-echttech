@@ -9,8 +9,8 @@ import { Dialog } from '@headlessui/react';
 import logo from "../../assetsechttech/logo/logo.png"
 import { useNavigate } from "react-router-dom";
 import { useAlert } from 'react-alert'
-import { logout } from '../../reduxapis/actions/loginAction'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout, clearErrors } from '../../reduxapis/actions/loginAction';
 
 
 
@@ -23,12 +23,15 @@ const HeaderComponent = () => {
 
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
+  const { isAuthenticated, error, message, loading, user } = useSelector(state => state.auth);
   const logoutHandler = () => {
       dispatch(logout());
-      alert.success('Logged out successfully.')
+      dispatch(clearErrors());
       localStorage.removeItem("token");
       localStorage.removeItem('mid');
-      navigate('/login');
+      alert.success('Logged out successfully!.')
+      window.location.href = '/login';
+      //navigate('/login');
   }
 
   return (
@@ -275,7 +278,7 @@ const HeaderComponent = () => {
                         </a>
                       )}
                     </MenuItem>
-                    <form method="POST">
+                    {/* <form method="POST"> */}
                       <MenuItem>
                         {({ active }) => (
                           <button
@@ -288,7 +291,7 @@ const HeaderComponent = () => {
                           </button>
                         )}
                       </MenuItem>
-                    </form>
+                    {/* </form> */}
                   </div>
                 </MenuItems>
               </Menu>

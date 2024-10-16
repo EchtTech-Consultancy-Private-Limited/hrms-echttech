@@ -55,7 +55,7 @@ export default function Router () {
     
     return useRoutes([
 
-        { path: '/', element: <LayoutComponent />,
+        { path: '/', element: <ProtectedRoutesLayout />,
             children: [
                     {path: 'dashboard', element: <Dashboard />},
                     { path:'account-setting', element:<AccountSettingPage />},
@@ -110,7 +110,7 @@ export default function Router () {
             path: '/',
             element: <PublicRoutesLayout />,
             children: [
-                    {  index: true, element: <LoginPage /> },
+                    // {  index: true, element: <LoginPage /> },
                     {  path: 'login', element: <LoginPage /> },
                     { path: 'page404', element: <MissingPage /> },    
             ],

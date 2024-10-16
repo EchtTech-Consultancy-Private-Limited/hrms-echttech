@@ -57,6 +57,7 @@ import RecruitmentConfigurationPage from './pages/SettingPages/RecruitmentConfig
 import RoleConfigurationPage from './pages/SettingPages/RoleConfigurationPage';
 import SystemConfigurationPage from './pages/SettingPages/SystemConfigurationPage';
 import SystemLogoPage from './pages/SettingPages/SystemLogoPage';
+import ProtectedRoutesLayout from './components/RouteComponent/ProtectedRoute';
 
 function App() {
     const { loading } = useSelector((state) => state.alerts);
@@ -82,9 +83,8 @@ function App() {
         <Router>
             <Routes>
                 <Route index path='/' element={<LoginPage />} />
-                {/* <Route path='/login' element={<LoginPage />} /> */}
-                <Route path="/" element={<LayoutComponent />}>
-                    {/* <Route index element={<ProtectedRoute><Dashboard /></ProtectedRoute>} /> */}
+                <Route path='/login' element={<LoginPage />} />
+                <Route path="/" element={<ProtectedRoutesLayout />}>
                     <Route path='dashboard' element={<Dashboard />} />
                     <Route path='account-setting' element={<AccountSettingPage />} />
                     <Route path='company' element={<CompanyCreatePage />} />
