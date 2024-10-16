@@ -1,4 +1,4 @@
-import axios from 'axios'
+import { axiosInatance } from '../../lib/helpers/axiosInstance';
 import {
     LOGIN_REQUEST,
     LOGIN_SUCCESS,
@@ -20,7 +20,7 @@ export const login = (email, password, loggedinType) => async (dispatch) => {
                 'Content-Type': 'application/json'
             }
         }
-        const { data } = await axios.post('/v1/admin/authenticate', { email, password, loggedinType }, config)
+        const { data } = await axiosInatance.post('/v1/admin/authenticate', { email, password, loggedinType }, config)
         localStorage.setItem("token",data.token);
         localStorage.setItem("mid",data.adminID);
         dispatch({
@@ -44,7 +44,7 @@ export const getuserdetailsbyID =(id) => async(dispatch)=> {
                     'authorization': `Bearer ${localStorage.getItem("token")}`
                 }
             }
-            const { data } = await axios.post('/v1/admin/'.id, config)
+            const { data } = await axiosInatance.post('/v1/admin/'.id, config)
             dispatch({
                 type: LOAD_USER_SUCCESS,
                 payload: data
@@ -61,9 +61,7 @@ export const getuserdetailsbyID =(id) => async(dispatch)=> {
 // Logout user
 export const logout = () => async (dispatch) => {
     try {
-
-        await axios.get('/v1/admin/logout')
-
+        const { data } = await axiosInatance.post('/v1/admin/logout')
         dispatch({
             type: LOGOUT_SUCCESS,
         })

@@ -3,12 +3,11 @@ import PayrollTemplatesComponent from '../../components/Payrollmanagement/Payrol
 
 const PayrollTemplatesPage = () => {
   return (
-   
-      <div className='content-mid' >
+   <div className='content-mid' >
       <div id='dashboard' className='px-5 py-12 right-const-structure'  >
-         <PayrollTemplatesComponent />
+      <PayrollTemplatesComponent />
       </div>
-      </div>
+    </div>
   )
 }
 

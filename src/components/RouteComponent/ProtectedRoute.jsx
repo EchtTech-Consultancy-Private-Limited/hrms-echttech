@@ -31,7 +31,7 @@ const ProtectedRoutesLayout = () => {
             localStorage.removeItem('token');
             localStorage.removeItem('mid');
             setResult(false); // Handle the invalid token
-            navigate('/login');
+            navigate('/');
             console.error("Token validation error:", error.message);
         }
     }

@@ -1,12 +1,14 @@
-import React from 'react'
-import RecruitmentConfigurationComponent from '../../components/Settings/RecruitmentConfigurationComponent'
+import React from "react";
+import RecruitmentConfigurationComponent from "../../components/Settings/RecruitmentConfigurationComponent";
 
 const RecruitmentConfigurationPage = () => {
   return (
-    <div>
-      <RecruitmentConfigurationComponent />
+    <div className="content-mid">
+      <div id="dashboard" className="px-5 py-12 right-const-structure">
+        <RecruitmentConfigurationComponent />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default RecruitmentConfigurationPage
+export default RecruitmentConfigurationPage;

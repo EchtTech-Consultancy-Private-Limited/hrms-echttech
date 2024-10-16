@@ -26,22 +26,13 @@ const LayoutComponent = () => {
 
   const handleSettingSidebar = () => {
     setIsSettingactive(!isSettingactive)
-  
-
   }
-
-
   useEffect(()=>{
-if(isconstsidebarActive === true){
-
-    setIsSettingactive(false)
-
-}
-  
+    if(isconstsidebarActive === true){
+        setIsSettingactive(false)
+    }
+      
   },[isconstsidebarActive])
-    
-
-
 
   return (
     <div className="complete-layout">
