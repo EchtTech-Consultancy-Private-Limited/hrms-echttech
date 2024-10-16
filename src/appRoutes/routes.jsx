@@ -55,7 +55,7 @@ export default function Router () {
     
     return useRoutes([
 
-        { path: '/', element: <ProtectedRoutesLayout />,
+        { path: '/', element: <LayoutComponent />,
             children: [
                     {path: 'dashboard', element: <Dashboard />},
                     { path:'account-setting', element:<AccountSettingPage />},
