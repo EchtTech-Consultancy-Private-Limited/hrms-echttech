@@ -186,9 +186,17 @@
       border-radius: 0px 10px 10px 0px;
       transition: left 0.7s linear;
     }
-    .layout.hide.constshow .constant-sidebar{
+    .layout.hide.constshow .constant-sidebar, .layout.hide.settinghide .setting-sidebar {
       left: -20.9%;
-    }
+      height: 478px;
+      width: 215px;
+      overflow-x: hidden;
+      position: absolute;
+      padding: 10px 10px 10px 10px;
+      top: 9%;
+      border-radius: 0px 10px 10px 0px;
+      transition: left 0.5s linear;
+  }
 
   .layout.consthide .constant-sidebar li, .layout.constshow .constant-sidebar li,  .layout.settinghide .setting-sidebar li, .layout.settingshow .setting-sidebar li {
     border: none;

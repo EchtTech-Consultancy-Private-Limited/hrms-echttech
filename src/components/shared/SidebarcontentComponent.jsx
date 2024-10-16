@@ -82,7 +82,7 @@ export default function SidebarcontentComponent({consttoggleClass, toggleClass, 
                   if (isToggled){
                     if(!isSettingactive){
                       consttoggleClass();
-                      handleSettingSidebar();
+                      // handleSettingSidebar();
                      
                     }
                     else{
@@ -99,6 +99,10 @@ export default function SidebarcontentComponent({consttoggleClass, toggleClass, 
                   if (isToggled) {
                     if (constisToggled) {
                       consttoggleClass();
+                      toggleClass();
+                    }
+                    if (!isSettingactive) {
+                     handleSettingSidebar();
                       toggleClass();
                     }
                     else{
