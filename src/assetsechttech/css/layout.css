@@ -88,6 +88,37 @@
   transition: left 0.5s linear;
 }
 
+/* Styling for forms and fields */
+
+.department-below-sect label, .form-labels label {
+  color: #000000;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.top-section {
+  padding: 0 !important;
+}
+input, select {
+  font-size: 14px !important;
+}
+.top-head .form-labels, .top-head .second-child, .form-step, .form-labels {
+  padding: 20px;
+}
+hr.mb-6 {
+  background-color: #113689;
+  height: 3px;
+  margin: 0;
+  /* display: none; */
+}
+.top-head .pb-3, .top-hdr {
+  padding: 10px 20px;
+  color: #113689;
+  background-color: #1136892b;
+  border-radius: 6px 6px 0 0;
+}
+
 
 
 

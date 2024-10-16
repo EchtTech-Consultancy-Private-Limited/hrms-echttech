@@ -97,7 +97,7 @@ const PoliciesComponent = () => {
             <hr className="mb-6" />
 
             {/* Policy Form Section */}
-            <div className="department-below-sect w-full">
+            <div className="department-below-sect w-full p-6 pt-4">
               <div className="flex justify-between policy-container">
                 {/* Grid Item 1: Policy Title */}
                 <div className="policy-left-fields flex justify-between">

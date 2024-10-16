@@ -15,10 +15,11 @@
    width: 19.3%;
  }
  .add-reset-btns button {
-   padding: 6px 15px;
-   margin-left: 5px;
-   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  padding: 8px 20px;
+  margin-left: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
  }
  .add-reset-btns .main-bg-color:hover{
    background-color: #2562b0 !important;
  }
+ 

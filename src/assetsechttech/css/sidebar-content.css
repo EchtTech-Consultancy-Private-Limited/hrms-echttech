@@ -162,12 +162,12 @@
     /* styling for second-sidebar/constant sidebar */
 
     .layout.hide.consthide .constant-sidebar, .layout.hide.settingshow .setting-sidebar {
-      height: 478px;
+      height: 435px;
       width: 215px;
       overflow-x: hidden;
       position: absolute;
       left: 4.1%;
-      padding: 10px 10px 10px 10px;
+      padding: 10px 0px;
       top: 9%;
       border-radius: 0px 10px 10px 0px;
       transition: left 0.5s linear;
@@ -177,7 +177,7 @@
       top: 9%;
     }
     .layout.show.constshow .constant-sidebar {
-      height: 478px;
+      height: 435px;
       overflow-x: hidden;
       position: absolute;
       left: -20.9%;
@@ -188,7 +188,7 @@
     }
     .layout.hide.constshow .constant-sidebar, .layout.hide.settinghide .setting-sidebar {
       left: -20.9%;
-      height: 478px;
+      height: 435px;
       width: 215px;
       overflow-x: hidden;
       position: absolute;
@@ -201,7 +201,7 @@
   .layout.consthide .constant-sidebar li, .layout.constshow .constant-sidebar li,  .layout.settinghide .setting-sidebar li, .layout.settingshow .setting-sidebar li {
     border: none;
     margin: 3px 0;
-    padding: 10px 10px 10px 15px;
+    padding: 10px 15px 10px 20px;
   }
   .layout.consthide .constant-sidebar li:hover, .layout.settingshow .setting-sidebar li:hover {
     background-color: rgb(28, 74, 178);
