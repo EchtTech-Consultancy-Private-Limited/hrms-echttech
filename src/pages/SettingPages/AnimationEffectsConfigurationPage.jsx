@@ -1,12 +1,14 @@
-import React from 'react'
-import AnimationEffectsConfigurationComponent from '../../components/Settings/AnimationEffectsConfigurationComponent'
+import React from "react";
+import AnimationEffectsConfigurationComponent from "../../components/Settings/AnimationEffectsConfigurationComponent";
 
 const AnimationEffectsConfigurationPage = () => {
   return (
-    <div>
-      <AnimationEffectsConfigurationComponent />
+    <div className="content-mid">
+      <div id="dashboard" className="px-5 py-12 right-const-structure">
+        <AnimationEffectsConfigurationComponent />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default AnimationEffectsConfigurationPage
+export default AnimationEffectsConfigurationPage;
