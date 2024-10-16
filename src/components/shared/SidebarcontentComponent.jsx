@@ -14,20 +14,19 @@ import { useState, SyntheticEvent } from 'react';
 import { DASHBOARD_SIDEBAR_BOTTOM_LINKS, DASHBOARD_SIDEBAR_LINKS } from '../../lib/constants'
 
 
-
-const Accordion = styled((props: AccordionProps) => (
+const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
-))(({ theme }) => ({
-  border: `1px solid ${theme.palette.divider}`,
-  "&:not(:last-child)": {
-    borderBottom: 0,
-  },
-  "&::before": {
-    display: "none",
-  },
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
 }));
 
-const AccordionSummary = styled((props: AccordionSummaryProps) => (
+const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
     expandIcon={
       <ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem", color: "white" }} />
@@ -56,10 +55,9 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 export default function SidebarcontentComponent({consttoggleClass, toggleClass, isToggled, handleSettingSidebar, constisToggled, isSettingactive, setIsSettingactive}) {
   const [expanded, setExpanded] = useState('panel1');
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
-  const handleChange =
-    (panel) => (event: SyntheticEvent, newExpanded: Boolean) => {
-      setExpanded(newExpanded ? panel : false);
-    };
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
 
   return (
     <>
@@ -209,7 +207,6 @@ export default function SidebarcontentComponent({consttoggleClass, toggleClass, 
         <AccordionDetails className='parent-all-ul'>
           <ul className='all-ul'>
             {link.submenu.map((subLink) => (
-              
               <li><Link to={subLink.path}>{subLink.label}</Link></li>
             ))}
           </ul>

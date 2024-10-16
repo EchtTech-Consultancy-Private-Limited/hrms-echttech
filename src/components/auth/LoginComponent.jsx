@@ -15,7 +15,7 @@ import { decode } from 'string-encode-decode';
 
 
 const LoginComponent = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loggedinType, setOTP] = useState('');
@@ -23,13 +23,17 @@ const LoginComponent = () => {
     const [showEmailInput, setShowEmailInput] = useState(false);
     const [isClosed, setIsClosed] = useState(false);
     const [showOtpInput, setShowOtpInput] = useState(false);
+    const [selectedLanguage, setSelectedLanguage] = useState('en');
     const navigate = useNavigate();
-    const [captchaCode, setCaptchaCode] = useState('');
-    const [generatedCaptcha, setGeneratedCaptcha] = useState('');
     const { register, handleSubmit,handleSubmitveryfy, formState: { errors } } = useForm();
     const alert = useAlert();
     const dispatch = useDispatch();
-
+    
+    const handleLanguageChange = (e) => {
+      const selectedLang = e.target.value;
+      setSelectedLanguage(selectedLang); // update state
+      i18n.changeLanguage(selectedLang); // change the language
+    };
 
   const { isAuthenticated, error, message, loading, user } = useSelector(state => state.auth);
     //const redirect = location.search ? location.search.split('=')[1] : '/'
@@ -280,7 +284,7 @@ const LoginComponent = () => {
                 <div className='flex items-center' >
                    <HiChevronDoubleRight className='text-white mt-1'/>
 
-                   <h2 className='text-white underline font-bold' >Learn more about us</h2>
+                   <h2 className='text-white underline font-bold' >{t('learn_more_about_us')}</h2>
 
                 </div>
                 <h4 className=" text-white font-bold">
@@ -295,17 +299,13 @@ const LoginComponent = () => {
         </div>
         <select
           className=" absolute top-1 right-4 w-[7%]  border-2 border-blue-500 rounded-lg"
-          onChange={(e) => console.log(e.target.value)} // Handle language selection change
-        >
+          value={selectedLanguage} 
+          onChange={handleLanguageChange}>
           <option value="en">English</option>
           <option value="hi">Hindi</option>
         </select>
-        
       </div>
-    
-      
     </div>
-    
   );
 };
 
