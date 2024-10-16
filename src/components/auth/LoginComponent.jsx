@@ -10,8 +10,6 @@ import { useTranslation } from "react-i18next";
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux'
 import { login, clearErrors } from '../../reduxapis/actions/loginAction';
-import { FaLanguage } from "react-icons/fa";
-import { decode } from 'string-encode-decode';
 
 
 const LoginComponent = () => {
@@ -61,6 +59,11 @@ const LoginComponent = () => {
         }else{
           setShowOtpInput(false)
         }
+      // if (validateCaptcha(e.captcha)) {
+       
+      // } else {
+      //   alert.error('Captcha Not Matched');
+      // }
   };
   const onButtonClick = (btnValue) => {
     dispatch(ShowLoading());
@@ -184,7 +187,7 @@ const LoginComponent = () => {
                               message: 'captcha must be at least 6 characters long.'
                             },
                             pattern: {
-                              value: /^\d{6}$/,
+                              value: /^[a-zA-Z0-9]{6}$/,
                               message: 'The input is not a valid captcha!'
                             }
                           })}

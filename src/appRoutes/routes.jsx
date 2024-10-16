@@ -116,7 +116,5 @@ export default function Router () {
             ],
         },
         { path: "*", element: <Navigate to="/page404" replace={true} /> },
-
     ])
-
 }
