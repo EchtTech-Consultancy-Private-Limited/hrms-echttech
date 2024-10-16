@@ -1,7 +1,7 @@
 /* src/MultiStepForm.css */
 .form-container {
     margin: auto;
-    padding: 25px;
+    /* padding: 25px; */
     background: white;
     
   }
@@ -132,3 +132,19 @@
   .button-bottom{
     align-items: center;
   }
+  /* styling for forms */
+  .both-address{
+    display: flex;
+  }
+  .both-address .reg-add, .both-address .corp-add{
+    width: 50%;
+  }
+  .both-address .reg-add{
+    border-right: 1px solid #000;
+  }
+  .same-add {
+    margin-right: 10px;
+}
+.same-add input{
+  margin-right: 5px;
+}

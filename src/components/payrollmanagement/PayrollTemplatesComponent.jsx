@@ -90,8 +90,8 @@ const PayrollTemplatesComponent = () => {
           </div>
 
           <div className="template-section ">
-            <div className="flex justify-between pb-3 pt-5 w-full text-black">
-              <h1 className="text-2x font-bold">Earning Salary</h1>
+            <div className="flex justify-between p-4 w-full text-black">
+              <h1 className="text-lg  font-bold">Earning Salary</h1>
             </div>
             <hr className="mb-6" />
             {/* Department Form Section */}
@@ -211,8 +211,8 @@ const PayrollTemplatesComponent = () => {
           </div>
 
           <div className="template-section ">
-            <div className="flex justify-between pb-3 pt-5 w-full text-black">
-              <h1 className="text-2x font-bold">Deduction Salary</h1>
+            <div className="flex justify-between p-4 w-full text-black">
+              <h1 className="text-lg  font-bold">Deduction Salary</h1>
             </div>
             <hr className="mb-6" />
             {/* Department Form Section */}
@@ -277,8 +277,8 @@ const PayrollTemplatesComponent = () => {
           </div>
 
           <div className="template-section ">
-            <div className="flex justify-between pb-3 pt-5 w-full text-black">
-              <h1 className="text-2x font-bold">Benefits Salary</h1>
+            <div className="flex justify-between p-4 w-full text-black">
+              <h1 className="text-lg  font-bold">Benefits Salary</h1>
             </div>
             <hr className="mb-6" />
             {/* Department Form Section */}
@@ -329,9 +329,9 @@ const PayrollTemplatesComponent = () => {
             </div>
           </div>
 
-          <div className="total-salary-section ">
-            <div className="flex justify-between pb-3 pt-5 w-full text-black">
-              <h1 className="text-2x font-bold">Earning Salary</h1>
+          <div className="total-salary-section template-section ">
+            <div className="flex justify-between p-4 w-full text-black">
+              <h1 className="text-lg  font-bold">Earning Salary</h1>
             </div>
             <hr className="mb-6" />
             {/* Department Form Section */}
@@ -400,7 +400,7 @@ const PayrollTemplatesComponent = () => {
         <div className="w-full department-list mt-5">
           <div className=" dep-list-con mx-auto p-6 border rounded-lg bg-white">
             <div className="flex justify-between pb-3 w-full text-black items-center">
-              <h1 className="text-lg font-bold mb-2">Template List</h1>
+              <h1 className="text-lg  font-bold mb-2">Template List</h1>
               {/* <button className=" add-btn main-bg-color rounded color-white flex items-center justify-between">
                 <AiOutlinePlus className="color-white" />
                 Add New

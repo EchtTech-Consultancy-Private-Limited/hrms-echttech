@@ -300,7 +300,7 @@ const AnnouncementComponent = () => {
                   />
                 </div>
               </div>
-              <div className="add-reset-btns flex items-center justify-end pt-4 p-2">
+              <div className="add-reset-btns flex items-center justify-end pt-4 p-6">
                 <button className="mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
                   Save
                 </button>
