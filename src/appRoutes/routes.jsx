@@ -45,12 +45,11 @@ import SystemLogoPage from "../pages/SettingPages/SystemLogoPage";
 import SystemConfigurationPage from "../pages/SettingPages/SystemConfigurationPage";
 import RoleConfigurationPage from "../pages/SettingPages/RoleConfigurationPage";
 import AttendanceConfigurationPage from "../pages/SettingPages/AttendanceConfigurationPage";
-import PayrollSalarySlipLogoPage from "../pages/SettingPages/PayrollSalarySlipLogoPage";
+import LoginMethod from "../pages/SettingPages/LoginMethodPage";
 import RecruitmentConfigurationPage from "../pages/SettingPages/RecruitmentConfigurationPage";
 import EmailNotificationsConfigurationPage from "../pages/SettingPages/EmailNotificationsConfigurationPage";
 import AnimationEffectsConfigurationPage from "../pages/SettingPages/AnimationEffectsConfigurationPage";
 import NotificationPositionConfigurationPage from "../pages/SettingPages/NotificationPositionConfigurationPage";
-import Loader from "../components/shared/Loader";
 import { useSelector } from "react-redux";
 
 export default function Router () {
@@ -102,7 +101,7 @@ export default function Router () {
                     { path:'system-configuration', element:<SystemConfigurationPage />},
                     { path:'role-configuration', element:<RoleConfigurationPage />},
                     { path:'attendance-configuration', element:<AttendanceConfigurationPage />},
-                    { path:'payroll-logo-salaryslip', element:<PayrollSalarySlipLogoPage />},
+                    { path:'login-method', element:<LoginMethod />},
                     { path:'recruitment-configuration', element:<RecruitmentConfigurationPage />},
                     { path:'email-notifications-configuration', element:<EmailNotificationsConfigurationPage />},
                     { path:'animation-effects-configuration', element:<AnimationEffectsConfigurationPage />},

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { HiOutlinePhone, HiOutlineMail, HiOutlineLocationMarker, HiOutlineHome, HiOutlineCalendar } from "react-icons/hi";
 import { FaCity, FaBirthdayCake } from "react-icons/fa";
-import staffprofile from '../../images/female.jpg';
+import staffprofile from '../../assetsechttech/image/female.jpg';
 
 function AccountSettingComponent() {
   const [activeTab, setActiveTab] = useState(1);
