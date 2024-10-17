@@ -41,8 +41,9 @@ const LoginComponent = () => {
 
   const { isAuthenticated, error, message, loading, user } = useSelector(state => state.auth);
     //const redirect = location.search ? location.search.split('=')[1] : '/'
+    
     useEffect(() => {
-      console.log('Brijesh',isAuthenticated)
+      dispatch(ShowLoading());
         if (isAuthenticated) {
             dispatch(HideLoading());
             alert.success(message)
@@ -61,6 +62,7 @@ const LoginComponent = () => {
   const onSubmit = (e) => {
       dispatch(ShowLoading());
       dispatch(login(e.email, btoa(e.password), loggedinType))
+      dispatch(HideLoading());
       if(loggedinType == 'otp'){
           setShowOtpInput(true);
         }else{
@@ -304,11 +306,11 @@ const LoginComponent = () => {
               </form>
               
             )}
-            <div class="text-xs text-center text-gray-600 px-8 pb-2 pt-2">
-  <p>Wed Oct 16, 16:22:39, IST 2024</p>
-  <p>2024 © Echt Tech Consultancy Services Pvt Ltd</p>
-</div>
-                     
+            <div className="text-xs text-center text-gray-600 px-8 pb-2 pt-2">
+              <p>Wed Oct 16, 16:22:39, IST 2024</p>
+              <p>2024 © Echt Tech Consultancy Services Pvt Ltd</p>
+            </div>
+                                
           </div>
           
 

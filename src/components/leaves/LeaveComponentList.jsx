@@ -56,12 +56,13 @@ const LeaveComponentList = () => {
       {/* Top Section for filtering and leave balance */}
       <div className="flex md:flex-row flex-col justify-between items-center gap-x-4 leave-info-container">
         <div className="w-full md:w-1/2 top-section py-6 px-4 border rounded-lg bg-white">
-          <div className="top-head flex justify-between items-center">
+          <div className="top-head flex justify-between items-center items-center">
             <div className="left-part flex justify-between pb-3 w-full">
-              <h1 className="headings">Leaves Information</h1>
+              <h1 className="headings text-lg font-bold">Leaves Information</h1>
             </div>
           </div>
-          <h2 className="text-lg pt-2 border-t font-semibold mb-2">Select Date</h2>
+          <hr class="mb-6"></hr>
+          {/* <h2 className="text-lg pt-2 border-t font-semibold mb-2">Select Date</h2> */}
           <div className="form-labels">
           <div className="flex-gap items-end">
             <div className="first ">
@@ -105,7 +106,7 @@ const LeaveComponentList = () => {
               </button>
             </div>
           </div>
-          <div className="flex pt-1 flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+          <div className="flex p-6 flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
             <div className="w-full md:w-1/2 p-1 border rounded-lg bg-white">
               <h2 className="font-semibold text-sm pb-1">Total Leave</h2>
               <div className="py-2 border-t">

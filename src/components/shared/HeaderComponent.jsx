@@ -30,8 +30,8 @@ const HeaderComponent = () => {
       localStorage.removeItem("token");
       localStorage.removeItem('mid');
       alert.success('Logged out successfully!.')
-      window.location.href = '/login';
-      //navigate('/login');
+      //window.location.href = '/login';
+      navigate('/login');
   }
 
   return (
@@ -151,7 +151,7 @@ const HeaderComponent = () => {
 
                          <NotificationsActiveOutlinedIcon/>
 
-                    <div class="absolute top-0 right-0 w-2.5 h-2.5 bg-red-500 border-2 border-gray-100 dark:border-gray-900 rounded-full"></div>
+                    <div className="absolute top-0 right-0 w-2.5 h-2.5 bg-red-500 border-2 border-gray-100 dark:border-gray-900 rounded-full"></div>
                   </MenuButton>
                 </div>
 
@@ -233,7 +233,7 @@ const HeaderComponent = () => {
                 <div className='' >
                   <MenuButton className="inline-flex items-center w-full justify-center gap-x-1.5 rounded-md  px-3 py-2 text-sm font-semibold text-gray-900   ">
 
-                    <img class="w-8 h-8 rounded-full" src={accountimage} width="32" height="32" alt="User" />
+                    <img className="w-8 h-8 rounded-full" src={accountimage} width="32" height="32" alt="User" />
 
 
                     My Account

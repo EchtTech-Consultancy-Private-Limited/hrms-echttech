@@ -158,8 +158,8 @@ const DesignationComponent = () => {
 
       <div className="department-list mt-5">
         <div className=" mx-auto p-6 border rounded-lg bg-white">
-        <h1 className="text-lg font-bold mb-2">Designation List</h1>
-
+        <h1 className="text-lg font-bold mb-4">Designation List</h1>
+        <hr class="mb-4"></hr>
         <div className='flex justify-between  items-center mb-4' >
             <div className='mob-entries flex items-center'>
                <label className='mb-0 text-sm text-gray-600' htmlFor="#">Show</label>

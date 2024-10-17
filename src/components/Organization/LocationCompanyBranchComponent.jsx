@@ -362,7 +362,7 @@ const LocationCompanyBranchComponent = () => {
               <div className="flex flex-col md:flex-row md:space-x-4 justify-between">
                 
               </div> */}
-              <div className="add-reset-btns flex items-center justify-end pt-4">
+              <div className="add-reset-btns top-border flex items-center justify-end pt-4">
                 <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
                   Save
                 </button>
