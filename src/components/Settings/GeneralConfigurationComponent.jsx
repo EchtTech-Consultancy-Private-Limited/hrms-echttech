@@ -6,7 +6,7 @@ const GeneralConfigurationComponent = () => {
     <div className="top-hdr flex justify-between">
       <h1 className="pb-3 font-bold text-lg">Add New Company</h1>
     </div>
-    <hr class="mb-6"></hr>
+    <hr className="mb-6"></hr>
     <form className="mt-5">
       <div className="form-step">
         <div className="form-labels">

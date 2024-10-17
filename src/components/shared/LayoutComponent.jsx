@@ -65,9 +65,9 @@ const LayoutComponent = () => {
          <div className='absolute setting-sidebar main-bg-color ' >
           <ul>
           {SETTING_SIDEBAR_BOTTOM_LINKS.map((tab) => (
-              <li class="py-2 px-1 flex justify-between my-2 border-b border-white" key={tab.key}>
-                <Link class="text-white no-underline flex items-center" to={tab.path}>
-                    <span class="mr-2">{tab.icon}</span>
+              <li className="py-2 px-1 flex justify-between my-2 border-b border-white" key={tab.key}>
+                <Link className="text-white no-underline flex items-center" to={tab.path}>
+                    <span className="mr-2">{tab.icon}</span>
                     {tab.label}
                 </Link>
               </li>
