@@ -1,6 +1,5 @@
 .mlc-right
 {
-
     background: #174e94;
 }
 .mlc-left
@@ -23,26 +22,21 @@
     background-color: #174e94;
     color: #fff !important;
 }
-
-
 .bg-login-img {
-  
     background-size: cover;
     background-position: center; 
     background-image: url('https://cdn.dribbble.com/users/48830/screenshots/1216892/media/21e8f2d2af06c996e9bb547d78b0f3be.gif');
      /* background-image: url('https://i.makeagif.com/media/12-04-2015/r8lmxe.gif');  */
-
 }
-
 .absolute-eye-pwd {
     position: absolute;
     right: 3%;
     color: grey;
-    bottom: 29%;
+    bottom: 22%;
     z-index: 99;
 }
 
-.mc {
+.mc{
     position: relative;
     min-height: 100vh;
   }
@@ -52,9 +46,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
   }
-
   .cstm-btn-pos
   {
     margin-right: -10px;
@@ -73,12 +65,9 @@
   {
     background-color: #2562b0; 
   }
-
   .login-style h2 , .login-style svg
   {
-    font-size: 14px;
-    
-    
+    font-size: 14px; 
   }
   .login-style h4
   {
@@ -87,23 +76,23 @@
   }
   .login-logo-img
   {
-    width: 46%;
-    height: 38px;
+    width: 100%;
+    height: 42px;
     object-fit: contain;
   }
   #captcha
   {
-    border-radius: 3px;
+    border-radius: 8px;
   }
   .parnt-login-h-438 , .child-login-h-438 
   {
-    height: 438px;
+    height: 494px;
     
   }
   .parnt-login-h-438 
   {
     border-radius: 10px; 
-    height: 438px;
+    height: 494px;
   }
   .child-login-h-438 
   {
@@ -113,29 +102,18 @@
     margin-bottom: 5px;
 }
   #canv{
-    border-radius: 3px;
+    border-radius: 8px;
     margin: 6px 0px 0px 0px;
     padding: 8px 6px 0px 0px;
     height: 35px !important;
-    border: 1px solid #d7d7d7;
+    border: 1px solid #d7d7d794;
   }
-  /* .signin-text
-  {
-    color: #113689;
-    background: #0000ff26;
-    border-radius: 3px;
-    padding: 5px 8px;
-    display: inline-block;
-    font-size: 18px;
-  } */
    .login-style
    {
     padding: 10px;
-    background: #ffffff1c;
+    /* background: #101152bd; */
     border-radius: 12px;
-    margin-top: 24px;
    }
-
   a#reload_href
   {
     cursor: pointer;
@@ -143,7 +121,6 @@
     font-size: 14px;
     font-weight: 600;
   }
-
   .mc-login label
   {
     margin-bottom: 8px;
@@ -151,9 +128,29 @@
   }
   .mc .refresh-custtom-design 
   {
-    /* padding: 0px 8px 0px 8px; */
     margin: 0px 4px;
+    height: 34px;
+    width: 40px;
+    color: #fff;
+    background-color: #3C83F6;
+    padding: 0px 8px 0px 8px;
   }
- 
+  .company_logo_custom img
+  {
+    border-radius: 12px;
+  }
+  .cstm-border-radius
+  {
+    border-radius: 0px 10px 10px 0px;
+  }
+
+  .info-date-time
+  {
+    margin-top: 9%;
+  }
+  .log-style 
+  {
+	background-image: url("../../images/logindesignbg.png");
+  }
 
   
