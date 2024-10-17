@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useState } from "react";
+import ImgUpload from "../Common/ImgUpload";
 
-const SystemLogoComponent = () => {
+  const SystemLogoComponent = ()=>{
   return (
-    <div>
-      SystemLogoComponent
-    </div>
+    <>
+     <ImgUpload/>
+     <ImgUpload/>
+     <ImgUpload/>
+     
+    </>
+    
   )
-}
+};
 
-export default SystemLogoComponent
+export default SystemLogoComponent;
