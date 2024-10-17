@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FaCloudUploadAlt } from "react-icons/fa";
+import ReactQuill from "react-quill"; // Importing the ReactQuill component
 
 const CompanyCreateComponent = () => {
   // Dropdown state
@@ -46,6 +47,21 @@ const CompanyCreateComponent = () => {
   const filteredItemscountry = itemcountry.filter((item) =>
     item.toLowerCase().includes(searchTermcountry.toLowerCase())
   );
+  // Text-Area first
+
+  const [editorContent, setEditorContent] = useState("");
+
+  const handleChange = (content) => {
+    setEditorContent(content);
+  };
+
+  // Text-Area second
+
+  const [editorContentOne, setEditorContentOne] = useState("");
+
+  const handleChangeOne = (content) => {
+    setEditorContentOne(content);
+  };
 
   const Container = styled.div`
     display: flex;
@@ -480,20 +496,19 @@ const CompanyCreateComponent = () => {
               </div>
             </div>
 
-            <div className="justifu-between flex-gap template-sec">
-              <div className="first mb-4">
-                <label
-                  htmlFor=""
-                  className="block text-gray-700 font-bold mb-2"
-                >
-                  Address
-                </label>
-                <textarea
-                  name=""
-                  id=""
-                  className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                ></textarea>
-              </div>
+            <div className="w-full second-child">
+              <label className="block text-gray-700 font-bold mb-2">
+                Address
+                {/* <span className="text-red-500 text-sm ml-1">*</span> */}
+              </label>
+              <ReactQuill
+                value={editorContent}
+                onChange={handleChange}
+                placeholder="Write your Address here..."
+                theme="snow"
+                className=" rounded-lg announcement-quill"
+                style={{ height: "200px" }}
+              />
             </div>
           </div>
         </div>
@@ -686,20 +701,19 @@ const CompanyCreateComponent = () => {
               </div>
             </div>
 
-            <div className="justifu-between flex-gap template-sec">
-              <div className="first mb-4">
-                <label
-                  htmlFor=""
-                  className="block text-gray-700 font-bold mb-2"
-                >
-                  Address
-                </label>
-                <textarea
-                  name=""
-                  id=""
-                  className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                ></textarea>
-              </div>
+            <div className="w-full second-child">
+              <label className="block text-gray-700 font-bold mb-2">
+                Address
+                {/* <span className="text-red-500 text-sm ml-1">*</span> */}
+              </label>
+              <ReactQuill
+                value={editorContentOne}
+                onChange={handleChangeOne}
+                placeholder="Write your Address here..."
+                theme="snow"
+                className=" rounded-lg announcement-quill"
+                style={{ height: "200px" }}
+              />
             </div>
           </div>
         </div>
