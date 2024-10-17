@@ -50,8 +50,11 @@ import RecruitmentConfigurationPage from "../pages/SettingPages/RecruitmentConfi
 import EmailNotificationsConfigurationPage from "../pages/SettingPages/EmailNotificationsConfigurationPage";
 import AnimationEffectsConfigurationPage from "../pages/SettingPages/AnimationEffectsConfigurationPage";
 import NotificationPositionConfigurationPage from "../pages/SettingPages/NotificationPositionConfigurationPage";
+import Loader from "../components/shared/Loader";
+import { useSelector } from "react-redux";
 
 export default function Router () {
+    const { loading } = useSelector((state) => state.alerts);
     
     return useRoutes([
 

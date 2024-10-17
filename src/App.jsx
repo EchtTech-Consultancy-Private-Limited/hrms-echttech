@@ -7,6 +7,8 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import HttpApi from "i18next-http-backend";
 import { useSelector } from "react-redux";
+import Loader from "./components/shared/Loader";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
 //   useEffect(() => {
@@ -30,11 +32,12 @@ function App() {
     react: { useSuspense: false },
     });
   return (
-    <>
-    
-     <Router />
-    
-    </>
+    <div>
+      {/* {loading && <Loader />} */}
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </div>
   );
 }
 export default App;

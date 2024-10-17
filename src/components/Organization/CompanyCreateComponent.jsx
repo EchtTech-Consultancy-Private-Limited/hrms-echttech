@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FaCloudUploadAlt } from "react-icons/fa";
-import ReactQuill from "react-quill"; // Importing the ReactQuill component
+import { HideLoading, ShowLoading } from "../../reduxapis/slice/alertsSlice";
+import ReactQuill from "react-quill";
+import { useDispatch } from "react-redux";
+import InputFiled from "../Common/InputFiled";
 
 const CompanyCreateComponent = () => {
   // Dropdown state
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedItem, setSelectedItem] = useState("Select type");
-
+  const dispatch = useDispatch();
+  //dispatch(ShowLoading());
   // Dropdown items
   const items = [
     "Privileged type",
@@ -130,14 +134,7 @@ const CompanyCreateComponent = () => {
             </div>
 
             <div className="first mb-4">
-              <label htmlFor="" className="block text-gray-700 font-bold mb-2">
-                Company Name
-              </label>
-              <input
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                type="text"
-                placeholder="Company Name"
-              />
+              <InputFiled fileType="text" filedName="companyName" filedplaceholder="Company Name" filedlabelName="Company Name"/>
             </div>
 
             <div className="first mb-4">
