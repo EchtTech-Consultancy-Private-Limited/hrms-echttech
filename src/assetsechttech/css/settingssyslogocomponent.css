@@ -1,0 +1,12 @@
+
+.upload-img-logo-company
+{
+    width: 100%;
+    max-height: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+.width-cstm-for-upload-logosettings
+{
+    width: 50%;
+}
