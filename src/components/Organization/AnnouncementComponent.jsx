@@ -152,7 +152,7 @@ const AnnouncementComponent = () => {
                       />
                     </div>
                     <div className="first mb-4">
-                      <div className="">
+                      <div className="selector-parent">
                         <label className="block text-black font-bold">
                           Company
                           <span className="text-red-500 text-sm ml-1">*</span>

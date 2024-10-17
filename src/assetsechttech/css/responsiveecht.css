@@ -99,7 +99,7 @@
     .layout.hide .left-sidebar {
       width: 7%;
     }
-    .layout.hide.consthide .constant-sidebar{
+    .layout.hide.consthide .constant-sidebar, .layout.hide.settingshow .setting-sidebar {
       left: 7.1% !important;
     }
     .layout.hide .right-dashboard {
@@ -228,6 +228,17 @@
       width: 63% !important;
     }
 
+    .both-address{
+      display: flex;
+      flex-direction: column;
+    }
+    .both-address .reg-add, .both-address .corp-add{
+      width: 100%;
+    }
+    .both-address .reg-add{
+      border: none;
+    }
+
 
     /* ============== */
 
@@ -262,7 +273,7 @@
     .layout.hide .left-sidebar {
       width: 5%;
     }
-    .layout.hide.consthide .constant-sidebar{
+    .layout.hide.consthide .constant-sidebar, .layout.hide.settingshow .setting-sidebar{
       left: 5.1% !important;
     }
     .layout.hide .right-dashboard {
