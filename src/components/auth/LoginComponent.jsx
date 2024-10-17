@@ -11,15 +11,14 @@ import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux'
 import { login, clearErrors } from '../../reduxapis/actions/loginAction';
 import { FaLanguage, FaSync } from "react-icons/fa";
-import { RiSync } from 'react-icons/ri';
-
-// import  earthlogin  from './../../images/earthlogin.png'
+//import  earthlogin  from './../../images/earthlogin.png'
 import  creative1  from './../../images/creative1.png'
 
 
 
 const LoginComponent = () => {
     const { t, i18n } = useTranslation();
+    // const [loading, setLoading] = useState(true);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loggedinType, setOTP] = useState('');
@@ -32,13 +31,12 @@ const LoginComponent = () => {
     const { register, handleSubmit,handleSubmitveryfy, formState: { errors } } = useForm();
     const alert = useAlert();
     const dispatch = useDispatch();
-    
     const handleLanguageChange = (e) => {
       const selectedLang = e.target.value;
       setSelectedLanguage(selectedLang); // update state
       i18n.changeLanguage(selectedLang); // change the language
     };
-
+   
   const { isAuthenticated, error, message, loading, user } = useSelector(state => state.auth);
     //const redirect = location.search ? location.search.split('=')[1] : '/'
     
@@ -348,7 +346,6 @@ const LoginComponent = () => {
           <option value="hi">Hindi</option>
         </select>
       </div>
-      
     </div>
   );
 };
