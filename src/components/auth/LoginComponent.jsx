@@ -96,9 +96,9 @@ const LoginComponent = () => {
   }, []);
   
   return (
-    <div className="mc">
+    <div className="mc mc-login">
       <div className="min-h-screen relative bg-gray-300 border flex items-center bg-login-img">
-        <div className={`parnt-login-h-438 absolute mc-child main-bg-color transition-all duration-500 flex ${isClosed ? 'w-[393px]' : 'w-[786px]'}`}>
+        <div className={`parnt-login-h-438 absolute mc-child main-bg-color transition-all duration-500 flex ${isClosed ? 'w-[376px]' : 'w-[752px]'}`}>
           {/* The Toggle Button */}
           <button
             className="absolute -top-2 -right-2 -mr-4 mt-2 main-bg-color text-white font-bold py-2 px-4 rounded-full focus:outline-none"
@@ -179,12 +179,13 @@ const LoginComponent = () => {
                         {showPassword ?  <IoEyeOutline /> : <GoEyeClosed />}
                       </button>
                     </div>
-                    <div className="pb-1">
-                      <div className='flex items-center h-[42px] mb-3'>
+                    <div className="">
+                      <div className='flex items-center h-[42px] mt-2 mb-3'>
                       <LoadCanvasTemplateNoReload />
 
                         
-                        <FaSync className='flex items-center mx-1 px-2 py-3 font-medium text-blue-700 bg-white border border-black-700 rounded-lg hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2' />
+                        <FaSync className='refresh-custtom-design flex text-4xl items-center bg-white border border-black-700 rounded-lg  focus:ring-2 focus:ring-blue-500 focus:ring-offset-2' />
+                        
                         <input
                           type="text"
                           id="captcha"
@@ -211,7 +212,7 @@ const LoginComponent = () => {
                       type="submit"
                       onClick={() => onButtonClick('normal')}
                       disabled={loading}
-                      className="border rounded-lg text-wrap text-sm mt-2 mb-2 text-black font-bold py-2 px-1 from-blue-300 via-blue-500 to-blue-900 transition duration-300 w-1/2"
+                      className="border rounded-lg text-wrap text-sm text-black font-bold py-2 px-1 from-blue-300 via-blue-500 to-blue-900 transition duration-300 w-1/2"
                     >
                       {/* {loading ? 'Logging in...' : t("login_title")} */}
                       Forget Password
@@ -220,13 +221,13 @@ const LoginComponent = () => {
                       type="submit"
                       onClick={() => onButtonClick('normal')}
                       disabled={loading}
-                      className="login-btn mt-2 mb-2 ml-1 text-sm rounded-lg bg-gradient-to-r text-white font-bold py-2 px-4 from-blue-300 via-blue-500 to-blue-900 transition duration-300 w-1/2"
+                      className="login-btn ml-1 text-sm rounded-lg bg-gradient-to-r text-white font-bold py-2 px-4 from-blue-300 via-blue-500 to-blue-900 transition duration-300 w-1/2"
                     >
                       {loading ? 'Logging in...' : t("login_title")}
                     </button>
                     </div>
                     <Link>
-                        <p className='text-sm signin-text font-bold mt-2' >Sign-in with OTP</p>
+                        <p className='text-sm signin-text font-bold mt-1' >Sign-in with OTP</p>
                       </Link>
                     
                   </>
