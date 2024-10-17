@@ -148,3 +148,7 @@
 .same-add input{
   margin-right: 5px;
 }
+/* Styling for save and reset button */
+.top-section .add-reset-btns.top-border {
+  border-top: 1px solid #113689;
+}

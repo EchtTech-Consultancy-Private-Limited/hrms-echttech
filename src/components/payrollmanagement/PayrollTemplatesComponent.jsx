@@ -385,7 +385,7 @@ const PayrollTemplatesComponent = () => {
                   />
                 </div>
               </div>
-              <div className="add-reset-btns flex items-center justify-end pt-4">
+              <div className="add-reset-btns top-border flex items-center justify-end pt-4">
                 <button className="apply-leave-btn mx-1 bg-blue-500 text-white px-2 py-2 rounded w-full md:w-auto main-bg-color">
                   Save
                 </button>

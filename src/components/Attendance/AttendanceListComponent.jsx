@@ -38,16 +38,17 @@ const AttendanceListComponent = () => {
     <>
       <div className="w-full top-section  p-4 border rounded-lg bg-white">
         <div className="top-head flex justify-between items-center">
-          <div className="left-part flex justify-between pb-3 w-full">
-            <h1 className="headings">Attendance Information</h1>
+          <div className="left-part flex justify-between pb-3 w-full items-center">
+            <h1 className="headings text-lg font-bold">Attendance Information</h1>
             <button className="main-bg-color text-white px-4 py-2 rounded w-full md:w-auto text-sm">
               Add Attendance
             </button>
           </div>
         </div>
-        <h2 className="text-lg pt-2 border-t font-semibold mb-2">
+        <hr class="mb-6"></hr>
+        {/* <h2 className="text-lg pt-2 border-t font-semibold mb-2">
           Select Date
-        </h2>
+        </h2> */}
         <div className="form-labels">
           <div className="flex-gap items-center">
             <div className="first mb-4 ">

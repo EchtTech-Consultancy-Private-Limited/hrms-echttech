@@ -34,12 +34,12 @@
 }
 
 
-.constant-sidebar ul li a
-{
+.constant-sidebar ul li a, .layout.settingshow .setting-sidebar li a {
   font-size: 14px;
   text-decoration: none;
+  width: 100%;
+  padding: 10px 15px 10px 20px;
 }
-
 .consthide .content-mid .div-lr-pad-0
 {
   padding: 10px 0px !important;
@@ -113,7 +113,7 @@ hr.mb-6 {
   /* display: none; */
 }
 .top-head .pb-3, .top-hdr {
-  padding: 10px 20px;
+  padding: 5px 20px;
   color: #113689;
   background-color: #1136892b;
   border-radius: 6px 6px 0 0;

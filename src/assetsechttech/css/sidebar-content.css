@@ -201,7 +201,7 @@
   .layout.consthide .constant-sidebar li, .layout.constshow .constant-sidebar li,  .layout.settinghide .setting-sidebar li, .layout.settingshow .setting-sidebar li {
     border: none;
     margin: 3px 0;
-    padding: 10px 15px 10px 20px;
+    padding: 0 !important;
   }
   .layout.consthide .constant-sidebar li:hover, .layout.settingshow .setting-sidebar li:hover {
     background-color: rgb(28, 74, 178);
