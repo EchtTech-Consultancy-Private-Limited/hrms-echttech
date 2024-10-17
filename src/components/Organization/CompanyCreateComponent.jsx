@@ -1042,7 +1042,7 @@ const CompanyCreateComponent = () => {
     //   <div className="top-hdr flex justify-between">
     //     <h1 className="font-bold text-lg">Company Information</h1>
     //   </div>
-    //   <hr class="mb-6"></hr>
+    //   <hr className="mb-6"></hr>
     //   <form className="mt-0">
     //     <div className="form-step">
     //       <div className="form-labels">

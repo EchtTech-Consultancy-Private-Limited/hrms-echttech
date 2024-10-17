@@ -7,6 +7,7 @@ import {
     REGISTER_USER_SUCCESS,
     REGISTER_USER_FAIL,
     LOAD_USER_SUCCESS,
+    LOGOUT_REQUEST,
     LOGOUT_SUCCESS,
     LOAD_USER_FAIL,
     LOGOUT_FAIL,
@@ -19,6 +20,7 @@ export const authReducer = (state = { user: {} }, action) => {
         case LOGIN_REQUEST:
         case REGISTER_USER_REQUEST:
         case LOAD_USER_REQUEST:
+        case LOGOUT_REQUEST:
             return {
                 loading: true,
                 isAuthenticated: false,

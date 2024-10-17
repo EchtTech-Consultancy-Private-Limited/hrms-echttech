@@ -20,7 +20,7 @@ const RecruitmentConfigurationComponent = () => {
           <label className="mr-2 block text-black font-bold ">Enable Jobs for Employees</label>
          
 
-           <div class="toggle-switch w-12 h-6 flex items-center rounded-full p-1 transition-colors duration-300 ease-in-out bg-gray-300"><div class="bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 ease-in-out translate-x-1"></div></div>
+           <div className="toggle-switch w-12 h-6 flex items-center rounded-full p-1 transition-colors duration-300 ease-in-out bg-gray-300"><div className="bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 ease-in-out translate-x-1"></div></div>
           </div>
          
 

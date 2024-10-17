@@ -6,6 +6,7 @@ import {
     LOAD_USER_REQUEST,
     LOAD_USER_SUCCESS,
     LOAD_USER_FAIL,
+    LOGOUT_REQUEST,
     LOGOUT_SUCCESS,
     LOGOUT_FAIL,
     CLEAR_ERRORS
@@ -61,9 +62,16 @@ export const getuserdetailsbyID =(id) => async(dispatch)=> {
 // Logout user
 export const logout = () => async (dispatch) => {
     try {
-        const { data } = await axiosInatance.post('/v1/admin/logout')
+        dispatch({ type: LOGOUT_REQUEST })
+        const config = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }
+        const { data } = await axiosInatance.post('/v1/admin/logout', config)
         dispatch({
             type: LOGOUT_SUCCESS,
+            payload: data
         })
 
     } catch (error) {
