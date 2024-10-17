@@ -23,6 +23,7 @@
 @import url('../src//assetsechttech//css/leave-information.css');
 @import url('../src//assetsechttech//css/setting-sidebar.css');
 @import url('../src//assetsechttech//css/selectordata.css');
+@import url('../src//assetsechttech//css/settingssyslogocomponent.css');
 
 @import url('../src//assetsechttech//css/responsiveecht.css');
 
@@ -80,3 +81,5 @@ body {
   input {
 	height: 36px;
   }
+
+

@@ -198,9 +198,9 @@ export const SETTING_SIDEBAR_BOTTOM_LINKS = [
     submenu: [], // No submenu for holidays
   },
   {
-    key: 'payroll-logo-salaryslip',
-    label: 'PaySlip Logo',
-		path: '/payroll-logo-salaryslip',
+    key: 'login-method',
+    label: 'Login Method',
+		path: '/login-method',
     icon: <VscSymbolConstant />,
     secondsidebar: 1,
     submenu: [], // No submenu for holidays

@@ -11,12 +11,17 @@ import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux'
 import { login, clearErrors } from '../../reduxapis/actions/loginAction';
 import { FaLanguage, FaSync } from "react-icons/fa";
-//import  earthlogin  from './../../images/earthlogin.png'
-import  creative1  from './../../images/creative1.png'
+import { RiSync } from 'react-icons/ri';
+
+// import  earthlogin  from './../../images/earthlogin.png'
+import  extneww  from '../../assetsechttech/image/extneww.png'
+import  echttechlogo  from '../../assetsechttech/image/echttechlogo.png'
+
 
 
 
 const LoginComponent = () => {
+
     const { t, i18n } = useTranslation();
     // const [loading, setLoading] = useState(true);
     const [email, setEmail] = useState('');
@@ -94,11 +99,12 @@ const LoginComponent = () => {
   useEffect(() => {
     loadCaptchaEnginge(6); // Generate a 6-character CAPTCHA
   }, []);
+
   
   return (
-    <div className="mc">
+    <div className="mc mc-login">
       <div className="min-h-screen relative bg-gray-300 border flex items-center bg-login-img">
-        <div className={`parnt-login-h-438 absolute mc-child main-bg-color transition-all duration-500 flex ${isClosed ? 'w-[393px]' : 'w-[786px]'}`}>
+        <div className={`parnt-login-h-438 absolute mc-child main-bg-color transition-all duration-500 flex ${isClosed ? 'w-[376px]' : 'w-[752px]'}`}>
           {/* The Toggle Button */}
           <button
             className="absolute -top-2 -right-2 -mr-4 mt-2 main-bg-color text-white font-bold py-2 px-4 rounded-full focus:outline-none"
@@ -121,9 +127,12 @@ const LoginComponent = () => {
                 {!showEmailInput && !showOtpInput ? (  // Hide login form if OTP input is shown
                   <>
                    {/* <h2 className="text-2xl font-bold mb-1">{t('login_title')}</h2> */}
-                   <div className='flex justify-between items-center pb-2' >
-                   <p className='mb-1 text-semi-bold text-gray-500 text-xs underline'>Learn more about us</p>
-                   <img className='login-logo-img' src="https://www.echttech.com/assets/images/logo-light.png" alt="" />
+                   <div className='flex justify-center mb-4' >
+                   <img className='login-logo-img text-center' src={echttechlogo} alt="" />
+
+                   </div>
+                   <div className='flex justify-between items-center pb-1' >
+                   {/* <p className=' text-bold text-gray-800 text-xs underline'>Learn more about us</p> */}
                    </div>
                    
                    {/* <p className='mb-1 '>Email/Employee ID</p> */}
@@ -131,12 +140,12 @@ const LoginComponent = () => {
                    
                     {/* Email and Password Fields */}
                     <div className="pb-1">
-                      <label htmlFor="email" className="block text-black font-bold text-[14px]">{t('email')}</label>
+                      <label htmlFor="email" className="block text-black font-bold text-[14px]">{t('Email / Emp ID')}</label>
                       <input
                         type="email"
                         id="email"
                         className="w-full px-3 py-2 border-slate-200 text-gray-700 focus:border-blue-500 rounded-lg"
-                        placeholder={t('email/emp ID')}
+                        placeholder={t('Enter Your Email / Emp ID')}
                         {...register('email', {
                           required: 'Please input your email!',
                           pattern: {
@@ -145,17 +154,17 @@ const LoginComponent = () => {
                           }
                         })}
                       />
-                      {errors.email && <p className="text-red-500 text-xs transition-all duration-500">{errors.email.message}</p>}
+                      {errors.email && <p className= "error-message text-red-500 text-xs"   >{errors.email.message}</p>}
                     </div>
                     <div className="pb-1 relative">
-                      <label htmlFor="password" className="block text-black font-bold text-[14px]">{t('password')}</label>
+                      <label htmlFor="password" className="block text-black font-bold text-[14px]">{t('Password')}</label>
                       <input
                         type={showPassword ? 'text' : 'password'}
                         id="password"
                         name="password"
                         onChange={(e) => setPassword(e.target.value)}
                         className="w-full px-3 py-2 border-slate-200 text-gray-700 focus:border-blue-500 rounded-lg"
-                        placeholder={t('password')}
+                        placeholder={t('Enter Your Password')}
                         {...register('password', {
                           required: 'Please input your password!',
                           minLength: {
@@ -168,7 +177,7 @@ const LoginComponent = () => {
                           // }
                         })}
                       />
-                      {errors.password && <p className="text-red-500 text-xs transition-all duration-500">{errors.password.message}</p>}
+                      {errors.password && <p className="text-red-500 text-xs error-message">{errors.password.message}</p>}
                       {/* <button type="submit" className='text-sm signin-text font-bold mt-2' onClick={() => onButtonClick('otp')}>{t('Sign_in_with_OTP')}</button> */}
                      
                       <button
@@ -179,17 +188,17 @@ const LoginComponent = () => {
                         {showPassword ?  <IoEyeOutline /> : <GoEyeClosed />}
                       </button>
                     </div>
-                    <div className="pb-1">
-                      <div className='flex items-center h-[42px] mb-3'>
+                    <div className="">
+                      <div className='flex items-center h-[42px] mt-2 mb-3'>
                       <LoadCanvasTemplateNoReload />
 
+                        <FaSync className='refresh-custtom-design flex text-3xl p-1 items-center bg-white border border-black-700 rounded-lg  focus:ring-2 focus:ring-blue-500 focus:ring-offset-2' />
                         
-                        <FaSync className='flex items-center mx-1 px-2 py-3 font-medium text-blue-700 bg-white border border-black-700 rounded-lg hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2' />
                         <input
                           type="text"
                           id="captcha"
                           name="captcha"
-                          className="w-full border px-3 py-2 border-slate-200 text-gray-700 focus:border-blue-500 rounded-lg"
+                          className="w-1/2 border px-3 py-2 border-slate-200 text-gray-700 focus:border-blue-500 rounded-lg"
                           placeholder="Captcha"
                           {...register('captcha', {
                             required: 'Please input your captcha!',
@@ -206,29 +215,30 @@ const LoginComponent = () => {
                       </div>
                       {/* {errors.captcha && <p className="text-red-500 text-xs transition-all duration-500">{errors.captcha.message}</p>} */}
                     </div>
-                    <div className='flex justify-between' >
+                    <div className='flx justify-between' >
+                    
                     <button
                       type="submit"
                       onClick={() => onButtonClick('normal')}
                       disabled={loading}
-                      className="border rounded-lg text-wrap text-sm mt-2 mb-2 text-black font-bold py-2 px-1 from-blue-300 via-blue-500 to-blue-900 transition duration-300 w-1/2"
+                      className="w-full login-btn py-2  text-sm rounded-lg bg-gradient-to-r text-white font-bold  px-4 from-blue-300 via-blue-500 to-blue-900 transition duration-300 w-1/2"
+                    >
+                      {loading ? 'Logging in...' : t("Login")}
+                    </button>
+                    <button
+                      type="submit"
+                      onClick={() => onButtonClick('normal')}
+                      disabled={loading}
+                      className=""
                     >
                       {/* {loading ? 'Logging in...' : t("login_title")} */}
-                      Forget Password
-                    </button>
-                    <button
-                      type="submit"
-                      onClick={() => onButtonClick('normal')}
-                      disabled={loading}
-                      className="login-btn mt-2 mb-2 ml-1 text-sm rounded-lg bg-gradient-to-r text-white font-bold py-2 px-4 from-blue-300 via-blue-500 to-blue-900 transition duration-300 w-1/2"
-                    >
-                      {loading ? 'Logging in...' : t("login_title")}
+                      {/* Forget Password */}
                     </button>
                     </div>
-                    <Link>
-                        <p className='text-sm signin-text font-bold mt-2' >Sign-in with OTP</p>
-                      </Link>
-                    
+                      <div className='flex items-center' >
+                         <button className='text-sm signin-text font-bold w-1/2 mt-3 border rounded-lg text-wrap text-sm text-black font-bold py-2 px-1 mr-2' >Sign In with OTP</button>
+                         <button className='text-sm signin-text font-bold w-1/2 mt-3 border rounded-lg text-wrap text-sm text-black font-bold py-2 px-1' >Forget Password</button>
+                      </div>
                   </>
                 ) : null} 
                 {/* Only show login form if OTP input is NOT shown */}
@@ -267,7 +277,6 @@ const LoginComponent = () => {
                 </p>
               )}
               </div>
-             
             </div>
 
             {/* Show this div on click of signinOtp */}
@@ -304,8 +313,8 @@ const LoginComponent = () => {
               </form>
               
             )}
-            <div className="text-xs text-center text-gray-600 px-8 pb-2 pt-2">
-              <p>Wed Oct 16, 16:22:39, IST 2024</p>
+            <div className="info-date-time text-xs text-center text-gray-600 px-8 pb-2 pt-2">
+              <p>Wed Oct 17, 16:22:39, IST 2024</p>
               <p>2024 © Echt Tech Consultancy Services Pvt Ltd</p>
             </div>
                                 
@@ -314,29 +323,22 @@ const LoginComponent = () => {
 
           {/* Right Box (red section) */}
           
-          <div className={`main-bg-color flex justify-between overflow-hidden rounded-lg shadow-lg transition-all duration-500 ${isClosed ? 'max-w-0 overflow-hidden' : 'max-w-[50%]'}`}>
+          <div className={`main-bg-color flex justify-between overflow-hidden cstm-border-radius shadow-lg transition-all duration-500 ${isClosed ? 'max-w-0 overflow-hidden' : 'max-w-[50%]'}`}>
              
-            <div className='p-8'>
+            <div className='p-8 log-style flex items-center justify-center'>
               <div className='login-style' >
-                {/* <div className='flex items-center' >
-                   <HiChevronDoubleRight className='text-white mt-1'/>
-
-
-                </div> */}
-                
-                <img src={creative1} alt="" />
-                <h4 className=" text-white font-bold">
+                <div className='company_logo_custom' >
+                <img src={extneww} alt="" />
+                </div>
+                <h4 className=" text-black font-bold mt-2 mb-1">
                   Efficiently Organize and <span className='font-bold'>Handle Tasks .</span>
                 </h4>
-                <p className='text-white'>
+                <p className='text-black'>
                   Manage your HR tasks efficiently. See how our innovative works.
                 </p>
               </div>
-     
             </div>
-            
           </div>
-          
         </div>
         <select
           className=" absolute top-1 right-4 w-[7%]  border-2 border-blue-500 rounded-lg"
