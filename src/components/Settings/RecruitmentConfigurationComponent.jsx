@@ -1,7 +1,14 @@
 import React, { useState } from "react";
+import Selector from "../Common/Selector";
+import ImgUpload from "../Common/ImgUpload";
 
 const RecruitmentConfigurationComponent = () => {
   const [isJobsEnabled, setIsJobsEnabled] = useState(false);
+  const [image2, setImage2] = useState(null);
+  const selectorData = [
+    { name: "Afghanistan", cca2: "AF", flag: "🇦🇫", code: "93" },
+    { name: "India", cca2: "IN", flag: "🇮🇳", code: "91" },
+  ];
 
   const handleToggle = () => {
     setIsJobsEnabled((prevState) => !prevState);
@@ -20,16 +27,41 @@ const RecruitmentConfigurationComponent = () => {
     }
   };
 
+  const handleFileChange2 = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const validTypes = ["image/jpeg", "image/png", "image/gif"];
+      if (validTypes.includes(file.type)) {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          setImage2(reader.result);
+        };
+        reader.readAsDataURL(file);
+      } else {
+        alert("Please upload a valid image file (gif, png, jpg, jpeg).");
+      }
+    }
+  };
+
+  const handleDrop2 = (e) => {
+    e.preventDefault();
+    const files = e.dataTransfer.files;
+    if (files.length > 0) {
+      const file = files[0];
+      handleFileChange2({ target: { files: [file] } });
+    }
+  };
+
   return (
     <div className="flex flex-col items-center p-6 space-y-6">
       {/* First Card: Recruitment Configuration */}
-      <div className="bg-white rounded-lg shadow-lg p-4 w-full ">
-        <h2 className="text-lg font-semibold mb-4">
-          Recruitment Configuration
-        </h2>
-        <hr className="mb-4" />
+      <div className="bg-white rounded-lg shadow-lg w-full ">
+       <div className="top-hdr flex justify-between">
+          <h1 className="font-bold text-lg">Login Method</h1>
+        </div>
+        <hr className="mb-6"></hr>
         {/* Toggle Switch */}
-        <div className="flex items-center mb-4">
+        <div className="flex items-center mb-4 p-4">
           <div className="w-1/2">
             <label className="mr-2 block text-black font-bold ">
               Enable Jobs for Employees
@@ -47,50 +79,40 @@ const RecruitmentConfigurationComponent = () => {
             >
               Job Application File Format
             </label>
-            <select
-              id="fileFormat"
-              className="border border-gray-300 rounded-lg w-1/2"
-            >
-              <option value="">Choose a format</option>
-              <option value="doc">DOC</option>
-              <option value="jpeg">JPEG</option>
-              <option value="pdf">PDF</option>
-              <option value="excel">Excel</option>
-              <option value="txt">TXT</option>
-            </select>
+
+            <div className="relative  group">
+                  <Selector selectorData={selectorData} />
+                </div>
           </div>
         </div>
       </div>
 
       {/* Second Card: Job Listing (Logo Frontend) */}
-      <div className="bg-white rounded-lg shadow-lg p-4 w-full">
-        <h2 className="text-lg font-semibold mb-4">
-          Job Listing (Logo Frontend)
-        </h2>
-        <hr className="mb-4" />
-        {/* Logo Content Here */}
+      <div className="bg-white rounded-lg shadow-lg  w-full">
+      <div className="top-hdr flex justify-between">
+          <h1 className="font-bold text-lg">System Logo</h1>
+        </div>
+        <hr className="mb-6"></hr>
+        
         <div className="flex items-center mb-4">
-          <div className="w-1/2">
-            <label className="mr-2 block text-black font-bold ">
-              Logo
-            </label>
-            <div className="browse-image-btn  flex items-center rounded-full p-1 relative">
-              {/* Attach a browse button here which will on upload show image preview which is small of 200px rounded-lg */}
-              <input
-        type="file"
-        accept="image/*"
-        onChange={handleImageUpload}
-        className="manage-img-location r-0"
-      />
-      {/* Image preview */}
-      {imagePreview && (
-        <img
-          src={imagePreview}
-          alt="Preview"
-          className="absolute top-0 left-0 w-50 h-50 rounded-lg object-cover"
-          style={{ width: '50px', height: '50px' }} // Small preview size
-        />
-      )}
+          <div className="w-full">
+            <div className=" system-log-catch">
+              <div className="bg-white rounded-lg p-4">
+                <label htmlFor="text-lg mb-4 font-exrabold">Logo</label>
+                <ImgUpload
+                  className="text-lg mb-4 font-bold"
+                  fileID="3setlogo"
+                  labelName=""
+                  handleFileChange={handleFileChange2}
+                  image={image2}
+                  handleDrop={handleDrop2}
+                />
+                <div className="add-reset-btns flex items-center justify-end">
+                  <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
+                    Save
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ const ImgUpload = ({fileID, labelName, handleFileChange, image, handleDrop}) => 
   
 
   return (
-    <div className="rounded-lg p-4 bg-white" >
+    <div className="rounded-lg py-4 bg-white" >
       <h2 className="text-3xl font-semibold " >{labelName}</h2>
       <div className="bg-white w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

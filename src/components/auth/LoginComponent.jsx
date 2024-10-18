@@ -16,6 +16,7 @@ import { RiSync } from 'react-icons/ri';
 // import  earthlogin  from './../../images/earthlogin.png'
 import  extneww  from '../../assetsechttech/image/extneww.png'
 import  echttechlogo  from '../../assetsechttech/image/echttechlogo.png'
+import  bluedesignlogin  from '../../assetsechttech/image/bluedesignlogin.png'
 
 
 
@@ -71,11 +72,6 @@ const LoginComponent = () => {
         }else{
           setShowOtpInput(false)
         }
-      // if (validateCaptcha(e.captcha)) {
-       
-      // } else {
-      //   alert.error('Captcha Not Matched');
-      // }
   };
   const onButtonClick = (btnValue) => {
     dispatch(ShowLoading());
@@ -99,8 +95,6 @@ const LoginComponent = () => {
   useEffect(() => {
     loadCaptchaEnginge(6); // Generate a 6-character CAPTCHA
   }, []);
-
-  
   return (
     <div className="mc mc-login">
       <div className="min-h-screen relative bg-gray-300 border flex items-center bg-login-img">
@@ -156,14 +150,15 @@ const LoginComponent = () => {
                       />
                       {errors.email && <p className= "error-message text-red-500 text-xs"   >{errors.email.message}</p>}
                     </div>
-                    <div className="pb-1 relative">
+                    <div className="pb-1 relative ">
                       <label htmlFor="password" className="block text-black font-bold text-[14px]">{t('Password')}</label>
+                      
                       <input
                         type={showPassword ? 'text' : 'password'}
                         id="password"
                         name="password"
                         onChange={(e) => setPassword(e.target.value)}
-                        className="w-full px-3 py-2 border-slate-200 text-gray-700 focus:border-blue-500 rounded-lg"
+                        className="w-full px-3 py-2 border-slate-200 text-gray-700 focus:border-blue-500 rounded-lg "
                         placeholder={t('Enter Your Password')}
                         {...register('password', {
                           required: 'Please input your password!',
@@ -177,6 +172,8 @@ const LoginComponent = () => {
                           // }
                         })}
                       />
+                      
+                      
                       {errors.password && <p className="text-red-500 text-xs error-message">{errors.password.message}</p>}
                       {/* <button type="submit" className='text-sm signin-text font-bold mt-2' onClick={() => onButtonClick('otp')}>{t('Sign_in_with_OTP')}</button> */}
                      

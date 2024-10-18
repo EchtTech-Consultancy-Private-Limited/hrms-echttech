@@ -4,11 +4,11 @@ const GeneralConfigurationComponent = () => {
   return (
     <div className="form-container shadow radius">
     <div className="top-hdr flex justify-between">
-      <h1 className="pb-3 font-bold text-lg">Add New Company</h1>
+      <h1 className="font-bold text-lg">Add New Company</h1>
     </div>
     <hr className="mb-6"></hr>
     <form className="mt-5">
-      <div className="form-step">
+      <div className="">
         <div className="form-labels">
           <div className="row first-row flex items-center flex-wrap justify-start md:space-x-3 justify-between flex-gap">
             <div className="first mb-4">
@@ -24,9 +24,6 @@ const GeneralConfigurationComponent = () => {
                 placeholder="Echt Tech Consultancy Pvt. Ltd."
               />
             </div>
-
-            
-
             <div className="first mb-4">
               <label
                 htmlFor=""
@@ -156,10 +153,7 @@ const GeneralConfigurationComponent = () => {
            
             </div>
           </div>
-
-         
-        
-        <div className="button mt-10 flex justify-between">
+        <div className="button px-6 pb-6">
 
           <div className="add-reset-btns flex items-center justify-end">
             <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">

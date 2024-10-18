@@ -45,17 +45,18 @@ const AttendanceConfigurationComponent = () => {
 
   return (
     <>
-      <div className="container mx-auto p-6 bg-white rounded-lg">
-        <h1 className="my-3 text-lg font-bold">Attendance Configuration</h1>
+      <div className=" bg-white rounded rounded-lg top-head">
+        <h2 className=" text-lg font-bold pb-3">Attendance Configuration</h2>
         <hr className="mb-6" />
         {/* Grid layout with only two items */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
           {titles.map((title, index) => (
             <GridItem key={index} index={index} title={title} />
           ))}
+          
         </div>
         <div className="right-btn">
-          <div className="add-reset-btns flex items-center mb-4">
+          <div className="add-reset-btns justify-end flex items-center pr-4 pb-4">
             <button className="mx-1 main-bg-color bg-blue-500 text-white px-2 py-2 rounded w-full md:w-auto">
               Save
             </button>
@@ -64,6 +65,7 @@ const AttendanceConfigurationComponent = () => {
             </button>
           </div>
         </div>
+        
       </div>
     </>
   );

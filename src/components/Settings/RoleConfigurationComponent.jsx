@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const RoleConfigurationComponent = () => {
   // State to manage switch buttons
@@ -26,12 +26,12 @@ const RoleConfigurationComponent = () => {
         {/* Added transition here */}
         <div
           className={`toggle-switch w-12 h-6 flex items-center rounded-full p-1 transition-colors duration-300 ease-in-out ${
-            switches[index] ? 'bg-blue-500' : 'bg-gray-300'
+            switches[index] ? "bg-blue-500" : "bg-gray-300"
           }`}
         >
           <div
             className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 ease-in-out ${
-              switches[index] ? 'translate-x-6' : 'translate-x-1'
+              switches[index] ? "translate-x-6" : "translate-x-1"
             }`}
           ></div>
         </div>
@@ -54,10 +54,11 @@ const RoleConfigurationComponent = () => {
   return (
     <>
       {/* Create it here */}
-      <div className="container mx-auto p-6 bg-white rounded rounded-lg">
-        <h1 className="my-3 text-lg font-bold">Role Configuration</h1>
+      <div className=" bg-white rounded rounded-lg top-head">
+        <h2 className=" text-lg font-bold pb-3">Role Configuration</h2>
         <hr className="mb-6" />
         {/* Responsive grid layout */}
+        <div className="p-4" >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Grid 1 */}
           <div>
@@ -73,15 +74,17 @@ const RoleConfigurationComponent = () => {
           </div>
         </div>
         <div className="right-btn">
-                  <div className="add-reset-btns flex items-center mb-4">
-                    <button className=" mx-1 main-bg-color bg-blue-500 text-white px-2 py-2 rounded w-full md:w-auto ">
-                      Save
-                    </button>
-                    <button className=" bg-gray-400 text-white px-2 py-2 rounded w-full md:w-auto">
-                      Reset
-                    </button>
-                  </div>
-                </div>
+          <div className="add-reset-btns flex justify-end items-center">
+            <button className=" mx-1 main-bg-color bg-blue-500 text-white px-2 py-2 rounded w-full md:w-auto ">
+              Save
+            </button>
+            <button className=" bg-gray-400 text-white px-2 py-2 rounded w-full md:w-auto">
+              Reset
+            </button>
+          </div>
+        </div>
+        </div>
+        
       </div>
     </>
   );

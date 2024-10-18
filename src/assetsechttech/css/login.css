@@ -29,11 +29,11 @@
      /* background-image: url('https://i.makeagif.com/media/12-04-2015/r8lmxe.gif');  */
 }
 .absolute-eye-pwd {
-    position: absolute;
-    right: 3%;
-    color: grey;
-    bottom: 22%;
-    z-index: 99;
+  position: absolute;
+  top: 35PX;
+  right: 12px;
+  color: grey;
+  z-index: 99;
 }
 
 .mc{
@@ -150,7 +150,9 @@
   }
   .log-style 
   {
-	background-image: url("../../assetsechttech//image/logindesignbg.png");
+	/* background-image: url("../../assetsechttech//image/logindesignbg.png"); */
+  background-image: url("../../assetsechttech//image/bluedesignlogin.png");
+  background-position: -40px -75px;
   }
 
   

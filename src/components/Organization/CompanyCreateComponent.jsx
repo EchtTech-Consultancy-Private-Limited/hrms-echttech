@@ -185,7 +185,7 @@ const CompanyCreateComponent = () => {
                   Country
                 </label>
 
-                <div className="relative z-10 group">
+                <div className="relative group">
                   <Selector selectorData={selectorData} />
                 </div>
               </div>

@@ -8,7 +8,6 @@ const DepartmentPage = () => {
       <DepartmentComponent />
     </div>
     </div>
-   
   )
 }
 
