@@ -17,7 +17,7 @@
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .left-sidebar-inner .collapse-btn svg {
-  color: #113689;
+  color: var(--primary-color-echttech);
   font-size: 17px;
 }
 .left-sidebar-inner .collapse-btn {
@@ -38,6 +38,12 @@
     .layout.hide .left-sidebar{
       width: 4%;
     }
+    #dashboard-header a {
+      padding: 20% 200% 20% 0%;
+  }
+  #holidays-header a, #constants-header a, #settings-header a{
+    padding: 20% 300% 20% 0%;
+  }
    
    
  

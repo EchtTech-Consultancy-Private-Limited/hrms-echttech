@@ -148,7 +148,10 @@
 .same-add input{
   margin-right: 5px;
 }
+.first.mb-4 input {
+  font-size: 14px !important;
+}
 /* Styling for save and reset button */
 .top-section .add-reset-btns.top-border {
-  border-top: 1px solid #113689;
+  border-top: 1px solid var(--primary-color-echttech);
 }

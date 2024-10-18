@@ -1,71 +1,56 @@
 /* Mobile Phones */
 @media (max-width: 767px) {
-    /* Styles for mobile devices */
-    
-   
-    /* .right-dashboard {
+  /* Styles for mobile devices */
+
+  /* .right-dashboard {
         background-color: #ffffff;
         width: 100%;
     } */
-     .mobile-view-notif
-    {
-       right: -140% !important;
-       
-    }
-    .mobile-view-inf
-    {
-        right: -150% !important;
-
-    }
-     .add-reset-btns
-    {
-        padding-top: 0rem !important;
-    }
-    /* .dep-list-con
+  .mobile-view-notif {
+    right: -140% !important;
+  }
+  .mobile-view-inf {
+    right: -150% !important;
+  }
+  .add-reset-btns {
+    padding-top: 0rem !important;
+  }
+  /* .dep-list-con
     {
         overflow-x: scroll;
     } */
 
-  .mob-entries    
-  {
+  .mob-entries {
     width: 52px;
     padding: 4px;
-    }
-    .mob-search-dc
-    {
-        width: 75px;
-    }
-    .mob-none-entries
-    {
-        display: none;
-    }
-    .esel-entry
-    {
-        padding: 3px 27px 3px 4px;
-    }
-    .ql-container
-    {
-        height: 54% !important;
-    }
-    .custom-width-ann-sd
- {
+  }
+  .mob-search-dc {
+    width: 75px;
+  }
+  .mob-none-entries {
+    display: none;
+  }
+  .esel-entry {
+    padding: 3px 27px 3px 4px;
+  }
+  .ql-container {
+    height: 54% !important;
+  }
+  .custom-width-ann-sd {
     width: 100%;
- }
- .apply-leave-btn
- {
+  }
+  .apply-leave-btn {
     width: 30% !important;
     padding: 3px !important;
     font-size: 11px !important;
- }
- .top-section:last-of-type {
+  }
+  .top-section:last-of-type {
     margin-top: 12px;
   }
-  .sectors-parent 
-  {
+  .sectors-parent {
     flex-direction: column;
   }
-  .sectors-parent .sectors input
-  {
+  .sectors-parent .sectors input {
     width: 100% !important;
   }
   .form-labels .first {
@@ -81,248 +66,274 @@
     display: flex;
     flex-direction: column;
   }
-  .policy-left-fields, .policy-right-fields {
+  .policy-left-fields,
+  .policy-right-fields {
     width: 100%;
   }
+  .both-address {
+    display: flex;
+    flex-direction: column;
   }
-  
-  /* Tablets */
-  @media (min-width: 768px) and (max-width: 1024px) {
-    /* Styles for tablets */
-    .left-sidebar {
-      width: 25%;
-    }
-    .right-dashboard {
-      background-color: #ffffff;
-      width: 75%;
-    }
-    .layout.hide .left-sidebar {
-      width: 7%;
-    }
-    .layout.hide.consthide .constant-sidebar, .layout.hide.settingshow .setting-sidebar {
-      left: 7.1% !important;
-    }
-    .layout.hide .right-dashboard {
-      width: 93%;
-    }
-    .ul-list .ul-parent a {
-      font-size: 14px !important;
-    }
-    .below-content.p-4 {
-      padding: 10px;
-    }
-    .layout.hide .ul-parent svg {
-      font-size: 22px;
-    }
-    .card.relative {
-      margin-bottom: 45px;
-      width: 48%;
-    }
-    .layout.hide .card.relative {
-      margin: 0;
-      width: 23.5%;
-    }
-    .layout.show .high-charts-section {
-      margin-top: 0px;
-    }
-    .layout.hide .high-charts-section {
-      margin-top: 30px;
-    }
-    .high-charts-section .first-chart {
-      width: 100%;
-    }
-    .high-charts-section .second-chart {
-      width: 100%;
-      margin-top: 20px;
-    }
-    
-    .message-section .message-card {
-      width: 48%;
-      margin-bottom: 15px;
-    }
-    .message-section .message-card:last-child{
-      margin-bottom: 0;
-    }
-    .message-section .message-card {
-      width: 100%;
-    }
-    .layout.hide .message-section .message-card.first-msg-card, .layout.hide .message-section .message-card.second-events-card {
-      width: 49%;
-    }
-    .to-do-weather-section .to-do-card-container {
-      width: 100%;
-    }
-    .to-do-weather-section .weather-card-container {
-      width: 100%;
-      margin-top: 30px;
-    }
-    .emp-info-section .time-card, .emp-info-section .emp-info.first {
-      width: 49%;
-    }
-    .emp-info.emp-info.second{
-      background-position: 0px 280px;
-      width: 100%;
-      margin-top: 25px;
-    }
-    .mid-part #time-in p, .mid-part #time-out p {
-      font-size: 14px;
-    }
-    .md\:w-1\/4 {
-      width: 33% !important;
-    }
-    .bottom-section.template-list {
-      padding-bottom: 20px;
-    }
-     label {
-      font-size: 14px;
-    }
-    select, input {
-      text-overflow: ellipsis;
-      font-size: 14px !important;
-    }
-    .form-labels .first {
-      width: 30%;
-      align-self: end;
-      flex: 1 0 auto;
-    }
-    select {
-      height: unset !important;
-      padding: 2px 2px 8px 10px !important;
-    }
-    .field-btn-parent {
-      display: flex;
-      flex-direction: column;
-    }
-    .left-fields {
-      width: 100%;
-    }
-    .department-prnt .first-child .first {
-      width: 49%;
-      margin: 10px 0 !important;
-    }
-    .policy-container {
-      display: flex;
-      flex-direction: column;
-    }
-    .policy-left-fields, .policy-right-fields {
-      width: 100%;
-    }
-    .manage-salary-btn {
-      width: 70%;
-      justify-content: flex-start;
-    }
-    .leave-info-container {
-      display: flex;
-      flex-direction: column !important;
-    }
-    .leave-info-container .top-section {
-      width: 100% !important;
-      margin-top: 10px;
-    }
-    .pay-slip-table {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start !important;
-    }
-    .w-3\/4.apply-leave-modal {
-      width: 63% !important;
-    }
+  .both-address .reg-add,
+  .both-address .corp-add {
+    width: 100%;
+  }
+  .both-address .reg-add {
+    border: none;
+  }
+}
 
-    .both-address{
-      display: flex;
-      flex-direction: column;
-    }
-    .both-address .reg-add, .both-address .corp-add{
-      width: 100%;
-    }
-    .both-address .reg-add{
-      border: none;
-    }
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Styles for tablets */
+  .left-sidebar {
+    width: 25%;
+  }
+  .right-dashboard {
+    background-color: #ffffff;
+    width: 75%;
+  }
+  .layout.hide .left-sidebar {
+    width: 7%;
+  }
+  .layout.hide.consthide .constant-sidebar,
+  .layout.hide.settingshow .setting-sidebar {
+    left: 7.1% !important;
+  }
+  .layout.hide .right-dashboard {
+    width: 93%;
+  }
+  .ul-list .ul-parent a {
+    font-size: 14px !important;
+  }
+  .below-content.p-4 {
+    padding: 10px;
+  }
+  .layout.hide .ul-parent svg {
+    font-size: 22px;
+  }
+  .card.relative {
+    margin-bottom: 45px;
+    width: 48%;
+  }
+  .layout.hide .card.relative {
+    margin: 0;
+    width: 23.5%;
+  }
+  .layout.show .high-charts-section {
+    margin-top: 0px;
+  }
+  .layout.hide .high-charts-section {
+    margin-top: 30px;
+  }
+  .high-charts-section .first-chart {
+    width: 100%;
+  }
+  .high-charts-section .second-chart {
+    width: 100%;
+    margin-top: 20px;
+  }
 
+  .message-section .message-card {
+    width: 48%;
+    margin-bottom: 15px;
+  }
+  .message-section .message-card:last-child {
+    margin-bottom: 0;
+  }
+  .message-section .message-card {
+    width: 100%;
+  }
+  .layout.hide .message-section .message-card.first-msg-card,
+  .layout.hide .message-section .message-card.second-events-card {
+    width: 49%;
+  }
+  .to-do-weather-section .to-do-card-container {
+    width: 100%;
+  }
+  .to-do-weather-section .weather-card-container {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .emp-info-section .time-card,
+  .emp-info-section .emp-info.first {
+    width: 49%;
+  }
+  .emp-info.emp-info.second {
+    background-position: 0px 280px;
+    width: 100%;
+    margin-top: 25px;
+  }
+  .mid-part #time-in p,
+  .mid-part #time-out p {
+    font-size: 14px;
+  }
+  .md\:w-1\/4 {
+    width: 33% !important;
+  }
+  .bottom-section.template-list {
+    padding-bottom: 20px;
+  }
+  label {
+    font-size: 14px;
+  }
+  select,
+  input {
+    text-overflow: ellipsis;
+    font-size: 14px !important;
+  }
+  .form-labels .first {
+    width: 30%;
+    align-self: end;
+    flex: 1 0 auto;
+  }
+  select {
+    height: unset !important;
+    padding: 2px 2px 8px 10px !important;
+  }
+  .field-btn-parent {
+    display: flex;
+    flex-direction: column;
+  }
+  .left-fields {
+    width: 100%;
+  }
+  .department-prnt .first-child .first {
+    width: 49%;
+    margin: 10px 0 !important;
+  }
+  .policy-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .policy-left-fields,
+  .policy-right-fields {
+    width: 100%;
+  }
+  .manage-salary-btn {
+    width: 70%;
+    justify-content: flex-start;
+  }
+  .leave-info-container {
+    display: flex;
+    flex-direction: column !important;
+  }
+  .leave-info-container .top-section {
+    width: 100% !important;
+    margin-top: 10px;
+  }
+  .pay-slip-table {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  .w-3\/4.apply-leave-modal {
+    width: 63% !important;
+  }
 
-    /* ============== */
+  .both-address {
+    display: flex;
+    flex-direction: column;
+  }
+  .both-address .reg-add,
+  .both-address .corp-add {
+    width: 100%;
+  }
+  .both-address .reg-add {
+    border: none;
+  }
 
-    /* .layout.consthide .content-mid .right-const-structure {
+  /* ============== */
+
+  /* .layout.consthide .content-mid .right-const-structure {
       position: absolute;
       width: 75%;
       right: 0;
   } */
+}
 
-
+/* Laptops */
+@media (min-width: 1025px) and (max-width: 1250px) {
+  .w-3\/4.apply-leave-modal {
+    width: 45% !important;
   }
-  
-  /* Laptops */
-  @media (min-width: 1025px) and (max-width: 1250px){
-    .w-3\/4.apply-leave-modal {
-      width: 45% !important;
-    }
 
-    .left-sidebar {
-      width: 24%;
-    }
-    .right-dashboard{
-      width: 76%;
-    }
+  .left-sidebar {
+    width: 24%;
   }
-  @media (min-width: 1025px) and (max-width: 1399px) {
-    .w-3\/4.apply-leave-modal {
-      width: 45% !important;
-    }
+  .right-dashboard {
+    width: 76%;
+  }
 
-    /* Styles for small desktops */
-    .layout.hide .left-sidebar {
-      width: 5%;
-    }
-    .layout.hide.consthide .constant-sidebar, .layout.hide.settingshow .setting-sidebar{
-      left: 5.1% !important;
-    }
-    .layout.hide .right-dashboard {
-      width: 95%;
-    }
-    select, input {
-      font-size: 15px !important;
-    }
-    /* .left-sidebar {
+  .form-labels .first {
+    width: 31% !important;
+  }
+  h1.text-lg.font-bold {
+    font-size: 16px;
+  }
+  .same-add label {
+    font-size: 14px;
+  }
+  .first.mb-4 label {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1399px) {
+  .w-3\/4.apply-leave-modal {
+    width: 45% !important;
+  }
+
+  /* Styles for small desktops */
+  .layout.hide .left-sidebar {
+    width: 5%;
+  }
+  .layout.hide.consthide .constant-sidebar,
+  .layout.hide.settingshow .setting-sidebar {
+    left: 5.1% !important;
+  }
+  .layout.hide .right-dashboard {
+    width: 95%;
+  }
+  select,
+  input {
+    font-size: 15px !important;
+  }
+  /* .left-sidebar {
       width: 20%;
     } */
-    .form-labels .first {
-      width: 24%;
-    }
-    /* .right-dashboard {
+  .form-labels .first {
+    width: 24%;
+  }
+  /* .right-dashboard {
       width: 80%;
     } */
 
-    .high-charts-section .first-chart {
-      width: 49%;
-    }
-    .high-charts-section .second-chart {
-      width: 49%;
-    }
-    /* .form-labels .first {
+  .high-charts-section .first-chart {
+    width: 49%;
+  }
+  .high-charts-section .second-chart {
+    width: 49%;
+  }
+  /* .form-labels .first {
       width: 25%;
     } */
-   /* ========== */
-   
+  /* ========== */
+}
+
+/* Desktops */
+@media (min-width: 1400px) and (max-width: 1599px) {
+  /* Styles for laptops */
+  /* ========== */
+  .w-3\/4.apply-leave-modal {
+    width: 45% !important;
   }
-  
-  /* Desktops */
-  @media (min-width: 1400px) and (max-width: 1599px) {
-    /* Styles for laptops */
-    /* ========== */
-    .w-3\/4.apply-leave-modal {
-      width: 45% !important;
-    }
+}
 
-    }
-  
-  /* Big Desktops */
-  @media (min-width: 1600px) {
-    /* Styles for big desktops */
-    /* ========== */
-    .w-3\/4.apply-leave-modal {
-      width: 40% !important;
-    }
-
-   }
-  
-  
+/* Big Desktops */
+@media (min-width: 1600px) {
+  /* Styles for big desktops */
+  /* ========== */
+  .w-3\/4.apply-leave-modal {
+    width: 40% !important;
+  }
+}
