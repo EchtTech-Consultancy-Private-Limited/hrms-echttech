@@ -87,7 +87,7 @@ const CompanyCreateComponent = () => {
                 Company Type
               </label>
 
-              <div className="relative z-10 group">
+              <div className="relative group">
                 <Selector selectorData={selectorData} />
               </div>
             </div>
@@ -185,7 +185,7 @@ const CompanyCreateComponent = () => {
                   Country
                 </label>
 
-                <div className="relative z-10 group">
+                <div className="relative group">
                   <Selector selectorData={selectorData} />
                 </div>
               </div>
@@ -198,7 +198,7 @@ const CompanyCreateComponent = () => {
                   State
                 </label>
 
-                <div className="relative z-10 group">
+                <div className="relative group">
                   <Selector selectorData={selectorData} />
                 </div>
               </div>
@@ -211,7 +211,7 @@ const CompanyCreateComponent = () => {
                   City
                 </label>
 
-                <div className="relative z-10 group">
+                <div className="relative group">
                   <Selector selectorData={selectorData} />
                 </div>
               </div>
@@ -228,7 +228,7 @@ const CompanyCreateComponent = () => {
                 placeholder="Write your Address here..."
                 theme="snow"
                 className=" rounded-lg announcement-quill"
-                style={{ height: "200px" }}
+                // style={{ height: "200px" }}
               />
             </div>
           </div>
@@ -255,7 +255,7 @@ const CompanyCreateComponent = () => {
                   Country
                 </label>
 
-                <div className="relative z-10 group">
+                <div className="relative group">
                   <Selector selectorData={selectorData} />
                 </div>
               </div>
@@ -268,7 +268,7 @@ const CompanyCreateComponent = () => {
                   State
                 </label>
 
-                <div className="relative z-10 group">
+                <div className="relative group">
                   <Selector selectorData={selectorData} />
                 </div>
               </div>
@@ -281,7 +281,7 @@ const CompanyCreateComponent = () => {
                   City
                 </label>
 
-                <div className="relative z-10 group">
+                <div className="relative group">
                   <Selector selectorData={selectorData} />
                 </div>
               </div>
@@ -298,7 +298,7 @@ const CompanyCreateComponent = () => {
                 placeholder="Write your Address here..."
                 theme="snow"
                 className=" rounded-lg announcement-quill"
-                style={{ height: "200px" }}
+                // style={{ height: "200px" }}
               />
             </div>
           </div>
@@ -366,7 +366,7 @@ const CompanyCreateComponent = () => {
                   Certification Type
                 </label>
 
-                <div className="relative z-10 group">
+                <div className="relative group">
                   <Selector selectorData={selectorData} />
                 </div>
               </div>
@@ -377,7 +377,7 @@ const CompanyCreateComponent = () => {
                 Level
               </label>
 
-              <div className="relative z-10 group">
+              <div className="relative group">
                 <Selector selectorData={selectorData} />
               </div>
             </div>
@@ -427,7 +427,7 @@ const CompanyCreateComponent = () => {
                   Certification Type
                 </label>
 
-                <div className="relative z-10 group">
+                <div className="relative group">
                   <Selector selectorData={selectorData} />
                 </div>
               </div>
@@ -437,7 +437,7 @@ const CompanyCreateComponent = () => {
                 Level
               </label>
 
-              <div className="relative z-10 group">
+              <div className="relative group">
                 <Selector selectorData={selectorData} />
               </div>
             </div>

@@ -107,15 +107,15 @@ input, select {
   padding: 20px;
 }
 hr.mb-6 {
-  background-color: #113689;
+  background-color: var(--primary-color-echttech);
   height: 3px;
   margin: 0;
   /* display: none; */
 }
 .top-head .pb-3, .top-hdr {
   padding: 5px 20px;
-  color: #113689;
-  background-color: #1136892b;
+  color: var(--primary-color-echttech);
+  background-color: var(--lighter-primary-color-echttech);
   border-radius: 6px 6px 0 0;
 }
 

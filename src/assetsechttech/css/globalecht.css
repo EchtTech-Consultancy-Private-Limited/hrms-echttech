@@ -1,16 +1,17 @@
-:root {
+  :root {
     --white-color: #fff;
-    --common-btn-color-echttech: #113689: 
-}
+    --primary-color-echttech: #113689;
+    --lighter-primary-color-echttech: #11368930;
+    
+  }
 .color-white{
-    color:#fff;
+    color:var(--white-color);
 }
 .arrow-icons{
     font-size: 13px !important;
 }
 .main-bg-color{
-    background-color:#113689 !important;
-    /* background-color: #174E94; */
+    background-color:var(--primary-color-echttech) !important;
 }
 .delete{
     background-color: rgb(219, 19, 19);
@@ -19,8 +20,10 @@
     background-color: #174e9412;
 }
 .headings {
-    font-size: 22px;
-    font-weight: 500;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--primary-color-echttech);
+
   }
   .shadow{
     box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
@@ -89,8 +92,8 @@
   height: 64px;
   margin: 8px;
   border-radius: 50%;
-  border: 6px solid #113689;
-  border-color: #113689 transparent;
+  border: 6px solid var(--primary-color-echttech);
+  border-color: var(--primary-color-echttech) transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
 @keyframes lds-dual-ring {

@@ -117,7 +117,7 @@
   a#reload_href
   {
     cursor: pointer;
-    color: #113689 !important;
+    color: var(--primary-color-echttech) !important;
     font-size: 14px;
     font-weight: 600;
   }

@@ -108,6 +108,7 @@
     .below-content
     {
       overflow: auto; 
+      overflow-x: hidden;
       transition: scrollbar-color 0.3s ease-in-out, scrollbar-width 0.3s ease-in-out; /* For Firefox */
       transition: opacity 0.5s ease-in-out;
 
@@ -121,7 +122,7 @@
     }
     
     .below-content::-webkit-scrollbar-track, .constant-sidebar::-webkit-scrollbar-track {
-      background: #113689; 
+      background: var(--primary-color-echttech); 
       transition: background-color 0.3s ease-in-out;
       transition: opacity 0.5s ease-in-out;
     }
@@ -155,7 +156,7 @@
 
     .css-uvvswg-MuiButtonBase-root-MuiAccordionSummary-root 
     {
-      background-color: #113689 !important;
+      background-color: var(--primary-color-echttech) !important;
     }
 
 
