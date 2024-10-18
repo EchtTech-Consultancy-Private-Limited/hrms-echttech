@@ -14,8 +14,8 @@ import { FaLanguage, FaSync } from "react-icons/fa";
 import { RiSync } from 'react-icons/ri';
 
 // import  earthlogin  from './../../images/earthlogin.png'
-import  extneww  from './../../images/extneww.png'
-import  echttechlogo  from './../../images/echttechlogo.png'
+import  extneww  from '../../assetsechttech/image/extneww.png'
+import  echttechlogo  from '../../assetsechttech/image/echttechlogo.png'
 
 
 
