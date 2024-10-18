@@ -84,15 +84,15 @@
   {
     border-radius: 8px;
   }
-  .parnt-login-h-438 , .child-login-h-438 
+  /* .parnt-login-h-438 , .child-login-h-438 
   {
     height: 494px;
     
-  }
+  } */
   .parnt-login-h-438 
   {
     border-radius: 10px; 
-    height: 494px;
+    /* height: 494px; */
   }
   .child-login-h-438 
   {
@@ -146,7 +146,7 @@
 
   .info-date-time
   {
-    margin-top: 9%;
+    margin-bottom: 8%;
   }
   .log-style 
   {
