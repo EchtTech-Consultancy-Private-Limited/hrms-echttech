@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { FaCloudUploadAlt } from "react-icons/fa";
 import { HideLoading, ShowLoading } from "../../reduxapis/slice/alertsSlice";
-import ReactQuill from "react-quill";
 import { useDispatch } from "react-redux";
 import InputFiled from "../Common/InputFiled";
 import Selector from "../Common/Selector";
+import { TextAreaEditor } from "../Common/TextAreaEditor";
 
 const CompanyCreateComponent = () => {
   const selectorData = [
@@ -56,15 +56,6 @@ const CompanyCreateComponent = () => {
   const filteredItemscountry = itemcountry.filter((item) =>
     item.toLowerCase().includes(searchTermcountry.toLowerCase())
   );
-  // Text-Area first
-
-  const [editorContent, setEditorContent] = useState("");
-
-  const handleChange = (content) => {
-    setEditorContent(content);
-  };
-
-  // Text-Area second
 
   const [editorContentOne, setEditorContentOne] = useState("");
 
@@ -98,71 +89,64 @@ const CompanyCreateComponent = () => {
                 filedName="companyName"
                 filedplaceholder="Company Name"
                 filedlabelName="Company Name"
+                
               />
             </div>
 
             <div className="first mb-4">
-              <label htmlFor="" className="block text-gray-700 font-bold mb-2">
-                Legal/Tranding Name
-              </label>
-              <input
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                type="text"
-                placeholder="Legal/Tranding Name"
+              <InputFiled
+                fileType="text"
+                filedName="Legal/Tranding Name"
+                filedplaceholder="Legal/Tranding Name"
+                filedlabelName="Legal/Tranding Name"
+                
               />
             </div>
 
             <div className="first mb-4">
-              <label htmlFor="" className="block text-gray-700 font-bold mb-2">
-                Registration Number
-              </label>
-              <input
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                type="text"
-                placeholder="Registration Number"
+              <InputFiled
+                fileType="text"
+                filedName="Registration Number"
+                filedplaceholder="Registration Number"
+                filedlabelName="Registration Number"
+                
               />
             </div>
             <div className="first mb-4">
-              <label htmlFor="" className="block text-gray-700 font-bold mb-2">
-                GST Number
-              </label>
-              <input
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                type="text"
-                placeholder="GST Number"
-              />
-            </div>
-
-            <div className="first mb-4">
-              <label htmlFor="" className="block text-gray-700 font-bold mb-2">
-                Pan Number
-              </label>
-              <input
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                type="text"
-                placeholder="Pan Number"
+              <InputFiled
+                fileType="text"
+                filedName="GST Number"
+                filedplaceholder="GST Number"
+                filedlabelName="GST Number"
+                
               />
             </div>
 
             <div className="first mb-4">
-              <label htmlFor="" className="block text-gray-700 font-bold mb-2">
-                TAN Number
-              </label>
-              <input
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                type="text"
-                placeholder="TAN Number"
+              <InputFiled
+                fileType="text"
+                filedName="Pan Number"
+                filedplaceholder="Pan Number"
+                filedlabelName="Pan Number"
+                
               />
             </div>
 
             <div className="first mb-4">
-              <label htmlFor="" className="block text-gray-700 font-bold mb-2">
-                CIN Number
-              </label>
-              <input
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                type="text"
-                placeholder="CIN Number"
+              <InputFiled
+                fileType="text"
+                filedName="TAN Number"
+                filedplaceholder="TAN Number"
+                filedlabelName="TAN Number" 
+              />
+            </div>
+
+            <div className="first mb-4">
+              <InputFiled
+                fileType="text"
+                filedName="CIN Number"
+                filedplaceholder="CIN Number"
+                filedlabelName="CIN Number" 
               />
             </div>
           </div>
@@ -218,18 +202,7 @@ const CompanyCreateComponent = () => {
             </div>
 
             <div className="w-full second-child">
-              <label className="block text-gray-700 font-bold mb-2">
-                Address
-                {/* <span className="text-red-500 text-sm ml-1">*</span> */}
-              </label>
-              <ReactQuill
-                value={editorContent}
-                onChange={handleChange}
-                placeholder="Write your Address here..."
-                theme="snow"
-                className=" rounded-lg announcement-quill"
-                // style={{ height: "200px" }}
-              />
+              <TextAreaEditor />
             </div>
           </div>
         </div>
@@ -288,18 +261,7 @@ const CompanyCreateComponent = () => {
             </div>
 
             <div className="w-full second-child">
-              <label className="block text-gray-700 font-bold mb-2">
-                Address
-                {/* <span className="text-red-500 text-sm ml-1">*</span> */}
-              </label>
-              <ReactQuill
-                value={editorContentOne}
-                onChange={handleChangeOne}
-                placeholder="Write your Address here..."
-                theme="snow"
-                className=" rounded-lg announcement-quill"
-                // style={{ height: "200px" }}
-              />
+              <TextAreaEditor />
             </div>
           </div>
         </div>
@@ -314,35 +276,29 @@ const CompanyCreateComponent = () => {
         <div className="department-below-sect form-labels">
           <div className="flex-gap template-sec justify-between">
             <div className="first mb-4">
-              <label htmlFor="" className="block text-gray-700 font-bold mb-2">
-                Contact Number
-              </label>
-              <input
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                type="text"
-                placeholder="Contact Number"
+              <InputFiled
+                fileType="text"
+                filedName="Contact Number"
+                filedplaceholder="Contact Number"
+                filedlabelName="Contact Number" 
               />
             </div>
 
             <div className="first mb-4">
-              <label htmlFor="" className="block text-gray-700 font-bold mb-2">
-                Whatsapp Number
-              </label>
-              <input
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                type="text"
-                placeholder="Whatsapp Number"
+              <InputFiled
+                fileType="text"
+                filedName="Whatsapp Number"
+                filedplaceholder="Whatsapp Number"
+                filedlabelName="Whatsapp Number" 
               />
             </div>
 
             <div className="first mb-4">
-              <label htmlFor="" className="block text-gray-700 font-bold mb-2">
-                Email id
-              </label>
-              <input
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                type="text"
-                placeholder="Email id"
+              <InputFiled
+                fileType="text"
+                filedName="Email id"
+                filedplaceholder="Email id"
+                filedlabelName="Email id" 
               />
             </div>
           </div>
@@ -383,25 +339,20 @@ const CompanyCreateComponent = () => {
             </div>
 
             <div className="first mb-4">
-              <label htmlFor="" className="block text-gray-700 font-bold mb-2">
-                Certification Authority
-              </label>
-              <input
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                type="text"
-                placeholder="Certification Authority
-"
+              <InputFiled
+                fileType="text"
+                filedName="Certification Authority"
+                filedplaceholder="Certification Authority"
+                filedlabelName="Certification Authority" 
               />
             </div>
 
             <div className="first mb-4">
-              <label htmlFor="" className="block text-gray-700 font-bold mb-2">
-                Validity Period
-              </label>
-              <input
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                type="date"
-                placeholder="Whatsapp Number"
+              <InputFiled
+                fileType="date"
+                filedName="Validity Period"
+                filedplaceholder="Validity Period"
+                filedlabelName="Validity Period" 
               />
             </div>
           </div>
@@ -443,24 +394,20 @@ const CompanyCreateComponent = () => {
             </div>
 
             <div className="first mb-4">
-              <label htmlFor="" className="block text-gray-700 font-bold mb-2">
-                Certification Authority
-              </label>
-              <input
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                type="text"
-                placeholder="Certification Authority"
+              <InputFiled
+                fileType="text"
+                filedName="Certification Authority"
+                filedplaceholder="Certification Authority"
+                filedlabelName="Certification Authority" 
               />
             </div>
 
             <div className="first mb-4">
-              <label htmlFor="" className="block text-gray-700 font-bold mb-2">
-                Validity Period
-              </label>
-              <input
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                type="date"
-                placeholder="Whatsapp Number"
+              <InputFiled
+                fileType="date"
+                filedName="Validity Period"
+                filedplaceholder="Validity Period"
+                filedlabelName="Validity Period" 
               />
             </div>
           </div>

@@ -115,7 +115,7 @@ hr.mb-6 {
 .top-head .pb-3, .top-hdr {
   padding: 5px 20px;
   color: var(--primary-color-echttech);
-  background-color: var(--lighter-primary-color-echttech);
+  background-color: var(--fade-lighter-primary-color-echttech);
   border-radius: 6px 6px 0 0;
 }
 

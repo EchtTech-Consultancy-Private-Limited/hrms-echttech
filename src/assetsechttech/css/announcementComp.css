@@ -20,6 +20,6 @@
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
  }
  .add-reset-btns .main-bg-color:hover{
-   background-color: #2562b0 !important;
+   background-color:var(--lighter-primary-color-echttech) !important;
  }
  

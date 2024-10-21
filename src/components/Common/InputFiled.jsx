@@ -1,6 +1,6 @@
 import React from 'react'
 
-const InputFiled = ({fileType, filedName, filedplaceholder, filedlabelName}) => {
+const InputFiled = ({fileType, filedName, filedplaceholder, filedlabelName, mandtStar}) => {
   return (
     <div>
        <label
@@ -8,7 +8,7 @@ const InputFiled = ({fileType, filedName, filedplaceholder, filedlabelName}) => 
             className="block text-black font-bold"
             >
             {filedlabelName}
-            <span className="text-red-500 text-sm ml-1">*</span>
+            <span className="text-red-500 text-sm ml-1">{mandtStar}</span>
         </label>
         <input
             type={fileType}

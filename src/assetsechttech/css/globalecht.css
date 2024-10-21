@@ -1,7 +1,8 @@
   :root {
     --white-color: #fff;
     --primary-color-echttech: #113689;
-    --lighter-primary-color-echttech: #11368930;
+    --lighter-primary-color-echttech: #325ec3;
+    --fade-lighter-primary-color-echttech: #11368924;
     
   }
 .color-white{

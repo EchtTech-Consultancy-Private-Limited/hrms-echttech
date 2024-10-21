@@ -63,7 +63,7 @@
   }
   .login-btn:hover
   {
-    background-color: #2562b0; 
+    background-color:var(--lighter-primary-color-echttech) !important;
   }
   .login-style h2 , .login-style svg
   {

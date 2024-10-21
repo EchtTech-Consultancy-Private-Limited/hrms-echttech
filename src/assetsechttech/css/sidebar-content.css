@@ -25,7 +25,7 @@
   }
   .all-ul{
     margin-left: 20px;
-    border-left: 3px solid #3959a3;
+    border-left: 3px solid var(--lighter-primary-color-echttech);
     padding-left: 13px;
     list-style-type: disc;
      
@@ -38,7 +38,7 @@
   }
   
   .all-ul li:hover, .all-ul li.active {
-    background: rgb(28, 74, 178);
+    background: var(--lighter-primary-color-echttech);
     padding: 10px;
     border-radius: 0 30px 30px 0;
   }
@@ -205,7 +205,7 @@
     padding: 0 !important;
   }
   .layout.consthide .constant-sidebar li:hover, .layout.settingshow .setting-sidebar li:hover {
-    background-color: rgb(28, 74, 178);
+    background-color:var(--lighter-primary-color-echttech) !important;
     border-radius: 0 30px 30px 0;
   }
   .layout.settingshow .setting-sidebar li a{
