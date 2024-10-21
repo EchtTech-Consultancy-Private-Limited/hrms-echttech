@@ -61,8 +61,8 @@ const RecruitmentConfigurationComponent = () => {
         </div>
         <hr className="mb-6"></hr>
         {/* Toggle Switch */}
-        <div className="flex items-center mb-4 p-4">
-          <div className="w-1/2">
+        <div className="flex flex-gap items-center mb-4 p-4 template-sec form-labels form-labels-sysconfigs">
+          <div className="w-1/2 border rounded-lg p-2">
             <label className="mr-2 block text-black font-bold ">
               Enable Jobs for Employees
             </label>
@@ -72,18 +72,18 @@ const RecruitmentConfigurationComponent = () => {
             </div>
           </div>
 
-          <div className="w-1/2">
-            <label
-              className="mb-2 block text-black font-bold "
-              htmlFor="fileFormat"
-            >
-              Job Application File Format
-            </label>
+          <div className="first mb-4 first_class_change18to100 w-1/2">
+                  <label
+                    for="type"
+                    className="block text-gray-700 font-bold mb-2"
+                  >
+                    Currency Code
+                  </label>
 
-            <div className="relative  group">
-                  <Selector selectorData={selectorData} />
+                  <div className="relative group">
+                    <Selector selectorData={selectorData} />
+                  </div>
                 </div>
-          </div>
         </div>
       </div>
 

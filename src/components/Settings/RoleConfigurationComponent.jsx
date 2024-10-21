@@ -14,7 +14,7 @@ const RoleConfigurationComponent = () => {
   // Grid Item Component
   const GridItem = ({ index, title }) => (
     <div className="p-2 border border-gray-300 rounded-lg mb-4">
-      <p className="block text-black font-bold mb-2">{title}</p>
+      <label for="type" className="block text-black mb-2">{title}</label>
       <label className="flex items-center cursor-pointer">
         {/* <span className="mr-2 block text-black text-sm">Switch</span> */}
         <input

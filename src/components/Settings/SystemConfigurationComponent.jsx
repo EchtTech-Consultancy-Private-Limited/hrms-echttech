@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Selector from "./../Common/Selector"
+import Selector from "./../Common/Selector";
 
 const SystemConfigurationPage = () => {
   const [isCodeIgniterEnabled, setIsCodeIgniterEnabled] = useState(false);
@@ -14,56 +14,72 @@ const SystemConfigurationPage = () => {
   return (
     <div className="content-mid bg-white rounded-lg">
       <div className=" bg-white rounded-lg top-head top-section">
-        <h2 className="text-lg font-semibold pb-3">
-          System Configuration
-        </h2>
+        <h2 className="text-lg font-semibold pb-3">System Configuration</h2>
         <hr className="mb-6" />
         <div className="flex items-start gap-6 px-4 both-address template-section">
           {/* First Half */}
           <div className="left-container template-section reg-add pr-4 pt-4">
-            <div>
-              <label className="block mb-2 mt-2" htmlFor="app-name-1">
-                Application Name
-              </label>
-              <input
-                id="app-name-1"
-                type="text"
-                className="border border-gray-300 rounded p-2 w-full"
-                placeholder="Enter application name"
-              />
-            </div>
-            <div>
-              <label className="block mb-2 mt-2" htmlFor="app-name-2">
-                Default Currency
-              </label>
-              <div className="relative group" >
-              <Selector selectorData={selectorData}/>
-              
+            <div className="department-below-sect form-labels form-labels-sysconfigs">
+              <div className="flex-col template-sec">
+              <div className="first mb-4 first_class_change18to100">
+                  <label
+                    for="type"
+                    className="block text-gray-700 font-bold mb-2"
+                  >
+                    Application Name
+                  </label>
+
+                  <div className="relative group">
+                    
+                    <input className="border border-gray-300 rounded p-2 w-full" type="text" />
+                  </div>
+                </div>
+                <div className="first mb-4 first_class_change18to100">
+                  <label
+                    for="type"
+                    className="block text-gray-700 font-bold mb-2"
+                  >
+                    Default Currency
+                  </label>
+
+                  <div className="relative group">
+                    <Selector selectorData={selectorData} />
+                  </div>
+                </div>
+
+                <div className="first mb-4 first_class_change18to100">
+                  <label
+                    for="type"
+                    className="block text-gray-700 font-bold mb-2"
+                  >
+                    Currency Code
+                  </label>
+
+                  <div className="relative group">
+                    <Selector selectorData={selectorData} />
+                  </div>
+                </div>
+
+                <div className="first mb-4 first_class_change18to100">
+                  <label
+                    for="type"
+                    className="block text-gray-700 font-bold mb-2"
+                  >
+                    Currency Code
+                  </label>
+
+                  <div className="relative group">
+                    <Selector selectorData={selectorData} />
+                  </div>
+                </div>
               </div>
-              
             </div>
-            <div>
-              <label className="block mb-2 mt-2" htmlFor="app-name-3">
-                Currency Code(Symbol code)
-              </label>
-              <div className="relative group" >
-              <Selector selectorData={selectorData}/>
-              </div>
-            </div>
-            <div>
-              <label className="block mb-2 mt-2" htmlFor="app-name-4">
-                Currency Code
-              </label>
-              <div className="relative group" >
-              <Selector selectorData={selectorData}/>
-              </div>
-            </div>
+
             <div className="flex items-center justify-between mb-4 mt-2">
               <label className="block mb-2 mt-2">
                 Enable CodeIgniter Page Rendered on Footer
               </label>
               <div className="flex items-center">
-                
                 <label className="relative inline-flex items-center cursor-pointer mb-0">
                   <input
                     type="checkbox"
@@ -139,7 +155,6 @@ const SystemConfigurationPage = () => {
                 Enable Current year on footer
               </label>
               <div className="flex items-center">
-                
                 <label className="relative inline-flex items-center cursor-pointer mb-0">
                   <input
                     type="checkbox"
@@ -163,13 +178,13 @@ const SystemConfigurationPage = () => {
           </div>
         </div>
         <div className="add-reset-btns top-border flex items-center justify-end p-4">
-        <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
-          Save
-        </button>
-        <button className="apply-leave-btn bg-gray-400 text-white px-2 py-2 rounded w-full md:w-auto">
-          Reset
-        </button>
-      </div>
+          <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
+            Save
+          </button>
+          <button className="apply-leave-btn bg-gray-400 text-white px-2 py-2 rounded w-full md:w-auto">
+            Reset
+          </button>
+        </div>
       </div>
     </div>
   );
