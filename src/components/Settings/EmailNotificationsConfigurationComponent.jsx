@@ -40,12 +40,12 @@ const EmailNotificationsConfigurationComponent = () => {
     <>
       <div className="bg-white rounded-lg">
       <div className="top-hdr flex justify-between">
-          <h1 className="font-bold text-lg">Email Notification</h1>
+          <h1 className="font-bold text-lg">Email Notification Configuration</h1>
         </div>
         <hr className="mb-6"></hr>
         <div className='p-4' >
         {/* Grid layout with only one switch */}
-        <div className="grid grid-cols-1 gap-6 mt-4">
+        <div className="grid grid-cols-2 gap-6 mt-4">
           <GridItem title="Enable email notification" />
         </div>
         <div className="right-btn ">

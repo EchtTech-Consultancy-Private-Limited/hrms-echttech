@@ -58,7 +58,7 @@ const NotificationPositionConfigurationComponent = () => {
     <>
       <div className=" bg-white rounded-lg">
         <div className="top-hdr flex justify-between">
-          <h1 className="font-bold text-lg">Animation Effect Configuration </h1>
+          <h1 className="font-bold text-lg">Notification Position Configuration </h1>
         </div>
         {/* Grid layout with three items inline, responsive */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-4">

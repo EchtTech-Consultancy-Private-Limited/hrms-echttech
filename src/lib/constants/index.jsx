@@ -25,7 +25,24 @@ import { BiExit } from "react-icons/bi";
 import { MdWorkOutline } from "react-icons/md";
 import { FaCriticalRole } from "react-icons/fa";
 import { CiSettings } from "react-icons/ci";
-;
+import { CiCamera } from "react-icons/ci";
+import { GrConfigure } from "react-icons/gr";
+import { IoIosLogIn } from "react-icons/io";
+import { IoKeyOutline } from "react-icons/io5";
+import { FaUserCheck } from "react-icons/fa6";
+import { CiBullhorn } from "react-icons/ci";
+import { AiOutlineMail } from "react-icons/ai";
+import { IoDiamondOutline } from "react-icons/io5";
+import { FaCheck } from "react-icons/fa6";
+
+
+
+
+
+
+
+
+
 
 
 export const DASHBOARD_SIDEBAR_LINKS = [
@@ -171,7 +188,7 @@ export const SETTING_SIDEBAR_BOTTOM_LINKS = [
     key: 'system-logo',
     label: 'Logos',
 		path: '/system-logo',
-    icon: <VscSymbolConstant />,
+    icon: <CiCamera />,
     secondsidebar: 1,
     submenu: [], // No submenu for holidays
   },
@@ -179,7 +196,7 @@ export const SETTING_SIDEBAR_BOTTOM_LINKS = [
     key: 'system-configuration',
     label: 'System',
 		path: '/system-configuration',
-    icon: <VscSymbolConstant />,
+    icon: <GrConfigure/>,
     secondsidebar: 1,
     submenu: [], // No submenu for holidays
   },
@@ -187,7 +204,7 @@ export const SETTING_SIDEBAR_BOTTOM_LINKS = [
     key: 'login-method',
     label: 'Login Method',
 		path: '/login-method',
-    icon: <VscSymbolConstant />,
+    icon: <IoIosLogIn  />,
     secondsidebar: 1,
     submenu: [], // No submenu for holidays
   },
@@ -195,7 +212,7 @@ export const SETTING_SIDEBAR_BOTTOM_LINKS = [
     key: 'role-configuration',
     label: 'Role',
 		path: '/role-configuration',
-    icon: <VscSymbolConstant />,
+    icon: <IoKeyOutline />,
     secondsidebar: 1,
     submenu: [], // No submenu for holidays
   },
@@ -203,7 +220,7 @@ export const SETTING_SIDEBAR_BOTTOM_LINKS = [
     key: 'attendance-configuration',
     label: 'Attendance',
 		path: '/attendance-configuration',
-    icon: <VscSymbolConstant />,
+    icon : <FaUserCheck />,
     secondsidebar: 1,
     submenu: [], // No submenu for holidays
   },
@@ -212,7 +229,7 @@ export const SETTING_SIDEBAR_BOTTOM_LINKS = [
     key: 'recruitment-configuration',
     label: 'Recruitment',
 		path: '/recruitment-configuration',
-    icon: <VscSymbolConstant />,
+    icon: <CiBullhorn/>,
     secondsidebar: 1,
     submenu: [], // No submenu for holidays
   },
@@ -220,7 +237,7 @@ export const SETTING_SIDEBAR_BOTTOM_LINKS = [
     key: 'email-notifications-configuration',
     label: 'Email Notifications',
 		path: '/email-notifications-configuration',
-    icon: <VscSymbolConstant />,
+    icon: <AiOutlineMail/>,
     secondsidebar: 1,
     submenu: [], // No submenu for holidays
   },
@@ -228,7 +245,7 @@ export const SETTING_SIDEBAR_BOTTOM_LINKS = [
     key: 'animation-effects-configuration',
     label: 'Animation Effects',
 		path: '/animation-effects-configuration',
-    icon: <VscSymbolConstant />,
+    icon: <IoDiamondOutline />,
     secondsidebar: 1,
     submenu: [], // No submenu for holidays
   },
@@ -236,7 +253,7 @@ export const SETTING_SIDEBAR_BOTTOM_LINKS = [
     key: 'notification-position-configuration',
     label: 'Notification Position',
 		path: '/notification-position-configuration',
-    icon: <VscSymbolConstant />,
+    icon: <FaCheck/>,
     secondsidebar: 1,
     submenu: [], // No submenu for holidays
   },
