@@ -36,7 +36,7 @@ const SystemConfigurationPage = () => {
               <label className="block mb-2 mt-2" htmlFor="app-name-2">
                 Default Currency
               </label>
-              <div className="relative z-10 group" >
+              <div className="relative group" >
               <Selector selectorData={selectorData}/>
               
               </div>
@@ -44,28 +44,26 @@ const SystemConfigurationPage = () => {
             </div>
             <div>
               <label className="block mb-2 mt-2" htmlFor="app-name-3">
-                Default Currency (Symbol code)
+                Currency Code(Symbol code)
               </label>
-              <div className="relative z-10 group" >
+              <div className="relative group" >
               <Selector selectorData={selectorData}/>
               </div>
             </div>
             <div>
               <label className="block mb-2 mt-2" htmlFor="app-name-4">
-                Currency Position
+                Currency Code
               </label>
-              <div className="relative z-10 group" >
+              <div className="relative group" >
               <Selector selectorData={selectorData}/>
               </div>
             </div>
-            <div>
+            <div className="flex items-center justify-between">
               <label className="block mb-2 mt-2">
                 Enable CodeIgniter Page Rendered on Footer
               </label>
               <div className="flex items-center">
-                <span className="mr-2 mb-2">
-                  {isCodeIgniterEnabled ? "On" : "Off"}
-                </span>
+                
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input
                     type="checkbox"
@@ -136,12 +134,12 @@ const SystemConfigurationPage = () => {
                 placeholder="ET HRMS Consultancy Services Pvt. Ltd."
               />
             </div>
-            <div className="flex items-center mt-4">
-              <label className="mr-2">Enable Current year on footer</label>
+            <div className="flex items-center justify-between">
+              <label className="block mb-2 mt-2">
+                Enable Current year on footer
+              </label>
               <div className="flex items-center">
-                <span className="mr-2 mb-2">
-                  {isCodeIgniterEnabled ? "(On)" : "(Off)"}
-                </span>
+                
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input
                     type="checkbox"

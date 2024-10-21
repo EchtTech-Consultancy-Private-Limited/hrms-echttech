@@ -26,9 +26,7 @@ const ImgUpload = ({fileID, labelName, handleFileChange, image, handleDrop}) => 
               onDrop={handleDrop}
             >
               <MdOutlineCloudUpload className="text-gray-500" />
-              <span className="text-xs text-center text-red-700 mt-1">
-                "Upload Files Only gif, png, jpg, jpeg. Consider Size 160*40. White background with black text"
-              </span>
+              
             </div>
             <div className="ml-2" >
             {image && (
@@ -39,6 +37,9 @@ const ImgUpload = ({fileID, labelName, handleFileChange, image, handleDrop}) => 
               />
             )}
             </div>
+            <span className="text-xs text-center text-red-700 mt-1">
+                "Upload Files Only gif, png, jpg, jpeg. Best Size 160*40. White background with black text"
+              </span>
             
             </div>
             

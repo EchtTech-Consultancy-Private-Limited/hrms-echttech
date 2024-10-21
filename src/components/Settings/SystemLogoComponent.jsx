@@ -85,74 +85,115 @@ const SystemLogoComponent = () => {
           <h1 className="text-lg font-bold">System Logo</h1>
         </div>
         <hr className="mb-6" />
-        <div className="p-4" >
-        <div className="flex items-center">
-          <div>
-            <label htmlFor="text-lg mb-4 font-exrabold">First Logo</label>
-            <ImgUpload
-              fileID="1setlogo"
-              labelName=""
-              handleFileChange={handleFileChange}
-              image={image}
-              handleDrop={handleDrop}
-            />
+        <div className="p-4">
+          <div className="flex items-center">
+            <div>
+              <label htmlFor="text-lg mb-4 font-exrabold">First/Company Logo</label>
+              <ImgUpload
+                fileID="1setlogo"
+                labelName=""
+                handleFileChange={handleFileChange}
+                image={image}
+                handleDrop={handleDrop}
+              />
+            </div>
+            <div>
+              <label htmlFor="text-lg mb-4 font-exrabold">Second Logo</label>
+              <ImgUpload
+                className="text-lg mb-4 font-bold"
+                fileID="2setlogo"
+                labelName=""
+                handleFileChange={handleFileChange1}
+                image={image1}
+                handleDrop={handleDrop1}
+              />
+            </div>
+            <div>
+              <label htmlFor="text-lg mb-4 font-exrabold">Favicon</label>
+              <ImgUpload
+                className="text-lg mb-4 font-bold"
+                fileID="3setlogo"
+                labelName=""
+                handleFileChange={handleFileChange2}
+                image={image2}
+                handleDrop={handleDrop2}
+              />
+            </div>
           </div>
-          <div>
-            <label htmlFor="text-lg mb-4 font-exrabold">Second Logo</label>
-            <ImgUpload
-              className="text-lg mb-4 font-bold"
-              fileID="2setlogo"
-              labelName=""
-              handleFileChange={handleFileChange1}
-              image={image1}
-              handleDrop={handleDrop1}
-            />
+
+          <div className="add-reset-btns flex items-center justify-end">
+            <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
+              Save
+            </button>
           </div>
         </div>
-        <div>
-          <label htmlFor="text-lg mb-4 font-exrabold">Favicon</label>
-          <ImgUpload
-            className="text-lg mb-4 font-bold"
-            fileID="3setlogo"
-            labelName=""
-            handleFileChange={handleFileChange2}
-            image={image2}
-            handleDrop={handleDrop2}
-          />
-        </div>
-        <div className="add-reset-btns flex items-center justify-end">
-          <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
-            Save
-          </button>
-        </div>
-        </div>
-       
       </div>
 
       <div className="mt-5 system-log-catch">
         <div className="bg-white rounded-lg top-head">
           <div className="to-hdr flex justify-between pb-3 w-full text-black">
-            <h1 className="text-lg font-bold">Sign In Page Logo</h1>
+            <h1 className="text-lg font-bold">Sign In Page</h1>
           </div>
           <hr className="mb-6" />
-          <div className="p-4" >
-          <label htmlFor="text-lg mb-4 font-exrabold">Logo</label>
-          <ImgUpload
-            className="text-lg mb-4 font-bold"
-            fileID="3setlogo"
-            labelName=""
-            handleFileChange={handleFileChange2}
-            image={image2}
-            handleDrop={handleDrop2}
-          />
+          <div className="p-4">
+            <div className="flex items-center">
+              <div>
+                <label htmlFor="text-lg mb-4 font-exrabold">First/Company Logo</label>
+                <ImgUpload
+                  fileID="1setlogo"
+                  labelName=""
+                  handleFileChange={handleFileChange}
+                  image={image}
+                  handleDrop={handleDrop}
+                />
+              </div>
+              <div>
+                <label htmlFor="text-lg mb-4 font-exrabold">Product Logo</label>
+                <ImgUpload
+                  className="text-lg mb-4 font-bold"
+                  fileID="2setlogo"
+                  labelName=""
+                  handleFileChange={handleFileChange1}
+                  image={image1}
+                  handleDrop={handleDrop1}
+                />
+              </div>
+              
+            </div>
             <div className="add-reset-btns flex items-center justify-end">
-            <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
-              Save
-            </button>
+              <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
+                Save
+              </button>
+            </div>
           </div>
+        </div>
+      </div>
+
+      <div className="mt-5 system-log-catch">
+        <div className="bg-white rounded-lg top-head">
+          <div className="to-hdr flex justify-between pb-3 w-full text-black">
+            <h1 className="text-lg font-bold">Payroll Logo</h1>
           </div>
-          
-         
+          <hr className="mb-6" />
+          <div className="p-4">
+            <label htmlFor="text-lg mb-4 font-exrabold">Logo</label>
+            <ImgUpload
+              className="text-lg mb-4 font-bold"
+              fileID="3setlogo"
+              labelName=""
+              handleFileChange={handleFileChange2}
+              image={image2}
+              handleDrop={handleDrop2}
+            />
+            <button className="apply-leave-btn mx-1 border border-rounded bg-gray-200 text-black px-2 py-2 rounded w-full md:w-auto ">
+                Remove
+              </button>
+            <div className="add-reset-btns flex items-center justify-end">
+              <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
+                Save
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </>

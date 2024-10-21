@@ -24,6 +24,8 @@ import { MdCardTravel } from "react-icons/md";
 import { BiExit } from "react-icons/bi";
 import { MdWorkOutline } from "react-icons/md";
 import { FaCriticalRole } from "react-icons/fa";
+import { CiSettings } from "react-icons/ci";
+;
 
 
 export const DASHBOARD_SIDEBAR_LINKS = [
@@ -161,7 +163,7 @@ export const SETTING_SIDEBAR_BOTTOM_LINKS = [
     key: 'general-configuration',
     label: 'General',
 		path: '/general-configuration',
-    icon: <VscSymbolConstant />,
+    icon: <CiSettings />,
     secondsidebar: 1,
     submenu: [], // No submenu for holidays
   },
@@ -182,6 +184,14 @@ export const SETTING_SIDEBAR_BOTTOM_LINKS = [
     submenu: [], // No submenu for holidays
   },
   {
+    key: 'login-method',
+    label: 'Login Method',
+		path: '/login-method',
+    icon: <VscSymbolConstant />,
+    secondsidebar: 1,
+    submenu: [], // No submenu for holidays
+  },
+  {
     key: 'role-configuration',
     label: 'Role',
 		path: '/role-configuration',
@@ -197,14 +207,7 @@ export const SETTING_SIDEBAR_BOTTOM_LINKS = [
     secondsidebar: 1,
     submenu: [], // No submenu for holidays
   },
-  {
-    key: 'login-method',
-    label: 'Login Method',
-		path: '/login-method',
-    icon: <VscSymbolConstant />,
-    secondsidebar: 1,
-    submenu: [], // No submenu for holidays
-  },
+  
   {
     key: 'recruitment-configuration',
     label: 'Recruitment',
