@@ -20,8 +20,10 @@ const LoginMethodComponent = () => {
         </div>
         <hr className="mb-6"></hr>
 
-        <div className="p-4">
-          <label className="block mb-2">Employee ID</label>
+        <div className="p-4 flex gap-x-2">
+          <div className="w-1/2">
+          <div className="p-2 border border-gray-300 rounded-lg mb-4" >
+          <label className="block mb-2">Using Employee ID</label>
           <div className="flex items-center">
             <span className="">{isEmployeeIdEnabled ? "" : ""}</span>
             <label className="relative inline-flex items-center cursor-pointer">
@@ -43,7 +45,12 @@ const LoginMethodComponent = () => {
               ></div>
             </label>
           </div>
-          <div>
+          </div>
+          </div>
+          
+          
+          <div className="w-1/2" >
+            <div className="p-2 border border-gray-300 rounded-lg mb-4" >
             <label className="block mb-2">Using Email ID</label>
             <div className="flex items-center">
               <span className="">{isEmailIdEnabled ? "" : ""}</span>
@@ -66,6 +73,19 @@ const LoginMethodComponent = () => {
                 ></div>
               </label>
             </div>
+            </div>
+            
+          </div>
+          
+        </div>
+        <div className="right-btn">
+          <div className="add-reset-btns flex justify-end items-center pb-4 pr-4">
+            <button className=" mx-1 main-bg-color bg-blue-500 text-white px-2 py-2 rounded w-full md:w-auto ">
+              Save
+            </button>
+            <button className=" bg-gray-400 text-white px-2 py-2 rounded w-full md:w-auto">
+              Reset
+            </button>
           </div>
         </div>
       </div>

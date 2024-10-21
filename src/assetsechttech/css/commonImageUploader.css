@@ -1,0 +1,37 @@
+.image-uploader-sections {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+.image-uploader-sections .width-cstm-for-upload-logosettings {
+    margin: 10px 0;
+    width: 200px;
+}
+.image-uploader-sections span {
+    width: 200px;
+}
+.image-uploader-sections .img-container {
+    width: 200px;
+    height: 150px;
+    border: 1px solid #e7e7e7;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    background-image: url('../utility-images/image-placeholder.png');
+    background-size: contain;
+}
+.img-main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 22px;
+}
+.img-main-container button {
+    display: none;
+}
+.img-main-container.remove-btn button{
+    display: block;
+    width: 200px;
+    border-radius: 5px;
+}

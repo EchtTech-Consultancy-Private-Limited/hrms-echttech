@@ -86,8 +86,8 @@ const SystemLogoComponent = () => {
         </div>
         <hr className="mb-6" />
         <div className="p-4">
-          <div className="flex items-center">
-            <div>
+          <div className="flex items-center justify-evenly">
+            <div className="img-main-container">
               <label htmlFor="text-lg mb-4 font-exrabold">First/Company Logo</label>
               <ImgUpload
                 fileID="1setlogo"
@@ -97,7 +97,7 @@ const SystemLogoComponent = () => {
                 handleDrop={handleDrop}
               />
             </div>
-            <div>
+            <div className="img-main-container">
               <label htmlFor="text-lg mb-4 font-exrabold">Second Logo</label>
               <ImgUpload
                 className="text-lg mb-4 font-bold"
@@ -108,7 +108,7 @@ const SystemLogoComponent = () => {
                 handleDrop={handleDrop1}
               />
             </div>
-            <div>
+            <div className="img-main-container">
               <label htmlFor="text-lg mb-4 font-exrabold">Favicon</label>
               <ImgUpload
                 className="text-lg mb-4 font-bold"
@@ -136,8 +136,8 @@ const SystemLogoComponent = () => {
           </div>
           <hr className="mb-6" />
           <div className="p-4">
-            <div className="flex items-center">
-              <div>
+            <div className="flex items-center justify-evenly">
+              <div className="img-main-container">
                 <label htmlFor="text-lg mb-4 font-exrabold">First/Company Logo</label>
                 <ImgUpload
                   fileID="1setlogo"
@@ -147,7 +147,7 @@ const SystemLogoComponent = () => {
                   handleDrop={handleDrop}
                 />
               </div>
-              <div>
+              <div className="img-main-container">
                 <label htmlFor="text-lg mb-4 font-exrabold">Product Logo</label>
                 <ImgUpload
                   className="text-lg mb-4 font-bold"
@@ -176,18 +176,18 @@ const SystemLogoComponent = () => {
           </div>
           <hr className="mb-6" />
           <div className="p-4">
-            <label htmlFor="text-lg mb-4 font-exrabold">Logo</label>
-            <ImgUpload
-              className="text-lg mb-4 font-bold"
-              fileID="3setlogo"
-              labelName=""
-              handleFileChange={handleFileChange2}
-              image={image2}
-              handleDrop={handleDrop2}
-            />
-            <button className="apply-leave-btn mx-1 border border-rounded bg-gray-200 text-black px-2 py-2 rounded w-full md:w-auto ">
-                Remove
-              </button>
+            <div className="flex items-center justify-evenly">
+              <div className="img-main-container remove-btn">
+                <label htmlFor="text-lg mb-4 font-exrabold">First/Company Logo</label>
+                <ImgUpload
+                  fileID="1setlogo"
+                  labelName=""
+                  handleFileChange={handleFileChange}
+                  image={image}
+                  handleDrop={handleDrop}
+                />
+              </div> 
+            </div>
             <div className="add-reset-btns flex items-center justify-end">
               <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
                 Save

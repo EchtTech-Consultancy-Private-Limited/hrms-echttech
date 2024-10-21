@@ -18,9 +18,9 @@ const SystemConfigurationPage = () => {
           System Configuration
         </h2>
         <hr className="mb-6" />
-        <div className="flex items-center gap-6 px-4 both-address template-section">
+        <div className="flex items-start gap-6 px-4 both-address template-section">
           {/* First Half */}
-          <div className="left-container template-section reg-add pr-4">
+          <div className="left-container template-section reg-add pr-4 pt-4">
             <div>
               <label className="block mb-2 mt-2" htmlFor="app-name-1">
                 Application Name
@@ -58,13 +58,13 @@ const SystemConfigurationPage = () => {
               <Selector selectorData={selectorData}/>
               </div>
             </div>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between mb-4 mt-2">
               <label className="block mb-2 mt-2">
                 Enable CodeIgniter Page Rendered on Footer
               </label>
               <div className="flex items-center">
                 
-                <label className="relative inline-flex items-center cursor-pointer">
+                <label className="relative inline-flex items-center cursor-pointer mb-0">
                   <input
                     type="checkbox"
                     className="sr-only"
@@ -86,8 +86,8 @@ const SystemConfigurationPage = () => {
             </div>
           </div>
           {/* Second Half */}
-          <div className="right-container template-section corp-add pr-4">
-            <label className="block mb-2">Select Date Format:</label>
+          <div className="right-container template-section corp-add pt-4">
+            <label className="block mb-2 mt-2">Date Format:</label>
             <div className="flex flex-col">
               <label className="flex items-center">
                 <input
@@ -96,7 +96,7 @@ const SystemConfigurationPage = () => {
                   value="dd-mm-yy"
                   className="mr-2"
                 />
-                dd-mm-yy (14-10-2024)
+                dd-mm-YYYY (14-10-2024)
               </label>
               <label className="flex items-center">
                 <input
@@ -105,7 +105,7 @@ const SystemConfigurationPage = () => {
                   value="mm-dd-yy"
                   className="mr-2"
                 />
-                mm-dd-yy (10-14-2024)
+                mm-dd-YYYY (10-14-2024)
               </label>
               <label className="flex items-center">
                 <input
@@ -114,7 +114,7 @@ const SystemConfigurationPage = () => {
                   value="yy-mm-dd"
                   className="mr-2"
                 />
-                yy-mm-dd (24-10-20)
+                dd-MM-YYYY (14-Oct-20)
               </label>
               <label className="flex items-center">
                 <input
@@ -123,7 +123,7 @@ const SystemConfigurationPage = () => {
                   value="full-date"
                   className="mr-2"
                 />
-                Full Date (14-10-2024)
+                MM-dd-YYYY (Oct-10-2024)
               </label>
             </div>
             <div className=" mt-4">
@@ -134,13 +134,13 @@ const SystemConfigurationPage = () => {
                 placeholder="ET HRMS Consultancy Services Pvt. Ltd."
               />
             </div>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between mb-4 mt-2">
               <label className="block mb-2 mt-2">
                 Enable Current year on footer
               </label>
               <div className="flex items-center">
                 
-                <label className="relative inline-flex items-center cursor-pointer">
+                <label className="relative inline-flex items-center cursor-pointer mb-0">
                   <input
                     type="checkbox"
                     className="sr-only"

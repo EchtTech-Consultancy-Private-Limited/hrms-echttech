@@ -41,21 +41,21 @@ const RoleConfigurationComponent = () => {
 
   // Titles for each switch
   const titles = [
-    "Employee can manage own information",
-    "Employee can Bank Account ",
-    "Employee can Qualification",
-    "Employee can Work Experience",
-    "Employee can manage own Documents",
-    "Employee can Profile pictures",
-    "Employee can Profile Information",
-    "Employee can Social Information",
+    "Employee can manage own contact information",
+    "Employee can manage own bank Account ",
+    "Employee can own qualification",
+    "Employee can manage own work experience",
+    "Employee can manage own documents",
+    "Employee can manage own profile picture",
+    "Employee can manage own profile information",
+    "Employee can manage own social information",
   ];
 
   return (
     <>
       {/* Create it here */}
-      <div className=" bg-white rounded rounded-lg top-head">
-        <h2 className=" text-lg font-bold pb-3">Role Configuration</h2>
+      <div className=" bg-white rounded rounded-lg top-head ">
+        <h2 className=" text-lg font-bold pb-3">Employee</h2>
         <hr className="mb-6" />
         {/* Responsive grid layout */}
         <div className="p-4" >
@@ -72,6 +72,39 @@ const RoleConfigurationComponent = () => {
               <GridItem key={index} index={item} title={titles[item]} />
             ))}
           </div>
+        </div>
+        <div className="right-btn">
+          <div className="add-reset-btns flex justify-end items-center">
+            <button className=" mx-1 main-bg-color bg-blue-500 text-white px-2 py-2 rounded w-full md:w-auto ">
+              Save
+            </button>
+            <button className=" bg-gray-400 text-white px-2 py-2 rounded w-full md:w-auto">
+              Reset
+            </button>
+          </div>
+        </div>
+        </div>
+        
+      </div>
+
+      <div className=" bg-white rounded rounded-lg top-head mt-4">
+        <h2 className=" text-lg font-bold pb-3">Admin</h2>
+        <hr className="mb-6" />
+        {/* Responsive grid layout */}
+        <div className="p-4 " >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+          {/* Grid 1 */}
+          {/* <div>
+            {[0, 1, 2, 3].map((item, index) => (
+              <GridItem key={index} index={item} title={titles[item]} />
+            ))}
+          </div> */}
+          {/* Grid 2 */}
+          {/* <div>
+            {[4, 5, 6, 7].map((item, index) => (
+              <GridItem key={index} index={item} title={titles[item]} />
+            ))}
+          </div> */}
         </div>
         <div className="right-btn">
           <div className="add-reset-btns flex justify-end items-center">
