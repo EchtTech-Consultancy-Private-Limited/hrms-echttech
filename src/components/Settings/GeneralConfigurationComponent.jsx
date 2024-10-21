@@ -1,5 +1,6 @@
-import React from 'react'
-import Selector from '../Common/Selector'
+import React from "react";
+import Selector from "../Common/Selector";
+import { TextAreaEditor } from "../Common/TextAreaEditor";
 
 const GeneralConfigurationComponent = () => {
   const selectorData = [
@@ -7,7 +8,6 @@ const GeneralConfigurationComponent = () => {
     { name: "India", cca2: "IN", flag: "🇮🇳", code: "91" },
   ];
   return (
-
     <div className="w-full top-section p-4 border rounded-lg bg-white">
       <div className="top-head ">
         <div className="flex justify-between pb-3 w-full text-black">
@@ -17,8 +17,7 @@ const GeneralConfigurationComponent = () => {
         {/* Department Form Section */}
         <div className="department-below-sect form-labels">
           <div className=" flex-gap justify-between">
-
-          <div className="first mb-4">
+            <div className="first mb-4">
               <label htmlFor="" className="block text-gray-700 font-bold mb-2">
                 Company Name
               </label>
@@ -60,21 +59,11 @@ const GeneralConfigurationComponent = () => {
                 placeholder="Phone Number"
               />
             </div>
-
-            <div className="first mb-4">
-              <label htmlFor="" className="block text-gray-700 font-bold mb-2">
-                Address
-              </label>
-              <input
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                type="text"
-                placeholder="Address"
-              />
-            </div>
           </div>
+          <TextAreaEditor />
         </div>
       </div>
-    
+
       <div className="template-section ">
         <div className="flex justify-between p-4 w-full text-black">
           <h1 className="text-lg  font-bold">ISO Certification</h1>
@@ -83,7 +72,7 @@ const GeneralConfigurationComponent = () => {
         {/* Department Form Section */}
         <div className="department-below-sect form-labels">
           <div className="flex-gap template-sec justify-between">
-          <div className="first mb-4">
+            <div className="first mb-4">
               <label for="type" className="block text-gray-700 font-bold mb-2">
                 Certification Type
               </label>
@@ -135,7 +124,6 @@ const GeneralConfigurationComponent = () => {
                 placeholder="Whatsapp Number"
               />
             </div>
-
           </div>
         </div>
       </div>
@@ -149,8 +137,7 @@ const GeneralConfigurationComponent = () => {
         </button>
       </div>
     </div>
-  
-  )
-}
+  );
+};
 
-export default GeneralConfigurationComponent
+export default GeneralConfigurationComponent;

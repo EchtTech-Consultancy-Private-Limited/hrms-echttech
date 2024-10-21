@@ -13,7 +13,7 @@ const SystemConfigurationPage = () => {
 
   return (
     <div className="content-mid bg-white rounded-lg">
-      <div className=" bg-white rounded-lg top-head">
+      <div className=" bg-white rounded-lg top-head top-section">
         <h2 className="text-lg font-semibold pb-3">
           System Configuration
         </h2>
@@ -162,6 +162,14 @@ const SystemConfigurationPage = () => {
             </div>
           </div>
         </div>
+        <div className="add-reset-btns top-border flex items-center justify-end p-4">
+        <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
+          Save
+        </button>
+        <button className="apply-leave-btn bg-gray-400 text-white px-2 py-2 rounded w-full md:w-auto">
+          Reset
+        </button>
+      </div>
       </div>
     </div>
   );
