@@ -290,6 +290,7 @@
   .layout.hide.consthide .constant-sidebar,
   .layout.hide.settingshow .setting-sidebar {
     left: 5.1% !important;
+    
   }
   .layout.hide .right-dashboard {
     width: 95%;
@@ -304,6 +305,12 @@
   .form-labels .first {
     width: 24%;
   }
+
+  /* ======Added for responsiveness of custom selector======== */
+
+  .department-below-sect .first_class_change18to100 {
+    width: 100%;
+    }
   /* .right-dashboard {
       width: 80%;
     } */
