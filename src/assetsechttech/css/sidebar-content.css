@@ -1,6 +1,7 @@
 .below-content {
     height: 90vh;
-    overflow: auto;
+    /* overflow: auto; */
+    position: relative;
   }
   .ul-list .ul-parent {
     padding: 0 5px 0 0;
@@ -105,29 +106,29 @@
       margin-right: 0px;
    
     }
-    .below-content
+    .below-content, .below-content-list
     {
-      overflow: auto; 
-      overflow-x: hidden;
+      /* overflow: auto; 
+      overflow-x: hidden; */
       transition: scrollbar-color 0.3s ease-in-out, scrollbar-width 0.3s ease-in-out; /* For Firefox */
       transition: opacity 0.5s ease-in-out;
 
      
     }
-    .below-content::-webkit-scrollbar, .constant-sidebar::-webkit-scrollbar {
+    .below-content::-webkit-scrollbar, .constant-sidebar::-webkit-scrollbar, .below-content-list::-webkit-scrollbar {
       width: 4px; 
       transition: width 0.3s ease-in-out;
       opacity: 0; 
       transition: opacity 0.5s ease-in-out;
     }
     
-    .below-content::-webkit-scrollbar-track, .constant-sidebar::-webkit-scrollbar-track {
+    .below-content::-webkit-scrollbar-track, .constant-sidebar::-webkit-scrollbar-track, .below-content-list::-webkit-scrollbar-track {
       background: var(--primary-color-echttech); 
       transition: background-color 0.3s ease-in-out;
       transition: opacity 0.5s ease-in-out;
     }
     
-    .below-content::-webkit-scrollbar-thumb, .constant-sidebar::-webkit-scrollbar-thumb  {
+    .below-content::-webkit-scrollbar-thumb, .constant-sidebar::-webkit-scrollbar-thumb, .below-content-list::-webkit-scrollbar-thumb  {
       background-color: #c0c0c0; 
       border-radius: 10px; 
       transition: background-color 0.3s ease; 
@@ -263,6 +264,19 @@
   width: 100%;
   display: flex;
   justify-content: center;
+}
+.below-content-list {
+  overflow: auto;
+  height: 75vh;
+  overflow-x: hidden;
+}
+
+.bottom-setting {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 99;
+  background-color:var(--primary-color-echttech);
 }
 /* .layout.constshow.settingshow .setting-sidebar {
   display: none;

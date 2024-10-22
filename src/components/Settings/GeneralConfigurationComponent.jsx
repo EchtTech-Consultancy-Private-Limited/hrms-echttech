@@ -1,6 +1,7 @@
 import React from "react";
 import Selector from "../Common/Selector";
 import { TextAreaEditor } from "../Common/TextAreaEditor";
+import InputFiled from "../Common/InputFiled";
 
 const GeneralConfigurationComponent = () => {
   const selectorData = [
@@ -18,45 +19,37 @@ const GeneralConfigurationComponent = () => {
         <div className="department-below-sect form-labels">
           <div className=" flex-gap justify-between">
             <div className="first mb-4">
-              <label htmlFor="" className="block text-gray-700 font-bold mb-2">
-                Company Name
-              </label>
-              <input
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                type="text"
-                placeholder="Company Name"
+              <InputFiled
+                fileType="text"
+                filedName="Company Name"
+                filedplaceholder="Company Name"
+                filedlabelName="Company Name" 
               />
             </div>
 
             <div className="first mb-4">
-              <label htmlFor="" className="block text-gray-700 font-bold mb-2">
-                Contact Person
-              </label>
-              <input
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                type="text"
-                placeholder="Contact person"
+              <InputFiled
+                fileType="text"
+                filedName="Contact Person"
+                filedplaceholder="Contact Person"
+                filedlabelName="Contact Person" 
               />
             </div>
 
             <div className="first mb-4">
-              <label htmlFor="" className="block text-gray-700 font-bold mb-2">
-                Email
-              </label>
-              <input
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                type="text"
-                placeholder="Email"
+              <InputFiled
+                fileType="text"
+                filedName="Email"
+                filedplaceholder="Email"
+                filedlabelName="Email" 
               />
             </div>
             <div className="first mb-4">
-              <label htmlFor="" className="block text-gray-700 font-bold mb-2">
-                Phone
-              </label>
-              <input
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                type="text"
-                placeholder="Phone Number"
+              <InputFiled
+                fileType="text"
+                filedName="Phone"
+                filedplaceholder="Phone"
+                filedlabelName="Phone" 
               />
             </div>
           </div>
@@ -93,35 +86,29 @@ const GeneralConfigurationComponent = () => {
             </div>
 
             <div className="first mb-4">
-              <label htmlFor="" className="block text-gray-700 font-bold mb-2">
-                Certification Authority
-              </label>
-              <input
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                type="text"
-                placeholder="Certification Authority"
+              <InputFiled
+                fileType="text"
+                filedName="Certification Authority"
+                filedplaceholder="Certification Authority"
+                filedlabelName="Certification Authority" 
               />
             </div>
 
             <div className="first mb-4">
-              <label htmlFor="" className="block text-gray-700 font-bold mb-2">
-                Date of Certification
-              </label>
-              <input
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                type="date"
-                placeholder="Whatsapp Number"
+              <InputFiled
+                fileType="date"
+                filedName="Date of Certification"
+                filedplaceholder="Date of Certification"
+                filedlabelName="Date of Certification" 
               />
             </div>
 
             <div className="first mb-4">
-              <label htmlFor="" className="block text-gray-700 font-bold mb-2">
-                Validity Period
-              </label>
-              <input
-                className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                type="date"
-                placeholder="Whatsapp Number"
+              <InputFiled
+                fileType="date"
+                filedName="Validity Period"
+                filedplaceholder="Validity Period"
+                filedlabelName="Validity Period" 
               />
             </div>
           </div>
