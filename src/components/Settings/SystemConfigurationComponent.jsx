@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Selector from "./../Common/Selector";
+import InputFiled from "../Common/InputFiled";
 
 const SystemConfigurationPage = () => {
   const [isCodeIgniterEnabled, setIsCodeIgniterEnabled] = useState(false);
@@ -21,18 +22,13 @@ const SystemConfigurationPage = () => {
           <div className="left-container template-section reg-add pr-4 pt-4">
             <div className="department-below-sect form-labels form-labels-sysconfigs">
               <div className="flex-col template-sec">
-              <div className="first mb-4 first_class_change18to100">
-                  <label
-                    for="type"
-                    className="block text-gray-700 font-bold mb-2"
-                  >
-                    Application Name
-                  </label>
-
-                  <div className="relative group">
-                    
-                    <input className="border border-gray-300 rounded p-2 w-full" type="text" />
-                  </div>
+                <div className="first mb-4 first_class_change18to100">
+                  <InputFiled
+                    fileType="text"
+                    filedName="Application Name"
+                    filedplaceholder="Application Name"
+                    filedlabelName="Application Name"
+                  />
                 </div>
                 <div className="first mb-4 first_class_change18to100">
                   <label
@@ -102,7 +98,7 @@ const SystemConfigurationPage = () => {
             </div>
           </div>
           {/* Second Half */}
-          <div className="right-container template-section corp-add pt-4">
+          <div className="right-container template-section corp-add pt-4 department-below-sect">
             <label className="block mb-2 mt-2">Date Format:</label>
             <div className="flex flex-col">
               <label className="flex items-center">
@@ -142,13 +138,13 @@ const SystemConfigurationPage = () => {
                 MM-dd-YYYY (Oct-10-2024)
               </label>
             </div>
-            <div className=" mt-4">
-              <label className="mr-2">Footer Text</label>
-              <input
-                type="text"
-                className="custom-footer border border-gray-300 rounded p-2 w-full"
-                placeholder="ET HRMS Consultancy Services Pvt. Ltd."
-              />
+            <div className=" first mb-4 mt-4">
+              <InputFiled
+                    fileType="text"
+                    filedName="Footer Text"
+                    filedplaceholder="Your Company Name"
+                    filedlabelName="Footer Text"
+                  />
             </div>
             <div className="flex items-center justify-between mb-4 mt-2">
               <label className="block mb-2 mt-2">

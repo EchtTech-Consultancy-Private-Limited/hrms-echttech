@@ -87,24 +87,12 @@ const RoleConfigurationComponent = () => {
         
       </div>
 
-      <div className=" bg-white rounded rounded-lg top-head mt-4">
+      {/* <div className=" bg-white rounded rounded-lg top-head mt-4">
         <h2 className=" text-lg font-bold pb-3">Admin</h2>
         <hr className="mb-6" />
-        {/* Responsive grid layout */}
+      
         <div className="p-4 " >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
-          {/* Grid 1 */}
-          {/* <div>
-            {[0, 1, 2, 3].map((item, index) => (
-              <GridItem key={index} index={item} title={titles[item]} />
-            ))}
-          </div> */}
-          {/* Grid 2 */}
-          {/* <div>
-            {[4, 5, 6, 7].map((item, index) => (
-              <GridItem key={index} index={item} title={titles[item]} />
-            ))}
-          </div> */}
         </div>
         <div className="right-btn">
           <div className="add-reset-btns flex justify-end items-center">
@@ -118,7 +106,7 @@ const RoleConfigurationComponent = () => {
         </div>
         </div>
         
-      </div>
+      </div> */}
     </>
   );
 };

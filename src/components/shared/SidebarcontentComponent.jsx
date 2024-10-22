@@ -155,7 +155,7 @@ export default function SidebarcontentComponent({consttoggleClass, toggleClass, 
       
     {/* Below Menu Content for settings & Suport section */}
     </div>
-     <div className='mt-6' >
+     <div className='bottom-setting' >
         <hr />
       {DASHBOARD_SIDEBAR_BOTTOM_LINKS.map((link) => (
       <Accordion expanded={link.submenu?.length > 0 && expanded === link.key} onChange={handleChange(link.key)} className='ul-list'>
