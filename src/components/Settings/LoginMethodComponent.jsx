@@ -20,13 +20,13 @@ const LoginMethodComponent = () => {
         </div>
         <hr className="mb-6"></hr>
 
-        <div className="p-4 flex gap-x-2">
+        <div className="pt-8 px-4 flex gap-x-2">
           <div className="w-1/2">
-          <div className="p-2 border border-gray-300 rounded-lg mb-4" >
-          <label className="block mb-2">Using Employee ID</label>
+          <div className="p-2 border border-gray-300 rounded-lg flex items-center justify-between" >
+          <label className="block m-0 ">Using Employee ID</label>
           <div className="flex items-center">
             <span className="">{isEmployeeIdEnabled ? "" : ""}</span>
-            <label className="relative inline-flex items-center cursor-pointer">
+            <label className="relative inline-flex items-center cursor-pointer m-0">
               <input
                 type="checkbox"
                 className="sr-only"
@@ -39,7 +39,7 @@ const LoginMethodComponent = () => {
                 }`}
               ></div>
               <div
-                className={`toggle-dot absolute w-4 h-4 bg-white rounded-full shadow transition-transform duration-300 ${
+                className={`toggle-dot ml-1 absolute w-4 h-4 bg-white rounded-full shadow transition-transform duration-300 ${
                   isEmployeeIdEnabled ? "translate-x-4" : "translate-x-0"
                 }`}
               ></div>
@@ -50,11 +50,11 @@ const LoginMethodComponent = () => {
           
           
           <div className="w-1/2" >
-            <div className="p-2 border border-gray-300 rounded-lg mb-4" >
-            <label className="block mb-2">Using Email ID</label>
+            <div className="p-2 border border-gray-300 rounded-lg flex items-center justify-between" >
+            <label className="block m-0">Using Email ID</label>
             <div className="flex items-center">
               <span className="">{isEmailIdEnabled ? "" : ""}</span>
-              <label className="relative inline-flex items-center cursor-pointer">
+              <label className="relative inline-flex items-center cursor-pointer m-0">
                 <input
                   type="checkbox"
                   className="sr-only"
@@ -67,7 +67,7 @@ const LoginMethodComponent = () => {
                   }`}
                 ></div>
                 <div
-                  className={`toggle-dot absolute w-4 h-4 bg-white rounded-full shadow transition-transform duration-300 ${
+                  className={`toggle-dot ml-1 absolute w-4 h-4 bg-white rounded-full shadow transition-transform duration-300 ${
                     isEmailIdEnabled ? "translate-x-4" : "translate-x-0"
                   }`}
                 ></div>
@@ -79,7 +79,7 @@ const LoginMethodComponent = () => {
           
         </div>
         <div className="right-btn">
-          <div className="add-reset-btns flex justify-end items-center pb-4 pr-4">
+          <div className="add-reset-btns flex justify-end items-center pb-8 pr-4 pt-6">
             <button className=" mx-1 main-bg-color bg-blue-500 text-white px-2 py-2 rounded w-full md:w-auto ">
               Save
             </button>

@@ -3,6 +3,8 @@ import Selector from "./../Common/Selector";
 
 const SystemConfigurationPage = () => {
   const [isCodeIgniterEnabled, setIsCodeIgniterEnabled] = useState(false);
+  const [isCodeIgniterEnabled1, setIsCodeIgniterEnabled1] = useState(false);
+
   const selectorData = [
     { name: "Afghanistan", cca2: "AF", flag: "🇦🇫", code: "93" },
     { name: "India", cca2: "IN", flag: "🇮🇳", code: "91" },
@@ -10,13 +12,16 @@ const SystemConfigurationPage = () => {
   const handleToggle = () => {
     setIsCodeIgniterEnabled(!isCodeIgniterEnabled);
   };
+  const handleToggle1 = () => {
+    setIsCodeIgniterEnabled1(!isCodeIgniterEnabled1);
+  };
 
   return (
     <div className="content-mid bg-white rounded-lg">
       <div className=" bg-white rounded-lg top-head top-section">
         <h2 className="text-lg font-semibold pb-3">System Configuration</h2>
         <hr className="mb-6" />
-        <div className="flex items-start gap-6 px-4 both-address template-section">
+        <div className="flex items-start gap-4 px-4 both-address template-section">
           {/* First Half */}
           <div className="left-container template-section reg-add pr-4 pt-4">
             <div className="department-below-sect form-labels form-labels-sysconfigs">
@@ -93,8 +98,8 @@ const SystemConfigurationPage = () => {
                     }`}
                   ></div>
                   <div
-                    className={`toggle-dot absolute w-4 h-4 bg-white rounded-full shadow transition-transform duration-300 ${
-                      isCodeIgniterEnabled ? "translate-x-4" : "translate-x-0"
+                    className={`toggle-dot absolute ml-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-300 ${
+                      isCodeIgniterEnabled ? "translate-x-4" : "translate-x-1"
                     }`}
                   ></div>
                 </label>
@@ -159,17 +164,17 @@ const SystemConfigurationPage = () => {
                   <input
                     type="checkbox"
                     className="sr-only"
-                    checked={isCodeIgniterEnabled}
-                    onChange={handleToggle}
+                    checked={isCodeIgniterEnabled1}
+                    onChange={handleToggle1}
                   />
                   <div
                     className={`toggle-bg w-10 h-6 rounded-full transition-all duration-300 ${
-                      isCodeIgniterEnabled ? "bg-blue-500" : "bg-gray-200"
+                      isCodeIgniterEnabled1 ? "bg-blue-500" : "bg-gray-200"
                     }`}
                   ></div>
                   <div
-                    className={`toggle-dot absolute w-4 h-4 bg-white rounded-full shadow transition-transform duration-300 ${
-                      isCodeIgniterEnabled ? "translate-x-4" : "translate-x-0"
+                    className={`toggle-dot absolute ml-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-300 ${
+                      isCodeIgniterEnabled1 ? "translate-x-4" : "translate-x-1"
                     }`}
                   ></div>
                 </label>

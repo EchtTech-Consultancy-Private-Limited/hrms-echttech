@@ -82,10 +82,6 @@ const SystemLogoComponent = () => {
     }
   };
 
-
-
-
-
   const handleFileChange3 = (event) => {
     const file = event.target.files[0];
     if (file) {
@@ -111,7 +107,6 @@ const SystemLogoComponent = () => {
     }
   };
 
-  
   const handleFileChange4 = (event) => {
     const file = event.target.files[0];
     if (file) {
@@ -136,7 +131,6 @@ const SystemLogoComponent = () => {
       handleFileChange4({ target: { files: [file] } });
     }
   };
-
 
   const handleFileChange5 = (event) => {
     const file = event.target.files[0];
@@ -163,8 +157,9 @@ const SystemLogoComponent = () => {
     }
   };
 
+ 
+ 
 
-  
   return (
     <>
       <div className=" rounded-lg bg-white system-log-catch top-head">
@@ -175,13 +170,16 @@ const SystemLogoComponent = () => {
         <div className="p-4">
           <div className="flex items-center justify-evenly">
             <div className="img-main-container">
-              <label htmlFor="text-lg mb-4 font-exrabold">First/Company Logo</label>
+              <label htmlFor="text-lg mb-4 font-exrabold">
+                First/Company Logo
+              </label>
               <ImgUpload
                 fileID="1setlogo"
                 labelName=""
                 handleFileChange={handleFileChange}
                 image={image}
                 handleDrop={handleDrop}
+              
               />
             </div>
             <div className="img-main-container">
@@ -193,6 +191,7 @@ const SystemLogoComponent = () => {
                 handleFileChange={handleFileChange1}
                 image={image1}
                 handleDrop={handleDrop1}
+                
               />
             </div>
             <div className="img-main-container">
@@ -204,6 +203,7 @@ const SystemLogoComponent = () => {
                 handleFileChange={handleFileChange2}
                 image={image2}
                 handleDrop={handleDrop2}
+                
               />
             </div>
           </div>
@@ -225,13 +225,16 @@ const SystemLogoComponent = () => {
           <div className="p-4">
             <div className="flex items-center justify-evenly">
               <div className="img-main-container">
-                <label htmlFor="text-lg mb-4 font-exrabold">First/Company Logo</label>
+                <label htmlFor="text-lg mb-4 font-exrabold">
+                  First/Company Logo
+                </label>
                 <ImgUpload
                   fileID="4setlogo"
                   labelName=""
                   handleFileChange={handleFileChange3}
                   image={image3}
                   handleDrop={handleDrop3}
+                
                 />
               </div>
               <div className="img-main-container">
@@ -243,9 +246,9 @@ const SystemLogoComponent = () => {
                   handleFileChange={handleFileChange4}
                   image={image4}
                   handleDrop={handleDrop4}
+                 
                 />
               </div>
-              
             </div>
             <div className="add-reset-btns flex items-center justify-end">
               <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
@@ -265,15 +268,18 @@ const SystemLogoComponent = () => {
           <div className="p-4">
             <div className="flex items-center justify-evenly">
               <div className="img-main-container remove-btn">
-                <label htmlFor="text-lg mb-4 font-exrabold">First/Company Logo</label>
+                <label htmlFor="text-lg mb-4 font-exrabold">
+                  First/Company Logo
+                </label>
                 <ImgUpload
                   fileID="6setlogo"
                   labelName=""
                   handleFileChange={handleFileChange5}
                   image={image5}
                   handleDrop={handleDrop5}
+                  
                 />
-              </div> 
+              </div>
             </div>
             <div className="add-reset-btns flex items-center justify-end">
               <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">

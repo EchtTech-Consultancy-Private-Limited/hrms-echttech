@@ -5,7 +5,6 @@ import {
 	HiOutlineUsers,
 	HiOutlineQuestionMarkCircle,
 	HiOutlineCog,
-  HiUserGroup
 } from 'react-icons/hi';
 import { SiAwsorganizations } from "react-icons/si";
 import { FaAmazonPay } from "react-icons/fa6";
@@ -26,22 +25,15 @@ import { MdWorkOutline } from "react-icons/md";
 import { FaCriticalRole } from "react-icons/fa";
 import { CiSettings } from "react-icons/ci";
 import { CiCamera } from "react-icons/ci";
-import { GrConfigure } from "react-icons/gr";
-import { IoIosLogIn } from "react-icons/io";
+import { GiSettingsKnobs } from "react-icons/gi";
+import { CiLogin } from "react-icons/ci";
 import { IoKeyOutline } from "react-icons/io5";
-import { FaUserCheck } from "react-icons/fa6";
+import { PiUserPlusLight } from "react-icons/pi";
 import { CiBullhorn } from "react-icons/ci";
 import { AiOutlineMail } from "react-icons/ai";
 import { IoDiamondOutline } from "react-icons/io5";
 import { FaCheck } from "react-icons/fa6";
-
-
-
-
-
-
-
-
+import { SlUmbrella } from "react-icons/sl";
 
 
 
@@ -75,7 +67,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     key: 'employees',
     label: 'Employees',
     path: '#',
-    icon: <HiUserGroup />,
+    icon: <HiOutlineUsers />,
     secondsidebar: 0,
 
     submenu: [
@@ -135,7 +127,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     key: 'holidays',
     label: 'Holidays',
     path: '/holidays',
-    icon: <HiOutlineUsers />,
+    icon: <SlUmbrella/>,
     secondsidebar: 0,
     submenu: [] // No submenu for holidays
   },
@@ -196,7 +188,7 @@ export const SETTING_SIDEBAR_BOTTOM_LINKS = [
     key: 'system-configuration',
     label: 'System',
 		path: '/system-configuration',
-    icon: <GrConfigure/>,
+    icon: <GiSettingsKnobs/>,
     secondsidebar: 1,
     submenu: [], // No submenu for holidays
   },
@@ -204,7 +196,7 @@ export const SETTING_SIDEBAR_BOTTOM_LINKS = [
     key: 'login-method',
     label: 'Login Method',
 		path: '/login-method',
-    icon: <IoIosLogIn  />,
+    icon: <CiLogin/>,
     secondsidebar: 1,
     submenu: [], // No submenu for holidays
   },
@@ -220,7 +212,7 @@ export const SETTING_SIDEBAR_BOTTOM_LINKS = [
     key: 'attendance-configuration',
     label: 'Attendance',
 		path: '/attendance-configuration',
-    icon : <FaUserCheck />,
+    icon : <PiUserPlusLight/>,
     secondsidebar: 1,
     submenu: [], // No submenu for holidays
   },

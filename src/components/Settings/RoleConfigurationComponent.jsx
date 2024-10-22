@@ -13,9 +13,9 @@ const RoleConfigurationComponent = () => {
 
   // Grid Item Component
   const GridItem = ({ index, title }) => (
-    <div className="p-2 border border-gray-300 rounded-lg mb-4">
-      <label for="type" className="block text-black mb-2">{title}</label>
-      <label className="flex items-center cursor-pointer">
+    <div className="p-2 border border-gray-300 rounded-lg mb-4 flex items-center justify-between">
+      <label for="type" className="block text-black m-0">{title}</label>
+      <label className="flex items-center cursor-pointer m-0">
         {/* <span className="mr-2 block text-black text-sm">Switch</span> */}
         <input
           type="checkbox"
@@ -25,13 +25,13 @@ const RoleConfigurationComponent = () => {
         />
         {/* Added transition here */}
         <div
-          className={`toggle-switch w-12 h-6 flex items-center rounded-full p-1 transition-colors duration-300 ease-in-out ${
+          className={`toggle-switch w-10 h-6 flex items-center rounded-full p-1 transition-colors duration-300 ease-in-out ${
             switches[index] ? "bg-blue-500" : "bg-gray-300"
           }`}
         >
           <div
             className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 ease-in-out ${
-              switches[index] ? "translate-x-6" : "translate-x-1"
+              switches[index] ? "translate-x-4" : "translate-x-0"
             }`}
           ></div>
         </div>
@@ -58,7 +58,7 @@ const RoleConfigurationComponent = () => {
         <h2 className=" text-lg font-bold pb-3">Employee</h2>
         <hr className="mb-6" />
         {/* Responsive grid layout */}
-        <div className="p-4" >
+        <div className="pt-8 px-4 pb-8" >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Grid 1 */}
           <div>
@@ -89,9 +89,9 @@ const RoleConfigurationComponent = () => {
 
       <div className=" bg-white rounded rounded-lg top-head mt-4">
         <h2 className=" text-lg font-bold pb-3">Admin</h2>
-        <hr className="mb-6" />
+        <hr className="mb-6"/>
         {/* Responsive grid layout */}
-        <div className="p-4 " >
+        <div className="pt-8 pb-8 px-4" >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
           {/* Grid 1 */}
           {/* <div>

@@ -21,6 +21,26 @@
     background-image: url('../utility-images/image-placeholder.png');
     background-size: contain;
 }
+.image-uploader-sections .img-container.hide {
+    width: 200px;
+    height: 150px;
+    border: 1px solid #e7e7e7;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    background-image: url('../utility-images/image-placeholder.png');
+    background-size: contain;
+}
+.image-uploader-sections .img-container.show {
+    width: 200px;
+    height: 150px;
+    border: 1px solid #e7e7e7;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    background-image: none;
+    background-size: contain;
+}
 .img-main-container{
     display: flex;
     flex-direction: column;
