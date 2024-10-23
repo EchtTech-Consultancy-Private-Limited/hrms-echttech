@@ -134,10 +134,12 @@ const TransfersComponent = () => {
                           <option>West</option>
                         </select>
                       </div>
+                     
                     </div>
+                    
+                    
                   </div>
-                </div>
-                <div className="w-full second-child">
+                  <div className="w-full second-child-change">
                   <label className="block text-gray-700 font-bold mb-2">
                     Remark
                     <span className="text-red-500 text-sm ml-1">*</span>
@@ -151,6 +153,9 @@ const TransfersComponent = () => {
                     style={{ height: "200px" }}
                   />
                 </div>
+                 
+                </div>
+                
               </div>
               <div className="add-reset-btns top-border flex items-center justify-end p-4">
                 <button className="mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">

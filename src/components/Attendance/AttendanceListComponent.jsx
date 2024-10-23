@@ -69,13 +69,15 @@ const AttendanceListComponent = () => {
                 />
               </div>
             </div>
-            <div className="first mb-4">
+            <div className="first mb-4 ">
               <div>
+                <label className="block text-black  font-bold mt-6 "></label>
                 <button className="main-bg-color text-white px-4 py-2 rounded w-full md:w-auto text-sm">
                   Filter
                 </button>
               </div>
             </div>
+            
           </div>
         </div>
       </div>

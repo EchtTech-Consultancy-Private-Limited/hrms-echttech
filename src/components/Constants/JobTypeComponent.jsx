@@ -71,11 +71,11 @@ const JobTypeComponent = () => {
     <div>
        <div className="form-container shadow radius">
         <div className="top-hdr flex justify-between">
-          <h1 className="pb-1 font-bold text-xl">Add New Contract Type</h1>
+          <h1 className="pb-1 font-bold text-xl">Add New Job Type</h1>
         </div>
         <hr />
 
-        <form className="mt-10">
+        {/* <form className="mt-10">
           <div className="form-step">
             <div className="form-labels">
               <div className="row first-row flex items-center flex-wrap justify-start md:space-x-3 justify-between flex-gap">
@@ -112,7 +112,27 @@ const JobTypeComponent = () => {
             </div>
 
           </div>
-        </form>
+        </form> */}
+          <div className="department-below-sect form-labels field-btn-parent flex-gap">
+              <div className="left-fields row first-row flex items-center flex-wrap justify-start  justify-between flex-gap">
+                <div className="first mb-4">
+                  <label className="block text-black font-bold">Job Type</label>
+                  <input
+                    type="text"
+                    className="block w-full p-2 border border-gray-300 rounded-md"
+                    placeholder="Enter Job name"
+                  />
+                </div>
+                <div className="add-reset-btns first flex items-center">
+                  <button className=" main-bg-color mx-1 bg-blue-500 text-white px-4 py-2 rounded w-full md:w-auto ">
+                    Save
+                  </button>
+                  <button className=" bg-gray-400 text-white px-4 py-2 rounded w-full md:w-auto">
+                    Reset
+                  </button>
+                </div>
+              </div>
+            </div>
       </div>
   
       <div className="contract-type-list  mx-auto p-6 border rounded-lg bg-white mt-5">

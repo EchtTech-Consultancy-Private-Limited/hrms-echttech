@@ -55,7 +55,7 @@ const LeaveComponentList = () => {
     <>
       {/* Top Section for filtering and leave balance */}
       <div className="flex md:flex-row flex-col justify-between items-center gap-x-4 leave-info-container">
-        <div className="w-full md:w-1/2 top-section py-6 px-4 border rounded-lg bg-white">
+        <div className="w-full md:w-1/2 top-section py-6 px-4 border rounded-lg bg-white h-[206px]">
           <div className="top-head flex justify-between items-center items-center">
             <div className="left-part flex justify-between pb-3 w-full">
               <h1 className="headings text-lg font-bold">Leaves Information</h1>
@@ -143,7 +143,7 @@ const LeaveComponentList = () => {
       )}
   
       {/* Leave Table */}
-      <div className="leave-table overflow-auto mt-5">
+      <div className="leave-table overflow-auto mt-5 p-4 bg-white rounded-lg">
         <table className="min-w-full bg-white border-collapse border border-gray-300">
           <thead>
             <tr className="main-bg-color">
@@ -181,9 +181,7 @@ const LeaveComponentList = () => {
             ))}
           </tbody>
         </table>
-      </div>
-
-      {/* Pagination */}
+         {/* Pagination */}
       <div className="pagination flex justify-between items-center mt-4">
         
         <span>
@@ -208,6 +206,9 @@ const LeaveComponentList = () => {
          </div>
         
       </div>
+      </div>
+
+     
     </>
   );
 };

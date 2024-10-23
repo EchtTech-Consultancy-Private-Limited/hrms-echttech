@@ -407,7 +407,7 @@ const PayrollTemplatesComponent = () => {
               </button> */}
             </div>
             <hr className="mb-6" />
-            <div className="flex justify-between  items-center mb-4">
+            <div className="flex justify-between  items-center mb-4 mt-4">
               <div className="mob-entries flex items-center">
                 <label className="mb-0 text-sm text-gray-600" htmlFor="#">
                   Show

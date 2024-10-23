@@ -136,8 +136,7 @@ const HolidayListComponent = () => {
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="w-full second-child">
+                  <div className="w-full second-child-change">
                   <label className="block text-gray-700 font-bold mb-2">
                     Remark
                     <span className="text-red-500 text-sm ml-1">*</span>
@@ -151,8 +150,10 @@ const HolidayListComponent = () => {
                     style={{ height: "200px" }}
                   />
                 </div>
+                </div>
+                
               </div>
-              <div className="add-reset-btns flex items-center justify-end pt-4 p-2">
+              <div className="add-reset-btns flex items-center justify-end pb-4 px-4">
                 <button className="mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
                   Save
                 </button>

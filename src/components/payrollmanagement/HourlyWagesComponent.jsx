@@ -75,8 +75,10 @@ const HourlyWagesComponent = () => {
                 />
               </div>
 
+              
 
-              <div className='add-reset-btns flex items-center first mb-4'>
+
+              <div className='add-reset-btns flex items-center first first-my mb-4'>
                 <button
                   className="apply-leave-btn mx-1 text-white px-2 py-2 rounded w-full md:w-auto main-bg-color"
                 >

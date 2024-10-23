@@ -144,7 +144,7 @@ const ManageSalaryComponent = () => {
                 </select>
               </div>
 
-              <div className="mb-4 add-reset-btns flex items-center manage-salary-btn first">
+              <div className="mb-4 add-reset-btns flex items-center manage-salary-btn first first-my">
                 <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
                   Search
                 </button>

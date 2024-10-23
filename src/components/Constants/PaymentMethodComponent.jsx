@@ -75,49 +75,28 @@ const PaymentMethodComponent = () => {
         </div>
         <hr />
 
-        <form className="mt-10">
-          <div className="form-step">
-            <div className="form-labels">
-              <div className="row first-row flex items-center flex-wrap justify-start md:space-x-3 justify-between flex-gap">
-                <div className="first mb-4">
-                  <label
-                    htmlFor=""
-                    className="block text-gray-700 font-bold mb-2"
-                  >
-                    Payment Type
-                  </label>
-                  <input
-                    className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                    type="text"
-                    placeholder="Company Name"
-                  />
-                </div>
-                
-                <div className="button mt-2 flex justify-between first mb-4">
-
-
-                  <div className="add-reset-btns flex items-center justify-end">
-                    <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
-                      Save
-                    </button>
-                    <button className="apply-leave-btn bg-gray-400 text-white px-2 py-2 rounded w-full md:w-auto">
-                      Reset
-                    </button>
-                  </div>
-                </div>
-
-
-
-
-
-
-
-              </div>
-
+        <div className="department-below-sect form-labels field-btn-parent flex-gap">
+          <div className="left-fields row first-row flex items-center flex-wrap justify-start  justify-between flex-gap">
+            <div className="first mb-4">
+              <label className="block text-black font-bold">
+                Payment Method Type
+              </label>
+              <input
+                type="text"
+                className="block w-full p-2 border border-gray-300 rounded-md"
+                placeholder="Payment type"
+              />
             </div>
-
+            <div className="add-reset-btns first flex items-center">
+              <button className=" main-bg-color mx-1 bg-blue-500 text-white px-4 py-2 rounded w-full md:w-auto ">
+                Save
+              </button>
+              <button className=" bg-gray-400 text-white px-4 py-2 rounded w-full md:w-auto">
+                Reset
+              </button>
+            </div>
           </div>
-        </form>
+        </div>
       </div>
   
       <div className="contract-type-list overflow-auto mx-auto p-6 border rounded-lg bg-white mt-5">

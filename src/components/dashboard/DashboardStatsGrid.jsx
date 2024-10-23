@@ -193,7 +193,7 @@ const DashboardStatsGrid = () => {
       <div className='dashboard-stats-grid  super-admin'>
         <div className="top-head flex justify-between items-center">
           <div className="left-part">
-            <h1 className='headings'>Welcome Anurag</h1>
+            <h1 className='headings text-xl'>Welcome to, <span className='bg-gray text-black px-2 rounded-lg text-2xl' >Anurag</span></h1>
           </div>
           <div className="right-part">
                     <Listbox value={selected} onChange={setSelected}>
@@ -287,7 +287,7 @@ const DashboardStatsGrid = () => {
 
          {/* High-charts section start */}
          <div className="high-charts-section flex justify-between mt-10 flex-wrap">
-            <div className="first-chart shadow charts radius">
+            <div className="first-chart shadow charts radius ">
             < HighchartsReact 
                   highcharts={Highcharts}
                   options={{
@@ -327,12 +327,18 @@ const DashboardStatsGrid = () => {
                   },
                   series: [{
                       name: 'Population',
+                      // colors: [
+                      //     '#9b20d9', '#9215ac', '#861ec9', '#7a17e6', '#7010f9', '#691af3',
+                      //     '#6225ed', '#5b30e7', '#533be1', '#4c46db', '#4551d5', '#3e5ccf',
+                      //     '#3667c9', '#2f72c3', '#277dbd', '#1f88b7', '#1693b1', '#0a9eaa',
+                      //     '#03c69b',  '#00f194'
+                      // ],
                       colors: [
-                          '#9b20d9', '#9215ac', '#861ec9', '#7a17e6', '#7010f9', '#691af3',
-                          '#6225ed', '#5b30e7', '#533be1', '#4c46db', '#4551d5', '#3e5ccf',
-                          '#3667c9', '#2f72c3', '#277dbd', '#1f88b7', '#1693b1', '#0a9eaa',
-                          '#03c69b',  '#00f194'
-                      ],
+                        '#113689', '#113689', '#113689', '#113689', '#113689', '#113689',
+                        '#113689', '#113689', '#113689', '#113689', '#113689', '#113689',
+                        '#113689', '#113689', '#113689', '#113689', '#113689', '#113689',
+                        '#113689',  '#113689'
+                    ],
                       colorByPoint: true,
                       groupPadding: 0,
                       data: [
@@ -453,7 +459,7 @@ const DashboardStatsGrid = () => {
                       <Typography className="font-bold" style={{ color: '#000', fontSize: '1.25rem' }}>
                           Messages
                       </Typography>
-                      <Typography as="a" href="#" className="text-blue-500 font-bold" style={{ fontSize: '0.875rem' }}>
+                      <Typography as="a" href="#" className="text-black font-bold" style={{ fontSize: '0.875rem' }}>
                           View all
                       </Typography>
                   </div>
@@ -488,7 +494,7 @@ const DashboardStatsGrid = () => {
                       <Typography className="font-bold" style={{ color: '#000', fontSize: '1.25rem' }}>
                           Events
                       </Typography>
-                      <Typography as="a" href="#" className="text-blue-500 font-bold" style={{ fontSize: '0.875rem' }}>
+                      <Typography as="a" href="#" className="text-black font-bold" style={{ fontSize: '0.875rem' }}>
                           View all
                       </Typography>
                   </div>
@@ -523,7 +529,7 @@ const DashboardStatsGrid = () => {
                       <Typography className="font-bold" style={{ color: '#000', fontSize: '1.25rem' }}>
                           Notification
                       </Typography>
-                      <Typography as="a" href="#" className="text-blue-500 font-bold" style={{ fontSize: '0.875rem' }}>
+                      <Typography as="a" href="#" className="text-black font-bold" style={{ fontSize: '0.875rem' }}>
                           View all
                       </Typography>
                   </div>
@@ -566,7 +572,7 @@ const DashboardStatsGrid = () => {
                       <Typography className="font-bold" style={{ color: '#000', fontSize: '1.25rem' }}>
                           TO DO List
                       </Typography>
-                      <Typography as="a" href="#" className="text-blue-500 font-bold" style={{ fontSize: '0.875rem' }}>
+                      <Typography as="a" href="#" className="text-black font-bold" style={{ fontSize: '0.875rem' }}>
                           View all
                       </Typography>
                   </div>

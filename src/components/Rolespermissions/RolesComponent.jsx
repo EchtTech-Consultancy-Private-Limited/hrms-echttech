@@ -92,7 +92,8 @@ const RolesComponent = () => {
                     <option>Developer</option>
                   </select>
                 </div>
-                <div className="add-reset-btns first mb-4">
+                <div className="add-reset-btns first">
+                  <label htmlFor="" className="mt-2 block text-black font-bold" ></label>
                 <button
                   className=" main-bg-color mx-1 bg-blue-500 text-white px-4 py-2 rounded w-full md:w-auto "
                 >
@@ -111,7 +112,7 @@ const RolesComponent = () => {
         </div>
       </div>
       {/* Roles Table */}
-      <div className="leave-table overflow-auto mt-5">
+      <div className="leave-table overflow-auto mt-5 p-4 bg-white rounded-lg">
         <table className="min-w-full bg-white border-collapse border border-gray-300">
           <thead>
             <tr className="main-bg-color">
@@ -171,9 +172,7 @@ const RolesComponent = () => {
             ))}
           </tbody>
         </table>
-      </div>
-
-      {/* Pagination */}
+         {/* Pagination */}
       <div className="pagination flex justify-between items-center mt-4">
         <span>
           Page {currentPage} of {Math.ceil(totalEntries / entriesPerPage)}
@@ -195,6 +194,9 @@ const RolesComponent = () => {
           </button>
         </div>
       </div>
+      </div>
+
+     
     </div>
   );
 };

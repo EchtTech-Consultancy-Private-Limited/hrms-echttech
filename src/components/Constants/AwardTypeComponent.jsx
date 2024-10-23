@@ -77,7 +77,7 @@ const AwardTypeComponent = () => {
           <h1 className="font-bold text-lg">Add New Contract Type</h1>
         </div>
         <hr class="mb-6"></hr>
-        <form className="mt-0">
+        {/* <form className="mt-0">
           <div className="">
             <div className="form-labels">
               <div className="row first-row flex items-center flex-wrap justify-start md:space-x-3 justify-between flex-gap">
@@ -95,7 +95,7 @@ const AwardTypeComponent = () => {
                   />
                 </div>
 
-                <div className="button mt-2 flex justify-between first mb-4">
+                <div className="button flex justify-between first">
                   <div className="add-reset-btns flex items-center justify-end">
                     <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
                       Save
@@ -108,7 +108,29 @@ const AwardTypeComponent = () => {
               </div>
             </div>
           </div>
-        </form>
+        </form> */}
+         <div className="department-below-sect form-labels field-btn-parent flex-gap">
+          <div className="left-fields row first-row flex items-center flex-wrap justify-start  justify-between flex-gap">
+            <div className="first mb-4">
+              <label className="block text-black font-bold">
+                Award Type
+              </label>
+              <input
+                type="text"
+                className="block w-full p-2 border border-gray-300 rounded-md"
+                placeholder="Award type name"
+              />
+            </div>
+            <div className="add-reset-btns first flex items-center">
+              <button className=" main-bg-color mx-1 bg-blue-500 text-white px-4 py-2 rounded w-full md:w-auto ">
+                Save
+              </button>
+              <button className=" bg-gray-400 text-white px-4 py-2 rounded w-full md:w-auto">
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="contract-type-list  mx-auto p-6 border rounded-lg bg-white mt-5">

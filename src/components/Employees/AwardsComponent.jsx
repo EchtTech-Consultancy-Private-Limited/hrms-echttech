@@ -136,20 +136,20 @@ const AwardsComponent = () => {
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="w-full second-child">
-                  <label className="block text-gray-700 font-bold mb-2">
-                    Remark
-                    <span className="text-red-500 text-sm ml-1">*</span>
-                  </label>
-                  <ReactQuill
-                    value={editorContent}
-                    onChange={handleChange}
-                    placeholder="Write your reason here..."
-                    theme="snow"
-                    className=" rounded-lg announcement-quill"
-                    style={{ height: "200px" }}
-                  />
+                  <div className="w-full second-child-change">
+                    <label className="block text-gray-700 font-bold mb-2">
+                      Remark
+                      <span className="text-red-500 text-sm ml-1">*</span>
+                    </label>
+                    <ReactQuill
+                      value={editorContent}
+                      onChange={handleChange}
+                      placeholder="Write your reason here..."
+                      theme="snow"
+                      className=" rounded-lg announcement-quill"
+                      style={{ height: "200px" }}
+                    />
+                  </div>
                 </div>
               </div>
               <div className="add-reset-btns top-border flex items-center justify-end p-4">
@@ -191,7 +191,10 @@ const AwardsComponent = () => {
             </div>
 
             <div className="flex justify-end items-center">
-              <label className=" mb-0 text-sm text-gray-600 search-label" htmlFor="#">
+              <label
+                className=" mb-0 text-sm text-gray-600 search-label"
+                htmlFor="#"
+              >
                 Search :{" "}
               </label>
               <input

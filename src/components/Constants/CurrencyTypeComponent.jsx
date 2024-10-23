@@ -76,86 +76,48 @@ const CurrencyTypeComponent = () => {
           <h1 className="pb-1 font-bold text-xl">Add New Currency Type</h1>
         </div>
         <hr />
-
-        <form className="mt-10">
-          <div className="form-step">
-            <div className="form-labels">
-              <div className="row first-row flex items-center flex-wrap justify-start md:space-x-3 justify-between flex-gap">
-                <div className="first mb-4">
-                  <label
-                    htmlFor=""
-                    className="block text-gray-700 font-bold mb-2"
-                  >
-                    Employee
-                  </label>
-                  <select className="block w-full p-2 border border-gray-300 rounded-md">
-                      <option value="" disabled selected>
-                        Select Title
-                      </option>
-                      <option value="delhi">Delhi</option>
-                      <option value="mumbai">Mumbai</option>
-                      <option value="chennai">Chennai</option>
-                      <option value="gurgaon">Gurgaon</option>
-                    </select>
-                </div>
-
-                <div className="first mb-4">
-                  <label
-                    htmlFor=""
-                    className="block text-gray-700 font-bold mb-2"
-                  >
-                    Location  
-                  </label>
-                  <select className="block w-full p-2 border border-gray-300 rounded-md">
-                      <option value="" disabled selected>
-                        Select Title
-                      </option>
-                      <option value="delhi">Delhi</option>
-                      <option value="mumbai">Mumbai</option>
-                      <option value="chennai">Chennai</option>
-                      <option value="gurgaon">Gurgaon</option>
-                    </select>
-                </div>
-
-                <div className="first mb-4">
-                  <label
-                    htmlFor=""
-                    className="block text-gray-700 font-bold mb-2"
-                  >
-                    Select Date Range
-                  </label>
-                  <input
-                    className="border border-gray-300 text-gray-500 p-2 h-9 rounded w-full"
-                    type="date"
-                    placeholder="Company Name"
-                  />
-                </div>
-                
-                <div className="button mt-2 flex justify-between first mb-4">
-
-
-                  <div className="add-reset-btns flex items-center justify-end">
-                    <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
-                      Save
-                    </button>
-                    <button className="apply-leave-btn bg-gray-400 text-white px-2 py-2 rounded w-full md:w-auto">
-                      Reset
-                    </button>
-                  </div>
-                </div>
-
-
-
-
-
-
-
-              </div>
-
+        <div className="department-below-sect form-labels field-btn-parent flex-gap">
+          <div className="left-fields row first-row flex items-center flex-wrap justify-start  justify-between flex-gap">
+            <div className="first mb-4">
+              <label className="block text-black font-bold">
+                Employee
+              </label>
+              <input
+                type="text"
+                className="block w-full p-2 border border-gray-300 rounded-md"
+                placeholder="Travel arrangement type"
+              />
             </div>
-
+            <div className="first mb-4">
+              <label className="block text-black font-bold">
+                Location
+              </label>
+              <input
+                type="text"
+                className="block w-full p-2 border border-gray-300 rounded-md"
+                placeholder="Travel arrangement type"
+              />
+            </div>
+            <div className="first mb-4">
+              <label className="block text-black font-bold">
+                Date
+              </label>
+              <input
+                type="date"
+                className="block w-full p-2 border border-gray-300 rounded-md"
+                placeholder="Travel arrangement type"
+              />
+            </div>
+            <div className="add-reset-btns first flex items-center">
+              <button className=" main-bg-color mx-1 bg-blue-500 text-white px-4 py-2 rounded w-full md:w-auto ">
+                Save
+              </button>
+              <button className=" bg-gray-400 text-white px-4 py-2 rounded w-full md:w-auto">
+                Reset
+              </button>
+            </div>
           </div>
-        </form>
+        </div>
       </div>
   
       <div className="contract-type-list  mx-auto p-6 border rounded-lg bg-white mt-5">
