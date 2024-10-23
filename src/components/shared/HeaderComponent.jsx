@@ -19,6 +19,8 @@ const HeaderComponent = () => {
   const alert = useAlert();
   const dispatch = useDispatch();
   const [isOpen, setIsOpen] = useState(false);
+  const [isTada, setIsTada] = useState(false); // State for animation
+
   const navigate = useNavigate();
 
   const openModal = () => setIsOpen(true);
@@ -33,6 +35,14 @@ const HeaderComponent = () => {
       //window.location.href = '/login';
       navigate('/login');
   }
+    
+
+
+  const handleNewNotifications = () => {
+    setIsTada(true);
+    setTimeout(() => setIsTada(false), 1500); // Reset animation state
+  };
+
 
   return (
     <div className='top-header flex justify-between items-center px-3'>
@@ -149,9 +159,13 @@ const HeaderComponent = () => {
                   <MenuButton className="relative inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold text-gray-400 ">
                     {/* Notifications */}
 
-                         <NotificationsActiveOutlinedIcon/>
+                         {/* <NotificationsActiveOutlinedIcon/> */}
+                         <NotificationsActiveOutlinedIcon className="tada" /> {/* Always animated */}
 
-                    <div className="absolute top-0 right-0 w-2.5 h-2.5 bg-red-500 border-2 border-gray-100 dark:border-gray-900 rounded-full"></div>
+                         {/* <NotificationsActiveOutlinedIcon className={isTada ? 'tada' : ''} /> */}
+
+
+                    <div className="absolute top-2 right-0 w-2.5 h-2.5 bg-red-500 border-2 border-gray-100 dark:border-gray-900 rounded-full"></div>
                   </MenuButton>
                 </div>
 

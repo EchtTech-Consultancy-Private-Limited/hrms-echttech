@@ -193,7 +193,7 @@ const DashboardStatsGrid = () => {
       <div className='dashboard-stats-grid  super-admin'>
         <div className="top-head flex justify-between items-center">
           <div className="left-part">
-            <h1 className='headings'>User's Information</h1>
+            <h1 className='headings'>Welcome Anurag</h1>
           </div>
           <div className="right-part">
                     <Listbox value={selected} onChange={setSelected}>
