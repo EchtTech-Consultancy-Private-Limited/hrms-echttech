@@ -105,8 +105,6 @@ const RoleConfigurationComponent = () => {
           </div>
         </div>
         </div>
-        
-      
     </>
   );
 };
