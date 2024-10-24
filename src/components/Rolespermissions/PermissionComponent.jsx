@@ -49,22 +49,18 @@ const PermissionComponent = () => {
                   </div>
                 </div> */}
 
+                <div className="first mb-4">
+                  <label
+                    for="type"
+                    className="block text-gray-700 font-bold mb-2"
+                  >
+                    Permissions Type
+                  </label>
 
-
-           
-           
-
-            <div className="first mb-4">
-              <label for="type" className="block text-gray-700 font-bold mb-2">
-                Permissions Type
-              </label>
-
-              <div className="relative group">
-                <Selector selectorData={selectorData} />
-              </div>
-            
-          
-        </div>
+                  <div className="relative group">
+                    <Selector selectorData={selectorData} />
+                  </div>
+                </div>
               </div>
               {/* Roles Table */}
               <div className="bg-white  mt-5 ">
