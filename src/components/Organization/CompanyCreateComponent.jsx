@@ -73,7 +73,7 @@ const CompanyCreateComponent = () => {
         {/* Department Form Section */}
         <div className="department-below-sect form-labels">
           <div className=" flex-gap justify-between">
-            <div className="first mb-4">
+            <div className="first mb-2">
               <label for="type" className="block text-gray-700 font-bold mb-2">
                 Company Type
               </label>
@@ -83,7 +83,7 @@ const CompanyCreateComponent = () => {
               </div>
             </div>
 
-            <div className="first mb-4">
+            <div className="first mb-2">
               <InputFiled
                 fileType="text"
                 filedName="companyName"
@@ -93,7 +93,7 @@ const CompanyCreateComponent = () => {
               />
             </div>
 
-            <div className="first mb-4">
+            <div className="first mb-2">
               <InputFiled
                 fileType="text"
                 filedName="Legal/Tranding Name"
@@ -103,7 +103,7 @@ const CompanyCreateComponent = () => {
               />
             </div>
 
-            <div className="first mb-4">
+            <div className="first mb-2">
               <InputFiled
                 fileType="text"
                 filedName="Registration Number"
@@ -112,7 +112,7 @@ const CompanyCreateComponent = () => {
                 
               />
             </div>
-            <div className="first mb-4">
+            <div className="first mb-2">
               <InputFiled
                 fileType="text"
                 filedName="GST Number"
@@ -122,7 +122,7 @@ const CompanyCreateComponent = () => {
               />
             </div>
 
-            <div className="first mb-4">
+            <div className="first mb-2">
               <InputFiled
                 fileType="text"
                 filedName="Pan Number"
@@ -132,7 +132,7 @@ const CompanyCreateComponent = () => {
               />
             </div>
 
-            <div className="first mb-4">
+            <div className="first mb-2">
               <InputFiled
                 fileType="text"
                 filedName="TAN Number"
@@ -141,7 +141,7 @@ const CompanyCreateComponent = () => {
               />
             </div>
 
-            <div className="first mb-4">
+            <div className="first mb-2">
               <InputFiled
                 fileType="text"
                 filedName="CIN Number"

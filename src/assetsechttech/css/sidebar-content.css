@@ -87,7 +87,11 @@
     .ul-parent .side-bar-content-arrow {
       position: absolute;
       right: 0;
+      transition: transform 0.3s ease;
     }
+    .Mui-expanded .ul-parent .side-bar-content-arrow {
+      transform: rotate(180deg);
+  }
 
     .ul-parent a{
       color: #fff;
@@ -106,53 +110,8 @@
       margin-right: 0px;
    
     }
-    .below-content, .below-content-list
-    {
-      /* overflow: auto; 
-      overflow-x: hidden; */
-      transition: scrollbar-color 0.3s ease-in-out, scrollbar-width 0.3s ease-in-out; /* For Firefox */
-      transition: opacity 0.5s ease-in-out;
+   
 
-     
-    }
-    .below-content::-webkit-scrollbar, .constant-sidebar::-webkit-scrollbar, .below-content-list::-webkit-scrollbar {
-      width: 4px; 
-      transition: width 0.3s ease-in-out;
-      opacity: 0; 
-      transition: opacity 0.5s ease-in-out;
-    }
-    
-    .below-content::-webkit-scrollbar-track, .constant-sidebar::-webkit-scrollbar-track, .below-content-list::-webkit-scrollbar-track {
-      background: var(--primary-color-echttech); 
-      transition: background-color 0.3s ease-in-out;
-      transition: opacity 0.5s ease-in-out;
-    }
-    
-    .below-content::-webkit-scrollbar-thumb, .constant-sidebar::-webkit-scrollbar-thumb, .below-content-list::-webkit-scrollbar-thumb  {
-      background-color: #c0c0c0; 
-      border-radius: 10px; 
-      transition: background-color 0.3s ease; 
-    }
-    /*  */
-
-/* Customize scrollbar */
-.layout.hide.consthide .constant-sidebar::-webkit-scrollbar {
-    width: 4px; /* Width of the scrollbar */
-}
-
-.layout.hide.consthide .constant-sidebar::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Background color of the track */
-    border-radius: 20px; /* Match the sidebar's border radius */
-}
-
-.layout.hide.consthide .constant-sidebar::-webkit-scrollbar-thumb {
-    background: #c0c0c0; /* Color of the scrollbar thumb */
-    border-radius: 10px; /* Round the corners */
-}
-
-.layout.hide.consthide .constant-sidebar::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Color on hover */
-}
 
 
     .css-uvvswg-MuiButtonBase-root-MuiAccordionSummary-root 
@@ -175,7 +134,7 @@
       transition: left 0.5s linear;
     }
     .layout.show.consthide .constant-sidebar, .layout.show.settingshow .setting-sidebar{
-      left: 0.1%;
+      left: 0%;
       top: 9%;
     }
     .layout.show.constshow .constant-sidebar {
@@ -280,4 +239,40 @@
 }
 /* .layout.constshow.settingshow .setting-sidebar {
   display: none;
+} */
+
+.below-content-list {
+  overflow-y: auto; /* Allow vertical scrolling */
+  height: 75vh;
+  overflow-x: hidden;
+  margin-right: 1px;
+  position: relative; /* Required for scrollbar positioning */
+}
+
+/* Hide scrollbar by default */
+.below-content-list::-webkit-scrollbar {
+  width: 4px; /* Hide scrollbar */
+  transition: width 1s ease; /* Transition effect for showing/hiding */
+}
+
+/* Show scrollbar when content overflows */
+/* .below-content-list:hover::-webkit-scrollbar {
+  width: 4px; /* Show scrollbar on hover */
+
+
+/* Style the scrollbar track */
+
+/* Style the scrollbar thumb */
+.below-content-list::-webkit-scrollbar-thumb {
+  background: #c4c4c4; /* Thumb color */
+  border-radius: 10px;
+}
+
+/* Style the scrollbar thumb on hover */
+
+
+
+/* Style the scrollbar thumb on hover */
+/* .below-content-list .ul-list {
+  width: 188px;
 } */

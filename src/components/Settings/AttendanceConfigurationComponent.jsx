@@ -39,7 +39,7 @@ const AttendanceConfigurationComponent = () => {
 
   // Titles for each switch
   const titles = [
-    "Enable Clockin Button On header (It will show everywhere on the system)",
+    "Enable Clock-in Button On header (It will show everywhere on the system)",
     "Enable Clock In and Clock out",
   ];
 

@@ -130,13 +130,7 @@ export default function SidebarcontentComponent({consttoggleClass, toggleClass, 
               )}
             </Typography>
             {link.submenu?.length > 0 && (
-              <span className="text-neutral-200 side-bar-content-arrow">
-                {isSubMenuOpen ? (
-                  <HiOutlineChevronRight />
-                ) : (
-                  <HiOutlineChevronDown />
-                )}
-              </span>
+              <span className="text-neutral-200 side-bar-content-arrow"><HiOutlineChevronDown /></span>
             )}
           </AccordionSummary>
           {link.submenu?.length > 0 && (
@@ -197,7 +191,7 @@ export default function SidebarcontentComponent({consttoggleClass, toggleClass, 
             
           </Typography>
           {link.submenu?.length > 0 && (
-            <span className="text-neutral-200 side-bar-content-arrow">{isSubMenuOpen ? < HiOutlineChevronRight /> : <HiOutlineChevronDown />}</span>
+            <span className="text-neutral-200 side-bar-content-arrow"><HiOutlineChevronDown /></span>
          )}
         </AccordionSummary>
         {link.submenu?.length > 0 && (

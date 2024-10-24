@@ -24,7 +24,7 @@ import { BiExit } from "react-icons/bi";
 import { MdWorkOutline } from "react-icons/md";
 import { FaCriticalRole } from "react-icons/fa";
 import { CiSettings } from "react-icons/ci";
-import { CiCamera } from "react-icons/ci";
+import { IoCameraOutline } from "react-icons/io5";
 import { GiSettingsKnobs } from "react-icons/gi";
 import { CiLogin } from "react-icons/ci";
 import { IoKeyOutline } from "react-icons/io5";
@@ -33,7 +33,10 @@ import { CiBullhorn } from "react-icons/ci";
 import { AiOutlineMail } from "react-icons/ai";
 import { IoDiamondOutline } from "react-icons/io5";
 import { FaCheck } from "react-icons/fa6";
-import { SlUmbrella } from "react-icons/sl";
+import { SlUmbrella, SlLogin } from "react-icons/sl";
+import { RxGear } from "react-icons/rx";
+import { RiComputerLine } from "react-icons/ri";
+import { IoHardwareChipOutline } from "react-icons/io5";
 
 
 
@@ -156,7 +159,7 @@ export const DASHBOARD_SIDEBAR_BOTTOM_LINKS = [
 		key: 'settings',
 		label: 'Settings',
     secondsidebar:1,
-		icon: <HiOutlineCog />
+		icon: <RxGear />
 	},
 	{
 		key: 'support',
@@ -172,7 +175,7 @@ export const SETTING_SIDEBAR_BOTTOM_LINKS = [
     key: 'general-configuration',
     label: 'General',
 		path: '/general-configuration',
-    icon: <CiSettings />,
+    icon: <RiComputerLine />,
     secondsidebar: 1,
     submenu: [], // No submenu for holidays
   },
@@ -180,7 +183,7 @@ export const SETTING_SIDEBAR_BOTTOM_LINKS = [
     key: 'system-logo',
     label: 'Logos',
 		path: '/system-logo',
-    icon: <CiCamera />,
+    icon: <IoCameraOutline />,
     secondsidebar: 1,
     submenu: [], // No submenu for holidays
   },
@@ -188,7 +191,7 @@ export const SETTING_SIDEBAR_BOTTOM_LINKS = [
     key: 'system-configuration',
     label: 'System',
 		path: '/system-configuration',
-    icon: <GiSettingsKnobs/>,
+    icon: <IoHardwareChipOutline/>,
     secondsidebar: 1,
     submenu: [], // No submenu for holidays
   },
@@ -196,7 +199,7 @@ export const SETTING_SIDEBAR_BOTTOM_LINKS = [
     key: 'login-method',
     label: 'Login Method',
 		path: '/login-method',
-    icon: <CiLogin/>,
+    icon: <SlLogin/>,
     secondsidebar: 1,
     submenu: [], // No submenu for holidays
   },

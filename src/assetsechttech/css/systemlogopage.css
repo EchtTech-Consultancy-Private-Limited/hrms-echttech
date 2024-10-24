@@ -2,3 +2,6 @@
 {
     font-weight: 800;
 }
+.add-reset-btns.flex.items-center.justify-end.p-4, .add-reset-btns.flex.justify-end.items-center.pb-8.pr-4.pt-6 {
+    border-top: 1px solid var(--primary-color-echttech);
+}

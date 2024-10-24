@@ -167,8 +167,8 @@ const SystemLogoComponent = () => {
           <h1 className="text-lg font-bold">System Logo</h1>
         </div>
         <hr className="mb-6" />
-        <div className="p-4">
-          <div className="flex items-center justify-evenly">
+        <div className="">
+          <div className="flex items-center justify-evenly p-4">
             <div className="img-main-container">
               <label htmlFor="text-lg mb-4 font-exrabold">
                 First/Company Logo
@@ -208,7 +208,7 @@ const SystemLogoComponent = () => {
             </div>
           </div>
 
-          <div className="add-reset-btns flex items-center justify-end">
+          <div className="add-reset-btns flex items-center justify-end p-4">
             <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
               Save
             </button>
@@ -222,8 +222,8 @@ const SystemLogoComponent = () => {
             <h1 className="text-lg font-bold">Sign In Page</h1>
           </div>
           <hr className="mb-6" />
-          <div className="p-4">
-            <div className="flex items-center justify-evenly">
+          <div className="">
+            <div className="flex items-center justify-evenly p-4">
               <div className="img-main-container">
                 <label htmlFor="text-lg mb-4 font-exrabold">
                   First/Company Logo
@@ -250,7 +250,7 @@ const SystemLogoComponent = () => {
                 />
               </div>
             </div>
-            <div className="add-reset-btns flex items-center justify-end">
+            <div className="add-reset-btns flex items-center justify-end p-4">
               <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
                 Save
               </button>
@@ -265,8 +265,8 @@ const SystemLogoComponent = () => {
             <h1 className="text-lg font-bold">Payroll Logo</h1>
           </div>
           <hr className="mb-6" />
-          <div className="p-4">
-            <div className="flex items-center justify-evenly">
+          <div className="">
+            <div className="flex items-center justify-evenly p-4">
               <div className="img-main-container remove-btn">
                 <label htmlFor="text-lg mb-4 font-exrabold">
                   First/Company Logo
@@ -281,7 +281,7 @@ const SystemLogoComponent = () => {
                 />
               </div>
             </div>
-            <div className="add-reset-btns flex items-center justify-end">
+            <div className="add-reset-btns flex items-center justify-end p-4">
               <button className="apply-leave-btn mx-1 main-bg-color text-white px-2 py-2 rounded w-full md:w-auto ">
                 Save
               </button>

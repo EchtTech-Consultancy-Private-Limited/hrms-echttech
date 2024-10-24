@@ -20,7 +20,7 @@ const LoginMethodComponent = () => {
         </div>
         <hr className="mb-6"></hr>
 
-        <div className="pt-8 px-4 flex gap-x-2">
+        <div className="pt-8 px-4 flex gap-x-2 pb-8">
           <div className="w-1/2">
           <div className="p-2 border border-gray-300 rounded-lg flex items-center justify-between" >
           <label className="block m-0 ">Using Employee ID</label>

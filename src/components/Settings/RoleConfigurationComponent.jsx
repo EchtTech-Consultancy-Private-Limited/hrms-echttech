@@ -44,7 +44,7 @@ const RoleConfigurationComponent = () => {
   const titles = [
     "Employee can manage own contact information",
     "Employee can manage own bank Account",
-    "Employee can own qualification",
+    "Employee can manage own qualification",
     "Employee can manage own work experience",
     "Employee can manage own documents",
     "Employee can manage own profile picture",

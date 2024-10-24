@@ -16,4 +16,5 @@
     padding: 5px 20px;
     color: var(--primary-color-echttech);
     background-color: var(--fade-lighter-primary-color-echttech);
+    border-radius: unset;
 }

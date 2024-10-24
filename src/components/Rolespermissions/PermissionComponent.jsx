@@ -68,11 +68,12 @@ const PermissionComponent = () => {
               </div>
               {/* Roles Table */}
               <div className="bg-white  mt-5 ">
-                <div className="top-had">
-                  <div className="flex justify-between pb-3 w-full text-black">
+                <div className="top-had template-section ">
+                  <div className="flex justify-between pb-3 w-full text-black p-4">
                     <h1 className="text-lg font-bold">Roles Permission</h1>
                   </div>
-                  <div className="permission-table overflow-auto p-4">
+                  <hr class="mb-6"></hr>
+                  <div className="permission-table overflow-auto p-6">
                     <table className="min-w-full bg-white border border-gray-200 ">
                       <thead className="rouned rounded-lg">
                         <tr>
